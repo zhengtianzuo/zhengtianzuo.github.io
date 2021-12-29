@@ -1,0 +1,1256 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+ :root {
+    --side-bar-bg-color: #d9ede5;
+	--control-text-color: #6B6B6B;
+	--active-file-bg-color: #ecf6f2;
+	--active-file-border-color: #6B6B6B;
+	--active-file-text-color: #202020;
+	--table-even-row-color:#f8fcfa;
+	--table-head-color:#d9ede5;
+	--deep-theme-color: #4eb289;
+	--code-block-bg-color: #0F111A;
+
+	
+}
+
+/*serif*/
+/*monospace*/
+/*Chinese*/
+html{
+	font-size: 16px;
+}
+
+body {
+    font-family: 'Lexend','SourceCodePro','NotoSansSC';
+	font-weight: normal;
+	line-height: 1.5rem;
+	letter-spacing: 0;
+    margin: 0;
+}
+
+#write {
+	max-width: 900px;
+    padding: 30px 50px 20px;
+}
+
+#write p{
+	text-align:left;
+}
+
+#write pre.md-meta-block {
+	padding: 1rem;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f7f7f7;
+	border: 0;
+	border-radius: 3px;
+	color: #777777;
+	margin-top: 0 !important;
+}
+
+.md-image>.md-meta {
+    color: #777777;
+    font-size: 0.9rem;
+	font-family: 'Lexend';
+    padding: 4px 0;
+}
+
+
+@media print {
+  html {
+    font-size: 12px;
+  }
+
+  table,
+  pre {
+    page-break-inside: avoid;
+  }
+
+  pre {
+    word-wrap: break-word;
+  }
+  
+  @page {
+    size: A4; 
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/*toc*/
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+	color: var(--deep-theme-color);
+}
+
+a {
+	color: var(--deep-theme-color);
+	text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*headers*/
+h1,h2,h3,h4,h5,h6 {
+	display: block;
+	font-weight:bold;
+}
+
+h1 {
+	font-size: 2em;
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin-top: 0.83em;
+	margin-bottom: 0.83em;
+}
+
+h3 {
+	font-size: 1.17em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+h4 {
+	font-size: 1em;
+	margin-top: 1.33em;
+	margin-bottom: 1.33em;
+}
+
+h5 {
+	font-size: 1em;
+	margin-top: 1.33em;
+	margin-bottom: 1.33em;
+	color: #777777;
+}
+
+h6 {
+	font-size: 1em;
+	margin-top: 1.33em;
+	margin-bottom: 1.33em;
+	color: #adadad;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+	margin: 0.8rem 0;
+}
+
+/*table*/
+table {
+	border-collapse: collapse;
+	padding: 0;
+    word-break: initial;
+	table-layout: fixed;
+	width: 100%;
+}
+
+table tr:nth-child(even){
+    background-color: var(--table-even-row-color);
+}
+
+thead{
+	background-color: var(--table-head-color);
+}
+
+table th{
+	text-align: center;
+	padding:6px 13px;
+	border: 1px solid var(--table-head-color);
+}
+
+table td{
+	padding:6px 13px;
+	border: 1px solid var(--table-head-color);
+}
+table tr{
+	padding:6px 13px;
+	border: 1px solid var(--table-head-color);
+}
+
+/*blockquote*/
+blockquote {
+	border-left: 0.2rem solid var(--side-bar-bg-color);
+	color: #777777;
+	font-family: 'Lexend','NotoSansSC';
+	font-size: 0.9rem;
+	padding-left: 2rem;
+}
+
+
+/*list*/
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+.md-task-list-item:hover > input:before,
+input[type='checkbox']:hover:before {
+	opacity: 1;
+	transition: 0.5s;
+	background-color: var(--side-bar-bg-color);
+}
+
+.task-list-item input::before {
+    content: "";
+    display: inline-block;
+	border-radius: 1.1rem;
+    vertical-align: middle;
+    border: 1.2px solid var(--deep-theme-color);
+    background-color: #ffffff;
+	width: 1.1rem;
+    height: 1.1rem;
+	margin-left: -0.1rem;
+    margin-right: 0.1rem;
+    margin-top: -0.68rem; 
+}
+
+
+.task-list-item input:checked::before {
+    padding-left: 0.125em;
+    content: '✔';
+    color:white;
+	background-color: var(--deep-theme-color);
+    font-size: 0.8rem;
+    line-height: 0.95rem;
+    margin-top: -0.68rem;
+	transition: background-color 200ms ease-in-out;
+}
+
+
+
+.task-list-done {
+    text-decoration: line-through;
+    color: #adadad;
+}
+
+hr {
+	border-style: none;
+    border-top-style: solid;
+    border-color: #e7e7e7;
+    border-width: 1px;
+	margin: 2rem 0;
+}
+
+
+/*highlight*/
+#write mark {
+	background-color: #c7ffe8;
+	border-radius: 2px;
+	color: black;
+	padding: 0 4px;
+	margin: 0 2px;
+}
+
+/*inline code*/
+#write code,tt {
+	padding: 0.6px 4px;
+	border-radius: 2px;
+	background-color: #f1f1f1;
+	font-family: 'SourceCodePro',Consolas,Courier, Monospace !important,宋体;
+	font-size: 0.9rem;
+	color: var(--code-block-bg-color);
+	margin: 0 2px;
+}
+
+/*footnote*/
+#write .md-footnote {
+	color: #777777;
+	background-color: #f7f7f7;
+}
+
+/*source code mode*/
+.cm-s-typora-default .cm-header {
+	color:var(--code-block-bg-color);
+}
+.cm-s-typora-default .cm-link {
+	color:var(--deep-theme-color);
+
+}
+
+
+/*code block*/
+#write .md-fences {
+    font-size: 1rem;
+    margin: 0.2em 0;
+    padding: 0.5em;
+    border-radius: 3px;
+	font-size: 0.9em;
+    font-family: 'SourceCodePro',Consolas,Courier, Monospace !important,宋体;
+    background-color: var(--code-block-bg-color);
+    color: #A9B7C6;
+    border: none;
+	text-shadow: none;
+}
+
+.md-fences .code-tooltip {
+	background-color: var(--code-block-bg-color);
+}
+
+/*
+  Name:       material-ocean
+  Author:     Mattia Astorino (http://github.com/equinusocio)
+  Website:    https://material-theme.site/
+*/
+
+.cm-s-inner.CodeMirror {
+  background-color: #0F111A;
+  color: #8F93A2;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+  background: #0F111A;
+  color: #464B5D;
+  border: none;
+}
+
+.cm-s-inner .CodeMirror-linenumber {color: #464B5D;}
+.cm-s-inner .CodeMirror-guttermarker { color: #FFEE80; }
+.cm-s-inner .CodeMirror-guttermarker-subtle { color: #D0D0D0; }
+
+/*
+.cm-s-inner .CodeMirror-cursor {
+  border-left: 1px solid #FFCC00;
+}
+.cm-s-inner.cm-fat-cursor .CodeMirror-cursor {
+  background-color: #FFCC00 !important;
+}
+.cm-s-inner .cm-animate-fat-cursor {
+  background-color: #FFCC00 !important;
+}
+*/
+
+.cm-s-inner .CodeMirror-cursor { border-left: 1px solid #A9B7C6; }
+.cm-s-inner div.CodeMirror-cursor { border-left: 1px solid #ffffff; }
+.cm-s-inner div.CodeMirror-selected {
+  background: rgba(113, 124, 180, 0.2);
+}
+
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(113, 124, 180, 0.2);
+}
+
+.cm-s-inner .CodeMirror-selected{ background: #214283 !important; }
+.cm-s-inner .CodeMirror-selectedtext { background: #214283 !important; }
+.cm-overlay.CodeMirror-selectedtext { background: #B5D6FC !important; }
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::selection {
+  background: rgba(128, 203, 196, 0.2);
+}
+
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+  background: rgba(128, 203, 196, 0.2);
+}
+
+.cm-s-inner .CodeMirror-activeline-background {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cm-s-inner .cm-keyword {
+  color: #C792EA;
+}
+
+.cm-s-inner .cm-operator {
+  color: #89DDFF;
+}
+
+.cm-s-inner .cm-variable-2 {
+  color: #EEFFFF;
+}
+
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+  color: #f07178;
+}
+
+.cm-s-inner .cm-builtin {
+  color: #FFCB6B;
+}
+
+.cm-s-inner .cm-atom {
+  color: #F78C6C;
+}
+
+.cm-s-inner .cm-number {
+  color: #FF5370;
+}
+
+.cm-s-inner .cm-def {
+  color: #82AAFF;
+}
+
+.cm-s-inner .cm-string {
+  color: #C3E88D;
+}
+
+.cm-s-inner .cm-string-2 {
+  color: #f07178;
+}
+
+.cm-s-inner .cm-comment {
+  color: #585d6d;
+}
+
+.cm-s-inner .cm-variable {
+  color: #f07178;
+}
+
+.cm-s-inner .cm-tag {
+  color: #FF5370;
+}
+
+.cm-s-inner .cm-meta {
+  color: #FFCB6B;
+}
+
+.cm-s-inner .cm-attribute {
+  color: #C792EA;
+}
+
+.cm-s-inner .cm-property {
+  color: #C792EA;
+}
+
+.cm-s-inner .cm-qualifier {
+  color: #DECB6B;
+}
+
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+  color: #DECB6B;
+}
+
+
+.cm-s-inner .cm-error {
+  color: rgba(255, 255, 255, 1.0);
+  background-color: #FF5370;
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+
+
+@import "";
+
+:root {
+  
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --side-bar-bg-color: #232325;
+  --control-text-color: #7a7b7e;
+  --active-file-bg-color: #19191b;
+  --active-file-border-color: #aa8b13;
+  --active-file-text-color: #aa8b13;
+  --table-head-color:#232325;
+  --mint-light-color:#d9ede5;
+  --deep-theme-color: #aa8b13;
+  --code-block-bg-color: #0F111A;
+  --rawblock-edit-panel-bd: #232325;
+  --footer-box:#6a6b6e;
+  --select-text-bg-color:#7a88a3;
+  --item-hover-bg-color: #56575a;
+  --window-border: 1px solid #39393a;
+  --highlight-color:#aa8b13;
+}
+
+#write {
+	max-width: 1186.56px;
+}
+
+#write pre.md-meta-block {
+	background-color: var(--item-hover-bg-color);
+	color: var(--text-color);
+}
+
+/*source code mode*/
+.cm-s-typora-default .cm-header {
+	color:var(--mint-light-color);
+}
+.cm-s-typora-default .cm-link {
+	color:var(--deep-theme-color);
+
+}
+
+/*table*/
+table tr:nth-child(even){
+    background-color: var(--bg-color);
+}
+
+thead{
+	background-color: var(--table-head-color);
+  color: var(--deep-theme-color);
+}
+
+table th{
+	border: 1px solid var(--mint-light-color);
+}
+
+table td{
+	border: 1px solid var(--mint-light-color);
+}
+table tr{
+	border: 1px solid var(--mint-light-color);
+}
+
+
+/* footer */
+footer.ty-footer {
+  border: none;
+}
+
+.footer-item:hover {
+  background-color: var(--footer-box);
+}
+
+/*megamenu*/
+
+
+/* preferences */
+.ty-preferences .window-header{
+  background-color: var(--active-file-bg-color);
+}
+
+.ty-preferences .nav-group-item:hover {
+  background-color: var(--item-hover-bg-color);
+}
+
+.btn:hover,
+.button-hover,
+.md-image-btn:hover {
+  background-color:#39393a !important;
+  color: var(--text-color);
+}
+
+.menu-style-btn:hover {
+  background-color: var(--item-hover-bg-color);
+  border: none;
+}
+
+/*blockquote*/
+blockquote {
+	border-left: 0.2rem solid var(--deep-theme-color);
+	color: #919191;
+}
+
+/*checkbox*/
+.md-task-list-item:hover > input:before,
+input[type='checkbox']:hover:before {
+	background-color: #505052;
+}
+
+.task-list-item input::before {
+  border: 1.2px solid var(--deep-theme-color);
+  background-color:var(--bg-color);
+}
+
+.task-list-item input:checked::before {
+  color:var(--bg-color);
+  font-weight: 600;
+	background-color: var(--deep-theme-color);
+}
+
+.task-list-done {
+  color: #777777;
+}
+
+/*highlight*/
+#write mark {
+	background-color: var(--highlight-color);
+	color:#fff;
+}
+
+/*inline code*/
+#write code,tt {
+  padding: 2px 4px;
+	border-radius: 2px;
+	background-color: var(--code-block-bg-color);
+	color: var(--text-color);
+  margin: 0 2px;
+}
+
+/*footnote*/
+#write .md-footnote {
+	color: #777777;
+	background-color: var(--code-block-bg-color);
+}
+
+
+</style><title>帮助文档</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''>﻿﻿<style>
+ .md-toc{z-index:999;display: block; position: fixed; left: 4px; top: 4px; width: 200px; color:#cc8b13; font-size:12px; line-height:1.4;}
+</style><div align="center">
+    <img src="./common/logo_devs.png">
+    <center><font color="#cc8b13" size="5" face="微软雅黑">丝绸程序员工具箱</font></center>
+</div>
+<div align="right">
+<font color="#cc8b13" size="3" face="楷体">程序员的超强本地构建工具</font>
+<br>
+<font color="#aa8b13" size="3" face="楷体">永久免费</font>
+</div><h1 id='简介'><font color="#cc8b13" size=5 face="微软雅黑"><span> 简介</span></font></h1><hr /><p><font color="#1395F9" size=3 face="微软雅黑"><span>　丝绸程序员工具箱, 强大的本地构建工具, 提供给项目全方位的静态检测, 动态检测, 代码工具以及各种便利的插件工具, 通过词法分析、语法分析、控制流、数据流分析、内存检测、代码覆盖率、热点函数检测等技术对程序代码进行扫描，验证代码是否满足规范性、安全性、可靠性、可维护性等指标. 根据分析结果对代码进行深度优化. 提升代码质量, 增强产品健壮性.</span>
+</font></p><div align="center">
+    <img src="./images/cap001.png">
+</div><div align="center">
+    <img src="./images/cap000.png" width="100%" height="100%">
+</div><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n5"><a class="md-toc-inner" href="#简介"> 简介</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n12"><a class="md-toc-inner" href="#使用指南">使用指南</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n14"><a class="md-toc-inner" href="#快速上手">快速上手</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n15"><a class="md-toc-inner" href="#安装软件">安装软件 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n17"><a class="md-toc-inner" href="#添加项目">添加项目 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n19"><a class="md-toc-inner" href="#一键检测">一键检测 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n21"><a class="md-toc-inner" href="#查看报告-1">查看报告 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n23"><a class="md-toc-inner" href="#添加开发工具">添加开发工具 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n25"><a class="md-toc-inner" href="#添加用户工具">添加用户工具 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n27"><a class="md-toc-inner" href="#运行插件工具">运行插件工具 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n29"><a class="md-toc-inner" href="#记录代码片段">记录代码片段 </a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n31"><a class="md-toc-inner" href="#详细功能">详细功能</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n33"><a class="md-toc-inner" href="#工作台">工作台 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n34"><a class="md-toc-inner" href="#概述">概述</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n36"><a class="md-toc-inner" href="#项目指标">项目指标 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n39"><a class="md-toc-inner" href="#编译运行">编译运行 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n41"><a class="md-toc-inner" href="#静态检测">静态检测 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n43"><a class="md-toc-inner" href="#动态检测">动态检测 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n45"><a class="md-toc-inner" href="#代码工具">代码工具 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n47"><a class="md-toc-inner" href="#查看报告-2">查看报告 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n49"><a class="md-toc-inner" href="#自动化运行">自动化运行 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n51"><a class="md-toc-inner" href="#任务管理器">任务管理器 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n53"><a class="md-toc-inner" href="#其他细节">其他细节</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n55"><a class="md-toc-inner" href="#工具箱">工具箱</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n56"><a class="md-toc-inner" href="#系统工具">系统工具 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n58"><a class="md-toc-inner" href="#用户工具">用户工具 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n60"><a class="md-toc-inner" href="#插件工具">插件工具 </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n62"><a class="md-toc-inner" href="#资料袋">资料袋 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n64"><a class="md-toc-inner" href="#文件夹">文件夹</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n66"><a class="md-toc-inner" href="#添加代码片段">添加代码片段 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n68"><a class="md-toc-inner" href="#修改代码片段">修改代码片段 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n70"><a class="md-toc-inner" href="#删除代码片段">删除代码片段 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n72"><a class="md-toc-inner" href="#重命名文件夹">重命名文件夹 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n74"><a class="md-toc-inner" href="#删除文件夹">删除文件夹 </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n76"><a class="md-toc-inner" href="#设置">设置 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n77"><a class="md-toc-inner" href="#多语言切换">多语言切换 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n79"><a class="md-toc-inner" href="#设置-一般">设置-一般 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n81"><a class="md-toc-inner" href="#设置-编译">设置-编译 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n83"><a class="md-toc-inner" href="#设置-分析">设置-分析 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n85"><a class="md-toc-inner" href="#设置-文档">设置-文档 </a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n87"><a class="md-toc-inner" href="#使用技巧">使用技巧 </a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n89"><a class="md-toc-inner" href="#常见问题">常见问题 </a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n91"><a class="md-toc-inner" href="#支持">支持 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n93"><a class="md-toc-inner" href="#支持内容">支持内容 </a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n96"><a class="md-toc-inner" href="#服务">服务 </a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n99"><a class="md-toc-inner" href="#关于我们">关于我们 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n101"><a class="md-toc-inner" href="#联系方式">联系方式 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n108"><a class="md-toc-inner" href="#我们的愿景">我们的愿景 </a></span></p></div><h1 id='使用指南'><font color="#cc8b13" size=5 face="微软雅黑"><span>使用指南</span></font></h1><hr /><h2 id='快速上手'><font color="#cc8b13" size=4 face="微软雅黑"><span>快速上手</span></font></h2><h3 id='安装软件'><font color="#cc8b13" size=3 face="微软雅黑"><span>安装软件 </span></font><img src="./common/logo_devs.png" width="4%" height="4%"/></h3><p><img src="./images/cap002.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>双击运行安装程序</span></font>
+<br>
+<img src="./images/cap003.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>可以点击立即安装</span></font>
+<br>
+<img src="./images/cap004.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>也可以点击自定义选项调整一些选项</span></font>
+<br>
+<img src="./images/cap005.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>开始安装</span></font>
+<br>
+<img src="./images/cap006.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>安装完成</span></font>
+<br>
+<img src="./images/cap007.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>桌面生成的快捷方式</span></font>
+<br>
+<img src="./images/cap008.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　双击启动程序</span></font>
+<br></p><h3 id='添加项目'><font color="#cc8b13" size=3 face="微软雅黑"><span>添加项目 </span></font><img src="./common/com_btnAdd.svg"/></h3><p><img src="./images/cap009.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　接下来我们添加一个项目进行检测分析, 点击新项目按钮</span></font>
+<br>
+<img src="./images/cap010.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在项目列表中选择已存在的项目, 也可以浏览加入没有在列表里的项目</span></font>
+<br>
+<img src="./images/cap011.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　选择名称为VS2019的样例工程</span></font>
+<br>
+<img src="./images/cap012.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　添加完成, 双击可直接启动项目, 单击出现详情页面</span></font>
+<br></p><h3 id='一键检测'><font color="#cc8b13" size=3 face="微软雅黑"><span>一键检测 </span></font><img src="./common/dev_btnOneRunAll.svg"/></h3><p><img src="./images/cap013.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在工作台里点击选中工程, 在弹出的项目详情页中点击一键检测按钮</span></font>
+<br>
+<img src="./images/cap014.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　一键检测已启动</span></font>
+<br>
+<img src="./images/cap015.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　可以看到项目检测已经按顺序进行运行</span></font>
+<br></p><h3 id='查看报告-1'><font color="#cc8b13" size=3 face="微软雅黑"><span>查看报告 </span></font><img src="./common/dev_btnLog.svg"/></h3><p><img src="./images/cap016.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　当检测完成时会自动返回项目信息页面, 点击右上角的报告按钮, 进入详细报告页面查看检测结果</span></font>
+<br>
+<img src="./images/cap017.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　这里可以看到代码53行有一个违规警告, 点击单条违规信息的右侧编辑文件的按钮, 打开对应的源代码文件进行查看和修改</span></font>
+<br>
+<img src="./images/cap018.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　源代码文件打开以后, 自动定位到违规行, 查看违规细节描述, delete需要修改成delete[]</span></font>
+<br></p><h3 id='添加开发工具'><font color="#cc8b13" size=3 face="微软雅黑"><span>添加开发工具 </span></font><img src="./common/com_btnAdd.svg"/></h3><p><img src="./images/cap019.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　点击新开发工具按钮</span></font>
+<br>
+<img src="./images/cap020.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在工具列表中选择已存在的工具, 也可以浏览加入没有在列表里的工具</span></font>
+<br>
+<img src="./images/cap021.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　添加完成, 双击可直接启动工具, 单击出现详情页面</span></font>
+<br></p><h3 id='添加用户工具'><font color="#cc8b13" size=3 face="微软雅黑"><span>添加用户工具 </span></font><img src="./common/com_btnAdd.svg"/></h3><p><img src="./images/cap022.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　点击新工具按钮</span></font>
+<br>
+<img src="./images/cap023.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在工具列表中选择已存在的工具, 也可以浏览加入没有在列表里的工具</span></font>
+<br>
+<img src="./images/cap024.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　添加完成, 双击可直接启动工具, 单击出现详情页面</span></font>
+<br></p><h3 id='运行插件工具'><font color="#cc8b13" size=3 face="微软雅黑"><span>运行插件工具 </span></font><img src="./common/dev_btnTools.svg"/></h3><p><img src="./images/cap025.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　双击插件工具按钮启动插件工具</span></font>
+</p></details></p><h3 id='记录代码片段'><font color="#cc8b13" size=3 face="微软雅黑"><span>记录代码片段 </span></font><img src="./common/com_btnCode.svg"/></h3><p><img src="./images/cap026.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　新建文件夹</span></font>
+<br>
+<img src="./images/cap027.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　输入文件夹的名称</span></font>
+<br>
+<img src="./images/cap028.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　新建代码片段</span></font>
+<br>
+<img src="./images/cap029.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　输入代码片段的名称, 粘贴入代码, 填写说明, 最后点击添加按钮即可</span></font>
+<br>
+<img src="./images/cap030.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　完成代码片段的添加, 当我们需要用这段代码的时候, 选中并且在详情页的右上角点击一键拷贝即可</span></font>
+<br></p><h1 id='详细功能'><font color="#cc8b13" size=5 face="微软雅黑"><span>详细功能</span></font></h1><hr /><h2 id='工作台'><font color="#cc8b13" size=4 face="微软雅黑"><span>工作台 </span></font><img src="./common/dev_btnWorkSpace.svg"/></h2><h3 id='概述'><font color="#cc8b13" size=3 face="微软雅黑"><span>概述</span></font></h3><p><br>
+<img src="./images/cap031.png"/>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　项目区域: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>添加/修改/删除项目, 这个区域罗列出已添加的全部项目</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　工具区域: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>添加/修改/删除开发工具, 这个区域罗列出已添加的全部开发工具</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　快速启动区域: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>提供一行图标按钮, 可对各种工具进行快速启动</span></font>
+<li><font color="#aa8b13" size=3 face="微软雅黑"><span>项目区域</span></font></li>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　添加项目:</span></font>
+<br>
+<img src="./images/cap009.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　点击新项目按钮</span></font>
+<br>
+<img src="./images/cap010.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在项目列表中选择已存在的项目, 也可以浏览加入没有在列表里的项目</span></font>
+<br>
+<img src="./images/cap011.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　选择工程</span></font>
+<br>
+<img src="./images/cap012.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　添加完成, 双击可直接启动项目, 单击出现详情页面</span></font>
+<br>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　删除项目:</span></font>
+<br>
+<img src="./images/cap032.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　点击项目图标, 在出现的项目详情页点击删除项目按钮</span></font>
+<br>
+<img src="./images/cap033.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　确认是否删除项目(不会删除源项目)</span></font>
+<br>
+<br>
+<li><font color="#aa8b13" size=3 face="微软雅黑"><span>工具区域</span></font></li>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　添加开发工具:</span></font>
+<br>
+<img src="./images/cap019.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　点击新开发工具按钮</span></font>
+<br>
+<img src="./images/cap020.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在工具列表中选择已存在的工具, 也可以浏览加入没有在列表里的工具</span></font>
+<br>
+<img src="./images/cap021.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　添加完成, 双击可直接启动工具, 单击出现详情页面</span></font>
+<br>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　删除开发工具:</span></font>
+<br>
+<img src="./images/cap034.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　点击开发工具图标, 在出现的开发工具详情页点击删除按钮</span></font>
+<br>
+<img src="./images/cap035.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　确认删除是否开发工具</span></font>
+<br>
+<br>
+<li><font color="#aa8b13" size=3 face="微软雅黑"><span>快速启动区域</span></font></li>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　添加快速启动:</span></font>
+<br>
+<span>　　</span><img src="./images/cap058.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在开发工具/我的工具/全部工具的详情页面中点击添加到快捷启动</span></font>
+<br>
+<br>
+<span>　　</span><img src="./images/cap059.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　添加成功</span></font>
+<br>
+<br>
+<span>　　</span><img src="./images/cap060.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　添加完成, 点击图标可直接启动工具</span></font>
+<br>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　删除快速启动:</span></font>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　查看批量删除快速启动</span></font>
+<br></p><h3 id='项目指标'><font color="#cc8b13" size=3 face="微软雅黑"><span>项目指标 </span></font><img src="./common/dev_btnInfo.svg"/></h3><p><br>
+<span>　　</span><img src="./images/cap036.png"/>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　圈复杂度: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>是一种代码复杂度的衡量标准，圈复杂度用来衡量一个模块判定结构的复杂程度，数量上表现为线性无关的路径条数，即合理的预防错误所需测试的最少路径条数。圈复杂度大说明程序代码可能质量低且难于测试和维护，根据经验，程序的可能错误和高的圈复杂度有着很大关系。</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　嵌套深度: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>位于花括号内的语句集称为代码块或复合语句代码块具有自己的声明语句和其他语句。一个代码块又位于某个函数体或另一个代码块中，这样创建的代码块被称为嵌套代码块。嵌套深度，即有效括号内嵌套代码块的层数。</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　魔法数字: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>是指拥有特殊意义，却又不能明确表现出这种意义的数字。程序里面存在大量这种难以阅读的数字。</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　宏定义数: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>它根据一系列预定义的规则替换一定的文本模式。解释器或编译器在遇到宏时会自动进行这一模式替换。</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　违规统计: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>罗列出了当前项目静态检测, 动态检测出的各种违规统计总数。</span></font></p><p><br>
+<span>　　</span><img src="./images/cap078.png"/>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　详细信息: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>点击详细信息进入查看项目内单个文件的详细指标</span></font>
+<br>
+<span>　　</span><img src="./images/cap079.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>点击单个文件最右侧的详细指标按钮, 进入查看文件的详细信息</span></font>
+<br>
+<span>　　</span><img src="./images/cap080.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>这个展示出单个文件的指标和函数调用关系(需要完成doxygen的运行)</span></font>
+<br>
+<span>　　</span><img src="./images/cap079.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>点击类名称最右侧的详细指标按钮, 进入查看类的详细信息</span></font>
+<br>
+<span>　　</span><img src="./images/cap081.png"/>
+<br></p><h3 id='编译运行'><font color="#cc8b13" size=3 face="微软雅黑"><span>编译运行 </span></font><img src="./common/dev_btnCompile.svg"/></h3><p><br>
+<span>　　</span><img src="./images/cap038.png"/>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　打开: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>启动开发工具打开项目</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　打开文件夹: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>打开源项目所在的文件夹</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　编译: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>编译项目</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　重新编译: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>重新编译项目</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　运行: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>运行项目可执行程序</span></font></p><h3 id='静态检测'><font color="#cc8b13" size=3 face="微软雅黑"><span>静态检测 </span></font><img src="./common/dev_btnAnalyse.svg"/></h3><p><br>
+<span>　　</span><img src="./images/cap037.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>单击按钮即可启动此类型的检测</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　代码分析: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>通过词法分析、语法分析、控制流、数据流分析等技术对程序代码进行扫描，检查代码和设计的一致性，代码对标准的遵循、可读性，代码的逻辑表达的正确性，代码结构的合理性等方面。</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　编码规范: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>发现违背程序编写标准的问题，程序中不安全、不明确和模糊的部分，找出程序中不可移植部分、违背程序编程风格的问题，包括变量检查、命名和类型审查、程序逻辑审查、程序语法检查和程序结构检查等内容。</span></font></p><h3 id='动态检测'><font color="#cc8b13" size=3 face="微软雅黑"><span>动态检测 </span></font><img src="./common/dev_btnDAnalyse.svg"/></h3><p><br>
+<span>　　</span><img src="./images/cap039.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>单击按钮即可启动此类型的检测</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　内存泄露: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>指程序中已动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果。</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　代码覆盖率: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>是软件测试中的一种度量，描述程序中源代码被测试的比例和程度，所得比例称为代码覆盖率。</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　性能分析: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>不合标准的应用程序性能会产生软件或网络问题。为确保软件满足或超过设计的期望值，有必要分析应用程序的性能以发现潜在的问题。它包括检查应用程序以确保每个组件有效地工作，并根据设计密切注视处理器的使用、网络和系统服务、存储和输入/输出(I/O)。</span></font></p><h3 id='代码工具'><font color="#cc8b13" size=3 face="微软雅黑"><span>代码工具 </span></font><img src="./common/dev_btnTools.svg"/></h3><p><br>
+<span>　　</span><img src="./images/cap040.png"/>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　代码格式化: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>在源代码编辑器中输入或自动生成代码的时候，代码会按照某些方式进行格式化，这个过程就被称作格式化代码。</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　生成文档: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>程序的文件产生工具，可将程序中的特定注释转换成为说明文件。大部分有用的注释都是属于针对函数、类型等等的说明。所以，如果能依据程序本身的结构，将注释经过处理重新整理成为一个纯粹的参考手册。</span></font></p><h3 id='查看报告-2'><font color="#cc8b13" size=3 face="微软雅黑"><span>查看报告 </span></font><img src="./common/dev_btnLog.svg"/></h3><p><br>
+<img src="./images/cap041.png"/>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　编译报告: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>每次编译完成会生成一条编译报告</span></font>
+<br>
+<img src="./images/cap042.png"/>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　静态分析报告: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>通过静态分析手段检测出来的违规项，点击文件按钮即可进行编辑修改</span></font>
+<br>
+<img src="./images/cap043.png"/>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　动态分析报告: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>通过动态分析手段检测出来的违规项，点击文件按钮即可进行编辑修改</span></font>
+<img src="./images/cap043.png"/>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　根据报告改进代码: </span></font>
+<img src="./images/cap016.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在项目信息页面, 点击右上角的报告按钮, 进入详细报告页面查看检测结果</span></font>
+<br>
+<img src="./images/cap017.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　这里可以看到代码53行有一个违规警告, 点击单条违规信息的右侧编辑文件的按钮, 打开对应的源代码文件进行查看和修改</span></font>
+<br>
+<img src="./images/cap018.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　源代码文件打开以后, 自动定位到违规行, 查看违规细节描述, delete需要修改成delete[]</span></font>
+<br>
+<img src="./images/cap088.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　打开编辑器后, 根据规则对代码进行修改</span></font>
+<img src="./images/cap089.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　编辑器常用的功能介绍</span></font>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　编辑完代码进行保存, 然后我们可以再次进行检测, 确认修改的违规是否还存在或者已经解决</span></font></p><h3 id='自动化运行'><font color="#cc8b13" size=3 face="微软雅黑"><span>自动化运行 </span></font><img src="./common/dev_btnRunInOrder.svg"/></h3><p><br>
+<span>　　</span><img src="./images/cap044.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　点击项目详情页的自动化运行按钮</span></font>
+<br>
+<span>　　</span><img src="./images/cap045.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在出现的自动化详情页面可以选择需要进行的自动化运行项</span></font></p><h3 id='任务管理器'><font color="#cc8b13" size=3 face="微软雅黑"><span>任务管理器 </span></font><img src="./common/dev_btnTask.svg"/></h3><p><span>　　</span><img src="./images/cap084.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　当运行检测任务时, 这里可以实时的显示出任务的一些信息, 也可以对任务进行中止操作</span></font></p><h3 id='其他细节'><font color="#cc8b13" size=3 face="微软雅黑"><span>其他细节</span></font></h3><p><br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　批量删除项目: </span></font>
+<span>　　</span><img src="./images/cap048.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在我的工作台右上角选择多选按钮</span></font>
+<br>
+<span>　　</span><img src="./images/cap049.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　勾选我们需要删除的项目</span></font>
+<br>
+<span>　　</span><img src="./images/cap050.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　点击删除项目按钮</span></font>
+<br>
+<span>　　</span><img src="./images/cap051.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　确认是否删除</span></font>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　批量删除开发工具: </span></font>
+<span>　　</span><img src="./images/cap048.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在我的工作台右上角选择多选按钮</span></font>
+<span>　　</span><img src="./images/cap052.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　勾选我们需要删除的开发工具</span></font>
+<br>
+<span>　　</span><img src="./images/cap053.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　点击删除开发工具按钮</span></font>
+<br>
+<span>　　</span><img src="./images/cap054.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　确认是否删除</span></font>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　批量删除快速启动: </span></font>
+<span>　　</span><img src="./images/cap048.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在我的工作台右上角选择多选按钮</span></font>
+<br>
+<span>　　</span><img src="./images/cap055.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　勾选我们需要删除的快速启动</span></font>
+<br>
+<span>　　</span><img src="./images/cap056.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　点击删除快速启动按钮</span></font>
+<br>
+<span>　　</span><img src="./images/cap057.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　确认是否删除</span></font>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　修改工程图标: </span></font>
+<span>　　</span><img src="./images/cap046.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在项目详情页点击项目图标即可给项目选择新的替换图标</span></font>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　修改工程名称: </span></font>
+<span>　　</span><img src="./images/cap047.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　在项目详情页点击项目名称即可编辑当前项目名称</span></font></p><h2 id='工具箱'><font color="#cc8b13" size=4 face="微软雅黑"><span>工具箱</span></font></h2><h3 id='系统工具'><font color="#cc8b13" size=3 face="微软雅黑"><span>系统工具 </span></font><img src="./common/dev_btnTools.svg"/></h3><p><span>　　</span><img src="./images/cap061.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　可以添加系统自带的一些工具, 方便在编程过程中快速启动</span></font></p><h3 id='用户工具'><font color="#cc8b13" size=3 face="微软雅黑"><span>用户工具 </span></font><img src="./common/dev_btnTools.svg"/></h3><p><font color="#1395F9" size=3 face="微软雅黑"><span>　　可以通过浏览本地路径来添加已安装的一些工具, 方便在编程过程中快速启动</span></font></p><h3 id='插件工具'><font color="#cc8b13" size=3 face="微软雅黑"><span>插件工具 </span></font><img src="./common/dev_btnTools.svg"/></h3><p><span>　　</span><img src="./images/cap062.png"/>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　通讯工具: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>各种通讯方式的测试相关工具, 满足验证环境或者测试方面的需求, 目前包含串口测试工具/TCPIP测试工具/文件传输</span></font>
+<br>
+<span>　　</span><img src="./images/cap063.png"/>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　图形工具: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>图形处理方面的相关工具, 目前包含屏幕截图/屏幕录像/yuv播放器</span></font>
+<br>
+<span>　　</span><img src="./images/cap064.png"/>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　设计工具: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>设计处理方面的相关工具, 目前包含屏幕取色</span></font>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　转换工具: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>进制转换等相关工具</span></font>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　生成工具: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>随机密码生成, UUID生成等相关工具</span></font>
+<br>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　杂项工具: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>文字加解密/JSON工具/时间戳工具等相关工具</span></font></p><h2 id='资料袋'><font color="#cc8b13" size=4 face="微软雅黑"><span>资料袋 </span></font><img src="./common/dev_btnFileBag.svg"/></h2><p><br>
+<span>　　</span><img src="./images/cap090.png"/>
+<br>
+<font color="#1395F9" size=3 face="微软雅黑"><span>可记录平时常用的代码到资料袋, 随时查阅浏览拷贝</span></font></p><h3 id='文件夹'><font color="#cc8b13" size=3 face="微软雅黑"><span>文件夹</span></font></h3><p><img src="./images/cap026.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　新建文件夹</span></font>
+<br>
+<img src="./images/cap027.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　输入文件夹的名称</span></font>
+<br></p><h3 id='添加代码片段'><font color="#cc8b13" size=3 face="微软雅黑"><span>添加代码片段 </span></font><img src="./common/com_btnCode.svg"/></h3><p><img src="./images/cap028.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　新建代码片段</span></font>
+<br>
+<img src="./images/cap029.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　输入代码片段的名称, 粘贴入代码, 填写说明, 最后点击添加按钮即可</span></font>
+<br>
+<img src="./images/cap030.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　完成代码片段的添加, 当我们需要用这段代码的时候, 选中并且在详情页的右上角点击一键拷贝即可</span></font>
+<br></p><h3 id='修改代码片段'><font color="#cc8b13" size=3 face="微软雅黑"><span>修改代码片段 </span></font><img src="./common/com_btnCode.svg"/></h3><p><img src="./images/cap065.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　点击需要修改的代码片段, 进行内容的修改, 然后点击修改按钮进行保存</span></font>
+<br></p><h3 id='删除代码片段'><font color="#cc8b13" size=3 face="微软雅黑"><span>删除代码片段 </span></font><img src="./common/com_btnClose.svg"/></h3><p><span>　　</span><img src="./images/cap066.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　右键点击需要删除的代码片段, 在弹出菜单中选择删除</span></font>
+<br>
+<span>　　</span><img src="./images/cap067.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　确认是否删除</span></font>
+<br></p><h3 id='重命名文件夹'><font color="#cc8b13" size=3 face="微软雅黑"><span>重命名文件夹 </span></font><img src="./common/com_btnRename.svg"/></h3><p><span>　　</span><img src="./images/cap068.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　右键点击需要重命名的文件夹</span></font>
+<br>
+<span>　　</span><img src="./images/cap069.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　进入编辑状态, 修改名称</span></font>
+<br>
+<span>　　</span><img src="./images/cap070.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　修改完成</span></font>
+<br></p><h3 id='删除文件夹'><font color="#cc8b13" size=3 face="微软雅黑"><span>删除文件夹 </span></font><img src="./common/com_btnClose.svg"/></h3><p><span>　　</span><img src="./images/cap071.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　右键点击需要删除的文件夹, 在弹出菜单中选择删除</span></font>
+<br>
+<span>　　</span><img src="./images/cap072.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　确认是否删除</span></font>
+<br></p><h2 id='设置'><font color="#cc8b13" size=4 face="微软雅黑"><span>设置 </span></font><img src="./common/com_btnSettings.svg"/></h2><h3 id='多语言切换'><font color="#cc8b13" size=3 face="微软雅黑"><span>多语言切换 </span></font><img src="./common/com_btnLanguage.svg"/></h3><p><span>　　</span><img src="./images/cap082.png"/>
+<font color="#1395F9" size=3 face="微软雅黑"><span>　　目前支持的语言有中文和英文, 可随时动态切换</span></font>
+<br>
+<span>　　</span><img src="./images/cap083.png"/>
+<br></p><h3 id='设置-一般'><font color="#cc8b13" size=3 face="微软雅黑"><span>设置-一般 </span></font><img src="./common/com_btnSettings.svg"/></h3><p><span>　　</span><img src="./images/cap085.png"/>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　保存窗体位置: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>在程序退出时保存窗体的位置和大小, 下次启动后直接按保存的位置和窗体大小启动</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　智能限制CPU占用: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>任务执行时按照CPU的占用情况智能进行限制, 避免占用过高的CPU资源</span></font>
+<br></p><h3 id='设置-编译'><font color="#cc8b13" size=3 face="微软雅黑"><span>设置-编译 </span></font><img src="./common/dev_btnCompile.svg"/></h3><p><span>　　</span><img src="./images/cap086.png"/>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　QMake设置: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>当C++项目是Qt工程时, 可以添加Qt的编译套件</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　配置: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>Debug, Release, Debug&amp;Release可选</span></font>
+<br></p><h3 id='设置-分析'><font color="#cc8b13" size=3 face="微软雅黑"><span>设置-分析 </span></font><img src="./common/dev_btnAnalyse.svg"/></h3><p><span>　　</span><img src="./images/cap087.png"/>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　超时时间: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>当任务执行超时时的默认结束时间</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　选择需要启用/禁用的功能: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>这里可以启用/禁用一些我们不感兴趣的检测功能, 对自动化检测, 一键检测都起效</span></font>
+<br></p><h3 id='设置-文档'><font color="#cc8b13" size=3 face="微软雅黑"><span>设置-文档 </span></font><img src="./common/dev_btnEdit.svg"/></h3><br><h1 id='使用技巧'><font color="#cc8b13" size=5 face="微软雅黑"><span>使用技巧 </span></font><img src="./common/com_btnHelp.svg"/></h1><hr /><h1 id='常见问题'><font color="#cc8b13" size=5 face="微软雅黑"><span>常见问题 </span></font><img src="./common/com_btnHelp.svg"/></h1><hr /><h1 id='支持'><font color="#cc8b13" size=5 face="微软雅黑"><span>支持 </span></font><img src="./common/com_btnAbout.svg"/></h1><hr /><h3 id='支持内容'><font color="#cc8b13" size=3 face="微软雅黑"><span>支持内容 </span></font><img src="./common/com_btnHelp.svg"/></h3><table border="1">
+  <tbody><tr>
+    <td><font color="#aa8b13" size="3" face="微软雅黑">名称</font></td>
+    <td><font color="#1395F9" size="3" face="微软雅黑">支持</font></td>
+	<td><font color="#1395F9" size="3" face="微软雅黑">开发中</font></td>
+  </tr>
+  <tr>
+    <td><font color="#aa8b13" size="3" face="微软雅黑">支持的操作系统</font></td>
+    <td><img src="./common/windows.svg"><font color="#1395F9" size="3" face="微软雅黑"> Windows7/8/10</font></td>
+	<td valign="middle"><font color="#1395F9" size="3" face="微软雅黑"> macOS </font><img src="./common/ubuntu.svg"><font color="#1395F9" size="3" face="微软雅黑"> UOS </font></td>
+  </tr>
+  <tr>
+    <td><font color="#aa8b13" size="3" face="微软雅黑">支持的编程语言</font></td>
+    <td><img src="./common/Language_cpp.svg"></td>
+	<td><img src="./common/Language_java.svg"><img src="./common/Language_js.svg"><img src="./common/Language_csharp.svg"><img src="./common/Language_python.svg"><img src="./common/Language_go.svg"><img src="./common/Language_php.svg"><img src="./common/Language_ruby.svg"><img src="./common/Language_swift.svg"></td>
+  </tr>
+  <tr>
+    <td><font color="#aa8b13" size="3" face="微软雅黑">支持的项目类型</font></td>
+    <td><img src="./common/IDE_Qt.png" width="24px" height="24px/"><font color="#1395F9" size="3" face="微软雅黑"> Qt</font><br>
+	<img src="./common/IDE_VS2003.png" width="24px" height="24px/"><img src="./common/IDE_VS2005.png" width="24px" height="24px/"><img src="./common/IDE_VS2008.png" width="24px" height="24px/"><img src="./common/IDE_VS2010.png" width="24px" height="24px/"><img src="./common/IDE_VS2012.png" width="24px" height="24px/"><img src="./common/IDE_VS2013.png" width="24px" height="24px/"><img src="./common/IDE_VS2015.png" width="24px" height="24px/"><img src="./common/IDE_VS2017.png" width="24px" height="24px/"><img src="./common/IDE_VS2019.png" width="24px" height="24px/"><font color="#1395F9" size="3" face="微软雅黑"> VS2003-VS2019</font></td>	
+	<td><img src="./common/IDE_ECLIPSE.png" width="24px" height="24px/"><font color="#1395F9" size="3" face="微软雅黑"> Eclipse</font><br><img src="./common/IDE_IntellijIDEA.png" width="24px" height="24px/"><font color="#1395F9" size="3" face="微软雅黑"> Intellij IDEA</font></td>
+  </tr>
+</tbody></table><h1 id='服务'><font color="#000000" size=5 face="微软雅黑"><span>服务 </span></font><img src="./common/com_btnVision.svg"/></h1><hr /><p><font color="#aa8b13" size=3 face="微软雅黑"><span>　　软件开发: </span></font><font color="#000000" size=3 face="微软雅黑"><span>长期提供C++ Qt Qml全平台软件开发服务</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　定制开发: </span></font><font color="#000000" size=3 face="微软雅黑"><span>长期提供丝绸程序员工具箱定制开发服务</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　代码优化: </span></font><font color="#000000" size=3 face="微软雅黑"><span>为企业和个人提供C++/Qt/Qml代码优化服务</span></font></p><h1 id='关于我们'><font color="#cc8b13" size=5 face="微软雅黑"><span>关于我们 </span></font><img src="./common/com_btnAbout.svg"/></h1><hr /><h3 id='联系方式'><font color="#cc8b13" size=3 face="微软雅黑"><span>联系方式 </span></font><img src="./common/com_btnWriter.svg"/></h3><style type="text/css">
+a.httplink:link {color: #1395F9}
+a.httplink:hover {color: #aa8b13}
+a.httplink:visited {color: #aa8b13}
+</style>
+<table border="1">
+  <tbody><tr>
+    <td><font color="#aa8b13" size="3" face="微软雅黑">作者</font></td>
+    <td><font color="#1395F9" size="3" face="微软雅黑">郑天佐</font></td>
+  </tr>
+  <tr>
+    <td><font color="#aa8b13" size="3" face="微软雅黑">QQ</font></td>
+    <td><font color="#1395F9" size="3" face="微软雅黑">278969898</font></td>
+  </tr>
+  <tr>
+    <td><font color="#aa8b13" size="3" face="微软雅黑">邮箱</font></td>
+    <td><font color="#1395F9" size="3" face="微软雅黑">camelsoft@163.com</font></td>
+  </tr>
+  <tr>
+    <td><font color="#aa8b13" size="3" face="微软雅黑">主页</font></td>
+    <td><a class="httplink" href="http://www.camelstudio.cn">http://www.camelstudio.cn</a></td>
+  </tr>
+  <tr>
+    <td><font color="#aa8b13" size="3" face="微软雅黑">博客</font></td>
+    <td><a class="httplink" href="http://blog.csdn.net/zhengtianzuo06">http://blog.csdn.net/zhengtianzuo06</a></td>
+  </tr>
+  <tr>
+    <td><font color="#aa8b13" size="3" face="微软雅黑">github</font></td>
+    <td><a class="httplink" href="https://github.com/zhengtianzuo">https://github.com/zhengtianzuo</a></td>
+  </tr>
+  <tr>
+    <td><font color="#aa8b13" size="3" face="微软雅黑">gitee</font></td>
+    <td><a class="httplink" href="https://gitee.com/zhengtianzuo">https://gitee.com/zhengtianzuo</a></td>
+  </tr>
+  <tr>
+    <td><font color="#aa8b13" size="3" face="微软雅黑">QQ群</font></td>
+    <td><font color="#1395F9" size="3" face="微软雅黑">199672080</font></td>
+  </tr>
+</tbody></table>
+<div align="center">
+    <img src="./common/allinone.png">
+</div><br><table>
+  <tbody><tr>
+    <td align="center"><font color="#1395F9" size="3" face="微软雅黑">加QQ好友</font></td>
+    <td align="center"><font color="#1395F9" size="3" face="微软雅黑">加微信好友</font></td>
+	<td align="center"><font color="#1395F9" size="3" face="微软雅黑">扫码提问</font></td>
+	<td align="center"><font color="#1395F9" size="3" face="微软雅黑">微信打赏</font></td>
+	<td align="center"><font color="#1395F9" size="3" face="微软雅黑">支付宝打赏</font></td>
+  </tr>
+</tbody></table><h3 id='我们的愿景'><font color="#cc8b13" size=3 face="微软雅黑"><span>我们的愿景 </span></font><img src="./common/com_btnVision.svg"/></h3><p><font color="#aa8b13" size=3 face="微软雅黑"><span>　　愿景: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>程序员的超强本地构建工具</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　使命: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>创造价值，成就客户，服务行业</span></font>
+<font color="#aa8b13" size=3 face="微软雅黑"><span>　　价值观: </span></font><font color="#1395F9" size=3 face="微软雅黑"><span>挖掘功能，集大成者，精准服务</span></font></p></div></div>
+</body>
+</html>
