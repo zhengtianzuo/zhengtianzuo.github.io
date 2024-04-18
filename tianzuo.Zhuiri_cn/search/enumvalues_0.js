@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['zhuiri_5fdata_5fsign_5fheart_0',['Zhuiri_data_sign_heart',['../tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23afbd008c57c3ebda86dda34b6a2536fc4',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fdata_5fsign_5fnone_1',['Zhuiri_data_sign_none',['../tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a7158d5109fd8c53b152d9d6c53206465',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fdata_5fsign_5fprocessing_2',['Zhuiri_data_sign_processing',['../tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a45a9152847f699d645cc9627fac0db46',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fdata_5fsign_5freliable_3',['Zhuiri_data_sign_reliable',['../tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23ae1e5b117bbd148ca1e81c1301aed34d4',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fdata_5fsign_5fresponse_4',['Zhuiri_data_sign_response',['../tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a5fd1b8dbf6243842374f18e2439a6fb6',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fdata_5fstatus_5ffailed_5',['Zhuiri_data_status_failed',['../tianzuo_8_zhuiri_8h.html#a3efa1e63ecadaaa193881f889f37eb89ae4c2588d863111d941dfcc666ac0c6f5',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fdata_5fstatus_5fnone_6',['Zhuiri_data_status_none',['../tianzuo_8_zhuiri_8h.html#a3efa1e63ecadaaa193881f889f37eb89ae419040c2f7467f9092aa6b9036d0a26',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fdata_5fstatus_5fnormal_7',['Zhuiri_data_status_normal',['../tianzuo_8_zhuiri_8h.html#a3efa1e63ecadaaa193881f889f37eb89accef136f6a5f9dcc73f3d2952d5d75f2',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fdata_5fstatus_5fretrying_8',['Zhuiri_data_status_retrying',['../tianzuo_8_zhuiri_8h.html#a3efa1e63ecadaaa193881f889f37eb89a933853a49c938b24546f770796788e7e',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5ferror_5fcode_5fhandle_9',['Zhuiri_error_code_handle',['../tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba6571245cdf82989de3f1ac473391568b',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5ferror_5fcode_5fno_5frights_10',['Zhuiri_error_code_no_rights',['../tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba443b5a0b25f06651a08df53b6218a36f',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5ferror_5fcode_5fout_5fof_5fcache_11',['Zhuiri_error_code_out_of_cache',['../tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba410fe30d356f23e27eb8a7d5e7d951df',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5ferror_5fcode_5fout_5fof_5fmemory_12',['Zhuiri_error_code_out_of_memory',['../tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baf2fc9a165ab80ba01bc920f657185ebe',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5ferror_5fcode_5fsocket_13',['Zhuiri_error_code_socket',['../tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba4cf0b7c73ab9b2b96a1bb42e1a315e29',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5ferror_5fcode_5fsuccess_14',['Zhuiri_error_code_success',['../tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba1cddc134652e59aca7cbc715776fdd6a',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5ferror_5fcode_5fthread_5ferror_15',['Zhuiri_error_code_thread_error',['../tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baf3559e08e2ebbd0eb0c209937129545c',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5ferror_5fcode_5ftime_5fout_16',['Zhuiri_error_code_time_out',['../tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baa1f84fa38d59db48f61054c5e45079ec',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5ferror_5fcode_5fuser_5fexit_17',['Zhuiri_error_code_user_exit',['../tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba3d3f5478590afa26be3c5c0ca6f3b0ce',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5ferror_5fcode_5fuser_5freject_18',['Zhuiri_error_code_user_reject',['../tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba4ebf46144d72d214a6433be9d4d9b0b8',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fqueue_5ferror_5fcode_5finvalid_5fvalue_19',['Zhuiri_queue_error_code_invalid_value',['../tianzuo_8_zhuiri_8h.html#af26e4be698e127f4af885907a6f3b4baa5c6b4246238c0922374c45d990c36120',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fqueue_5ferror_5fcode_5fno_5fdata_20',['Zhuiri_queue_error_code_no_data',['../tianzuo_8_zhuiri_8h.html#af26e4be698e127f4af885907a6f3b4baa279d9ab303f91d2c4ec783155ba17ca7',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fqueue_5ferror_5fcode_5fout_5fof_5fcache_21',['Zhuiri_queue_error_code_out_of_cache',['../tianzuo_8_zhuiri_8h.html#af26e4be698e127f4af885907a6f3b4baa2af36ab0853a975175b90354f652241d',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fqueue_5ferror_5fcode_5fout_5fof_5fmemory_22',['Zhuiri_queue_error_code_out_of_memory',['../tianzuo_8_zhuiri_8h.html#af26e4be698e127f4af885907a6f3b4baa58d223cd2b59aeef915dbd641d0b639c',1,'tianzuo.Zhuiri.h']]],
+  ['zhuiri_5fqueue_5ferror_5fcode_5fsuccess_23',['Zhuiri_queue_error_code_success',['../tianzuo_8_zhuiri_8h.html#af26e4be698e127f4af885907a6f3b4baa29cb96611bcd12123d4e75278a7dbd5b',1,'tianzuo.Zhuiri.h']]]
+];

@@ -1,0 +1,2312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="tianzuo.Qiankun" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="基于抽屉式文件存储的NoSql数据库，可用于文件打包，数据整合，加密存放等多种用途。可以方便快捷的搭建和部署存储应用的系统。" />
+<meta property="og:url" content="https://github.com/zhengtianzuo/tianzuo.Qiankun" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:title" content="tianzuo.Qiankun" />
+<meta name="twitter:description" content="基于抽屉式文件存储的NoSql数据库，可用于文件打包，数据整合，加密存放等多种用途。可以方便快捷的搭建和部署存储应用的系统。" />
+<!-- END twitter metadata -->
+<title>天佐.乾坤袋: tianzuo_QiankunInt Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="tianzuo.Qiankun.ico"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/zhengtianzuo/tianzuo.Qiankun" class="github-corner" title="view sdk on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="tianzuo.Qiankun.ico"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">天佐.乾坤袋
+   &#160;<span id="projectnumber">tianzuo.Qiankun</span>
+   </div>
+   <div id="projectbrief">NoSql数据库 NoSql database</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classtianzuo___qiankun_int.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classtianzuo___qiankun_int-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">tianzuo_QiankunInt Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>乾坤袋模块类 for c++  
+ <a href="classtianzuo___qiankun_int.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="tianzuo_8_qiankun_interface_8h_source.html">tianzuo.QiankunInterface.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a7fa077ca5e02172a9282cb67e0eb4b5a" id="r_a7fa077ca5e02172a9282cb67e0eb4b5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a7fa077ca5e02172a9282cb67e0eb4b5a">tianzuo_QiankunInt</a> ()</td></tr>
+<tr class="separator:a7fa077ca5e02172a9282cb67e0eb4b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a8189937ff425834c898bd76d0ab8cc" id="r_a2a8189937ff425834c898bd76d0ab8cc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a2a8189937ff425834c898bd76d0ab8cc">~tianzuo_QiankunInt</a> ()</td></tr>
+<tr class="separator:a2a8189937ff425834c898bd76d0ab8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">initialize</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>组件初始化</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">无</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a0a37140668515bc4afe1f75cc9fc05bb" id="r_a0a37140668515bc4afe1f75cc9fc05bb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a0a37140668515bc4afe1f75cc9fc05bb">initialize</a> ()=0</td></tr>
+<tr class="separator:a0a37140668515bc4afe1f75cc9fc05bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">terminate</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>组件销毁</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">无</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a04ee3bab621a7e9f7459dadb07ce5c84" id="r_a04ee3bab621a7e9f7459dadb07ce5c84"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a04ee3bab621a7e9f7459dadb07ce5c84">terminate</a> ()=0</td></tr>
+<tr class="separator:a04ee3bab621a7e9f7459dadb07ce5c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">db_create_database</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>创建数据库</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_name</td><td>数据库名称 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">over_write</td><td>是否重写 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:aeb6af70eb67396bf7d36e4db750e8c1f" id="r_aeb6af70eb67396bf7d36e4db750e8c1f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#aeb6af70eb67396bf7d36e4db750e8c1f">db_create_database</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, const char *db_name, bool const over_write)=0</td></tr>
+<tr class="separator:aeb6af70eb67396bf7d36e4db750e8c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">db_open_database</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>打开数据库</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a6cb1c5d564cac9f9ae90d6f92c6efc62" id="r_a6cb1c5d564cac9f9ae90d6f92c6efc62"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a6cb1c5d564cac9f9ae90d6f92c6efc62">db_open_database</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify)=0</td></tr>
+<tr class="separator:a6cb1c5d564cac9f9ae90d6f92c6efc62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">db_close_database</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>关闭数据库</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a0bc0238fa948f6bcaf24072cb3862806" id="r_a0bc0238fa948f6bcaf24072cb3862806"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a0bc0238fa948f6bcaf24072cb3862806">db_close_database</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify)=0</td></tr>
+<tr class="separator:a0bc0238fa948f6bcaf24072cb3862806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">db_change_password</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>修改密码</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">new_password</td><td>新的数据库密码 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:abaf305a0f4faf936291f01f33cd4c296" id="r_abaf305a0f4faf936291f01f33cd4c296"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#abaf305a0f4faf936291f01f33cd4c296">db_change_password</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, const char *new_password)=0</td></tr>
+<tr class="separator:abaf305a0f4faf936291f01f33cd4c296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">db_get_name</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据库名称</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">db_name</td><td>数据库名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a57c005fdd89f851d35eb23993ad4988c" id="r_a57c005fdd89f851d35eb23993ad4988c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a57c005fdd89f851d35eb23993ad4988c">db_get_name</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, char *&amp;db_name)=0</td></tr>
+<tr class="separator:a57c005fdd89f851d35eb23993ad4988c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">db_get_total_number</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据库数据总数</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">file_number</td><td>数据库数据总数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:ab48a119aaa4d146871e09c2dc8622ae8" id="r_ab48a119aaa4d146871e09c2dc8622ae8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#ab48a119aaa4d146871e09c2dc8622ae8">db_get_total_number</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, int *file_number)=0</td></tr>
+<tr class="separator:ab48a119aaa4d146871e09c2dc8622ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">db_rebuild</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>重建数据库</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">new_db_file_name</td><td>新的数据库文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a9999dc26143a608790bc2a705a575276" id="r_a9999dc26143a608790bc2a705a575276"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a9999dc26143a608790bc2a705a575276">db_rebuild</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, const char *new_db_file_name)=0</td></tr>
+<tr class="separator:a9999dc26143a608790bc2a705a575276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">db_set_name</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>设置数据库名称</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_name</td><td>数据库名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a02ac4d19422984bca0175f8fd8701ff0" id="r_a02ac4d19422984bca0175f8fd8701ff0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a02ac4d19422984bca0175f8fd8701ff0">db_set_name</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, const char *db_name)=0</td></tr>
+<tr class="separator:a02ac4d19422984bca0175f8fd8701ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">db_set_total_number</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>设置数据库总数</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">add_file_number</td><td>数据库总数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:af4389da0be55550db012da2891676e65" id="r_af4389da0be55550db012da2891676e65"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#af4389da0be55550db012da2891676e65">db_set_total_number</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, int const add_file_number)=0</td></tr>
+<tr class="separator:af4389da0be55550db012da2891676e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_check</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>检测数据有效性</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:af80b24eacf8cf12363c707e26640c361" id="r_af80b24eacf8cf12363c707e26640c361"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#af80b24eacf8cf12363c707e26640c361">data_check</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type)=0</td></tr>
+<tr class="separator:af80b24eacf8cf12363c707e26640c361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_combine</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>加入数据</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">remark</td><td>数据备注 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>数据内容 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">compress</td><td>是否压缩 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_index</td><td>数据序号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:af36dc384837a430d15b4d1cb38f3f0f7" id="r_af36dc384837a430d15b4d1cb38f3f0f7"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#af36dc384837a430d15b4d1cb38f3f0f7">data_combine</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, const char *remark, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> user_data, bool const compress, int const data_index)=0</td></tr>
+<tr class="separator:af36dc384837a430d15b4d1cb38f3f0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_combine_list</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>加入数据</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name_list</td><td>数据名称列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_list</td><td>数据内容列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">compress</td><td>是否压缩 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a323b8556b9240ff325094fce93801718" id="r_a323b8556b9240ff325094fce93801718"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a323b8556b9240ff325094fce93801718">data_combine_list</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> name_list, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> data_list, bool const compress)=0</td></tr>
+<tr class="separator:a323b8556b9240ff325094fce93801718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_modify</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>修改数据</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>数据内容 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">compress</td><td>是否压缩 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">update_index</td><td>是否更新序号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a595f74d8a3b2453a339f72338c756b8a" id="r_a595f74d8a3b2453a339f72338c756b8a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a595f74d8a3b2453a339f72338c756b8a">data_modify</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> user_data, bool const compress, bool const update_index=true)=0</td></tr>
+<tr class="separator:a595f74d8a3b2453a339f72338c756b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_modify_list</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>修改数据列表</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name_list</td><td>数据名称列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_list</td><td>数据内容列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">compress</td><td>是否压缩 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:abc68792889ae98d0ae453c223d04d838" id="r_abc68792889ae98d0ae453c223d04d838"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#abc68792889ae98d0ae453c223d04d838">data_modify_list</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> name_list, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> data_list, bool const compress)=0</td></tr>
+<tr class="separator:abc68792889ae98d0ae453c223d04d838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_modify_file</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>修改文件</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">remark</td><td>数据备注 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>文件路径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">compress</td><td>是否压缩 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">update_index</td><td>是否更新序号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:ac3354548fdef8c2685fe45b3aa1dd65c" id="r_ac3354548fdef8c2685fe45b3aa1dd65c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#ac3354548fdef8c2685fe45b3aa1dd65c">data_modify_file</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, const char *remark, char *file_name, bool const compress, bool const update_index=true)=0</td></tr>
+<tr class="separator:ac3354548fdef8c2685fe45b3aa1dd65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_extract</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function</td><td>获取数据函数指针 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">get_user_data</td><td>返回数据内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a0ee590107bd7f857c05d8e781a67fc18" id="r_a0ee590107bd7f857c05d8e781a67fc18"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a0ee590107bd7f857c05d8e781a67fc18">data_extract</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a> function, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#acc99dac26d38e075e43e0c61d2d82563">Qiankun_get_user_data_pointer</a> get_user_data)=0</td></tr>
+<tr class="separator:a0ee590107bd7f857c05d8e781a67fc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_extract_list</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name_list</td><td>数据名称列表 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data_list</td><td>数据内容列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a2cfd221b5534f357630b55bebbf27a13" id="r_a2cfd221b5534f357630b55bebbf27a13"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a2cfd221b5534f357630b55bebbf27a13">data_extract_list</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> name_list, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> data_list)=0</td></tr>
+<tr class="separator:a2cfd221b5534f357630b55bebbf27a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_extract_bytes</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据流</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function</td><td>获取数据函数指针 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">get_user_data</td><td>返回数据内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a545f151b35329d9f71fa742134388856" id="r_a545f151b35329d9f71fa742134388856"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a545f151b35329d9f71fa742134388856">data_extract_bytes</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a> function, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#acc99dac26d38e075e43e0c61d2d82563">Qiankun_get_user_data_pointer</a> get_user_data)=0</td></tr>
+<tr class="separator:a545f151b35329d9f71fa742134388856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_extract_file</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取文件</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name_list</td><td>数据名称列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_list</td><td>数据内容列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">over_write</td><td>是否重写 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a4216844dad6e9a1b9d8b93d349b7093e" id="r_a4216844dad6e9a1b9d8b93d349b7093e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a4216844dad6e9a1b9d8b93d349b7093e">data_extract_file</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, char *file_name, bool const over_write)=0</td></tr>
+<tr class="separator:a4216844dad6e9a1b9d8b93d349b7093e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7cc855cf5984f23e9dc5d56d7d0d523" id="r_aa7cc855cf5984f23e9dc5d56d7d0d523"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#aa7cc855cf5984f23e9dc5d56d7d0d523">data_extract_file_list</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> name_list, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> data_list, bool const over_write)=0</td></tr>
+<tr class="separator:aa7cc855cf5984f23e9dc5d56d7d0d523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_delete</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>删除数据</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name_list</td><td>数据名称列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a95833ae8a146c4cf9f5edf259ec0b8a4" id="r_a95833ae8a146c4cf9f5edf259ec0b8a4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a95833ae8a146c4cf9f5edf259ec0b8a4">data_delete</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, bool update_index=true)=0</td></tr>
+<tr class="separator:a95833ae8a146c4cf9f5edf259ec0b8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a748a127298a222ab6d88a6030a4e9229" id="r_a748a127298a222ab6d88a6030a4e9229"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a748a127298a222ab6d88a6030a4e9229">data_delete_list</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> name_list)=0</td></tr>
+<tr class="separator:a748a127298a222ab6d88a6030a4e9229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_get_index</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取序号</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data_index_code</td><td>数据序号代码 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a87d7c51ecb4dc5c24f88ff39f2827e94" id="r_a87d7c51ecb4dc5c24f88ff39f2827e94"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a87d7c51ecb4dc5c24f88ff39f2827e94">data_get_index</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, int *data_index_code)=0</td></tr>
+<tr class="separator:a87d7c51ecb4dc5c24f88ff39f2827e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_get_index_list</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取序号列表</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function</td><td>获取数据函数指针 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">user_data</td><td>数据内容指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:ac6b6e939bb98a3d7a4775dab9ab8ee91" id="r_ac6b6e939bb98a3d7a4775dab9ab8ee91"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#ac6b6e939bb98a3d7a4775dab9ab8ee91">data_get_index_list</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a> function, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> user_data)=0</td></tr>
+<tr class="separator:ac6b6e939bb98a3d7a4775dab9ab8ee91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_set_index</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>设置序号</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">new_data_index</td><td>新的数据序号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a043d23cff3bb8e59d2a7182d437eea72" id="r_a043d23cff3bb8e59d2a7182d437eea72"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a043d23cff3bb8e59d2a7182d437eea72">data_set_index</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, int const new_data_index)=0</td></tr>
+<tr class="separator:a043d23cff3bb8e59d2a7182d437eea72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_get_name</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据名称</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name_type</td><td>名称类型 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data_name</td><td>数据名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:aa3d64b0087650bf544a7f567649300c5" id="r_aa3d64b0087650bf544a7f567649300c5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#aa3d64b0087650bf544a7f567649300c5">data_get_name</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, int const name_type, char *&amp;data_name)=0</td></tr>
+<tr class="separator:aa3d64b0087650bf544a7f567649300c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_rename</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>修改数据名称</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">new_data_name</td><td>新的数据名称 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">new_remark</td><td>新的数据备注 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a24f6dcd2c03fa91b2cae36c888d1b62b" id="r_a24f6dcd2c03fa91b2cae36c888d1b62b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a24f6dcd2c03fa91b2cae36c888d1b62b">data_rename</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, const char *new_data_name, const char *new_remark)=0</td></tr>
+<tr class="separator:a24f6dcd2c03fa91b2cae36c888d1b62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_get_name_list</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据名称列表</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name_type</td><td>名称类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function</td><td>获取数据函数指针 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">user_data</td><td>数据内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a282dde05b120c3c8fb3c292052a1cde7" id="r_a282dde05b120c3c8fb3c292052a1cde7"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a282dde05b120c3c8fb3c292052a1cde7">data_get_name_list</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, int const name_type, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a> function, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> user_data)=0</td></tr>
+<tr class="separator:a282dde05b120c3c8fb3c292052a1cde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_get_type</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据类型</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data_type_code</td><td>数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:add5bbd3b514dc0e8bca2f6db75ba39f8" id="r_add5bbd3b514dc0e8bca2f6db75ba39f8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#add5bbd3b514dc0e8bca2f6db75ba39f8">data_get_type</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, int *data_type_code)=0</td></tr>
+<tr class="separator:add5bbd3b514dc0e8bca2f6db75ba39f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_get_type_list</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据类型列表</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function</td><td>获取数据函数指针 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">user_data</td><td>数据内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:aefeed432f076f23ecf83db14a5608f5a" id="r_aefeed432f076f23ecf83db14a5608f5a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#aefeed432f076f23ecf83db14a5608f5a">data_get_type_list</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a> function, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> user_data)=0</td></tr>
+<tr class="separator:aefeed432f076f23ecf83db14a5608f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_get_type_total_number</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据类型总数</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type_code</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data_type_total_number</td><td>数据类型总数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:abd9c49250f8107d614066d7abc50c73f" id="r_abd9c49250f8107d614066d7abc50c73f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#abd9c49250f8107d614066d7abc50c73f">data_get_type_total_number</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, int const data_type_code, int *data_type_total_number)=0</td></tr>
+<tr class="separator:abd9c49250f8107d614066d7abc50c73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_get_type_total_number_list</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据类型总数列表</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function</td><td>获取数据函数指针 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">user_data</td><td>数据内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a8523e98ba326644032511d1b5f1868d5" id="r_a8523e98ba326644032511d1b5f1868d5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a8523e98ba326644032511d1b5f1868d5">data_get_type_total_number_list</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a> function, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> user_data)=0</td></tr>
+<tr class="separator:a8523e98ba326644032511d1b5f1868d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_get_size</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据大小</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size_type</td><td>数据大小类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_type</td><td>数据类型 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data_size</td><td>数据大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a76ce19d4c8ac2cbd819c8fa7ae743bcd" id="r_a76ce19d4c8ac2cbd819c8fa7ae743bcd"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a76ce19d4c8ac2cbd819c8fa7ae743bcd">data_get_size</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, int const size_type, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a> data_type, int *data_size)=0</td></tr>
+<tr class="separator:a76ce19d4c8ac2cbd819c8fa7ae743bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">data_get_size_list</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>获取数据大小列表</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">db_verify</td><td>验证信息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size_type</td><td>数据大小类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function</td><td>获取数据函数指针 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">user_data</td><td>数据内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>郑天佐 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-4-3 </dd></dl>
+</div></td></tr>
+<tr class="memitem:a209af2a08ddd85ba285a258f1929dd32" id="r_a209af2a08ddd85ba285a258f1929dd32"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtianzuo___qiankun_int.html#a209af2a08ddd85ba285a258f1929dd32">data_get_size_list</a> (<a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a> db_verify, int const size_type, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a> function, <a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a> user_data)=0</td></tr>
+<tr class="separator:a209af2a08ddd85ba285a258f1929dd32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>乾坤袋模块类 for c++ </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7fa077ca5e02172a9282cb67e0eb4b5a" name="a7fa077ca5e02172a9282cb67e0eb4b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fa077ca5e02172a9282cb67e0eb4b5a">&#9670;&#160;</a></span>tianzuo_QiankunInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tianzuo_QiankunInt::tianzuo_QiankunInt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a8189937ff425834c898bd76d0ab8cc" name="a2a8189937ff425834c898bd76d0ab8cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a8189937ff425834c898bd76d0ab8cc">&#9670;&#160;</a></span>~tianzuo_QiankunInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual tianzuo_QiankunInt::~tianzuo_QiankunInt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af80b24eacf8cf12363c707e26640c361" name="af80b24eacf8cf12363c707e26640c361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80b24eacf8cf12363c707e26640c361">&#9670;&#160;</a></span>data_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_check </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af36dc384837a430d15b4d1cb38f3f0f7" name="af36dc384837a430d15b4d1cb38f3f0f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af36dc384837a430d15b4d1cb38f3f0f7">&#9670;&#160;</a></span>data_combine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_combine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>remark</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>user_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool const&#160;</td>
+          <td class="paramname"><em>compress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int const&#160;</td>
+          <td class="paramname"><em>data_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a323b8556b9240ff325094fce93801718" name="a323b8556b9240ff325094fce93801718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a323b8556b9240ff325094fce93801718">&#9670;&#160;</a></span>data_combine_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_combine_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>name_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool const&#160;</td>
+          <td class="paramname"><em>compress</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95833ae8a146c4cf9f5edf259ec0b8a4" name="a95833ae8a146c4cf9f5edf259ec0b8a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95833ae8a146c4cf9f5edf259ec0b8a4">&#9670;&#160;</a></span>data_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>update_index</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a748a127298a222ab6d88a6030a4e9229" name="a748a127298a222ab6d88a6030a4e9229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a748a127298a222ab6d88a6030a4e9229">&#9670;&#160;</a></span>data_delete_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_delete_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>name_list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ee590107bd7f857c05d8e781a67fc18" name="a0ee590107bd7f857c05d8e781a67fc18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ee590107bd7f857c05d8e781a67fc18">&#9670;&#160;</a></span>data_extract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_extract </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a>&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#acc99dac26d38e075e43e0c61d2d82563">Qiankun_get_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>get_user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a545f151b35329d9f71fa742134388856" name="a545f151b35329d9f71fa742134388856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a545f151b35329d9f71fa742134388856">&#9670;&#160;</a></span>data_extract_bytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_extract_bytes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a>&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#acc99dac26d38e075e43e0c61d2d82563">Qiankun_get_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>get_user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4216844dad6e9a1b9d8b93d349b7093e" name="a4216844dad6e9a1b9d8b93d349b7093e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4216844dad6e9a1b9d8b93d349b7093e">&#9670;&#160;</a></span>data_extract_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_extract_file </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool const&#160;</td>
+          <td class="paramname"><em>over_write</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7cc855cf5984f23e9dc5d56d7d0d523" name="aa7cc855cf5984f23e9dc5d56d7d0d523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7cc855cf5984f23e9dc5d56d7d0d523">&#9670;&#160;</a></span>data_extract_file_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_extract_file_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>name_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool const&#160;</td>
+          <td class="paramname"><em>over_write</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cfd221b5534f357630b55bebbf27a13" name="a2cfd221b5534f357630b55bebbf27a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cfd221b5534f357630b55bebbf27a13">&#9670;&#160;</a></span>data_extract_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_extract_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>name_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87d7c51ecb4dc5c24f88ff39f2827e94" name="a87d7c51ecb4dc5c24f88ff39f2827e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87d7c51ecb4dc5c24f88ff39f2827e94">&#9670;&#160;</a></span>data_get_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_get_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>data_index_code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6b6e939bb98a3d7a4775dab9ab8ee91" name="ac6b6e939bb98a3d7a4775dab9ab8ee91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b6e939bb98a3d7a4775dab9ab8ee91">&#9670;&#160;</a></span>data_get_index_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_get_index_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a>&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3d64b0087650bf544a7f567649300c5" name="aa3d64b0087650bf544a7f567649300c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3d64b0087650bf544a7f567649300c5">&#9670;&#160;</a></span>data_get_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_get_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int const&#160;</td>
+          <td class="paramname"><em>name_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&amp;&#160;</td>
+          <td class="paramname"><em>data_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a282dde05b120c3c8fb3c292052a1cde7" name="a282dde05b120c3c8fb3c292052a1cde7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a282dde05b120c3c8fb3c292052a1cde7">&#9670;&#160;</a></span>data_get_name_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_get_name_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int const&#160;</td>
+          <td class="paramname"><em>name_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a>&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76ce19d4c8ac2cbd819c8fa7ae743bcd" name="a76ce19d4c8ac2cbd819c8fa7ae743bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ce19d4c8ac2cbd819c8fa7ae743bcd">&#9670;&#160;</a></span>data_get_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_get_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int const&#160;</td>
+          <td class="paramname"><em>size_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>data_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a209af2a08ddd85ba285a258f1929dd32" name="a209af2a08ddd85ba285a258f1929dd32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a209af2a08ddd85ba285a258f1929dd32">&#9670;&#160;</a></span>data_get_size_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_get_size_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int const&#160;</td>
+          <td class="paramname"><em>size_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a>&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add5bbd3b514dc0e8bca2f6db75ba39f8" name="add5bbd3b514dc0e8bca2f6db75ba39f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add5bbd3b514dc0e8bca2f6db75ba39f8">&#9670;&#160;</a></span>data_get_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_get_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>data_type_code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefeed432f076f23ecf83db14a5608f5a" name="aefeed432f076f23ecf83db14a5608f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefeed432f076f23ecf83db14a5608f5a">&#9670;&#160;</a></span>data_get_type_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_get_type_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a>&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd9c49250f8107d614066d7abc50c73f" name="abd9c49250f8107d614066d7abc50c73f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd9c49250f8107d614066d7abc50c73f">&#9670;&#160;</a></span>data_get_type_total_number()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_get_type_total_number </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int const&#160;</td>
+          <td class="paramname"><em>data_type_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>data_type_total_number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8523e98ba326644032511d1b5f1868d5" name="a8523e98ba326644032511d1b5f1868d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8523e98ba326644032511d1b5f1868d5">&#9670;&#160;</a></span>data_get_type_total_number_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_get_type_total_number_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a7941be84dc63f3202b0c86060ac48282">Qiankun_function_pointer</a>&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a595f74d8a3b2453a339f72338c756b8a" name="a595f74d8a3b2453a339f72338c756b8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a595f74d8a3b2453a339f72338c756b8a">&#9670;&#160;</a></span>data_modify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_modify </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>user_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool const&#160;</td>
+          <td class="paramname"><em>compress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool const&#160;</td>
+          <td class="paramname"><em>update_index</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3354548fdef8c2685fe45b3aa1dd65c" name="ac3354548fdef8c2685fe45b3aa1dd65c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3354548fdef8c2685fe45b3aa1dd65c">&#9670;&#160;</a></span>data_modify_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_modify_file </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>remark</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool const&#160;</td>
+          <td class="paramname"><em>compress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool const&#160;</td>
+          <td class="paramname"><em>update_index</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc68792889ae98d0ae453c223d04d838" name="abc68792889ae98d0ae453c223d04d838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc68792889ae98d0ae453c223d04d838">&#9670;&#160;</a></span>data_modify_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_modify_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>name_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#aa773e023aee2337ba9d02e55231db473">Qiankun_user_data_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool const&#160;</td>
+          <td class="paramname"><em>compress</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24f6dcd2c03fa91b2cae36c888d1b62b" name="a24f6dcd2c03fa91b2cae36c888d1b62b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24f6dcd2c03fa91b2cae36c888d1b62b">&#9670;&#160;</a></span>data_rename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_rename </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>new_data_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>new_remark</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a043d23cff3bb8e59d2a7182d437eea72" name="a043d23cff3bb8e59d2a7182d437eea72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a043d23cff3bb8e59d2a7182d437eea72">&#9670;&#160;</a></span>data_set_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::data_set_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#ad3d5f0f7a6cc0688f2bfc931a284a649">Qiankun_data_type_pointer</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int const&#160;</td>
+          <td class="paramname"><em>new_data_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abaf305a0f4faf936291f01f33cd4c296" name="abaf305a0f4faf936291f01f33cd4c296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf305a0f4faf936291f01f33cd4c296">&#9670;&#160;</a></span>db_change_password()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::db_change_password </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>new_password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bc0238fa948f6bcaf24072cb3862806" name="a0bc0238fa948f6bcaf24072cb3862806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc0238fa948f6bcaf24072cb3862806">&#9670;&#160;</a></span>db_close_database()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::db_close_database </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb6af70eb67396bf7d36e4db750e8c1f" name="aeb6af70eb67396bf7d36e4db750e8c1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb6af70eb67396bf7d36e4db750e8c1f">&#9670;&#160;</a></span>db_create_database()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::db_create_database </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>db_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool const&#160;</td>
+          <td class="paramname"><em>over_write</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57c005fdd89f851d35eb23993ad4988c" name="a57c005fdd89f851d35eb23993ad4988c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c005fdd89f851d35eb23993ad4988c">&#9670;&#160;</a></span>db_get_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::db_get_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&amp;&#160;</td>
+          <td class="paramname"><em>db_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab48a119aaa4d146871e09c2dc8622ae8" name="ab48a119aaa4d146871e09c2dc8622ae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48a119aaa4d146871e09c2dc8622ae8">&#9670;&#160;</a></span>db_get_total_number()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::db_get_total_number </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>file_number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cb1c5d564cac9f9ae90d6f92c6efc62" name="a6cb1c5d564cac9f9ae90d6f92c6efc62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb1c5d564cac9f9ae90d6f92c6efc62">&#9670;&#160;</a></span>db_open_database()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::db_open_database </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9999dc26143a608790bc2a705a575276" name="a9999dc26143a608790bc2a705a575276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9999dc26143a608790bc2a705a575276">&#9670;&#160;</a></span>db_rebuild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::db_rebuild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>new_db_file_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02ac4d19422984bca0175f8fd8701ff0" name="a02ac4d19422984bca0175f8fd8701ff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02ac4d19422984bca0175f8fd8701ff0">&#9670;&#160;</a></span>db_set_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::db_set_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>db_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4389da0be55550db012da2891676e65" name="af4389da0be55550db012da2891676e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4389da0be55550db012da2891676e65">&#9670;&#160;</a></span>db_set_total_number()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::db_set_total_number </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tianzuo_8_qiankun_interface_8h.html#a5afad8ccb437486500309acc9c59eb6c">Qiankun_db_verify_pointer</a>&#160;</td>
+          <td class="paramname"><em>db_verify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int const&#160;</td>
+          <td class="paramname"><em>add_file_number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a37140668515bc4afe1f75cc9fc05bb" name="a0a37140668515bc4afe1f75cc9fc05bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a37140668515bc4afe1f75cc9fc05bb">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04ee3bab621a7e9f7459dadb07ce5c84" name="a04ee3bab621a7e9f7459dadb07ce5c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ee3bab621a7e9f7459dadb07ce5c84">&#9670;&#160;</a></span>terminate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int tianzuo_QiankunInt::terminate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/<a class="el" href="tianzuo_8_qiankun_interface_8h_source.html">tianzuo.QiankunInterface.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classtianzuo___qiankun_int.html">tianzuo_QiankunInt</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="tianzuo.Qiankun" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="基于抽屉式文件存储的NoSql数据库，可用于文件打包，数据整合，加密存放等多种用途。可以方便快捷的搭建和部署存储应用的系统。" />
+<meta property="og:url" content="https://github.com/zhengtianzuo/tianzuo.Qiankun" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:title" content="tianzuo.Qiankun" />
+<meta name="twitter:description" content="基于抽屉式文件存储的NoSql数据库，可用于文件打包，数据整合，加密存放等多种用途。可以方便快捷的搭建和部署存储应用的系统。" />
+<!-- END twitter metadata -->
+<title>天佐.乾坤袋: include/tianzuo.Qiankun.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="tianzuo.Qiankun.ico"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/zhengtianzuo/tianzuo.Qiankun" class="github-corner" title="view sdk on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="tianzuo.Qiankun.ico"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">天佐.乾坤袋
+   &#160;<span id="projectnumber">tianzuo.Qiankun</span>
+   </div>
+   <div id="projectbrief">NoSql数据库 NoSql database</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('tianzuo_8_qiankun_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">tianzuo.Qiankun.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for tianzuo.Qiankun.h:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tianzuo_8_qiankun_8h__incl.svg" width="384" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tianzuo_8_qiankun_8h__dep__incl.svg" width="231" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<p><a href="tianzuo_8_qiankun_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_qiankun__command.html">Qiankun_command</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据回调命令  <a href="struct_qiankun__command.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a3f52a5b16558738d36bac857c02ff902" id="r_a3f52a5b16558738d36bac857c02ff902"><td class="memItemLeft" align="right" valign="top">typedef unsigned(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tianzuo_8_qiankun_8h.html#a3f52a5b16558738d36bac857c02ff902">Qiankun_callback_data</a>) (int m_function, void *context, void *user_data, int user_size, void *return_data, int return_size)</td></tr>
+<tr class="memdesc:a3f52a5b16558738d36bac857c02ff902"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据回调函数  <br /></td></tr>
+<tr class="separator:a3f52a5b16558738d36bac857c02ff902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849a5728a98972a31d40728fa60e4b77" id="r_a849a5728a98972a31d40728fa60e4b77"><td class="memItemLeft" align="right" valign="top">typedef unsigned(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tianzuo_8_qiankun_8h.html#a849a5728a98972a31d40728fa60e4b77">Qiankun_callback_bytes</a>) (int m_function, void *context, void *&amp;user_data, int *user_size, void *return_data, int return_size)</td></tr>
+<tr class="separator:a849a5728a98972a31d40728fa60e4b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31234210cb159c102a02fb30b6bcc67c" id="r_a31234210cb159c102a02fb30b6bcc67c"><td class="memItemLeft" align="right" valign="top">typedef void()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tianzuo_8_qiankun_8h.html#a31234210cb159c102a02fb30b6bcc67c">Qiankun_callback</a>(void *&amp;, void *)</td></tr>
+<tr class="separator:a31234210cb159c102a02fb30b6bcc67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af191dda53956ffb63bb2b87cdcf24a8d" id="r_af191dda53956ffb63bb2b87cdcf24a8d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_qiankun__command.html">Qiankun_command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tianzuo_8_qiankun_8h.html#af191dda53956ffb63bb2b87cdcf24a8d">Qiankun_command_struct</a></td></tr>
+<tr class="separator:af191dda53956ffb63bb2b87cdcf24a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf95e912d38f26891f11f406e8888ed6" id="r_adf95e912d38f26891f11f406e8888ed6"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_qiankun__command.html">Qiankun_command</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tianzuo_8_qiankun_8h.html#adf95e912d38f26891f11f406e8888ed6">Qiankun_command_pointer</a></td></tr>
+<tr class="separator:adf95e912d38f26891f11f406e8888ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:aa7c8345b49183f1bf4a3de827d7422a7" id="r_aa7c8345b49183f1bf4a3de827d7422a7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tianzuo_8_qiankun_8h.html#aa7c8345b49183f1bf4a3de827d7422a7">Qiankun_data_operation</a> { <br />
+&#160;&#160;<a class="el" href="tianzuo_8_qiankun_8h.html#aa7c8345b49183f1bf4a3de827d7422a7a8d4dda5f59a891d9b50a4c9d6faff949">Qiankun_get_index_list</a> = 0x00000101
+, <a class="el" href="tianzuo_8_qiankun_8h.html#aa7c8345b49183f1bf4a3de827d7422a7ac489314d63c0a14d70a2e649ea55fca8">Qiankun_get_type_list</a> = 0x00000102
+, <a class="el" href="tianzuo_8_qiankun_8h.html#aa7c8345b49183f1bf4a3de827d7422a7acebb209d8b98b78afba39ffe8fe96cfa">Qiankun_get_type_total_number_list</a> = 0x00000103
+, <a class="el" href="tianzuo_8_qiankun_8h.html#aa7c8345b49183f1bf4a3de827d7422a7a67aabf3002e704ba60a24a19232a747b">Qiankun_get_name_list</a> = 0x00000104
+, <br />
+&#160;&#160;<a class="el" href="tianzuo_8_qiankun_8h.html#aa7c8345b49183f1bf4a3de827d7422a7ab71aba65a0f044a56b2187d0c7ff8aaf">Qiankun_get_size_list</a> = 0x00000105
+<br />
+ }</td></tr>
+<tr class="separator:aa7c8345b49183f1bf4a3de827d7422a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3066d7fb736b23b5889e2adf2529d462" id="r_a3066d7fb736b23b5889e2adf2529d462"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462">Qiankun_data_type</a> { <br />
+&#160;&#160;<a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462a2c6fcc06a9d7bb3de2c69cb3fe349221">Qiankun_data_type_short</a> = 0x00000001
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462a36191d41cbaacabffaf05dac0eae429a">Qiankun_data_type_integer</a> = 0x00000002
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462abaf88c9996bc2421aa046ac471ff7912">Qiankun_data_type_float</a> = 0x00000003
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462aacd3bc7528558b39516fdcf124a0531c">Qiankun_data_type_double</a> = 0x00000004
+, <br />
+&#160;&#160;<a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462a72a51c1b123123ce9b505833130b8267">Qiankun_data_type_currency</a> = 0x00000005
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462abe746ae9ba1d07340a2fcaa3c180c631">Qiankun_data_type_date</a> = 0x00000006
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462a7d74c078e4ebd622fda5ae9790045353">Qiankun_data_type_string</a> = 0x00000007
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462a05c7c9c5ebef694edc5ec2ad84de4d28">Qiankun_data_type_file</a> = 0x00000008
+, <br />
+&#160;&#160;<a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462a8cb2a03fb72089de51727f99811e48a2">Qiankun_data_type_byte_array</a> = 0x0000000A
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462a855c1dd2245d511ad4388b2c70427e70">Qiankun_data_type_short_array</a> = 0x0000000B
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462a951f9f3cc3967eed4e5bdd571f96484d">Qiankun_data_type_integer_array</a> = 0x0000000C
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462a9540dc25d0a16bf3ba9dad43d90f38e7">Qiankun_data_type_float_array</a> = 0x0000000D
+, <br />
+&#160;&#160;<a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462ae6cc8846f6f2e964e44ce40d46b51f08">Qiankun_data_type_double_array</a> = 0x0000000E
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462a5e0482fbc9ff7b3a3dce45639bef9bb5">Qiankun_data_type_currency_array</a> = 0x0000000F
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462a65e1e87dfa4a10c44474e492b24a6e1a">Qiankun_data_type_date_array</a> = 0x00000010
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462aac9fc1722b67b04d09a8124b87114a23">Qiankun_data_type_string_array</a> = 0x00000011
+<br />
+ }</td></tr>
+<tr class="separator:a3066d7fb736b23b5889e2adf2529d462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a103b0ed00c6444e3cc3f443864376b49" id="r_a103b0ed00c6444e3cc3f443864376b49"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tianzuo_8_qiankun_8h.html#a103b0ed00c6444e3cc3f443864376b49">Qiankun_name_type</a> { <a class="el" href="tianzuo_8_qiankun_8h.html#a103b0ed00c6444e3cc3f443864376b49a7fe83b8556786a5af5e9aaa97473dd40">Qiankun_name_type_name</a> = 0x00000001
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a103b0ed00c6444e3cc3f443864376b49a93cd0d78450ba0b5898aa96a0deddc17">Qiankun_name_type_remark</a> = 0x00000002
+ }</td></tr>
+<tr class="separator:a103b0ed00c6444e3cc3f443864376b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7b0f495602793341ace13e788aff706" id="r_ae7b0f495602793341ace13e788aff706"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tianzuo_8_qiankun_8h.html#ae7b0f495602793341ace13e788aff706">Qiankun_size_type</a> { <a class="el" href="tianzuo_8_qiankun_8h.html#ae7b0f495602793341ace13e788aff706a951feb2ca413b4daa512ee2a6e644fd7">Qiankun_size_type_data_all_size</a> = 0x00000001
+, <a class="el" href="tianzuo_8_qiankun_8h.html#ae7b0f495602793341ace13e788aff706a827996c4024ee51e5382056185df4e8d">Qiankun_size_type_data_delete_size</a> = 0x00000002
+, <a class="el" href="tianzuo_8_qiankun_8h.html#ae7b0f495602793341ace13e788aff706afa6bc023e4c840a1f65fc5b1b8543d2e">Qiankun_size_type_data_size</a> = 0x00000003
+ }</td></tr>
+<tr class="separator:ae7b0f495602793341ace13e788aff706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3309cdf05bd56e3dfd38a958001803d7" id="r_a3309cdf05bd56e3dfd38a958001803d7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7">Qiankun_error_code</a> { <br />
+&#160;&#160;<a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7abf8315c040923257f6c55720fdd6b091">Qiankun_errorcode_success</a> = 0x00000001
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7ae4ecae994aebf210c2e58e05192c66ed">Qiankun_errorcode_normal</a> = 0x00000002
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7af4af2a89ff840a0c044b82e744043f84">Qiankun_errorcode_differ</a> = 0x00000003
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7a9a09ae3aac19ee018c77f9c3b0f9d1b0">Qiankun_errorcode_no_rights</a> = 0x00000004
+, <br />
+&#160;&#160;<a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7a6465531a69cdd291bdc216f5c183eeac">Qiankun_errorcode_db_not_exist</a> = 0x00000005
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7aeb5def2fd068b2d462b5807c0be44ab4">Qiankun_errorcode_exist</a> = 0x00000006
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7a77ae468fdf80a766766624813f2e7453">Qiankun_errorcode_not_exist</a> = 0x00000007
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7afa25f0a03f97c1098bcd7f0b8314a92a">Qiankun_errorcode_out_of_range</a> = 0x00000008
+, <br />
+&#160;&#160;<a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7aae44d7527ef134d993db7a623cfa7fd2">Qiankun_errorcode_type</a> = 0x00000009
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7a97fde6d3a06aabe4392950142a9c52e4">Qiankun_errorcode_param</a> = 0x0000000A
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7a77a83983817f1f956368aa82516bec2b">Qiankun_errorcode_compress</a> = 0x0000000B
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7a523f62589da3aa1bf6f484e996aee702">Qiankun_errorcode_get_array</a> = 0x0000000C
+, <br />
+&#160;&#160;<a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7a726f7435283d7d06054fd689f5371899">Qiankun_errorcode_out_of_memory</a> = 0x0000000D
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7a3d36d463c402b5f8cc9da2127b2f3935">Qiankun_errorcode_handle</a> = 0x0000000E
+, <a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7a21594cac592ab73f4f2e845aba3c4627">Qiankun_errorcode_io</a> = 0x0000000F
+<br />
+ }</td></tr>
+<tr class="separator:a3309cdf05bd56e3dfd38a958001803d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6328e16474ab04a180229afc2c7aafef" id="r_a6328e16474ab04a180229afc2c7aafef"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tianzuo_8_qiankun_8h.html#a6328e16474ab04a180229afc2c7aafef">Qiankun_file_name_size</a> = 48</td></tr>
+<tr class="memdesc:a6328e16474ab04a180229afc2c7aafef"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件名长度 (Filename length)  <br /></td></tr>
+<tr class="separator:a6328e16474ab04a180229afc2c7aafef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a31234210cb159c102a02fb30b6bcc67c" name="a31234210cb159c102a02fb30b6bcc67c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31234210cb159c102a02fb30b6bcc67c">&#9670;&#160;</a></span>Qiankun_callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void() Qiankun_callback(void *&amp;, void *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a849a5728a98972a31d40728fa60e4b77" name="a849a5728a98972a31d40728fa60e4b77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a849a5728a98972a31d40728fa60e4b77">&#9670;&#160;</a></span>Qiankun_callback_bytes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned(* Qiankun_callback_bytes) (int m_function, void *context, void *&amp;user_data, int *user_size, void *return_data, int return_size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f52a5b16558738d36bac857c02ff902" name="a3f52a5b16558738d36bac857c02ff902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f52a5b16558738d36bac857c02ff902">&#9670;&#160;</a></span>Qiankun_callback_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned(* Qiankun_callback_data) (int m_function, void *context, void *user_data, int user_size, void *return_data, int return_size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>数据回调函数 </p>
+<p>data_callback_function </p>
+
+</div>
+</div>
+<a id="adf95e912d38f26891f11f406e8888ed6" name="adf95e912d38f26891f11f406e8888ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf95e912d38f26891f11f406e8888ed6">&#9670;&#160;</a></span>Qiankun_command_pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_qiankun__command.html">Qiankun_command</a> * <a class="el" href="tianzuo_8_qiankun_8h.html#adf95e912d38f26891f11f406e8888ed6">Qiankun_command_pointer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af191dda53956ffb63bb2b87cdcf24a8d" name="af191dda53956ffb63bb2b87cdcf24a8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af191dda53956ffb63bb2b87cdcf24a8d">&#9670;&#160;</a></span>Qiankun_command_struct</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_qiankun__command.html">Qiankun_command</a> <a class="el" href="tianzuo_8_qiankun_8h.html#af191dda53956ffb63bb2b87cdcf24a8d">Qiankun_command_struct</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="aa7c8345b49183f1bf4a3de827d7422a7" name="aa7c8345b49183f1bf4a3de827d7422a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7c8345b49183f1bf4a3de827d7422a7">&#9670;&#160;</a></span>Qiankun_data_operation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="tianzuo_8_qiankun_8h.html#aa7c8345b49183f1bf4a3de827d7422a7">Qiankun_data_operation</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa7c8345b49183f1bf4a3de827d7422a7a8d4dda5f59a891d9b50a4c9d6faff949" name="aa7c8345b49183f1bf4a3de827d7422a7a8d4dda5f59a891d9b50a4c9d6faff949"></a>Qiankun_get_index_list&#160;</td><td class="fielddoc"><p>获取数据序号列表 (Gets a list of data ordinals) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7c8345b49183f1bf4a3de827d7422a7ac489314d63c0a14d70a2e649ea55fca8" name="aa7c8345b49183f1bf4a3de827d7422a7ac489314d63c0a14d70a2e649ea55fca8"></a>Qiankun_get_type_list&#160;</td><td class="fielddoc"><p>获取数据类型列表 (Gets a list of data types) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7c8345b49183f1bf4a3de827d7422a7acebb209d8b98b78afba39ffe8fe96cfa" name="aa7c8345b49183f1bf4a3de827d7422a7acebb209d8b98b78afba39ffe8fe96cfa"></a>Qiankun_get_type_total_number_list&#160;</td><td class="fielddoc"><p>获取数据各类型总数列表 (Gets a list of total types of data) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7c8345b49183f1bf4a3de827d7422a7a67aabf3002e704ba60a24a19232a747b" name="aa7c8345b49183f1bf4a3de827d7422a7a67aabf3002e704ba60a24a19232a747b"></a>Qiankun_get_name_list&#160;</td><td class="fielddoc"><p>获取数据名称列表 (Gets a list of data names) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7c8345b49183f1bf4a3de827d7422a7ab71aba65a0f044a56b2187d0c7ff8aaf" name="aa7c8345b49183f1bf4a3de827d7422a7ab71aba65a0f044a56b2187d0c7ff8aaf"></a>Qiankun_get_size_list&#160;</td><td class="fielddoc"><p>获取数据大小列表 (Gets a list of data sizes) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a3066d7fb736b23b5889e2adf2529d462" name="a3066d7fb736b23b5889e2adf2529d462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3066d7fb736b23b5889e2adf2529d462">&#9670;&#160;</a></span>Qiankun_data_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="tianzuo_8_qiankun_8h.html#a3066d7fb736b23b5889e2adf2529d462">Qiankun_data_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462a2c6fcc06a9d7bb3de2c69cb3fe349221" name="a3066d7fb736b23b5889e2adf2529d462a2c6fcc06a9d7bb3de2c69cb3fe349221"></a>Qiankun_data_type_short&#160;</td><td class="fielddoc"><p>短整型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462a36191d41cbaacabffaf05dac0eae429a" name="a3066d7fb736b23b5889e2adf2529d462a36191d41cbaacabffaf05dac0eae429a"></a>Qiankun_data_type_integer&#160;</td><td class="fielddoc"><p>整型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462abaf88c9996bc2421aa046ac471ff7912" name="a3066d7fb736b23b5889e2adf2529d462abaf88c9996bc2421aa046ac471ff7912"></a>Qiankun_data_type_float&#160;</td><td class="fielddoc"><p>单精度浮点型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462aacd3bc7528558b39516fdcf124a0531c" name="a3066d7fb736b23b5889e2adf2529d462aacd3bc7528558b39516fdcf124a0531c"></a>Qiankun_data_type_double&#160;</td><td class="fielddoc"><p>双精度浮点型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462a72a51c1b123123ce9b505833130b8267" name="a3066d7fb736b23b5889e2adf2529d462a72a51c1b123123ce9b505833130b8267"></a>Qiankun_data_type_currency&#160;</td><td class="fielddoc"><p>货币型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462abe746ae9ba1d07340a2fcaa3c180c631" name="a3066d7fb736b23b5889e2adf2529d462abe746ae9ba1d07340a2fcaa3c180c631"></a>Qiankun_data_type_date&#160;</td><td class="fielddoc"><p>日期型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462a7d74c078e4ebd622fda5ae9790045353" name="a3066d7fb736b23b5889e2adf2529d462a7d74c078e4ebd622fda5ae9790045353"></a>Qiankun_data_type_string&#160;</td><td class="fielddoc"><p>字符串型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462a05c7c9c5ebef694edc5ec2ad84de4d28" name="a3066d7fb736b23b5889e2adf2529d462a05c7c9c5ebef694edc5ec2ad84de4d28"></a>Qiankun_data_type_file&#160;</td><td class="fielddoc"><p>文件型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462a8cb2a03fb72089de51727f99811e48a2" name="a3066d7fb736b23b5889e2adf2529d462a8cb2a03fb72089de51727f99811e48a2"></a>Qiankun_data_type_byte_array&#160;</td><td class="fielddoc"><p>字节数组 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462a855c1dd2245d511ad4388b2c70427e70" name="a3066d7fb736b23b5889e2adf2529d462a855c1dd2245d511ad4388b2c70427e70"></a>Qiankun_data_type_short_array&#160;</td><td class="fielddoc"><p>短整型数组 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462a951f9f3cc3967eed4e5bdd571f96484d" name="a3066d7fb736b23b5889e2adf2529d462a951f9f3cc3967eed4e5bdd571f96484d"></a>Qiankun_data_type_integer_array&#160;</td><td class="fielddoc"><p>整型数组 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462a9540dc25d0a16bf3ba9dad43d90f38e7" name="a3066d7fb736b23b5889e2adf2529d462a9540dc25d0a16bf3ba9dad43d90f38e7"></a>Qiankun_data_type_float_array&#160;</td><td class="fielddoc"><p>单精度浮点型数组 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462ae6cc8846f6f2e964e44ce40d46b51f08" name="a3066d7fb736b23b5889e2adf2529d462ae6cc8846f6f2e964e44ce40d46b51f08"></a>Qiankun_data_type_double_array&#160;</td><td class="fielddoc"><p>双精度浮点型数组 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462a5e0482fbc9ff7b3a3dce45639bef9bb5" name="a3066d7fb736b23b5889e2adf2529d462a5e0482fbc9ff7b3a3dce45639bef9bb5"></a>Qiankun_data_type_currency_array&#160;</td><td class="fielddoc"><p>货币型数组 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462a65e1e87dfa4a10c44474e492b24a6e1a" name="a3066d7fb736b23b5889e2adf2529d462a65e1e87dfa4a10c44474e492b24a6e1a"></a>Qiankun_data_type_date_array&#160;</td><td class="fielddoc"><p>日期型数组 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3066d7fb736b23b5889e2adf2529d462aac9fc1722b67b04d09a8124b87114a23" name="a3066d7fb736b23b5889e2adf2529d462aac9fc1722b67b04d09a8124b87114a23"></a>Qiankun_data_type_string_array&#160;</td><td class="fielddoc"><p>字符串型数组 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a3309cdf05bd56e3dfd38a958001803d7" name="a3309cdf05bd56e3dfd38a958001803d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3309cdf05bd56e3dfd38a958001803d7">&#9670;&#160;</a></span>Qiankun_error_code</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="tianzuo_8_qiankun_8h.html#a3309cdf05bd56e3dfd38a958001803d7">Qiankun_error_code</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7abf8315c040923257f6c55720fdd6b091" name="a3309cdf05bd56e3dfd38a958001803d7abf8315c040923257f6c55720fdd6b091"></a>Qiankun_errorcode_success&#160;</td><td class="fielddoc"><p>正确的值 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7ae4ecae994aebf210c2e58e05192c66ed" name="a3309cdf05bd56e3dfd38a958001803d7ae4ecae994aebf210c2e58e05192c66ed"></a>Qiankun_errorcode_normal&#160;</td><td class="fielddoc"><p>错误的值 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7af4af2a89ff840a0c044b82e744043f84" name="a3309cdf05bd56e3dfd38a958001803d7af4af2a89ff840a0c044b82e744043f84"></a>Qiankun_errorcode_differ&#160;</td><td class="fielddoc"><p>数据库文件数效验未通过 (The number of database files fails to be verified) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7a9a09ae3aac19ee018c77f9c3b0f9d1b0" name="a3309cdf05bd56e3dfd38a958001803d7a9a09ae3aac19ee018c77f9c3b0f9d1b0"></a>Qiankun_errorcode_no_rights&#160;</td><td class="fielddoc"><p>数据库密码效验未通过 (The database password verification failed) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7a6465531a69cdd291bdc216f5c183eeac" name="a3309cdf05bd56e3dfd38a958001803d7a6465531a69cdd291bdc216f5c183eeac"></a>Qiankun_errorcode_db_not_exist&#160;</td><td class="fielddoc"><p>数据库文件不存在 (The database file does not exist) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7aeb5def2fd068b2d462b5807c0be44ab4" name="a3309cdf05bd56e3dfd38a958001803d7aeb5def2fd068b2d462b5807c0be44ab4"></a>Qiankun_errorcode_exist&#160;</td><td class="fielddoc"><p>数据已存在 (Data already exists) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7a77ae468fdf80a766766624813f2e7453" name="a3309cdf05bd56e3dfd38a958001803d7a77ae468fdf80a766766624813f2e7453"></a>Qiankun_errorcode_not_exist&#160;</td><td class="fielddoc"><p>数据不存在 (Data does not exist) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7afa25f0a03f97c1098bcd7f0b8314a92a" name="a3309cdf05bd56e3dfd38a958001803d7afa25f0a03f97c1098bcd7f0b8314a92a"></a>Qiankun_errorcode_out_of_range&#160;</td><td class="fielddoc"><p>超出范围 (out of range) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7aae44d7527ef134d993db7a623cfa7fd2" name="a3309cdf05bd56e3dfd38a958001803d7aae44d7527ef134d993db7a623cfa7fd2"></a>Qiankun_errorcode_type&#160;</td><td class="fielddoc"><p>类型不符 (wrong type) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7a97fde6d3a06aabe4392950142a9c52e4" name="a3309cdf05bd56e3dfd38a958001803d7a97fde6d3a06aabe4392950142a9c52e4"></a>Qiankun_errorcode_param&#160;</td><td class="fielddoc"><p>参数错误 (parameter error) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7a77a83983817f1f956368aa82516bec2b" name="a3309cdf05bd56e3dfd38a958001803d7a77a83983817f1f956368aa82516bec2b"></a>Qiankun_errorcode_compress&#160;</td><td class="fielddoc"><p>压缩错误 (compression error) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7a523f62589da3aa1bf6f484e996aee702" name="a3309cdf05bd56e3dfd38a958001803d7a523f62589da3aa1bf6f484e996aee702"></a>Qiankun_errorcode_get_array&#160;</td><td class="fielddoc"><p>数组错误 (arrary error) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7a726f7435283d7d06054fd689f5371899" name="a3309cdf05bd56e3dfd38a958001803d7a726f7435283d7d06054fd689f5371899"></a>Qiankun_errorcode_out_of_memory&#160;</td><td class="fielddoc"><p>内存溢出 (memory overflow) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7a3d36d463c402b5f8cc9da2127b2f3935" name="a3309cdf05bd56e3dfd38a958001803d7a3d36d463c402b5f8cc9da2127b2f3935"></a>Qiankun_errorcode_handle&#160;</td><td class="fielddoc"><p>句柄错误 (error handle) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3309cdf05bd56e3dfd38a958001803d7a21594cac592ab73f4f2e845aba3c4627" name="a3309cdf05bd56e3dfd38a958001803d7a21594cac592ab73f4f2e845aba3c4627"></a>Qiankun_errorcode_io&#160;</td><td class="fielddoc"><p>IO错误 (io error) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a103b0ed00c6444e3cc3f443864376b49" name="a103b0ed00c6444e3cc3f443864376b49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a103b0ed00c6444e3cc3f443864376b49">&#9670;&#160;</a></span>Qiankun_name_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="tianzuo_8_qiankun_8h.html#a103b0ed00c6444e3cc3f443864376b49">Qiankun_name_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a103b0ed00c6444e3cc3f443864376b49a7fe83b8556786a5af5e9aaa97473dd40" name="a103b0ed00c6444e3cc3f443864376b49a7fe83b8556786a5af5e9aaa97473dd40"></a>Qiankun_name_type_name&#160;</td><td class="fielddoc"><p>数据名称 (data name) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a103b0ed00c6444e3cc3f443864376b49a93cd0d78450ba0b5898aa96a0deddc17" name="a103b0ed00c6444e3cc3f443864376b49a93cd0d78450ba0b5898aa96a0deddc17"></a>Qiankun_name_type_remark&#160;</td><td class="fielddoc"><p>数据备注 (data remark) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ae7b0f495602793341ace13e788aff706" name="ae7b0f495602793341ace13e788aff706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7b0f495602793341ace13e788aff706">&#9670;&#160;</a></span>Qiankun_size_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="tianzuo_8_qiankun_8h.html#ae7b0f495602793341ace13e788aff706">Qiankun_size_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae7b0f495602793341ace13e788aff706a951feb2ca413b4daa512ee2a6e644fd7" name="ae7b0f495602793341ace13e788aff706a951feb2ca413b4daa512ee2a6e644fd7"></a>Qiankun_size_type_data_all_size&#160;</td><td class="fielddoc"><p>总数据大小 (Total data size) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae7b0f495602793341ace13e788aff706a827996c4024ee51e5382056185df4e8d" name="ae7b0f495602793341ace13e788aff706a827996c4024ee51e5382056185df4e8d"></a>Qiankun_size_type_data_delete_size&#160;</td><td class="fielddoc"><p>删除的数据大小 (The size of the deleted data) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae7b0f495602793341ace13e788aff706afa6bc023e4c840a1f65fc5b1b8543d2e" name="ae7b0f495602793341ace13e788aff706afa6bc023e4c840a1f65fc5b1b8543d2e"></a>Qiankun_size_type_data_size&#160;</td><td class="fielddoc"><p>数据实际大小 (Actual data size) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a6328e16474ab04a180229afc2c7aafef" name="a6328e16474ab04a180229afc2c7aafef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6328e16474ab04a180229afc2c7aafef">&#9670;&#160;</a></span>Qiankun_file_name_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int Qiankun_file_name_size = 48</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文件名长度 (Filename length) </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="tianzuo_8_qiankun_8h.html">tianzuo.Qiankun.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
