@@ -1,0 +1,1414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="tianzuo.Zhuiri" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="高性能可靠UDP数据传输P2P通讯框架，可用于建立P2P环境，文件传输，数据通讯。基于UDP协议的内网穿透解决方案，轻松实现音视频会议中心，直播，远程桌面/文档演示等功能。" />
+<meta property="og:url" content="https://github.com/zhengtianzuo/tianzuo.Zhuiri" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:title" content="tianzuo.Zhuiri" />
+<meta name="twitter:description" content="高性能可靠UDP数据传输P2P通讯框架，可用于建立P2P环境，文件传输，数据通讯。基于UDP协议的内网穿透解决方案，轻松实现音视频会议中心，直播，远程桌面/文档演示等功能。" />
+<!-- END twitter metadata -->
+<title>天佐.追日靴: 天佐.追日靴</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="tianzuo.Zhuiri.ico"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/zhengtianzuo/tianzuo.Zhuiri" class="github-corner" title="view sdk on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="tianzuo.Zhuiri.ico"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">天佐.追日靴
+   &#160;<span id="projectnumber">tianzuo.Zhuiri</span>
+   </div>
+   <div id="projectbrief">可靠UDP传输 reliable UDP transmission</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">天佐.追日靴 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a><img src="logo.jpg" alt="" class="inline"/>    </p>
+<h3><a class="anchor" id="autotoc_md0"></a>
+天佐.追日靴</h3>
+<p><img src="https://img.shields.io/badge/release-1.0.0.0-blue.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/date-24.1.1-orange.svg" alt="" style="pointer-events: none;" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone" colspan="3"></th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">操作系统   </td><td class="markdownTableBodyNone" colspan="2"><img src="https://img.shields.io/badge/os-windows_7+-blue.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/os-macos_10.14+-lightgrey.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/os-ubuntu_20.04+-orange.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/os-android_5.0+-green.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/os-ios_12.0+-lightgrey.svg" alt="" style="pointer-events: none;" class="inline"/>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">编译器   </td><td class="markdownTableBodyNone" colspan="2"><img src="https://img.shields.io/badge/c++-11-blue.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/msvc-14.0-blue.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/msvc-14.1-blue.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/msvc-14.2-blue.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/msvc-14.3-blue.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/ndk-21.3-green.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/llvm-10.0-lightgrey.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/gcc-9.4-orange.svg" alt="" style="pointer-events: none;" class="inline"/>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">编程语言   </td><td class="markdownTableBodyNone" colspan="2"><p class="starttd"><img src="C.png" alt="" class="inline"/>     <img src="C__.png" alt="" class="inline"/>     <img src="Python.png" alt="" class="inline"/>     <img src="Java.png" alt="" class="inline"/>     <img src="C_.png" alt="" class="inline"/>     <img src="JavaScript.png" alt="" class="inline"/>     <img src="PHP.png" alt="" class="inline"/>     <img src="Visual_Basic.png" alt="" class="inline"/>     <img src="Go.png" alt="" class="inline"/>     <img src="Rust.png" alt="" class="inline"/>     <img src="Ruby.png" alt="" class="inline"/>    </p>
+<p class="endtd"></p>
+</td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md1"></a>
+简介</h1>
+<div class="image">
+<img src="alchemy_tianzuo.Zhuiri.jpg" alt=""/>
+</div>
+    <p><b>天佐.追日靴</b> 高性能可靠UDP数据传输P2P通讯框架，可用于建立P2P环境，文件传输，数据通讯。基于UDP协议的内网穿透解决方案，轻松实现音视频会议中心，直播，远程桌面/文档演示等功能。</p>
+<p><b>传说:</b> 凭此靴可以日行千里、夜走八百，如生羽翼。渴欲得饮，饮于河渭，河渭不足，北饮大泽。未至，道渴而死。弃其杖，化为邓林。</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+目标</h1>
+<p>构建UDP可靠数据传输，按策略动态调整丢包率和传输性能，可方便搭建P2P通讯。</p>
+<div class="image">
+<img src="tianzuo.Zhuiri.png" alt=""/>
+</div>
+    <h1><a class="anchor" id="autotoc_md3"></a>
+功能</h1>
+<ul>
+<li>🧩 集成简单</li>
+<li>📊 高层协议实现数据通讯的稳定可靠, 可动态修改参数调整通讯策略.</li>
+<li>🪡 可使用同一套接字初始化多个组件进行多线程数据通讯.</li>
+<li>🔢 解决丢包: 采用自行研发的并行滑动窗口协议, 保证数据的稳定可靠传输.</li>
+<li>🪟 动态调整: 数据通讯可行效率动态评估和计算获得当前环境下的最佳通讯表现.</li>
+<li>👜 数据组帧: 通讯数据包发送分包, 接收组包, 保证数据顺序完整.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+截图</h1>
+<p><b>天佐.追日靴测试程序:</b></p>
+<div class="image">
+<img src="screenshot.png" alt=""/>
+</div>
+    <h1><a class="anchor" id="autotoc_md5"></a>
+例子</h1>
+<details >
+<summary >
+cpp</summary>
+<p></p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="tianzuo_8_zhuiri_interface_8h.html">tianzuo.ZhuiriInterface.h</a>&quot;</span> <span class="comment">// 接口头文件 interface heaher file</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;winsock.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#pragma comment(lib, &quot;ws2_32.lib&quot;)</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 数据回调函数</span></div>
+<div class="line"><span class="keywordtype">void</span> msg_recv_callback(<span class="keywordtype">void</span>* context, <a class="code hl_struct" href="struct_zhuiri__data__pkg__tag.html">Zhuiri_data_pkg_pointer</a> data_pkg) {</div>
+<div class="line">    <a class="code hl_struct" href="struct_zhuiri__data__pkg__tag.html">Zhuiri_data_pkg_struct</a> data_new;</div>
+<div class="line">    memcpy(&amp;data_new, data_pkg, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_zhuiri__data__pkg__tag.html">Zhuiri_data_pkg_struct</a>));</div>
+<div class="line">    <span class="keywordtype">int</span> send_size = data_pkg-&gt;<a class="code hl_variable" href="struct_zhuiri__data__pkg__tag.html#a6959bf070a0d7595fb626933d0da8e63">m_data</a>.<a class="code hl_function" href="struct_zhuiri__data__tag.html#aef266e3a18d829141bed2d109c8c6093">get_send_size</a>();</div>
+<div class="line">    <span class="keywordflow">if</span> (send_size &gt; <a class="code hl_variable" href="tianzuo_8_zhuiri_8h.html#acc30625ce83295bb6ddd772bc4f0653a">Zhuiri_content_size</a>) {</div>
+<div class="line">        <span class="keywordtype">char</span>* send_data = <span class="keyword">new</span> <span class="keywordtype">char</span>[<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(send_size)];</div>
+<div class="line">        memcpy(send_data, data_pkg-&gt;<a class="code hl_function" href="struct_zhuiri__data__pkg__tag.html#a70298a2ce9791d231a66d75c5fb3b18a">get_send_data</a>(), <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(send_size));</div>
+<div class="line">        data_new.<a class="code hl_function" href="struct_zhuiri__data__pkg__tag.html#a8ad6d760ca20a8da48f4b991a8118061">set_send_data</a>(send_data);</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        data_new.<a class="code hl_function" href="struct_zhuiri__data__pkg__tag.html#a8ad6d760ca20a8da48f4b991a8118061">set_send_data</a>(data_new.<a class="code hl_variable" href="struct_zhuiri__data__pkg__tag.html#a6959bf070a0d7595fb626933d0da8e63">m_data</a>.<a class="code hl_variable" href="struct_zhuiri__data__tag.html#acdb96a0c1c3d1b92775b3be12a18a76d">m_data</a>);</div>
+<div class="line">    }</div>
+<div class="line">    <a class="code hl_class" href="classtianzuo___data_queue.html">tianzuo_DataQueue</a>* <span class="keyword">const</span> dataQueue = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classtianzuo___data_queue.html">tianzuo_DataQueue</a>*<span class="keyword">&gt;</span>(context);</div>
+<div class="line">    dataQueue-&gt;<a class="code hl_function" href="classtianzuo___data_queue.html#ab34d0f8c4609919336b91d927f924b0b">push_back</a>(&amp;data_new);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 接收线程</span></div>
+<div class="line"><span class="keywordtype">void</span> recv_thread(<a class="code hl_class" href="classtianzuo___data_queue.html">tianzuo_DataQueue</a>* data_queue_recv) {</div>
+<div class="line">    <span class="keywordflow">while</span> (1) {</div>
+<div class="line">        <a class="code hl_struct" href="struct_zhuiri__data__pkg__tag.html">Zhuiri_data_pkg_struct</a> recv_msg;</div>
+<div class="line">        <span class="keywordflow">if</span> (data_queue_recv-&gt;<a class="code hl_function" href="classtianzuo___data_queue.html#a673a6629ae3e3bd94ab1493f4d3b88e5">pop_up</a>(&amp;recv_msg) != <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af26e4be698e127f4af885907a6f3b4baa29cb96611bcd12123d4e75278a7dbd5b">Zhuiri_queue_error_code_success</a>) {</div>
+<div class="line">            <span class="comment">//std::cout &lt;&lt; &quot;pop_up no data&quot; &lt;&lt; std::endl;</span></div>
+<div class="line">            std::this_thread::sleep_for(std::chrono::milliseconds(200));</div>
+<div class="line">            <span class="keywordflow">continue</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;recv data: &quot;</span> &lt;&lt; recv_msg.<a class="code hl_variable" href="struct_zhuiri__data__pkg__tag.html#a6959bf070a0d7595fb626933d0da8e63">m_data</a>.<a class="code hl_variable" href="struct_zhuiri__data__tag.html#acdb96a0c1c3d1b92775b3be12a18a76d">m_data</a> &lt;&lt; std::endl;</div>
+<div class="line">        <span class="keywordflow">if</span> (strcmp(recv_msg.<a class="code hl_variable" href="struct_zhuiri__data__pkg__tag.html#a6959bf070a0d7595fb626933d0da8e63">m_data</a>.<a class="code hl_variable" href="struct_zhuiri__data__tag.html#acdb96a0c1c3d1b92775b3be12a18a76d">m_data</a>, <span class="stringliteral">&quot;send data 99&quot;</span>) == 0) {</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;recv done&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 初始化接口 initialize the interface</span></div>
+<div class="line">    std::unique_ptr&lt;tianzuo_ZhuiriInterface&gt; zhuiri_interface(<span class="keyword">new</span> <a class="code hl_class" href="classtianzuo___zhuiri_interface.html">tianzuo_ZhuiriInterface</a>());</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 创建实例 create an instance</span></div>
+<div class="line">    <a class="code hl_class" href="classtianzuo___zhuiri_int.html">tianzuo_ZhuiriInt</a>* zhuiri = zhuiri_interface-&gt;<a class="code hl_function" href="classtianzuo___zhuiri_int.html#a3a55b581f2f561ff517cdd6256bf93c1">initialize</a>();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 初始化数据队列接口 initialize the data queue interface</span></div>
+<div class="line">    std::unique_ptr&lt;tianzuo_DataQueueInterface&gt; data_queue_interface(<span class="keyword">new</span> <a class="code hl_class" href="classtianzuo___data_queue_interface.html">tianzuo_DataQueueInterface</a>());</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 创建数据队列实例 create an data queue instance</span></div>
+<div class="line">    <a class="code hl_class" href="classtianzuo___data_queue.html">tianzuo_DataQueue</a>* data_queue_recv = data_queue_interface-&gt;<a class="code hl_function" href="classtianzuo___data_queue.html#ab1a24db45b7bbd55ca20d33b1847920c">initialize</a>();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 初始化实例 initialize the instance</span></div>
+<div class="line">    <span class="keywordtype">int</span> port = 6666;</div>
+<div class="line">    <span class="keywordtype">int</span> error_code = zhuiri-&gt;<a class="code hl_function" href="classtianzuo___zhuiri_int.html#a3a55b581f2f561ff517cdd6256bf93c1">initialize</a>(</div>
+<div class="line">        <span class="keyword">nullptr</span>, port, <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(msg_recv_callback),</div>
+<div class="line">        data_queue_recv, 6000, <span class="keyword">false</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (error_code != <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba1cddc134652e59aca7cbc715776fdd6a">Zhuiri_error_code_success</a>) {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;initialize error: &quot;</span> &lt;&lt; error_code;</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// 释放接口 terminate the interface</span></div>
+<div class="line">        <span class="keywordflow">if</span> (data_queue_interface != <span class="keyword">nullptr</span> &amp;&amp; data_queue_recv != <span class="keyword">nullptr</span>) {</div>
+<div class="line">            data_queue_interface-&gt;terminate(&amp;data_queue_recv);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">if</span> (zhuiri_interface != <span class="keyword">nullptr</span> &amp;&amp; zhuiri != <span class="keyword">nullptr</span>) {</div>
+<div class="line">            zhuiri_interface-&gt;terminate(&amp;zhuiri);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 设置默认参数 set default parameters</span></div>
+<div class="line">    <a class="code hl_struct" href="struct_zhuiri__param__tag.html">Zhuiri_param_struct</a> param(0, 5168, 1024, 2280, 3, 5, 600);</div>
+<div class="line">    zhuiri-&gt;<a class="code hl_function" href="classtianzuo___zhuiri_int.html#a8c989fed29f7a7a7584ca8cf8ac66735">set_param</a>(&amp;param);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 启动接收线程 start receiving thread</span></div>
+<div class="line">    std::thread recv_th(recv_thread, data_queue_recv);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 开始发送数据 start sending data</span></div>
+<div class="line">    <span class="keywordtype">int</span> data_size = 1024;</div>
+<div class="line">    <span class="keywordtype">char</span> data[1024];</div>
+<div class="line">    memset(data, 0, data_size);</div>
+<div class="line">    <span class="keywordtype">int</span> ip = ntohl(inet_addr(<span class="stringliteral">&quot;127.0.0.1&quot;</span>));</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 100; i++) {</div>
+<div class="line">        <span class="comment">//std::cout &lt;&lt; &quot;start send index: &quot; &lt;&lt; i &lt;&lt; std::endl;</span></div>
+<div class="line">        sprintf_s(data, data_size, <span class="stringliteral">&quot;send data %d&quot;</span>, i);</div>
+<div class="line">        <span class="keywordtype">int</span> data_len = strlen(data);</div>
+<div class="line">        <a class="code hl_struct" href="struct_zhuiri__send__param__tag.html">Zhuiri_send_param_struct</a> send_param(0, ip, port, <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23ae1e5b117bbd148ca1e81c1301aed34d4">Zhuiri_data_sign_reliable</a>, 7788, data, data_len);</div>
+<div class="line">        error_code = zhuiri-&gt;<a class="code hl_function" href="classtianzuo___zhuiri_int.html#a8ae419160345fbacf48d03b541d3e653">send</a>(&amp;send_param);</div>
+<div class="line">        <span class="keywordflow">if</span> (error_code != <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba1cddc134652e59aca7cbc715776fdd6a">Zhuiri_error_code_success</a>) {</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;send error: &quot;</span> &lt;&lt; error_code;</div>
+<div class="line"> </div>
+<div class="line">            <span class="comment">// 释放接口 terminate the interface</span></div>
+<div class="line">            <span class="keywordflow">if</span> (data_queue_interface != <span class="keyword">nullptr</span> &amp;&amp; data_queue_recv != <span class="keyword">nullptr</span>) {</div>
+<div class="line">                data_queue_interface-&gt;terminate(&amp;data_queue_recv);</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">if</span> (zhuiri_interface != <span class="keyword">nullptr</span> &amp;&amp; zhuiri != <span class="keyword">nullptr</span>) {</div>
+<div class="line">                zhuiri_interface-&gt;terminate(&amp;zhuiri);</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">return</span> -1;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="comment">//std::this_thread::sleep_for(std::chrono::milliseconds(10));</span></div>
+<div class="line">    }</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;send done&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">    recv_th.join();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 释放接口 terminate the interface</span></div>
+<div class="line">    <span class="keywordflow">if</span> (data_queue_interface != <span class="keyword">nullptr</span> &amp;&amp; data_queue_recv != <span class="keyword">nullptr</span>) {</div>
+<div class="line">        data_queue_interface-&gt;terminate(&amp;data_queue_recv);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> (zhuiri_interface != <span class="keyword">nullptr</span> &amp;&amp; zhuiri != <span class="keyword">nullptr</span>) {</div>
+<div class="line">        zhuiri_interface-&gt;terminate(&amp;zhuiri);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclasstianzuo___data_queue_html"><div class="ttname"><a href="classtianzuo___data_queue.html">tianzuo_DataQueue</a></div><div class="ttdoc">追日靴数据队列模块类 for c++</div><div class="ttdef"><b>Definition</b> tianzuo.ZhuiriInterface.h:435</div></div>
+<div class="ttc" id="aclasstianzuo___data_queue_html_a673a6629ae3e3bd94ab1493f4d3b88e5"><div class="ttname"><a href="classtianzuo___data_queue.html#a673a6629ae3e3bd94ab1493f4d3b88e5">tianzuo_DataQueue::pop_up</a></div><div class="ttdeci">virtual int pop_up(const Zhuiri_data_pkg_pointer data)=0</div></div>
+<div class="ttc" id="aclasstianzuo___data_queue_html_ab1a24db45b7bbd55ca20d33b1847920c"><div class="ttname"><a href="classtianzuo___data_queue.html#ab1a24db45b7bbd55ca20d33b1847920c">tianzuo_DataQueue::initialize</a></div><div class="ttdeci">virtual int initialize(int const init_size)=0</div></div>
+<div class="ttc" id="aclasstianzuo___data_queue_html_ab34d0f8c4609919336b91d927f924b0b"><div class="ttname"><a href="classtianzuo___data_queue.html#ab34d0f8c4609919336b91d927f924b0b">tianzuo_DataQueue::push_back</a></div><div class="ttdeci">virtual int push_back(const Zhuiri_data_pkg_pointer data)=0</div></div>
+<div class="ttc" id="aclasstianzuo___data_queue_interface_html"><div class="ttname"><a href="classtianzuo___data_queue_interface.html">tianzuo_DataQueueInterface</a></div><div class="ttdoc">追日靴数据队列接口 for c++</div><div class="ttdef"><b>Definition</b> tianzuo.ZhuiriInterface.h:545</div></div>
+<div class="ttc" id="aclasstianzuo___zhuiri_int_html"><div class="ttname"><a href="classtianzuo___zhuiri_int.html">tianzuo_ZhuiriInt</a></div><div class="ttdoc">追日靴模块类 for c++</div><div class="ttdef"><b>Definition</b> tianzuo.ZhuiriInterface.h:213</div></div>
+<div class="ttc" id="aclasstianzuo___zhuiri_int_html_a3a55b581f2f561ff517cdd6256bf93c1"><div class="ttname"><a href="classtianzuo___zhuiri_int.html#a3a55b581f2f561ff517cdd6256bf93c1">tianzuo_ZhuiriInt::initialize</a></div><div class="ttdeci">virtual int initialize(const char *ip_addr, int port, const void *callback, const void *context, int const heart_check_time, bool log_trace)=0</div></div>
+<div class="ttc" id="aclasstianzuo___zhuiri_int_html_a8ae419160345fbacf48d03b541d3e653"><div class="ttname"><a href="classtianzuo___zhuiri_int.html#a8ae419160345fbacf48d03b541d3e653">tianzuo_ZhuiriInt::send</a></div><div class="ttdeci">virtual int send(Zhuiri_send_param_pointer send_param)=0</div></div>
+<div class="ttc" id="aclasstianzuo___zhuiri_int_html_a8c989fed29f7a7a7584ca8cf8ac66735"><div class="ttname"><a href="classtianzuo___zhuiri_int.html#a8c989fed29f7a7a7584ca8cf8ac66735">tianzuo_ZhuiriInt::set_param</a></div><div class="ttdeci">virtual int set_param(Zhuiri_param_pointer param)=0</div></div>
+<div class="ttc" id="aclasstianzuo___zhuiri_interface_html"><div class="ttname"><a href="classtianzuo___zhuiri_interface.html">tianzuo_ZhuiriInterface</a></div><div class="ttdoc">追日靴接口类 for c++</div><div class="ttdef"><b>Definition</b> tianzuo.ZhuiriInterface.h:390</div></div>
+<div class="ttc" id="astruct_zhuiri__data__pkg__tag_html"><div class="ttname"><a href="struct_zhuiri__data__pkg__tag.html">Zhuiri_data_pkg_tag</a></div><div class="ttdoc">数据包结构</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:116</div></div>
+<div class="ttc" id="astruct_zhuiri__data__pkg__tag_html_a6959bf070a0d7595fb626933d0da8e63"><div class="ttname"><a href="struct_zhuiri__data__pkg__tag.html#a6959bf070a0d7595fb626933d0da8e63">Zhuiri_data_pkg_tag::m_data</a></div><div class="ttdeci">Zhuiri_data_struct m_data</div><div class="ttdoc">结构内容 (structural content)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:155</div></div>
+<div class="ttc" id="astruct_zhuiri__data__pkg__tag_html_a70298a2ce9791d231a66d75c5fb3b18a"><div class="ttname"><a href="struct_zhuiri__data__pkg__tag.html#a70298a2ce9791d231a66d75c5fb3b18a">Zhuiri_data_pkg_tag::get_send_data</a></div><div class="ttdeci">char *&amp; get_send_data()</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:131</div></div>
+<div class="ttc" id="astruct_zhuiri__data__pkg__tag_html_a8ad6d760ca20a8da48f4b991a8118061"><div class="ttname"><a href="struct_zhuiri__data__pkg__tag.html#a8ad6d760ca20a8da48f4b991a8118061">Zhuiri_data_pkg_tag::set_send_data</a></div><div class="ttdeci">void set_send_data(char *send_data)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:135</div></div>
+<div class="ttc" id="astruct_zhuiri__data__tag_html_acdb96a0c1c3d1b92775b3be12a18a76d"><div class="ttname"><a href="struct_zhuiri__data__tag.html#acdb96a0c1c3d1b92775b3be12a18a76d">Zhuiri_data_tag::m_data</a></div><div class="ttdeci">char m_data[Zhuiri_content_size]</div><div class="ttdoc">具体内容 (concrete content)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:110</div></div>
+<div class="ttc" id="astruct_zhuiri__data__tag_html_aef266e3a18d829141bed2d109c8c6093"><div class="ttname"><a href="struct_zhuiri__data__tag.html#aef266e3a18d829141bed2d109c8c6093">Zhuiri_data_tag::get_send_size</a></div><div class="ttdeci">int get_send_size() const</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:92</div></div>
+<div class="ttc" id="astruct_zhuiri__param__tag_html"><div class="ttname"><a href="struct_zhuiri__param__tag.html">Zhuiri_param_tag</a></div><div class="ttdoc">参数</div><div class="ttdef"><b>Definition</b> tianzuo.ZhuiriInterface.h:27</div></div>
+<div class="ttc" id="astruct_zhuiri__send__param__tag_html"><div class="ttname"><a href="struct_zhuiri__send__param__tag.html">Zhuiri_send_param_tag</a></div><div class="ttdoc">发送参数</div><div class="ttdef"><b>Definition</b> tianzuo.ZhuiriInterface.h:123</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_a678e215265929295f16abf1942959d23ae1e5b117bbd148ca1e81c1301aed34d4"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23ae1e5b117bbd148ca1e81c1301aed34d4">Zhuiri_data_sign_reliable</a></div><div class="ttdeci">@ Zhuiri_data_sign_reliable</div><div class="ttdoc">可靠 (reliable)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:262</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_acc30625ce83295bb6ddd772bc4f0653a"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#acc30625ce83295bb6ddd772bc4f0653a">Zhuiri_content_size</a></div><div class="ttdeci">const int Zhuiri_content_size</div><div class="ttdoc">内容大小 (content size)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:14</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_af26e4be698e127f4af885907a6f3b4baa29cb96611bcd12123d4e75278a7dbd5b"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#af26e4be698e127f4af885907a6f3b4baa29cb96611bcd12123d4e75278a7dbd5b">Zhuiri_queue_error_code_success</a></div><div class="ttdeci">@ Zhuiri_queue_error_code_success</div><div class="ttdoc">正确的值 (success)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:292</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_af5ef4864d22ffc5006e0d4dae4f6c63ba1cddc134652e59aca7cbc715776fdd6a"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba1cddc134652e59aca7cbc715776fdd6a">Zhuiri_error_code_success</a></div><div class="ttdeci">@ Zhuiri_error_code_success</div><div class="ttdoc">正确的值 (success)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:278</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_interface_8h_html"><div class="ttname"><a href="tianzuo_8_zhuiri_interface_8h.html">tianzuo.ZhuiriInterface.h</a></div></div>
+</div><!-- fragment --> </details>
+<details >
+<summary >
+python</summary>
+<p></p>
+<div class="fragment"><div class="line"><span class="keyword">from</span> ctypes <span class="keyword">import</span> *</div>
+<div class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum</div>
+<div class="line"><span class="keyword">import</span> ctypes</div>
+<div class="line"><span class="keyword">import</span> ipaddress</div>
+<div class="line"> </div>
+<div class="line">tianzuo_ZhuiriLib = cdll.LoadLibrary(<span class="stringliteral">&#39;./tianzuo.Zhuiri.dll&#39;</span>)</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Zhuiri_error_code(Enum):</div>
+<div class="line">    Zhuiri_error_code_success       = 0x00000001                                     <span class="comment"># 正确的值 (success)</span></div>
+<div class="line">    Zhuiri_error_code_no_rights     = 0x00000002                                     <span class="comment"># 效验未通过 (no rights)</span></div>
+<div class="line">    Zhuiri_error_code_socket        = 0x0000000D                                     <span class="comment"># 套接字错误 (socket error)</span></div>
+<div class="line">    Zhuiri_error_code_thread_error  = 0x00000021                                     <span class="comment"># 线程失败 (thread error)</span></div>
+<div class="line">    Zhuiri_error_code_handle        = 0x00000022                                     <span class="comment"># 创建句柄失败 (handle error)</span></div>
+<div class="line">    Zhuiri_error_code_out_of_cache  = 0x00000023                                     <span class="comment"># 超出缓冲最大值 (out f cache)</span></div>
+<div class="line">    Zhuiri_error_code_out_of_memory = 0x00000024                                     <span class="comment"># 内存溢出 (out of memory)</span></div>
+<div class="line">    Zhuiri_error_code_time_out      = 0x00000025                                     <span class="comment"># 操作超时 (time out)</span></div>
+<div class="line">    Zhuiri_error_code_user_reject   = 0x00000098                                     <span class="comment"># 对方决绝 (user reject)</span></div>
+<div class="line">    Zhuiri_error_code_user_exit     = 0x00000099                                     <span class="comment"># 自行退出 (user exit)</span></div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Zhuiri_queue_error_code(Enum):</div>
+<div class="line">    Zhuiri_queue_error_code_success       = 0x00000001                               <span class="comment"># 正确的值 (success)</span></div>
+<div class="line">    Zhuiri_queue_error_code_invalid_value = 0x00000002                               <span class="comment"># 无效的值 (invalid value)</span></div>
+<div class="line">    Zhuiri_queue_error_code_out_of_cache  = 0x00000003                               <span class="comment"># 超出缓冲 (out f cache)</span></div>
+<div class="line">    Zhuiri_queue_error_code_out_of_memory = 0x00000004                               <span class="comment"># 内存溢出 (out of memory)</span></div>
+<div class="line">    Zhuiri_queue_error_code_no_data       = 0x00000005                               <span class="comment"># 无数据 (no data)</span></div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Zhuiri_data_sign(Enum):</div>
+<div class="line">    Zhuiri_data_sign_none       = 0x00000000                                         <span class="comment"># 无标识  (no sign)</span></div>
+<div class="line">    Zhuiri_data_sign_reliable   = 0x00000001                                         <span class="comment"># 可靠    (reliable)</span></div>
+<div class="line">    Zhuiri_data_sign_processing = 0x00000002                                         <span class="comment"># 处理中  (processing)</span></div>
+<div class="line">    Zhuiri_data_sign_response   = 0x00000003                                         <span class="comment"># 回应消息 (response)</span></div>
+<div class="line">    Zhuiri_data_sign_heart      = 0x00000004                                         <span class="comment"># 心跳包  (heart)</span></div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span><a class="code hl_class" href="classtianzuo___zhuiri_int.html">tianzuo_ZhuiriInt</a>:</div>
+<div class="line">    <span class="keyword">def </span>__init__(self):</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_ZhuiriInterface_initialize.restype = c_void_p</div>
+<div class="line">        self.obj = tianzuo_ZhuiriLib.tianzuo_ZhuiriInterface_initialize()</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">def </span>__del__(self):</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_ZhuiriInterface_terminate.argtypes = [c_void_p]</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_ZhuiriInterface_terminate(self.obj)</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">def </span>initialize(self, ip_addr, port, callback, context, heart_check_time, log_trace, iocp):</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_ZhuiriInt_initialize.restype = c_int</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_ZhuiriInt_initialize.argtypes = [c_void_p, c_char_p, ctypes.c_int, c_void_p, c_void_p, ctypes.c_int, ctypes.c_int, c_void_p]</div>
+<div class="line">        <span class="keywordflow">return</span> tianzuo_ZhuiriLib.tianzuo_ZhuiriInt_initialize(self.obj, ip_addr, port, callback, context, heart_check_time, log_trace, iocp)</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">def </span>set_param(self, sender_index, init_server_port, msg_init_size, recv_ex_data_max, retry_max, retry_all_number, init_retry_time):</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_ZhuiriInt_set_param.restype = c_int</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_ZhuiriInt_set_param.argtypes = [c_void_p, c_int, c_int, c_int, c_int, c_int, c_int, c_int]</div>
+<div class="line">        <span class="keywordflow">return</span> tianzuo_ZhuiriLib.tianzuo_ZhuiriInt_set_param(self.obj, sender_index, init_server_port, msg_init_size, recv_ex_data_max, retry_max, retry_all_number, init_retry_time)</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">def </span>send(self, sender_index, ip, port, sign, function, send_data, send_size):</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_ZhuiriInt_send.restype = c_int</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_ZhuiriInt_send.argtypes = [c_void_p, c_int, c_int, c_int, c_int, c_int, c_char_p, c_int]</div>
+<div class="line">        <span class="keywordflow">return</span> tianzuo_ZhuiriLib.tianzuo_ZhuiriInt_send(self.obj, sender_index, ip, port, sign, function, send_data, send_size)</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>tianzuo_DataQueueInt:</div>
+<div class="line">    <span class="keyword">def </span>__init__(self):</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_DataQueueInterface_initialize.restype = c_void_p</div>
+<div class="line">        self.obj = tianzuo_ZhuiriLib.tianzuo_DataQueueInterface_initialize()</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">def </span>__del__(self):</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_DataQueueInterface_terminate.argtypes = [c_void_p]</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_DataQueueInterface_terminate(self.obj)</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">def </span>initialize(self):</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_DataQueueInt_initialize.restype = c_void_p</div>
+<div class="line">        tianzuo_ZhuiriLib.tianzuo_DataQueueInt_initialize.argtypes = [c_void_p]</div>
+<div class="line">        <span class="keywordflow">return</span> tianzuo_ZhuiriLib.tianzuo_DataQueueInt_initialize(self.obj)</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">callback_type = ctypes.CFUNCTYPE(c_void_p, c_void_p, c_void_p)</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span><a class="code hl_struct" href="struct_zhuiri__data__tag.html">Zhuiri_data_struct</a>(ctypes.Structure):</div>
+<div class="line">    _fields_ = [(<span class="stringliteral">&quot;m_ip_adrs&quot;</span>, ctypes.c_int),</div>
+<div class="line">                (<span class="stringliteral">&quot;m_port&quot;</span>, ctypes.c_int),</div>
+<div class="line">                (<span class="stringliteral">&quot;m_function&quot;</span>, ctypes.c_int),</div>
+<div class="line">                (<span class="stringliteral">&quot;m_sign&quot;</span>, ctypes.c_int),</div>
+<div class="line">                (<span class="stringliteral">&quot;m_index&quot;</span>, ctypes.c_int),</div>
+<div class="line">                (<span class="stringliteral">&quot;m_send_time&quot;</span>, ctypes.c_int),</div>
+<div class="line">                (<span class="stringliteral">&quot;m_send_size&quot;</span>, ctypes.c_int),</div>
+<div class="line">                (<span class="stringliteral">&quot;m_data&quot;</span>, ctypes.c_char * 492)]</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span><a class="code hl_struct" href="struct_zhuiri__data__pkg__tag.html">Zhuiri_data_pkg_struct</a>(ctypes.Structure):</div>
+<div class="line">    _fields_ = [(<span class="stringliteral">&quot;m_data&quot;</span>, Zhuiri_data_struct),</div>
+<div class="line">                (<span class="stringliteral">&quot;m_send_data&quot;</span>, ctypes.c_char_p),</div>
+<div class="line">                (<span class="stringliteral">&quot;m_Zhuiri&quot;</span>, ctypes.c_void_p),</div>
+<div class="line">                (<span class="stringliteral">&quot;m_user_data&quot;</span>, ctypes.c_void_p)]</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">def </span>msg_recv_callback(context, pData):</div>
+<div class="line">    data = ctypes.cast(pData, ctypes.POINTER(Zhuiri_data_pkg_struct)).contents</div>
+<div class="line">    print(<span class="stringliteral">&quot;recv data:&quot;</span>, data.m_data.m_data)</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">def </span>main():</div>
+<div class="line">    <span class="comment"># 初始化接口 initialize the interface</span></div>
+<div class="line">    print(<span class="stringliteral">&quot;initialize the interface&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment"># 创建实例 create an instance</span></div>
+<div class="line">    data_queue_recv = tianzuo_DataQueueInt()</div>
+<div class="line">    pdata_queue_recv = ctypes.pointer(ctypes.py_object(data_queue_recv))</div>
+<div class="line"> </div>
+<div class="line">    pmsg_recv_callback = callback_type(msg_recv_callback)</div>
+<div class="line">    </div>
+<div class="line">    Zhuiri = <a class="code hl_class" href="classtianzuo___zhuiri_int.html">tianzuo_ZhuiriInt</a>()</div>
+<div class="line">    port = 6666</div>
+<div class="line">    error_code = Zhuiri.initialize(<span class="keywordtype">None</span>, port, pmsg_recv_callback, pdata_queue_recv, 6000, <span class="keyword">False</span>, <span class="keywordtype">None</span>)</div>
+<div class="line">    <span class="keywordflow">if</span> error_code != Zhuiri_error_code.Zhuiri_error_code_success.value:</div>
+<div class="line">        print(<span class="stringliteral">&quot;initialize error:&quot;</span>, error_code)</div>
+<div class="line">        <span class="keywordflow">return</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment"># 设置默认参数 set default parameters</span></div>
+<div class="line">    Zhuiri.set_param(0, 5168, 1024, 2280, 3, 5, 600)</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment"># 开始发送数据 start sending data</span></div>
+<div class="line">    ip = int(ipaddress.IPv4Address(<span class="stringliteral">&quot;127.0.0.1&quot;</span>))</div>
+<div class="line">    <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(100):</div>
+<div class="line">        data = <span class="stringliteral">&quot;send data {}&quot;</span>.format(i)</div>
+<div class="line">        data_len = len(data)</div>
+<div class="line">        bytes_string = data.encode(<span class="stringliteral">&#39;utf-8&#39;</span>)</div>
+<div class="line">        error_code = Zhuiri.send(0, ip, port, Zhuiri_data_sign.Zhuiri_data_sign_reliable.value, 7788, bytes_string, data_len)</div>
+<div class="line">        <span class="keywordflow">if</span> error_code != Zhuiri_error_code.Zhuiri_error_code_success.value:</div>
+<div class="line">            print(<span class="stringliteral">&quot;send error:&quot;</span>, error_code)</div>
+<div class="line">            <span class="keywordflow">return</span></div>
+<div class="line"> </div>
+<div class="line">    print(<span class="stringliteral">&quot;test done&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> __name__ == <span class="stringliteral">&#39;__main__&#39;</span>:</div>
+<div class="line">    main()</div>
+<div class="ttc" id="astruct_zhuiri__data__tag_html"><div class="ttname"><a href="struct_zhuiri__data__tag.html">Zhuiri_data_tag</a></div><div class="ttdoc">数据包结构</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:18</div></div>
+</div><!-- fragment --> </details>
+<details >
+<summary >
+java</summary>
+<p></p>
+<div class="fragment"><div class="line"><span class="keyword">package </span>cn.camelsoft;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">import</span> com.sun.jna.Library;</div>
+<div class="line"><span class="keyword">import</span> com.sun.jna.Native;</div>
+<div class="line"><span class="keyword">import</span> com.sun.jna.Pointer;</div>
+<div class="line"><span class="keyword">import</span> com.sun.jna.Callback;</div>
+<div class="line"><span class="keyword">import</span> com.sun.jna.CallbackReference;</div>
+<div class="line"><span class="keyword">import</span> com.sun.jna.ptr.IntByReference;</div>
+<div class="line"><span class="keyword">import</span> java.net.InetAddress;</div>
+<div class="line"><span class="keyword">import</span> java.net.UnknownHostException;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum</span> <a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63b">Zhuiri_error_code</a> {</div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba1cddc134652e59aca7cbc715776fdd6a">Zhuiri_error_code_success</a>       (0x00000001),                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba443b5a0b25f06651a08df53b6218a36f">Zhuiri_error_code_no_rights</a>     (0x00000002),                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba4cf0b7c73ab9b2b96a1bb42e1a315e29">Zhuiri_error_code_socket</a>        (0x0000000D),                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baf3559e08e2ebbd0eb0c209937129545c">Zhuiri_error_code_thread_error</a>  (0x00000021),                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba6571245cdf82989de3f1ac473391568b">Zhuiri_error_code_handle</a>        (0x00000022),                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba410fe30d356f23e27eb8a7d5e7d951df">Zhuiri_error_code_out_of_cache</a>  (0x00000023),                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baf2fc9a165ab80ba01bc920f657185ebe">Zhuiri_error_code_out_of_memory</a> (0x00000024),                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baa1f84fa38d59db48f61054c5e45079ec">Zhuiri_error_code_time_out</a>      (0x00000025),                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba4ebf46144d72d214a6433be9d4d9b0b8">Zhuiri_error_code_user_reject</a>   (0x00000098),                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba3d3f5478590afa26be3c5c0ca6f3b0ce">Zhuiri_error_code_user_exit</a>     (0x00000099);                                     </div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">int</span> value;</div>
+<div class="line">    <a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63b">Zhuiri_error_code</a>(<span class="keywordtype">int</span> value) {</div>
+<div class="line">        this.value = value;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> getValue() {</div>
+<div class="line">        <span class="keywordflow">return</span> value;</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum</span> <a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23">Zhuiri_data_sign</a> {</div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a7158d5109fd8c53b152d9d6c53206465">Zhuiri_data_sign_none</a>       (0x00000000),                                         </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23ae1e5b117bbd148ca1e81c1301aed34d4">Zhuiri_data_sign_reliable</a>   (0x00000001),                                         </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a45a9152847f699d645cc9627fac0db46">Zhuiri_data_sign_processing</a> (0x00000002),                                         </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a5fd1b8dbf6243842374f18e2439a6fb6">Zhuiri_data_sign_response</a>   (0x00000003),                                         </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23afbd008c57c3ebda86dda34b6a2536fc4">Zhuiri_data_sign_heart</a>      (0x00000004);                                         </div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">int</span> value;</div>
+<div class="line">    <a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23">Zhuiri_data_sign</a>(<span class="keywordtype">int</span> value) {</div>
+<div class="line">        this.value = value;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> getValue() {</div>
+<div class="line">        <span class="keywordflow">return</span> value;</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">interface </span>tianzuo_ZhuiriLib <span class="keyword">extends</span> Library {</div>
+<div class="line">    tianzuo_ZhuiriLib instance = (tianzuo_ZhuiriLib) Native.load(<span class="stringliteral">&quot;./tianzuo.Zhuiri.dll&quot;</span>, tianzuo_ZhuiriLib.class);</div>
+<div class="line">    Pointer <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a0bc5be709b1158d96497000d3d7f56a9">tianzuo_ZhuiriInterface_initialize</a>();</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a03d3680cec5d1a8277fd5393ce864266">tianzuo_ZhuiriInterface_terminate</a>(Pointer zhuiri);</div>
+<div class="line">    <span class="keywordtype">int</span> <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a3efbb7799d03347cb5fc0b02e08ebbb5">tianzuo_ZhuiriInt_initialize</a>(Pointer zhuiri, String ip_addr, <span class="keywordtype">int</span> port, Pointer callback, Pointer context, <span class="keywordtype">int</span> heart_check_time, Boolean log_trace, Pointer iocp);</div>
+<div class="line">    <span class="keywordtype">int</span> <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a6f4aa8b648475ebc632c5f2b7f0c0dd3">tianzuo_ZhuiriInt_set_param</a>(Pointer zhuiri, <span class="keywordtype">int</span> sender_index, <span class="keywordtype">int</span> init_server_port, <span class="keywordtype">int</span> msg_init_size, <span class="keywordtype">int</span> recv_ex_data_max, <span class="keywordtype">int</span> retry_max, <span class="keywordtype">int</span> retry_all_number, <span class="keywordtype">int</span> init_retry_time);</div>
+<div class="line">    <span class="keywordtype">int</span> <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a7e805681d3e0f4d29a4a07259b6afa58">tianzuo_ZhuiriInt_send</a>(Pointer zhuiri, <span class="keywordtype">int</span> sender_index, <span class="keywordtype">int</span> ip, <span class="keywordtype">int</span> port, <span class="keywordtype">int</span> sign, <span class="keywordtype">int</span> <span class="keyword">function</span>, String send_data, <span class="keywordtype">int</span> send_size);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">interface </span>tianzuo_DataQueueLib <span class="keyword">extends</span> Library {</div>
+<div class="line">    tianzuo_DataQueueLib instance = (tianzuo_DataQueueLib) Native.load(<span class="stringliteral">&quot;./tianzuo.Zhuiri.dll&quot;</span>, tianzuo_DataQueueLib.class);</div>
+<div class="line">    Pointer <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a7b54fa6cc4ba11742163fafeaa1f4947">tianzuo_DataQueueInterface_initialize</a>();</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a28ccb0493f82ef8be4d5a7930a06e7d3">tianzuo_DataQueueInterface_terminate</a>(Pointer DataQueue);</div>
+<div class="line">    <span class="keywordtype">int</span> <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a1f31eb5e34ce1762434fe32fb83a6bad">tianzuo_DataQueueInt_initialize</a>(Pointer DataQueue);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">interface </span>MyCallback <span class="keyword">extends</span> Callback {</div>
+<div class="line">    <span class="keywordtype">void</span> callbackFunction(Pointer context, Pointer pData);</div>
+<div class="line">}</div>
+<div class="line"><span class="keyword">class </span>MyCallbackImpl <span class="keyword">implements</span> MyCallback {</div>
+<div class="line"> </div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> callbackFunction(Pointer context, Pointer pData) {</div>
+<div class="line">        <a class="code hl_struct" href="struct_zhuiri__data__pkg__tag.html">Zhuiri_data_pkg_struct</a> data_pkg = <span class="keyword">new</span> <a class="code hl_typedef" href="tianzuo_8_zhuiri_8h.html#aed188dd510761cd27f610b9f17f3145e">Zhuiri_data_pkg_struct</a>(pData);</div>
+<div class="line">        String str = <span class="keyword">new</span> String(data_pkg.<a class="code hl_variable" href="struct_zhuiri__data__pkg__tag.html#a6959bf070a0d7595fb626933d0da8e63">m_data</a>.<a class="code hl_variable" href="struct_zhuiri__data__tag.html#acdb96a0c1c3d1b92775b3be12a18a76d">m_data</a>).trim();</div>
+<div class="line">        System.out.printf(<span class="stringliteral">&quot;recv data: %s\n&quot;</span>, str);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>Main {</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> ipToInt(String ipAddress) {</div>
+<div class="line">        <span class="keywordflow">try</span> {</div>
+<div class="line">            InetAddress inetAddress = InetAddress.getByName(ipAddress);</div>
+<div class="line">            <span class="keywordtype">byte</span>[] bytes = inetAddress.getAddress();</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordtype">int</span> result = 0;</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">byte</span> b : bytes) {</div>
+<div class="line">                result = result &lt;&lt; 8 | (b &amp; 0xFF);</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">return</span> result;</div>
+<div class="line">        } <span class="keywordflow">catch</span> (UnknownHostException e) {</div>
+<div class="line">            System.err.println(<span class="stringliteral">&quot;Invalid IP address: &quot;</span> + ipAddress);</div>
+<div class="line">            <span class="keywordflow">return</span> 0;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> main(String[] args) {</div>
+<div class="line"> </div>
+<div class="line">        System.setProperty(<span class="stringliteral">&quot;jna.encoding&quot;</span>,<span class="stringliteral">&quot;UTF-8&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// 初始化接口 initialize the interface</span></div>
+<div class="line">        System.out.printf(<span class="stringliteral">&quot;initialize the interface\n&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// 创建实例 create an instance</span></div>
+<div class="line">        Pointer data_queue_recv = tianzuo_DataQueueLib.instance.tianzuo_DataQueueInterface_initialize();</div>
+<div class="line"> </div>
+<div class="line">        MyCallback callback = <span class="keyword">new</span> MyCallbackImpl();</div>
+<div class="line">        Pointer pcallback = CallbackReference.getFunctionPointer(callback);</div>
+<div class="line"> </div>
+<div class="line">        Pointer zhuiri = tianzuo_ZhuiriLib.instance.tianzuo_ZhuiriInterface_initialize();</div>
+<div class="line">        <span class="keywordtype">int</span> port = 6666;</div>
+<div class="line">        <span class="keywordtype">int</span> error_code = tianzuo_ZhuiriLib.instance.tianzuo_ZhuiriInt_initialize(zhuiri, <span class="keyword">null</span>, port, pcallback, data_queue_recv, 6000, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line">        <span class="keywordflow">if</span> (error_code != <a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63b">Zhuiri_error_code</a>.Zhuiri_error_code_success.getValue()) {</div>
+<div class="line">            System.out.printf(<span class="stringliteral">&quot;tianzuo_QiankunInt_initialize error: %d\n&quot;</span>, error_code);</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// 设置默认参数 set default parameters</span></div>
+<div class="line">        tianzuo_ZhuiriLib.instance.tianzuo_ZhuiriInt_set_param(zhuiri, 0, 5168, 1024, 2280, 3, 5, 600);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// 开始发送数据 start sending data</span></div>
+<div class="line">        String ipAddress = <span class="stringliteral">&quot;127.0.0.1&quot;</span>;</div>
+<div class="line">        <span class="keywordtype">int</span> ip = ipToInt(ipAddress);</div>
+<div class="line">        <span class="keywordtype">int</span> sport = 6666;</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 100; i++) {</div>
+<div class="line">            String data = String.format(<span class="stringliteral">&quot;send data %d &quot;</span>, i);</div>
+<div class="line">            <span class="keywordtype">int</span> data_len = data.length();</div>
+<div class="line">            <span class="keywordtype">int</span> error_code2 = tianzuo_ZhuiriLib.instance.tianzuo_ZhuiriInt_send(zhuiri, 0, ip, sport, <a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23">Zhuiri_data_sign</a>.Zhuiri_data_sign_reliable.getValue(), 7788, data, data_len);</div>
+<div class="line">            <span class="keywordflow">if</span> (error_code2 != <a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63b">Zhuiri_error_code</a>.Zhuiri_error_code_success.getValue()) {</div>
+<div class="line">                System.out.printf(<span class="stringliteral">&quot;tianzuo_ZhuiriInt_send error: %d\n&quot;</span>, error_code2);</div>
+<div class="line">                <span class="keywordflow">return</span>;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        </div>
+<div class="line">        System.out.printf(<span class="stringliteral">&quot;test done\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_a678e215265929295f16abf1942959d23"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23">Zhuiri_data_sign</a></div><div class="ttdeci">Zhuiri_data_sign</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:260</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_a678e215265929295f16abf1942959d23a45a9152847f699d645cc9627fac0db46"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a45a9152847f699d645cc9627fac0db46">Zhuiri_data_sign_processing</a></div><div class="ttdeci">@ Zhuiri_data_sign_processing</div><div class="ttdoc">处理中 (processing)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:263</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_a678e215265929295f16abf1942959d23a5fd1b8dbf6243842374f18e2439a6fb6"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a5fd1b8dbf6243842374f18e2439a6fb6">Zhuiri_data_sign_response</a></div><div class="ttdeci">@ Zhuiri_data_sign_response</div><div class="ttdoc">回应消息 (response)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:264</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_a678e215265929295f16abf1942959d23a7158d5109fd8c53b152d9d6c53206465"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a7158d5109fd8c53b152d9d6c53206465">Zhuiri_data_sign_none</a></div><div class="ttdeci">@ Zhuiri_data_sign_none</div><div class="ttdoc">无标识 (no sign)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:261</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_a678e215265929295f16abf1942959d23afbd008c57c3ebda86dda34b6a2536fc4"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23afbd008c57c3ebda86dda34b6a2536fc4">Zhuiri_data_sign_heart</a></div><div class="ttdeci">@ Zhuiri_data_sign_heart</div><div class="ttdoc">心跳包 (heart)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:265</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_aed188dd510761cd27f610b9f17f3145e"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#aed188dd510761cd27f610b9f17f3145e">Zhuiri_data_pkg_struct</a></div><div class="ttdeci">struct Zhuiri_data_pkg_tag Zhuiri_data_pkg_struct</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_af5ef4864d22ffc5006e0d4dae4f6c63b"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63b">Zhuiri_error_code</a></div><div class="ttdeci">Zhuiri_error_code</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:277</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_af5ef4864d22ffc5006e0d4dae4f6c63ba3d3f5478590afa26be3c5c0ca6f3b0ce"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba3d3f5478590afa26be3c5c0ca6f3b0ce">Zhuiri_error_code_user_exit</a></div><div class="ttdeci">@ Zhuiri_error_code_user_exit</div><div class="ttdoc">自行退出 (user exit)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:287</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_af5ef4864d22ffc5006e0d4dae4f6c63ba410fe30d356f23e27eb8a7d5e7d951df"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba410fe30d356f23e27eb8a7d5e7d951df">Zhuiri_error_code_out_of_cache</a></div><div class="ttdeci">@ Zhuiri_error_code_out_of_cache</div><div class="ttdoc">超出缓冲最大值 (out f cache)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:283</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_af5ef4864d22ffc5006e0d4dae4f6c63ba443b5a0b25f06651a08df53b6218a36f"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba443b5a0b25f06651a08df53b6218a36f">Zhuiri_error_code_no_rights</a></div><div class="ttdeci">@ Zhuiri_error_code_no_rights</div><div class="ttdoc">效验未通过 (no rights)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:279</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_af5ef4864d22ffc5006e0d4dae4f6c63ba4cf0b7c73ab9b2b96a1bb42e1a315e29"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba4cf0b7c73ab9b2b96a1bb42e1a315e29">Zhuiri_error_code_socket</a></div><div class="ttdeci">@ Zhuiri_error_code_socket</div><div class="ttdoc">套接字错误 (socket error)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:280</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_af5ef4864d22ffc5006e0d4dae4f6c63ba4ebf46144d72d214a6433be9d4d9b0b8"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba4ebf46144d72d214a6433be9d4d9b0b8">Zhuiri_error_code_user_reject</a></div><div class="ttdeci">@ Zhuiri_error_code_user_reject</div><div class="ttdoc">对方决绝 (user reject)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:286</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_af5ef4864d22ffc5006e0d4dae4f6c63ba6571245cdf82989de3f1ac473391568b"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba6571245cdf82989de3f1ac473391568b">Zhuiri_error_code_handle</a></div><div class="ttdeci">@ Zhuiri_error_code_handle</div><div class="ttdoc">创建句柄失败 (handle error)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:282</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_af5ef4864d22ffc5006e0d4dae4f6c63baa1f84fa38d59db48f61054c5e45079ec"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baa1f84fa38d59db48f61054c5e45079ec">Zhuiri_error_code_time_out</a></div><div class="ttdeci">@ Zhuiri_error_code_time_out</div><div class="ttdoc">操作超时 (time out)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:285</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_af5ef4864d22ffc5006e0d4dae4f6c63baf2fc9a165ab80ba01bc920f657185ebe"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baf2fc9a165ab80ba01bc920f657185ebe">Zhuiri_error_code_out_of_memory</a></div><div class="ttdeci">@ Zhuiri_error_code_out_of_memory</div><div class="ttdoc">内存溢出 (out of memory)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:284</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_af5ef4864d22ffc5006e0d4dae4f6c63baf3559e08e2ebbd0eb0c209937129545c"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baf3559e08e2ebbd0eb0c209937129545c">Zhuiri_error_code_thread_error</a></div><div class="ttdeci">@ Zhuiri_error_code_thread_error</div><div class="ttdoc">线程失败 (thread error)</div><div class="ttdef"><b>Definition</b> tianzuo.Zhuiri.h:281</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_interface_8h_html_a03d3680cec5d1a8277fd5393ce864266"><div class="ttname"><a href="tianzuo_8_zhuiri_interface_8h.html#a03d3680cec5d1a8277fd5393ce864266">tianzuo_ZhuiriInterface_terminate</a></div><div class="ttdeci">tianzuo_Zhuiri_lib void tianzuo_ZhuiriInterface_terminate(tianzuo_ZhuiriInt **ZhuiriInt_pointer)</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_interface_8h_html_a0bc5be709b1158d96497000d3d7f56a9"><div class="ttname"><a href="tianzuo_8_zhuiri_interface_8h.html#a0bc5be709b1158d96497000d3d7f56a9">tianzuo_ZhuiriInterface_initialize</a></div><div class="ttdeci">tianzuo_Zhuiri_lib tianzuo_ZhuiriInt * tianzuo_ZhuiriInterface_initialize()</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_interface_8h_html_a1f31eb5e34ce1762434fe32fb83a6bad"><div class="ttname"><a href="tianzuo_8_zhuiri_interface_8h.html#a1f31eb5e34ce1762434fe32fb83a6bad">tianzuo_DataQueueInt_initialize</a></div><div class="ttdeci">tianzuo_Zhuiri_lib int tianzuo_DataQueueInt_initialize(int init_size)</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_interface_8h_html_a28ccb0493f82ef8be4d5a7930a06e7d3"><div class="ttname"><a href="tianzuo_8_zhuiri_interface_8h.html#a28ccb0493f82ef8be4d5a7930a06e7d3">tianzuo_DataQueueInterface_terminate</a></div><div class="ttdeci">tianzuo_Zhuiri_lib void tianzuo_DataQueueInterface_terminate(tianzuo_DataQueue **DataQueue_pointer)</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_interface_8h_html_a3efbb7799d03347cb5fc0b02e08ebbb5"><div class="ttname"><a href="tianzuo_8_zhuiri_interface_8h.html#a3efbb7799d03347cb5fc0b02e08ebbb5">tianzuo_ZhuiriInt_initialize</a></div><div class="ttdeci">tianzuo_Zhuiri_lib int tianzuo_ZhuiriInt_initialize(tianzuo_ZhuiriInt *ZhuiriInt_pointer, const char *ip_addr, int port, const void *callback, const void *context, int const heart_check_time, bool log_trace)</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_interface_8h_html_a6f4aa8b648475ebc632c5f2b7f0c0dd3"><div class="ttname"><a href="tianzuo_8_zhuiri_interface_8h.html#a6f4aa8b648475ebc632c5f2b7f0c0dd3">tianzuo_ZhuiriInt_set_param</a></div><div class="ttdeci">tianzuo_Zhuiri_lib int tianzuo_ZhuiriInt_set_param(tianzuo_ZhuiriInt *ZhuiriInt_pointer, int sender_index, int init_server_port, int msg_init_size, int recv_ex_data_max, int retry_max, int retry_all_number, int init_retry_time)</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_interface_8h_html_a7b54fa6cc4ba11742163fafeaa1f4947"><div class="ttname"><a href="tianzuo_8_zhuiri_interface_8h.html#a7b54fa6cc4ba11742163fafeaa1f4947">tianzuo_DataQueueInterface_initialize</a></div><div class="ttdeci">tianzuo_Zhuiri_lib tianzuo_DataQueue * tianzuo_DataQueueInterface_initialize()</div></div>
+<div class="ttc" id="atianzuo_8_zhuiri_interface_8h_html_a7e805681d3e0f4d29a4a07259b6afa58"><div class="ttname"><a href="tianzuo_8_zhuiri_interface_8h.html#a7e805681d3e0f4d29a4a07259b6afa58">tianzuo_ZhuiriInt_send</a></div><div class="ttdeci">tianzuo_Zhuiri_lib int tianzuo_ZhuiriInt_send(tianzuo_ZhuiriInt *ZhuiriInt_pointer, int sender_index, int ip, int port, int sign, int function, char *send_data, int send_size)</div></div>
+</div><!-- fragment --> </details>
+<details >
+<summary >
+csharp</summary>
+<p></p>
+<div class="fragment"><div class="line"><span class="keyword">using </span>System.Collections;</div>
+<div class="line"><span class="keyword">using </span>System.Net;</div>
+<div class="line"><span class="keyword">using </span>System.Runtime.InteropServices;</div>
+<div class="line"><span class="keyword">using </span>System.Text;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63b">Zhuiri_error_code</a></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba1cddc134652e59aca7cbc715776fdd6a">Zhuiri_error_code_success</a>       = 0x00000001,                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba443b5a0b25f06651a08df53b6218a36f">Zhuiri_error_code_no_rights</a>     = 0x00000002,                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba4cf0b7c73ab9b2b96a1bb42e1a315e29">Zhuiri_error_code_socket</a>        = 0x0000000D,                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baf3559e08e2ebbd0eb0c209937129545c">Zhuiri_error_code_thread_error</a>  = 0x00000021,                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba6571245cdf82989de3f1ac473391568b">Zhuiri_error_code_handle</a>        = 0x00000022,                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba410fe30d356f23e27eb8a7d5e7d951df">Zhuiri_error_code_out_of_cache</a>  = 0x00000023,                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baf2fc9a165ab80ba01bc920f657185ebe">Zhuiri_error_code_out_of_memory</a> = 0x00000024,                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baa1f84fa38d59db48f61054c5e45079ec">Zhuiri_error_code_time_out</a>      = 0x00000025,                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba4ebf46144d72d214a6433be9d4d9b0b8">Zhuiri_error_code_user_reject</a>   = 0x00000098,                                     </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba3d3f5478590afa26be3c5c0ca6f3b0ce">Zhuiri_error_code_user_exit</a>     = 0x00000099,                                     </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23">Zhuiri_data_sign</a></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a7158d5109fd8c53b152d9d6c53206465">Zhuiri_data_sign_none</a>       = 0x00000000,                                         </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23ae1e5b117bbd148ca1e81c1301aed34d4">Zhuiri_data_sign_reliable</a>   = 0x00000001,                                         </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a45a9152847f699d645cc9627fac0db46">Zhuiri_data_sign_processing</a> = 0x00000002,                                         </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a5fd1b8dbf6243842374f18e2439a6fb6">Zhuiri_data_sign_response</a>   = 0x00000003,                                         </div>
+<div class="line">    <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23afbd008c57c3ebda86dda34b6a2536fc4">Zhuiri_data_sign_heart</a>      = 0x00000004,                                         </div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_zhuiri__data__tag.html">Zhuiri_data_struct</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <a class="code hl_typedef" href="tianzuo_8_zhuiri_8h.html#a7a2f27241c10e3ebc1fdb63ef5b6d8fd">Zhuiri_data_struct</a>()</div>
+<div class="line">    {</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> m_ip_adrs;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> m_port;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> m_function;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> m_sign;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> m_index;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> m_send_time;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> m_send_size;</div>
+<div class="line">    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 492)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">byte</span>[] m_data;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_zhuiri__data__pkg__tag.html">Zhuiri_data_pkg_struct</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <a class="code hl_typedef" href="tianzuo_8_zhuiri_8h.html#aed188dd510761cd27f610b9f17f3145e">Zhuiri_data_pkg_struct</a>()</div>
+<div class="line">    {</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">public</span> <a class="code hl_struct" href="struct_zhuiri__data__tag.html">Zhuiri_data_struct</a> m_data;</div>
+<div class="line">    <span class="keyword">public</span> IntPtr m_send_data;</div>
+<div class="line">    <span class="keyword">public</span> IntPtr m_Zhuiri;</div>
+<div class="line">    <span class="keyword">public</span> IntPtr m_user_data;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> delegate <span class="keywordtype">void</span> CallbackDelegate(IntPtr context, IntPtr pData);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Program</div>
+<div class="line">{</div>
+<div class="line">    [DllImport(<span class="stringliteral">&quot;tianzuo.Zhuiri.dll&quot;</span>)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">extern</span> IntPtr <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a0bc5be709b1158d96497000d3d7f56a9">tianzuo_ZhuiriInterface_initialize</a>();</div>
+<div class="line">    [DllImport(<span class="stringliteral">&quot;tianzuo.Zhuiri.dll&quot;</span>)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a03d3680cec5d1a8277fd5393ce864266">tianzuo_ZhuiriInterface_terminate</a>(IntPtr Zhuiri);</div>
+<div class="line">    [DllImport(<span class="stringliteral">&quot;tianzuo.Zhuiri.dll&quot;</span>)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a3efbb7799d03347cb5fc0b02e08ebbb5">tianzuo_ZhuiriInt_initialize</a>(IntPtr Zhuiri, <span class="keywordtype">string</span> ip_addr, <span class="keywordtype">int</span> port, IntPtr callback, IntPtr context, <span class="keywordtype">int</span> heart_check_time, <span class="keywordtype">bool</span> log_trace, IntPtr iocp);</div>
+<div class="line">    [DllImport(<span class="stringliteral">&quot;tianzuo.Zhuiri.dll&quot;</span>)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">extern</span> IntPtr <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a7b54fa6cc4ba11742163fafeaa1f4947">tianzuo_DataQueueInterface_initialize</a>();</div>
+<div class="line">    [DllImport(<span class="stringliteral">&quot;tianzuo.Zhuiri.dll&quot;</span>)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a6f4aa8b648475ebc632c5f2b7f0c0dd3">tianzuo_ZhuiriInt_set_param</a>(IntPtr Zhuiri, <span class="keywordtype">int</span> sender_index, <span class="keywordtype">int</span> init_server_port, <span class="keywordtype">int</span> msg_init_size, <span class="keywordtype">int</span> recv_ex_data_max, <span class="keywordtype">int</span> retry_max, <span class="keywordtype">int</span> retry_all_number, <span class="keywordtype">int</span> init_retry_time);</div>
+<div class="line">    [DllImport(<span class="stringliteral">&quot;tianzuo.Zhuiri.dll&quot;</span>)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a7e805681d3e0f4d29a4a07259b6afa58">tianzuo_ZhuiriInt_send</a>(IntPtr Zhuiri, <span class="keywordtype">int</span> sender_index, <span class="keywordtype">int</span> ip, <span class="keywordtype">int</span> port, <span class="keywordtype">int</span> sign, <span class="keywordtype">int</span> <span class="keyword">function</span>, <span class="keywordtype">string</span> send_data, <span class="keywordtype">int</span> send_size);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> MyCallback(IntPtr context, IntPtr pData)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_struct" href="struct_zhuiri__data__pkg__tag.html">Zhuiri_data_pkg_struct</a> data = Marshal.PtrToStructure&lt;<a class="code hl_struct" href="struct_zhuiri__data__pkg__tag.html">Zhuiri_data_pkg_struct</a>&gt;(pData);</div>
+<div class="line">        <span class="keywordtype">string</span> str = Encoding.ASCII.GetString(data.<a class="code hl_variable" href="struct_zhuiri__data__pkg__tag.html#a6959bf070a0d7595fb626933d0da8e63">m_data</a>.<a class="code hl_variable" href="struct_zhuiri__data__tag.html#acdb96a0c1c3d1b92775b3be12a18a76d">m_data</a>);</div>
+<div class="line">        Console.WriteLine(<span class="stringliteral">&quot;recv data:&quot;</span> + str);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> Main(<span class="keywordtype">string</span>[] args)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// 初始化接口 initialize the interface</span></div>
+<div class="line">        Console.WriteLine(<span class="stringliteral">&quot;initialize the interface\n&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// 创建实例 create an instance</span></div>
+<div class="line">        IntPtr data_queue_recv = <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a7b54fa6cc4ba11742163fafeaa1f4947">tianzuo_DataQueueInterface_initialize</a>();</div>
+<div class="line"> </div>
+<div class="line">        CallbackDelegate callback = <span class="keyword">new</span> CallbackDelegate(MyCallback);</div>
+<div class="line">        IntPtr callbackPtr = Marshal.GetFunctionPointerForDelegate(callback);</div>
+<div class="line"> </div>
+<div class="line">        IntPtr zhuiri = <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a0bc5be709b1158d96497000d3d7f56a9">tianzuo_ZhuiriInterface_initialize</a>();</div>
+<div class="line">        <span class="keywordtype">int</span> port = 6666;</div>
+<div class="line">        <span class="keywordtype">int</span> error_code = <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a3efbb7799d03347cb5fc0b02e08ebbb5">tianzuo_ZhuiriInt_initialize</a>(zhuiri, <span class="keyword">null</span>, port, callbackPtr, data_queue_recv, 6000, <span class="keyword">false</span>, 0);</div>
+<div class="line">        <span class="keywordflow">if</span> (error_code != ((<span class="keywordtype">int</span>)<a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63b">Zhuiri_error_code</a>.Zhuiri_error_code_success))</div>
+<div class="line">        {</div>
+<div class="line">            Console.WriteLine(<span class="stringliteral">&quot;tianzuo_ZhuiriInt_initialize error:&quot;</span> + error_code);</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// 设置默认参数 set default parameters</span></div>
+<div class="line">        <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a6f4aa8b648475ebc632c5f2b7f0c0dd3">tianzuo_ZhuiriInt_set_param</a>(zhuiri, 0, 5168, 1024, 2280, 3, 5, 600);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// 开始发送数据 start sending data</span></div>
+<div class="line">        <span class="keywordtype">string</span> ipAddressString = <span class="stringliteral">&quot;127.0.1.1&quot;</span>;</div>
+<div class="line">        IPAddress ipAddress = IPAddress.Parse(ipAddressString);</div>
+<div class="line">        <span class="keywordtype">byte</span>[] bytes = ipAddress.GetAddressBytes();</div>
+<div class="line">        <span class="keywordflow">if</span> (BitConverter.IsLittleEndian)</div>
+<div class="line">        {</div>
+<div class="line">            Array.Reverse(bytes);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordtype">int</span> ip = BitConverter.ToInt32(bytes, 0);</div>
+<div class="line">        <span class="keywordtype">int</span> sport = 6666;</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 100; i++)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordtype">string</span> data = String.Format(<span class="stringliteral">&quot;send data {0}&quot;</span>, i);</div>
+<div class="line">            <span class="keywordtype">int</span> data_len = data.Length;</div>
+<div class="line">            error_code = <a class="code hl_function" href="tianzuo_8_zhuiri_interface_8h.html#a7e805681d3e0f4d29a4a07259b6afa58">tianzuo_ZhuiriInt_send</a>(zhuiri, 0, ip, sport, (<span class="keywordtype">int</span>)<a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23">Zhuiri_data_sign</a>.Zhuiri_data_sign_reliable, 7788, data, data_len);</div>
+<div class="line">            <span class="keywordflow">if</span> (error_code != ((<span class="keywordtype">int</span>)<a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63b">Zhuiri_error_code</a>.Zhuiri_error_code_success))</div>
+<div class="line">            {</div>
+<div class="line">                Console.WriteLine(<span class="stringliteral">&quot;tianzuo_ZhuiriInt_send error:&quot;</span> + error_code);</div>
+<div class="line">                <span class="keywordflow">return</span>;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        Console.WriteLine(<span class="stringliteral">&quot;test done&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="atianzuo_8_zhuiri_8h_html_a7a2f27241c10e3ebc1fdb63ef5b6d8fd"><div class="ttname"><a href="tianzuo_8_zhuiri_8h.html#a7a2f27241c10e3ebc1fdb63ef5b6d8fd">Zhuiri_data_struct</a></div><div class="ttdeci">struct Zhuiri_data_tag Zhuiri_data_struct</div></div>
+</div><!-- fragment --> </details>
+<details >
+<summary >
+javascript</summary>
+<p></p>
+<div class="fragment"><div class="line">Zhuiri_error_code_success       = 0x00000001;                                     ///&lt; 正确的值 (success)</div>
+<div class="line">Zhuiri_error_code_no_rights     = 0x00000002;                                     ///&lt; 效验未通过 (no rights)</div>
+<div class="line">Zhuiri_error_code_socket        = 0x0000000D;                                     ///&lt; 套接字错误 (socket error)</div>
+<div class="line">Zhuiri_error_code_thread_error  = 0x00000021;                                     ///&lt; 线程失败 (thread error)</div>
+<div class="line">Zhuiri_error_code_handle        = 0x00000022;                                     ///&lt; 创建句柄失败 (handle error)</div>
+<div class="line">Zhuiri_error_code_out_of_cache  = 0x00000023;                                     ///&lt; 超出缓冲最大值 (out f cache)</div>
+<div class="line">Zhuiri_error_code_out_of_memory = 0x00000024;                                     ///&lt; 内存溢出 (out of memory)</div>
+<div class="line">Zhuiri_error_code_time_out      = 0x00000025;                                     ///&lt; 操作超时 (time out)</div>
+<div class="line">Zhuiri_error_code_user_reject   = 0x00000098;                                     ///&lt; 对方决绝 (user reject)</div>
+<div class="line">Zhuiri_error_code_user_exit     = 0x00000099;                                     ///&lt; 自行退出 (user exit)</div>
+<div class="line"> </div>
+<div class="line">Zhuiri_data_sign_none           = 0x00000000;                                     ///&lt; 无标识  (no sign)</div>
+<div class="line">Zhuiri_data_sign_reliable       = 0x00000001;                                     ///&lt; 可靠    (reliable)</div>
+<div class="line">Zhuiri_data_sign_processing     = 0x00000002;                                     ///&lt; 处理中  (processing)</div>
+<div class="line">Zhuiri_data_sign_response       = 0x00000003;                                     ///&lt; 回应消息 (response)</div>
+<div class="line">Zhuiri_data_sign_heart          = 0x00000004;                                     ///&lt; 心跳包  (heart)</div>
+<div class="line"> </div>
+<div class="line">let ffi = require(&#39;ffi-napi&#39;)</div>
+<div class="line">const ref = require(&#39;ref-napi&#39;);</div>
+<div class="line"> </div>
+<div class="line">let tianzuo_ZhuiriLib = ffi.Library(&quot;tianzuo.Zhuiri.dll&quot;, {</div>
+<div class="line">    &#39;tianzuo_ZhuiriInterface_initialize&#39;: [&#39;pointer&#39;, []],</div>
+<div class="line">    &#39;tianzuo_ZhuiriInterface_terminate&#39;:[&#39;void&#39;,[&#39;pointer&#39;]],</div>
+<div class="line">    &#39;tianzuo_ZhuiriInt_initialize&#39;:[&#39;int&#39;,[&#39;pointer&#39;,&#39;pointer&#39;,&#39;int&#39;,&#39;pointer&#39;,&#39;pointer&#39;,&#39;int&#39;, &#39;bool&#39;,&#39;pointer&#39;]],</div>
+<div class="line">    &#39;tianzuo_ZhuiriInt_set_param&#39;:[&#39;int&#39;,[&#39;pointer&#39;,&#39;int&#39;,&#39;int&#39;,&#39;int&#39;,&#39;int&#39;,&#39;int&#39;,&#39;int&#39;,&#39;int&#39;]],</div>
+<div class="line">    &#39;tianzuo_ZhuiriInt_send&#39;:[&#39;int&#39;,[&#39;pointer&#39;,&#39;int&#39;,&#39;int&#39;,&#39;int&#39;,&#39;int&#39;,&#39;int&#39;,&#39;string&#39;,&#39;int&#39;]],</div>
+<div class="line">    &#39;tianzuo_DataQueueInterface_initialize&#39;: [&#39;pointer&#39;, []],</div>
+<div class="line">    &#39;tianzuo_DataQueueInterface_terminate&#39;:[&#39;void&#39;,[&#39;pointer&#39;]],</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line">function ipToInt(ip) {</div>
+<div class="line">    let parts = ip.split(&#39;.&#39;).map(Number);</div>
+<div class="line">    return (parts[0] &lt;&lt; 24) + (parts[1] &lt;&lt; 16) + (parts[2] &lt;&lt; 8) + parts[3];</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">function sleep(ms) {</div>
+<div class="line">    return new Promise(resolve =&gt; setTimeout(resolve, ms));</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">async function main() {</div>
+<div class="line"> </div>
+<div class="line">    // 初始化接口 initialize the interface</div>
+<div class="line">    console.log(&quot;initialize the interface\n&quot;);</div>
+<div class="line"> </div>
+<div class="line">    // 创建实例 create an instance</div>
+<div class="line">    let data_queue_recv = tianzuo_ZhuiriLib.tianzuo_DataQueueInterface_initialize();</div>
+<div class="line"> </div>
+<div class="line">    const callback = ffi.Callback(&#39;void&#39;, [&#39;pointer&#39;, &#39;pointer&#39;], function(context, pData) {</div>
+<div class="line">        const data = pData.readCString(4*7);</div>
+<div class="line">        console.log(`recv data: ${data}`);</div>
+<div class="line">    });</div>
+<div class="line"> </div>
+<div class="line">    let port = 5555;</div>
+<div class="line">    let zhuiri = tianzuo_ZhuiriLib.tianzuo_ZhuiriInterface_initialize();</div>
+<div class="line">    let error_code = tianzuo_ZhuiriLib.tianzuo_ZhuiriInt_initialize(zhuiri, null, port, callback, data_queue_recv, 6000, false, null);</div>
+<div class="line">    if (error_code !== Zhuiri_error_code_success) {</div>
+<div class="line">        console.log(&quot;tianzuo_ZhuiriInt_initialize error: %d\n&quot;, error_code);</div>
+<div class="line">        return;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    // 设置默认参数 set default parameters</div>
+<div class="line">    tianzuo_ZhuiriLib.tianzuo_ZhuiriInt_set_param(zhuiri, 0, 5168, 1024, 2280, 3, 5, 600);</div>
+<div class="line"> </div>
+<div class="line">    // 开始发送数据 start sending data</div>
+<div class="line">    const ipString = &#39;127.0.0.1&#39;;</div>
+<div class="line">    const ip = ipToInt(ipString);</div>
+<div class="line">    let sport = 6666;</div>
+<div class="line"> </div>
+<div class="line">    for (let i = 0; i &lt; 10; i++) {</div>
+<div class="line">        const data = `send data ${i}`;</div>
+<div class="line">        const data_len = data.length;</div>
+<div class="line">        error_code = tianzuo_ZhuiriLib.tianzuo_ZhuiriInt_send(zhuiri, 0, ip, sport, Zhuiri_data_sign_reliable, 7788, data, data_len);</div>
+<div class="line">        if (error_code !== Zhuiri_error_code_success) {</div>
+<div class="line">            console.log(&quot;tianzuo_ZhuiriInt_send error: %d\n&quot;, error_code);</div>
+<div class="line">            return;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    await sleep(20000);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">main();</div>
+<div class="line"> </div>
+<div class="line">console.log(&quot;test done\n&quot;);</div>
+</div><!-- fragment --> </details>
+<details >
+<summary >
+php</summary>
+<p></p>
+<div class="fragment"><div class="line">&lt;?php</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 检查是否加载了 FFI 扩展</span></div>
+<div class="line"><span class="keywordflow">if</span> (extension_loaded(<span class="stringliteral">&#39;ffi&#39;</span>)) {</div>
+<div class="line">    echo(<span class="stringliteral">&quot;已启用 FFI 扩展\n&quot;</span>);</div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    die(<span class="stringliteral">&quot;未启动 FFI 扩展\n&quot;</span>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum</span> <a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63b">Zhuiri_error_code</a></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba1cddc134652e59aca7cbc715776fdd6a">Zhuiri_error_code_success</a>       = 0x00000001;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba443b5a0b25f06651a08df53b6218a36f">Zhuiri_error_code_no_rights</a>     = 0x00000002;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba4cf0b7c73ab9b2b96a1bb42e1a315e29">Zhuiri_error_code_socket</a>        = 0x0000000D;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baf3559e08e2ebbd0eb0c209937129545c">Zhuiri_error_code_thread_error</a>  = 0x00000021;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba6571245cdf82989de3f1ac473391568b">Zhuiri_error_code_handle</a>        = 0x00000022;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba410fe30d356f23e27eb8a7d5e7d951df">Zhuiri_error_code_out_of_cache</a>  = 0x00000023;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baf2fc9a165ab80ba01bc920f657185ebe">Zhuiri_error_code_out_of_memory</a> = 0x00000024;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63baa1f84fa38d59db48f61054c5e45079ec">Zhuiri_error_code_time_out</a>      = 0x00000025;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba4ebf46144d72d214a6433be9d4d9b0b8">Zhuiri_error_code_user_reject</a>   = 0x00000098;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba3d3f5478590afa26be3c5c0ca6f3b0ce">Zhuiri_error_code_user_exit</a>     = 0x00000099;                                     </div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum</span> <a class="code hl_enumeration" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23">Zhuiri_data_sign</a></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a7158d5109fd8c53b152d9d6c53206465">Zhuiri_data_sign_none</a>           = 0x00000000;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23ae1e5b117bbd148ca1e81c1301aed34d4">Zhuiri_data_sign_reliable</a>       = 0x00000001;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a45a9152847f699d645cc9627fac0db46">Zhuiri_data_sign_processing</a>     = 0x00000002;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23a5fd1b8dbf6243842374f18e2439a6fb6">Zhuiri_data_sign_response</a>       = 0x00000003;                                     </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23afbd008c57c3ebda86dda34b6a2536fc4">Zhuiri_data_sign_heart</a>          = 0x00000004;                                     </div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">$ffi = FFI::cdef(<span class="stringliteral">&quot;</span></div>
+<div class="line"><span class="stringliteral">    void* tianzuo_ZhuiriInterface_initialize();</span></div>
+<div class="line"><span class="stringliteral">    void tianzuo_ZhuiriInterface_terminate(void* *ZhuiriInt_pointer);</span></div>
+<div class="line"><span class="stringliteral">    int tianzuo_ZhuiriInt_initialize(void* ZhuiriInt_pointer, const char* ip_addr, int port, const void* callback, const void* context, int const heart_check_time, bool log_trace, void* iocp);</span></div>
+<div class="line"><span class="stringliteral">    int tianzuo_ZhuiriInt_set_param(void* ZhuiriInt_pointer, int sender_index, int init_server_port, int msg_init_size, int recv_ex_data_max, int retry_max, int retry_all_number, int init_retry_time);</span></div>
+<div class="line"><span class="stringliteral">    int tianzuo_ZhuiriInt_send(void* ZhuiriInt_pointer, int sender_index, int ip, int port, int sign, int function, char* send_data, int send_size);</span></div>
+<div class="line"><span class="stringliteral">    void* tianzuo_DataQueueInterface_initialize();</span></div>
+<div class="line"><span class="stringliteral">    void tianzuo_DataQueueInterface_terminate(void* *DataQueue_pointer);</span></div>
+<div class="line"><span class="stringliteral">    typedef unsigned(*Zhuiri_callback)(const void *context, const void *pData);</span></div>
+<div class="line"><span class="stringliteral">&quot;</span>, <span class="stringliteral">&quot;tianzuo.Zhuiri.dll&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"># 初始化接口 initialize the interface</span></div>
+<div class="line">echo <span class="stringliteral">&quot;initialize the interface&quot;</span> . <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"># 创建实例 create an instance</span></div>
+<div class="line">$data_queue_recv = $ffi-&gt;tianzuo_DataQueueInterface_initialize();</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//function myCallback($context, $pData) {</span></div>
+<div class="line"><span class="comment">//    echo &quot;phpCallback&quot; . &quot;\n&quot;;</span></div>
+<div class="line"><span class="comment">//}</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">//$callback = function($context, $pData) {</span></div>
+<div class="line"><span class="comment">//    myCallback($context, $pData);</span></div>
+<div class="line"><span class="comment">//};</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">//$callableCallback = FFI::addr($callback);</span></div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//$phpCallback = function($context, $pData): void {</span></div>
+<div class="line"><span class="comment">//    echo &quot;phpCallback&quot; . &quot;\n&quot;;</span></div>
+<div class="line"><span class="comment">//};</span></div>
+<div class="line"><span class="comment">//$callback= FFI::new(&quot;Zhuiri_callback&quot;, $phpCallback);</span></div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">$callback = $ffi-&gt;callback(<span class="stringliteral">&quot;void(const char*)&quot;</span>, <span class="keyword">function</span>($message) {</div>
+<div class="line">    echo <span class="stringliteral">&quot;Callback message: $message\n&quot;</span>;</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">$port = 6666;</div>
+<div class="line">$zhuiri = $ffi-&gt;tianzuo_ZhuiriInterface_initialize();</div>
+<div class="line">$error_code = $ffi-&gt;tianzuo_ZhuiriInt_initialize($zhuiri, <span class="keyword">null</span>, $port, $callback, $data_queue_recv, 6000, False, <span class="keyword">null</span>);</div>
+<div class="line"><span class="keywordflow">if</span> ($error_code != <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba1cddc134652e59aca7cbc715776fdd6a">Zhuiri_error_code::Zhuiri_error_code_success</a>) {</div>
+<div class="line">    echo <span class="stringliteral">&quot;initialize error: &quot;</span> . $error_code . <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"># 设置默认参数 set default parameters</span></div>
+<div class="line">$ffi-&gt;tianzuo_ZhuiriInt_set_param($zhuiri, 0, 5168, 1024, 2280, 3, 5, 600);</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"># 开始发送数据 start sending data</span></div>
+<div class="line">$ip = ip2long(<span class="stringliteral">&quot;127.0.0.1&quot;</span>);</div>
+<div class="line"><span class="keywordflow">for</span> ($i = 0; $i &lt; 10; $i++) {</div>
+<div class="line">    $data = sprintf(<span class="stringliteral">&quot;send data %d&quot;</span>, $i);</div>
+<div class="line">    $data_len = strlen($data);</div>
+<div class="line">    echo <span class="stringliteral">&quot;ip: &quot;</span> . $ip . <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    echo <span class="stringliteral">&quot;port: &quot;</span> . $port . <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    echo <span class="stringliteral">&quot;send data: &quot;</span> . $data . <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    echo <span class="stringliteral">&quot;data_len: &quot;</span> . $data_len . <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    $error_code = $ffi-&gt;tianzuo_ZhuiriInt_send($zhuiri, 0, $ip, $port, <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#a678e215265929295f16abf1942959d23ae1e5b117bbd148ca1e81c1301aed34d4">Zhuiri_data_sign::Zhuiri_data_sign_reliable</a>, 7788, $data, $data_len);</div>
+<div class="line">    <span class="keywordflow">if</span> ($error_code != <a class="code hl_enumvalue" href="tianzuo_8_zhuiri_8h.html#af5ef4864d22ffc5006e0d4dae4f6c63ba1cddc134652e59aca7cbc715776fdd6a">Zhuiri_error_code::Zhuiri_error_code_success</a>) {</div>
+<div class="line">        echo <span class="stringliteral">&quot;send error: &quot;</span> . $error_code . <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">echo <span class="stringliteral">&quot;test done&quot;</span> . <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">?&gt;</div>
+</div><!-- fragment --> </details>
+<details >
+<summary >
+vb</summary>
+<p></p>
+<div class="fragment"><div class="line">Imports System.IO</div>
+<div class="line">Imports System.Net</div>
+<div class="line">Imports System.Runtime.InteropServices</div>
+<div class="line">Imports System.Runtime.InteropServices.JavaScript.JSType</div>
+<div class="line">Imports System.Text</div>
+<div class="line"> </div>
+<div class="line">Enum Zhuiri_error_code</div>
+<div class="line">    Zhuiri_error_code_success = 1                                            &#39; 正确的值 (success)</div>
+<div class="line">    Zhuiri_error_code_no_rights = 2                                          &#39; 效验未通过 (no rights)</div>
+<div class="line">    Zhuiri_error_code_socket = 13                                            &#39; 套接字错误 (socket Error)</div>
+<div class="line">    Zhuiri_error_code_thread_error = 21                                      &#39; 线程失败 (thread Error)</div>
+<div class="line">    Zhuiri_error_code_handle = 22                                            &#39; 创建句柄失败 (handle Error)</div>
+<div class="line">    Zhuiri_error_code_out_of_cache = 23                                      &#39; 超出缓冲最大值 (out f cache)</div>
+<div class="line">    Zhuiri_error_code_out_of_memory = 24                                     &#39; 内存溢出 (out Of memory)</div>
+<div class="line">    Zhuiri_error_code_time_out = 25                                          &#39; 操作超时 (time out)</div>
+<div class="line">    Zhuiri_error_code_user_reject = 98                                       &#39; 对方决绝 (user reject)</div>
+<div class="line">    Zhuiri_error_code_user_exit = 99                                         &#39; 自行退出 (user Exit)</div>
+<div class="line">End Enum</div>
+<div class="line"> </div>
+<div class="line">Enum Zhuiri_data_sign</div>
+<div class="line">    Zhuiri_data_sign_none = 0                                               &#39; 无标识  (no sign)</div>
+<div class="line">    Zhuiri_data_sign_reliable = 1                                           &#39; 可靠    (reliable)</div>
+<div class="line">    Zhuiri_data_sign_processing = 2                                         &#39; 处理中  (processing)</div>
+<div class="line">    Zhuiri_data_sign_response = 3                                           &#39; 回应消息 (response)</div>
+<div class="line">    Zhuiri_data_sign_heart = 4                                              &#39; 心跳包  (heart)</div>
+<div class="line">End Enum</div>
+<div class="line"> </div>
+<div class="line">Structure Zhuiri_data_struct</div>
+<div class="line">    Public m_ip_adrs As Integer</div>
+<div class="line">    Public m_port As Integer</div>
+<div class="line">    Public m_function As Integer</div>
+<div class="line">    Public m_sign As Integer</div>
+<div class="line">    Public m_index As Integer</div>
+<div class="line">    Public m_send_time As Integer</div>
+<div class="line">    Public m_send_size As Integer</div>
+<div class="line">    &lt;MarshalAs(UnmanagedType.ByValArray, SizeConst:=492)&gt;</div>
+<div class="line">    Public m_data As Byte()</div>
+<div class="line">End Structure</div>
+<div class="line"> </div>
+<div class="line">Structure Zhuiri_data_pkg_struct</div>
+<div class="line">    Public m_data As Zhuiri_data_struct</div>
+<div class="line">    Public m_send_data As IntPtr</div>
+<div class="line">    Public m_Zhuiri As IntPtr</div>
+<div class="line">    Public m_user_data As IntPtr</div>
+<div class="line">End Structure</div>
+<div class="line"> </div>
+<div class="line">Module Program</div>
+<div class="line">    &lt;DllImport(&quot;tianzuo.Zhuiri.dll&quot;)&gt;</div>
+<div class="line">    Public Function tianzuo_ZhuiriInterface_initialize() As IntPtr</div>
+<div class="line">    End Function</div>
+<div class="line">    &lt;DllImport(&quot;tianzuo.Zhuiri.dll&quot;)&gt;</div>
+<div class="line">    Public Function tianzuo_ZhuiriInterface_terminate(ByRef ZhuiriInt_pointer As IntPtr)</div>
+<div class="line">    End Function</div>
+<div class="line">    &lt;DllImport(&quot;tianzuo.Zhuiri.dll&quot;)&gt;</div>
+<div class="line">    Public Function tianzuo_ZhuiriInt_initialize(ZhuiriInt_pointer As IntPtr, ip_addr As String, port As Integer,</div>
+<div class="line">        callback As IntPtr, context As IntPtr, heart_check_time As Integer, log_trace As Boolean, iocp As IntPtr) As Integer</div>
+<div class="line">    End Function</div>
+<div class="line">    &lt;DllImport(&quot;tianzuo.Zhuiri.dll&quot;)&gt;</div>
+<div class="line">    Public Function tianzuo_ZhuiriInt_set_param(ZhuiriInt_pointer As IntPtr,</div>
+<div class="line">        sender_index As Integer, init_server_port As Integer, msg_init_size As Integer,</div>
+<div class="line">        recv_ex_data_max As Integer, retry_max As Integer, retry_all_number As Integer,</div>
+<div class="line">        init_retry_time As Integer) As Integer</div>
+<div class="line">    End Function</div>
+<div class="line">    &lt;DllImport(&quot;tianzuo.Zhuiri.dll&quot;)&gt;</div>
+<div class="line">    Public Function tianzuo_ZhuiriInt_send(ZhuiriInt_pointer As IntPtr,</div>
+<div class="line">        sender_index As Integer, ip As Integer, port As Integer, sign As Integer, func As Integer, send_data As String, send_size As Integer) As Integer</div>
+<div class="line">    End Function</div>
+<div class="line">    &lt;DllImport(&quot;tianzuo.Zhuiri.dll&quot;)&gt;</div>
+<div class="line">    Public Function tianzuo_DataQueueInterface_initialize() As IntPtr</div>
+<div class="line">    End Function</div>
+<div class="line">    &lt;DllImport(&quot;tianzuo.Zhuiri.dll&quot;)&gt;</div>
+<div class="line">    Public Function tianzuo_DataQueueInterface_terminate(ByRef DataQueue_pointer As IntPtr)</div>
+<div class="line">    End Function</div>
+<div class="line"> </div>
+<div class="line">    Public Delegate Sub CallbackFunc(context As IntPtr, pData As IntPtr)</div>
+<div class="line"> </div>
+<div class="line">    Public Sub msg_recv_callback(context As IntPtr, pData As IntPtr)</div>
+<div class="line">        Dim data As Zhuiri_data_pkg_struct = Marshal.PtrToStructure(Of Zhuiri_data_pkg_struct)(pData)</div>
+<div class="line">        Dim Str As String = Encoding.ASCII.GetString(data.m_data.m_data)</div>
+<div class="line">        Console.WriteLine(&quot;recv data:&quot; + Str)</div>
+<div class="line">    End Sub</div>
+<div class="line"> </div>
+<div class="line">    Sub Main(args As String())</div>
+<div class="line"> </div>
+<div class="line">        &#39; 初始化接口 initialize the interface</div>
+<div class="line">        Console.WriteLine(&quot;initialize the interface&quot;)</div>
+<div class="line"> </div>
+<div class="line">        &#39; 创建实例 create an instance</div>
+<div class="line">        Dim data_queue_recv As IntPtr = tianzuo_DataQueueInterface_initialize()</div>
+<div class="line">        Dim callbackDelegate As CallbackFunc = AddressOf msg_recv_callback</div>
+<div class="line">        Dim callbackPtr As IntPtr = Marshal.GetFunctionPointerForDelegate(callbackDelegate)</div>
+<div class="line"> </div>
+<div class="line">        Dim port As Integer = 6666</div>
+<div class="line">        Dim Zhuiri As IntPtr = tianzuo_ZhuiriInterface_initialize()</div>
+<div class="line">        Dim error_code As Integer = tianzuo_ZhuiriInt_initialize(Zhuiri, IntPtr.Zero, port, callbackPtr, data_queue_recv, 6000, False, IntPtr.Zero)</div>
+<div class="line">        If (error_code &lt;&gt; Zhuiri_error_code.Zhuiri_error_code_success) Then</div>
+<div class="line">            Console.WriteLine(&quot;tianzuo_ZhuiriInt_initialize error:&quot; + error_code.ToString)</div>
+<div class="line">            Return</div>
+<div class="line">        End If</div>
+<div class="line"> </div>
+<div class="line">        &#39; 设置默认参数 Set Default parameters</div>
+<div class="line">        tianzuo_ZhuiriInt_set_param(Zhuiri, 0, 5168, 1024, 2280, 3, 5, 600)</div>
+<div class="line"> </div>
+<div class="line">        &#39; 开始发送数据 start sending data</div>
+<div class="line">        Dim ipAddressString As String = &quot;127.0.1.1&quot;</div>
+<div class="line">        Dim ipAddress As IPAddress = IPAddress.Parse(ipAddressString)</div>
+<div class="line">        Dim bytes As Byte() = ipAddress.GetAddressBytes()</div>
+<div class="line">        If (BitConverter.IsLittleEndian) Then</div>
+<div class="line">            Array.Reverse(bytes)</div>
+<div class="line">        End If</div>
+<div class="line">        Dim ip As Integer = BitConverter.ToInt32(bytes, 0)</div>
+<div class="line">        Dim sport As Integer = 6666</div>
+<div class="line">        For i As Integer = 0 To 99</div>
+<div class="line">            Dim data As String = String.Format(&quot;send data {0}&quot;, i)</div>
+<div class="line">            Dim data_len As Integer = data.Length</div>
+<div class="line">            error_code = tianzuo_ZhuiriInt_send(Zhuiri, 0, ip, sport, Zhuiri_data_sign.Zhuiri_data_sign_reliable, 7788, data, data_len)</div>
+<div class="line">            If (error_code &lt;&gt; Zhuiri_error_code.Zhuiri_error_code_success) Then</div>
+<div class="line">                Console.WriteLine(&quot;tianzuo_ZhuiriInt_send error:&quot; + error_code.ToString)</div>
+<div class="line">                Return</div>
+<div class="line">            End If</div>
+<div class="line">        Next</div>
+<div class="line"> </div>
+<div class="line">        Console.WriteLine(&quot;test done -------------------&quot;)</div>
+<div class="line"> </div>
+<div class="line">    End Sub</div>
+<div class="line">End Module</div>
+</div><!-- fragment --> </details>
+<details >
+<summary >
+go</summary>
+<p></p>
+<div class="fragment"><div class="line">package main</div>
+<div class="line"> </div>
+<div class="line">/*</div>
+<div class="line">#include &quot;tianzuo.ZhuiriInterface.h&quot;</div>
+<div class="line">void msg_recv_callback_cgo(const void *context, const void *pData);</div>
+<div class="line">*/</div>
+<div class="line">import &quot;C&quot;</div>
+<div class="line">import (</div>
+<div class="line">    &quot;fmt&quot;</div>
+<div class="line">    &quot;net&quot;</div>
+<div class="line">    &quot;syscall&quot;</div>
+<div class="line">    &quot;unsafe&quot;</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">const (</div>
+<div class="line">    Zhuiri_error_code_success       = 1  // 正确的值 (success)</div>
+<div class="line">    Zhuiri_error_code_no_rights     = 2  // 效验未通过 (no rights)</div>
+<div class="line">    Zhuiri_error_code_socket        = 13 // 套接字错误 (socket error)</div>
+<div class="line">    Zhuiri_error_code_thread_error  = 21 // 线程失败 (thread error)</div>
+<div class="line">    Zhuiri_error_code_handle        = 22 // 创建句柄失败 (handle error)</div>
+<div class="line">    Zhuiri_error_code_out_of_cache  = 23 // 超出缓冲最大值 (out f cache)</div>
+<div class="line">    Zhuiri_error_code_out_of_memory = 24 // 内存溢出 (out of memory)</div>
+<div class="line">    Zhuiri_error_code_time_out      = 25 // 操作超时 (time out)</div>
+<div class="line">    Zhuiri_error_code_user_reject   = 98 // 对方决绝 (user reject)</div>
+<div class="line">    Zhuiri_error_code_user_exit     = 99 // 自行退出 (user exit)</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">const (</div>
+<div class="line">    Zhuiri_data_sign_none       = 0 // 无标识  (no sign)</div>
+<div class="line">    Zhuiri_data_sign_reliable   = 1 // 可靠    (reliable)</div>
+<div class="line">    Zhuiri_data_sign_processing = 2 // 处理中  (processing)</div>
+<div class="line">    Zhuiri_data_sign_response   = 3 // 回应消息 (response)</div>
+<div class="line">    Zhuiri_data_sign_heart      = 4 // 心跳包  (heart)</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">func ipToInt(ip net.IP) uint32 {</div>
+<div class="line">    ip = ip.To4()</div>
+<div class="line">    if ip == nil {</div>
+<div class="line">        return 0</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    ipInt := uint32(ip[0])&lt;&lt;24 | uint32(ip[1])&lt;&lt;16 | uint32(ip[2])&lt;&lt;8 | uint32(ip[3])</div>
+<div class="line">    return ipInt</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">type Zhuiri_data_pkg_struct C.Zhuiri_data_pkg_struct</div>
+<div class="line"> </div>
+<div class="line">//export msg_recv_callback</div>
+<div class="line">func msg_recv_callback(context unsafe.Pointer, pData unsafe.Pointer) {</div>
+<div class="line">    data := *(*Zhuiri_data_pkg_struct)(unsafe.Pointer(pData))</div>
+<div class="line">    charArray := data.m_data.m_data</div>
+<div class="line">    goStr := C.GoString((*C.char)(unsafe.Pointer(&amp;charArray[0])))</div>
+<div class="line">    fmt.Println(&quot;recv data:&quot;, goStr)</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">func main() {</div>
+<div class="line">    // 初始化接口 initialize the interface</div>
+<div class="line">    dll := syscall.MustLoadDLL(&quot;tianzuo.Zhuiri.dll&quot;)</div>
+<div class="line"> </div>
+<div class="line">    // 创建实例 create an instance</div>
+<div class="line">    tianzuo_DataQueueInterface_initialize := dll.MustFindProc(&quot;tianzuo_DataQueueInterface_initialize&quot;)</div>
+<div class="line">    data_queue_recv, _, _ := tianzuo_DataQueueInterface_initialize.Call()</div>
+<div class="line"> </div>
+<div class="line">    tianzuo_ZhuiriInterface_initialize := dll.MustFindProc(&quot;tianzuo_ZhuiriInterface_initialize&quot;)</div>
+<div class="line">    Zhuiri, _, _ := tianzuo_ZhuiriInterface_initialize.Call()</div>
+<div class="line"> </div>
+<div class="line">    var ip uintptr</div>
+<div class="line">    port := 6666</div>
+<div class="line">    var iocp uintptr</div>
+<div class="line">    tianzuo_ZhuiriInt_initialize := dll.MustFindProc(&quot;tianzuo_ZhuiriInt_initialize&quot;)</div>
+<div class="line">    msg_recv_callback_ptr := uintptr(unsafe.Pointer(C.msg_recv_callback_cgo))</div>
+<div class="line">    error_code, _, _ := tianzuo_ZhuiriInt_initialize.Call(Zhuiri, ip, uintptr(C.int(port)), msg_recv_callback_ptr, data_queue_recv, 6000, uintptr(C.int(0)), iocp)</div>
+<div class="line">    if error_code != Zhuiri_error_code_success {</div>
+<div class="line">        fmt.Println(&quot;tianzuo_ZhuiriInt_initialize error: &quot;, error_code)</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    // 设置默认参数 set default parameters</div>
+<div class="line">    tianzuo_ZhuiriInt_set_param := dll.MustFindProc(&quot;tianzuo_ZhuiriInt_set_param&quot;)</div>
+<div class="line">    tianzuo_ZhuiriInt_set_param.Call(Zhuiri, 0, 5168, 1024, 2280, 3, 5, 600)</div>
+<div class="line"> </div>
+<div class="line">    // 开始发送数据 start sending data</div>
+<div class="line">    ipStr := &quot;127.0.0.1&quot;</div>
+<div class="line">    ipint := net.ParseIP(ipStr)</div>
+<div class="line">    nip := ipToInt(ipint)</div>
+<div class="line">    tianzuo_ZhuiriInt_send := dll.MustFindProc(&quot;tianzuo_ZhuiriInt_send&quot;)</div>
+<div class="line">    for i := 0; i &lt; 100; i++ {</div>
+<div class="line">        data := &quot;send data %d&quot;</div>
+<div class="line">        gdata := fmt.Sprintf(data, i)</div>
+<div class="line">        cdata := C.CString(gdata)</div>
+<div class="line">        gdata_len := len(gdata)</div>
+<div class="line">        data_len := C.int(gdata_len)</div>
+<div class="line">        error_code, _, _ = tianzuo_ZhuiriInt_send.Call(Zhuiri, 0, uintptr(C.int(nip)), uintptr(C.int(port)), Zhuiri_data_sign_reliable, 7788, uintptr(unsafe.Pointer(cdata)), uintptr(data_len))</div>
+<div class="line">        if error_code != Zhuiri_error_code_success {</div>
+<div class="line">            fmt.Println(&quot;tianzuo_ZhuiriInt_send error: &quot;, error_code)</div>
+<div class="line">            return</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    fmt.Println(&quot;test done -------------------&quot;)</div>
+<div class="line">}</div>
+</div><!-- fragment --> </details>
+<details >
+<summary >
+rust</summary>
+<p></p>
+<div class="fragment"><div class="line">use std::os::raw::c_char;</div>
+<div class="line">use std::ffi::{c_int};</div>
+<div class="line">use std::ffi::CString;</div>
+<div class="line">use std::ptr::null;</div>
+<div class="line">use std::mem;</div>
+<div class="line"> </div>
+<div class="line">type CallbackFunc = extern &quot;C&quot; fn(context: *mut std::ffi::c_void, pData: *mut std::ffi::c_void);</div>
+<div class="line"> </div>
+<div class="line">struct Zhuiri_data_struct {</div>
+<div class="line">    m_ip_adrs: i32,</div>
+<div class="line">    m_port: i32,</div>
+<div class="line">    m_function: i32,</div>
+<div class="line">    m_sign: i32,</div>
+<div class="line">    m_index: i32,</div>
+<div class="line">    m_send_time: i32,</div>
+<div class="line">    m_send_size: i32,</div>
+<div class="line">    m_data: [u8; 492],</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">struct Zhuiri_data_pkg_struct {</div>
+<div class="line">    m_data: Zhuiri_data_struct,</div>
+<div class="line">    m_send_data: *const c_char,</div>
+<div class="line">    m_Zhuiri: *mut std::ffi::c_void,</div>
+<div class="line">    m_user_data: *mut std::ffi::c_void,</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">#[link(name = &quot;tianzuo.Zhuiri&quot;)]</div>
+<div class="line">extern {</div>
+<div class="line">    fn tianzuo_ZhuiriInterface_initialize() -&gt; *mut std::ffi::c_void;</div>
+<div class="line">    fn tianzuo_ZhuiriInterface_terminate(obj: *mut std::ffi::c_void);</div>
+<div class="line">    fn tianzuo_ZhuiriInt_initialize(obj: *mut std::ffi::c_void, ip_addr: *const c_char, port: c_int, callback: *mut std::ffi::c_void, context: *mut std::ffi::c_void, heart_check_time: c_int, log_trace: c_int, iocp: *const std::ffi::c_void) -&gt; c_int;</div>
+<div class="line">    fn tianzuo_ZhuiriInt_set_param(obj: *mut std::ffi::c_void, sender_index: c_int, init_server_port: c_int, msg_init_size: c_int, recv_ex_data_max: c_int, retry_max: c_int, retry_all_number: c_int, init_retry_time: c_int);</div>
+<div class="line">    fn tianzuo_ZhuiriInt_send(obj: *mut std::ffi::c_void, sender_index: c_int, ip: c_int, port: c_int, sign: c_int, function: c_int, send_data: *const c_char, send_size: c_int) -&gt; c_int;</div>
+<div class="line">    fn tianzuo_DataQueueInterface_initialize() -&gt; *mut std::ffi::c_void;</div>
+<div class="line">    fn tianzuo_DataQueueInterface_terminate(obj: *mut std::ffi::c_void);</div>
+<div class="line">    fn tianzuo_DataQueueInt_initializee(obj: *mut std::ffi::c_void);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">extern &quot;C&quot; fn msg_recv_callback(context: *mut std::ffi::c_void, pData: *mut std::ffi::c_void) {</div>
+<div class="line">    unsafe {</div>
+<div class="line">        //println!(&quot;Rust callback function called&quot;);</div>
+<div class="line">        let data: &amp;mut Zhuiri_data_pkg_struct = unsafe { mem::transmute(pData) };</div>
+<div class="line">        let string = std::str::from_utf8(&amp;data.m_data.m_data).unwrap();</div>
+<div class="line">        println!(&quot;recv data: {}&quot;, string);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">fn ip_to_int(ip: &amp;str) -&gt; i32 {</div>
+<div class="line">    let parts: Vec&lt;i32&gt; = ip.split(&#39;.&#39;).map(|part| part.parse().unwrap()).collect();</div>
+<div class="line">    (parts[0] &lt;&lt; 24) + (parts[1] &lt;&lt; 16) + (parts[2] &lt;&lt; 8) + parts[3]</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">fn main() {</div>
+<div class="line">    unsafe {</div>
+<div class="line">        // 初始化接口 initialize the interface</div>
+<div class="line">        println!(&quot;initialize the interface&quot;);</div>
+<div class="line"> </div>
+<div class="line">        // 创建实例 create an instance</div>
+<div class="line">        let data_queue_recv = tianzuo_DataQueueInterface_initialize();</div>
+<div class="line"> </div>
+<div class="line">        let pdata_queue_recv= data_queue_recv as *mut std::ffi::c_void;</div>
+<div class="line"> </div>
+<div class="line">        let pmsg_recv_callback = msg_recv_callback as *mut std::ffi::c_void;</div>
+<div class="line"> </div>
+<div class="line">        let zhuiri = tianzuo_ZhuiriInterface_initialize();</div>
+<div class="line">        let port = 6666;</div>
+<div class="line">        let error_code = tianzuo_ZhuiriInt_initialize(zhuiri, null(), port, pmsg_recv_callback, pdata_queue_recv, 6000, 0, null());</div>
+<div class="line">        if 1 != error_code {</div>
+<div class="line">            println!(&quot;tianzuo_ZhuiriInt_initialize error: {:?}&quot;, error_code);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        // 设置默认参数 set default parameters</div>
+<div class="line">        tianzuo_ZhuiriInt_set_param(zhuiri,0, 5168, 1024, 2280, 3, 5, 600);</div>
+<div class="line"> </div>
+<div class="line">        // 开始发送数据 start sending data</div>
+<div class="line">        let ip = ip_to_int(&quot;127.0.0.1&quot;);</div>
+<div class="line">        for i in 0..=99 {</div>
+<div class="line">            let data = format!(&quot;send data {}&quot;, i);</div>
+<div class="line">            let data_str = CString::new(String::from(data.clone())).expect(&quot;Failed to create CString&quot;);</div>
+<div class="line">            let data_len = data.len() as i32;</div>
+<div class="line">            let error_code = tianzuo_ZhuiriInt_send(zhuiri, 0, ip, port, 1, 7788, data_str.as_ptr(), data_len);</div>
+<div class="line">            if 1 != error_code {</div>
+<div class="line">                println!(&quot;tianzuo_ZhuiriInt_send error: {:?}&quot;, error_code);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        println!(&quot;test done -------------------&quot;)</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </details>
+<details >
+<summary >
+ruby</summary>
+<p></p>
+<div class="fragment"><div class="line">require &#39;fiddle&#39;</div>
+<div class="line">require &#39;ipaddr&#39;</div>
+<div class="line"> </div>
+<div class="line">lib = Fiddle::dlopen(&#39;C:/Users/zhengtianzuo/RubymineProjects/tianzuo.ZhuiriTest/tianzuo.Zhuiri.dll&#39;)</div>
+<div class="line">tianzuo_ZhuiriInterface_initialize = Fiddle::Function.new(lib[&#39;tianzuo_ZhuiriInterface_initialize&#39;], [], Fiddle::TYPE_VOIDP)</div>
+<div class="line">tianzuo_ZhuiriInterface_terminate = Fiddle::Function.new(lib[&#39;tianzuo_ZhuiriInterface_terminate&#39;], [Fiddle::TYPE_VOIDP], Fiddle::TYPE_VOID)</div>
+<div class="line">tianzuo_ZhuiriInt_initialize = Fiddle::Function.new(lib[&#39;tianzuo_ZhuiriInt_initialize&#39;], [Fiddle::TYPE_VOIDP, Fiddle::TYPE_VOIDP, Fiddle::TYPE_INT, Fiddle::TYPE_VOIDP, Fiddle::TYPE_VOIDP, Fiddle::TYPE_INT, Fiddle::TYPE_INT, Fiddle::TYPE_VOIDP], Fiddle::TYPE_INT)</div>
+<div class="line">tianzuo_ZhuiriInt_set_param = Fiddle::Function.new(lib[&#39;tianzuo_ZhuiriInt_set_param&#39;], [Fiddle::TYPE_VOIDP, Fiddle::TYPE_INT, Fiddle::TYPE_INT, Fiddle::TYPE_INT, Fiddle::TYPE_INT, Fiddle::TYPE_INT, Fiddle::TYPE_INT, Fiddle::TYPE_INT], Fiddle::TYPE_INT)</div>
+<div class="line">tianzuo_ZhuiriInt_send = Fiddle::Function.new(lib[&#39;tianzuo_ZhuiriInt_send&#39;], [Fiddle::TYPE_VOIDP, Fiddle::TYPE_INT, Fiddle::TYPE_INT, Fiddle::TYPE_INT, Fiddle::TYPE_INT, Fiddle::TYPE_INT, Fiddle::TYPE_VOIDP, Fiddle::TYPE_INT], Fiddle::TYPE_INT)</div>
+<div class="line">tianzuo_DataQueueInterface_initialize = Fiddle::Function.new(lib[&#39;tianzuo_DataQueueInterface_initialize&#39;], [], Fiddle::TYPE_VOIDP)</div>
+<div class="line">tianzuo_DataQueueInterface_terminate = Fiddle::Function.new(lib[&#39;tianzuo_DataQueueInterface_terminate&#39;], [Fiddle::TYPE_VOIDP], Fiddle::TYPE_VOID)</div>
+<div class="line"> </div>
+<div class="line">def string_to_char_pointer(str)</div>
+<div class="line">  ptr = Fiddle::Pointer[str]</div>
+<div class="line">  ptr.to_s</div>
+<div class="line">end</div>
+<div class="line"> </div>
+<div class="line"># 初始化接口 initialize the interface</div>
+<div class="line">print(&quot;initialize the interface\n&quot;)</div>
+<div class="line"> </div>
+<div class="line"># 创建实例 create an instance</div>
+<div class="line">data_queue_recv = tianzuo_DataQueueInterface_initialize.call()</div>
+<div class="line"> </div>
+<div class="line">callback = Fiddle::Closure::BlockCaller.new(Fiddle::TYPE_INT, [Fiddle::TYPE_VOIDP, Fiddle::TYPE_VOIDP]) do |context, pData|</div>
+<div class="line">  puts &quot;callback function called&quot;</div>
+<div class="line">end</div>
+<div class="line"> </div>
+<div class="line">port = 6666</div>
+<div class="line">zhuiri = tianzuo_ZhuiriInterface_initialize.call()</div>
+<div class="line">error_code = tianzuo_ZhuiriInt_initialize.call(zhuiri, nil, port, callback.to_i, data_queue_recv, 6000, 0, nil)</div>
+<div class="line">if error_code != 1</div>
+<div class="line">  print(&quot;initialize error:&quot;, error_code, &quot;\n&quot;)</div>
+<div class="line">  return</div>
+<div class="line">end</div>
+<div class="line"> </div>
+<div class="line"># 设置默认参数 set default parameters</div>
+<div class="line">tianzuo_ZhuiriInt_set_param.call(zhuiri, 0, 5168, 1024, 2280, 3, 5, 600)</div>
+<div class="line"> </div>
+<div class="line"># 开始发送数据 start sending data</div>
+<div class="line">ip = IPAddr.new(&quot;127.0.0.1&quot;).to_i</div>
+<div class="line">for i in 1..10</div>
+<div class="line">  data = &quot;send data %d&quot; % [i]</div>
+<div class="line">  data_len = data.length</div>
+<div class="line">  error_code = tianzuo_ZhuiriInt_send.call(zhuiri, 0, ip, port, 1, 7788, data, data_len)</div>
+<div class="line">  if error_code != 1</div>
+<div class="line">    print(&quot;tianzuo_ZhuiriInt_send error:&quot;, error_code, &quot;\n&quot;)</div>
+<div class="line">    return</div>
+<div class="line">  end</div>
+<div class="line">end</div>
+</div><!-- fragment --> </details>
+<h1><a class="anchor" id="autotoc_md6"></a>
+下载</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone" colspan="4"></th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://github.com/zhengtianzuo/tianzuo.Zhuiri/releases"><div class="image">
+<object type="image/svg+xml" data="com_btnGitHub.svg" style="pointer-events: none;"></object>
+<div class="caption">
+立即下载</div></div>
+     </a>   </td><td class="markdownTableBodyNone"><a href="https://gitee.com/zhengtianzuo/tianzuo.Zhuiri/releases"><div class="image">
+<object type="image/svg+xml" data="com_btnGitee.svg" style="pointer-events: none;"></object>
+<div class="caption">
+立即下载</div></div>
+     </a>   </td><td class="markdownTableBodyNone"><a href="https://pan.baidu.com/s/1HHm5_nGH6QRcEOCP39MOzg?pwd=1234"><div class="image">
+<object type="image/svg+xml" data="down_baidu.svg" style="pointer-events: none;"></object>
+<div class="caption">
+立即下载</div></div>
+     </a>   </td><td class="markdownTableBodyNone"><a href="https://share.weiyun.com/jLs40pKC"><div class="image">
+<object type="image/svg+xml" data="down_weiyun.svg" style="pointer-events: none;"></object>
+<div class="caption">
+立即下载</div></div>
+     </a>   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md7"></a>
+关于我们</h2>
+<h3><a class="anchor" id="autotoc_md8"></a>
+联系方式</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone" colspan="3"></th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">作者   </td><td class="markdownTableBodyNone" colspan="2">郑天佐    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">QQ   </td><td class="markdownTableBodyNone" colspan="2">278969898    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">邮箱   </td><td class="markdownTableBodyNone" colspan="2"><a href="#" onclick="location.href='mai'+'lto:'+'cam'+'el'+'sof'+'t@'+'163'+'.c'+'om'; return false;">camel<span class="obfuscator">.nosp@m.</span>soft<span class="obfuscator">.nosp@m.</span>@163.<span class="obfuscator">.nosp@m.</span>com</a>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">主页   </td><td class="markdownTableBodyNone" colspan="2"><a href="http://www.camelstudio.cn">http://www.camelstudio.cn</a>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">博客   </td><td class="markdownTableBodyNone" colspan="2"><a href="http://blog.csdn.net/zhengtianzuo06">http://blog.csdn.net/zhengtianzuo06</a>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">github   </td><td class="markdownTableBodyNone" colspan="2"><a href="https://github.com/zhengtianzuo">https://github.com/zhengtianzuo</a>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">gitee   </td><td class="markdownTableBodyNone" colspan="2"><a href="https://gitee.com/zhengtianzuo">https://gitee.com/zhengtianzuo</a>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">QQ群   </td><td class="markdownTableBodyNone" colspan="2">199672080   </td></tr>
+</table>
+<div class="image">
+<img src="allinone.png" alt=""/>
+</div>
+    <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone" colspan="4"></th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">加QQ好友   </td><td class="markdownTableBodyNone">加微信好友   </td><td class="markdownTableBodyNone">微信打赏   </td><td class="markdownTableBodyNone">支付宝打赏   </td></tr>
+</table>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
