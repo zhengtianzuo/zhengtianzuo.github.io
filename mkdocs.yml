@@ -1,8 +1,8 @@
-site_name: 天佐.主页(tianzuo.home)
+site_name: 天佐.主页
 site_description: "zhengtianzuo"
 site_url: https://camelstudio.cn/
 repo_url: https://github.com/zhengtianzuo/
-copyright: Copyright© 2003-2103 郑天佐. All rights reserved.
+copyright: Copyright© 2003-2025 郑天佐. All rights reserved.
 
 theme:
   name: material
@@ -43,14 +43,33 @@ plugins:
           name: 简体中文
           build: true
         - locale: en
+          site_name: tianzuo.home
           name: English
           build: true
           nav_translations:
-            主页: Home
-            教程: tutorial
+            主页: home
+            技术分享: technology sharing
+            个人作品: personal work
             模块: component
             产品: product
             其他: other
+            编程语言: Programming Languages
+            音视频: Audio&Video
+            操作系统: Operating System
+            开发工具: Development Tools
+            远程桌面: Remote Desktop
+            屏幕捕获: Screen Captures
+            视频编解码: Video Codec
+            音频编解码: Audio Codec
+            鼠标键盘: keyboard Mouse
+            文件传输: File Transfer
+            数据库: DataBases
+            网络通讯: Networks
+            安全技术: Security
+            剪切板共享: Clipboard
+            音频重定向: AudioRedirection
+            USB重定向: USBRedirection
+            数字水印: Watermarks
   - search
 
 extra:
@@ -80,11 +99,64 @@ extra:
 
 nav:
   - 主页: index.md
-  - 教程:
-    - tutorial/index.md
-  - 模块:
-    - component/index.md
-  - 产品:
-    - product/index.md
+  - 技术分享:
+    - technology/index.md
+    - 编程语言:
+      - C&C++:
+        - Cpp:
+          - technology/Cpp.md
+        - QtWidgets:
+          - technology/QtWidgets.md
+        - QtQuick:
+          - technology/QtQuick.md
+      - Python:
+        - technology/Python.md
+      - Java:
+        - technology/Java.md
+      - C#:
+        - technology/C#.md
+      - JavaScript:
+        - technology/JavaScript.md
+      - Rust:
+        - technology/Rust.md
+      - Visual Basic:
+        - technology/VisualBasic.md
+    - 音视频:
+      - technology/AudioVideo.md
+    - 操作系统:
+      - technology/OperatingSystem.md
+    - 开发工具:
+      - technology/DevelopmentTools.md
+  - 远程桌面:
+    - remotedesktop/index.md
+    - 屏幕捕获:
+      - remotedesktop/ScreenCaptures.md
+    - 视频编解码:
+      - remotedesktop/VideoCodec.md
+    - 音频编解码:
+      - remotedesktop/AudioCodec.md
+    - 鼠标键盘:
+      - remotedesktop/keyboardMouse.md
+    - 文件传输:
+      - remotedesktop/FileTransfer.md
+    - 数据库:
+      - remotedesktop/DataBases.md
+    - 网络通讯:
+      - remotedesktop/Networks.md
+    - 安全技术:
+      - remotedesktop/Security.md
+    - 剪切板共享:
+      - remotedesktop/Clipboard.md
+    - 音频重定向:
+      - remotedesktop/AudioRedirection.md
+    - USB重定向:
+      - remotedesktop/USBRedirection.md
+    - 数字水印:
+      - remotedesktop/Watermarks.md
+  - 个人作品:
+    - 模块:
+      - component/index.md
+    - 产品:
+      - product/index.md
   - 其他: 
     - other/index.md
