@@ -1,0 +1,90 @@
+site_name: 天佐.主页(tianzuo.home)
+site_description: "zhengtianzuo"
+site_url: https://camelstudio.cn/
+repo_url: https://github.com/zhengtianzuo/
+copyright: Copyright© 2003-2103 郑天佐. All rights reserved.
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换暗色模式
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: 切换亮色模式
+  language: zh
+  logo: img/me256.png
+  favicon: img/me256.png
+  features:
+    - content.code.copy # 代码块复制按钮
+    - navigation.tracking # Anchor tracking
+    - navigation.tabs # 导航栏
+    - navigation.tabs.sticky # 导航栏不随页面滚动隐藏
+    - navigation.sections # 侧边栏分组显示
+    - navigation.indexes # 组标题有专属页面
+    - navigation.top # 返回顶部按钮
+    - toc.follow # 目录自动跟随
+    - search.suggest # 搜索推荐
+
+plugins:
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      languages:
+        - locale: zh
+          default: true
+          name: 简体中文
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            主页: Home
+            教程: tutorial
+            模块: component
+            产品: product
+            其他: other
+  - search
+
+extra:
+  alternate:
+    - name: 简体中文
+      link: /
+      lang: zh
+    - name: English
+      link: /en/
+      lang: en
+  generator: false
+  social:
+    - icon: fontawesome/brands/qq
+      link: tencent://message/?uin=278969898&Site=&Menu=yes
+    - icon: fontawesome/brands/qq
+      link: https://qm.qq.com/q/tWTAELk0ow
+    - icon: fontawesome/solid/envelope
+      link: mailto:<camelsoft@163.com>
+    - icon: fontawesome/solid/c
+      link: https://blog.csdn.net/zhengtianzuo06/
+    - icon: fontawesome/brands/github
+      link: https://github.com/zhengtianzuo/
+    - icon: fontawesome/solid/g
+      link: https://gitee.com/zhengtianzuo/
+    - icon: fontawesome/brands/zhihu
+      link: https://www.zhihu.com/people/camelstudio/
+
+nav:
+  - 主页: index.md
+  - 教程:
+    - tutorial/index.md
+  - 模块:
+    - component/index.md
+  - 产品:
+    - product/index.md
+  - 其他: 
+    - other/index.md
