@@ -20,8 +20,8 @@ theme:
         icon: material/weather-sunny
         name: 切换亮色模式
   language: zh
-  logo: img/me256.png
-  favicon: img/me256.png
+  logo: img/me.png
+  favicon: img/me.png
   features:
     - content.code.copy # 代码块复制按钮
     - navigation.tracking # Anchor tracking
@@ -32,6 +32,7 @@ theme:
     - navigation.top # 返回顶部按钮
     - toc.follow # 目录自动跟随
     - search.suggest # 搜索推荐
+    - header.autohide # 自动隐藏头部
 extra_css:
   - stylesheets/extra.css
 
