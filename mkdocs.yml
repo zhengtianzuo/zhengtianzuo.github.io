@@ -32,6 +32,8 @@ theme:
     - navigation.top # 返回顶部按钮
     - toc.follow # 目录自动跟随
     - search.suggest # 搜索推荐
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - i18n:
@@ -70,6 +72,11 @@ plugins:
             音频重定向: AudioRedirection
             USB重定向: USBRedirection
             数字水印: Watermarks
+            构建: Building
+            调试: Debugging
+            性能: Performance
+            味道: CodeSmell
+            即时通讯: Instant Messaging
   - search
 
 extra:
@@ -106,9 +113,17 @@ nav:
         - Cpp:
           - technology/Cpp.md
         - QtWidgets:
-          - technology/QtWidgets.md
+          - technology/Cpp/QtWidgets.md
         - QtQuick:
-          - technology/QtQuick.md
+          - technology/Cpp/QtQuick.md
+        - 构建:
+          - technology/Cpp/Building.md
+        - 调试:
+          - technology/Cpp/Debugging.md
+        - 性能:
+          - technology/Cpp/Performance.md
+        - 味道:
+          - technology/Cpp/CodeSmell.md
       - Python:
         - technology/Python.md
       - Java:
@@ -153,6 +168,8 @@ nav:
       - remotedesktop/USBRedirection.md
     - 数字水印:
       - remotedesktop/Watermarks.md
+  - 即时通讯:
+    - instantmessaging/index.md
   - 个人作品:
     - 模块:
       - component/index.md
