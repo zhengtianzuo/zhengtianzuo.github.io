@@ -77,7 +77,6 @@ plugins:
             调试: Debugging
             性能: Performance
             味道: CodeSmell
-            即时通讯: Instant Messaging
   - search
 
 extra:
@@ -169,8 +168,6 @@ nav:
       - remotedesktop/USBRedirection.md
     - 数字水印:
       - remotedesktop/Watermarks.md
-  - 即时通讯:
-    - instantmessaging/index.md
   - 个人作品:
     - 模块:
       - component/index.md
