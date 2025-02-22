@@ -94,7 +94,7 @@ extra:
     - icon: fontawesome/brands/qq
       link: https://qm.qq.com/q/tWTAELk0ow
     - icon: fontawesome/solid/envelope
-      link: mailto:<camelsoft@163.com>
+      link: mailto:<zhengtianzuo06@163.com>
     - icon: fontawesome/solid/c
       link: https://blog.csdn.net/zhengtianzuo06/
     - icon: fontawesome/brands/github
@@ -169,9 +169,11 @@ nav:
     - 数字水印:
       - remotedesktop/Watermarks.md
   - 个人作品:
+    - 产品:
+      - product/tianzuo.Pangu.md
+      - product/tianzuo.Kunlun.md
+      - product/tianzuo.Fuxi.md
     - 模块:
       - component/index.md
-    - 产品:
-      - product/index.md
   - 其他: 
     - other/index.md
