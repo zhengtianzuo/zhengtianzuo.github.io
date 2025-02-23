@@ -65,7 +65,7 @@ hide:
             <font size=2>即时通讯平台</font>
           </th>
           <th>
-            <img src="./img/C.png"/> <img src="./img/C__.png"/> <img src="./img/tianzuo.Kongtong.png" class="icon_img"/> <img src="./img/tianzuo.Qiankun.png" class="icon_img"/> <img src="./img/tianzuo.Zhuiri.png" class="icon_img"/> <img src="./img/boost.png"/> <img src="./img/Qt.png"/> <img src="./img/ffmpeg.png"/> <img src="./img/SDL.png"/>
+            <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/> <img src="./img/tianzuo.Kongtong.png" class="icon_img"/> <img src="./img/tianzuo.Qiankun.png" class="icon_img"/> <img src="./img/tianzuo.Zhuiri.png" class="icon_img"/> <img src="./img/boost.png"/> <img src="./img/Qt.png"/> <img src="./img/ffmpeg.png"/> <img src="./img/SDL.png"/>
           </th>
         </tr>
         <tr>
@@ -91,7 +91,7 @@ hide:
             <font size=2>本地构建工具</font>
           </th>
           <th>
-            <img src="./img/C.png"/> <img src="./img/C__.png"/> <img src="./img/tianzuo.Kongtong.png" class="icon_img"/> <img src="./img/tianzuo.Qiankun.png" class="icon_img"/> <img src="./img/tianzuo.Zhuiri.png" class="icon_img"/> <img src="./img/boost.png"/> <img src="./img/Qt.png"/>
+            <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/> <img src="./img/tianzuo.Kongtong.png" class="icon_img"/> <img src="./img/tianzuo.Qiankun.png" class="icon_img"/> <img src="./img/tianzuo.Zhuiri.png" class="icon_img"/> <img src="./img/boost.png"/> <img src="./img/Qt.png"/>
           </th>
         </tr>
       </tbody>
@@ -135,7 +135,7 @@ hide:
             <font size=2>崩溃检测分析</font>
           </th>
           <th>
-            <img src="./img/C.png"/> <img src="./img/C__.png"/>
+            <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/>
           </th>
         </tr>
         <tr>
@@ -161,7 +161,7 @@ hide:
             <font size=2>NoSql数据库</font>
           </th>
           <th>
-            <img src="./img/C.png"/> <img src="./img/C__.png"/>
+            <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/>
           </th>
         </tr>
         <tr>
@@ -187,7 +187,7 @@ hide:
             <font size=2>UDP可靠数据传输</font>
           </th>
           <th>
-            <img src="./img/C.png"/> <img src="./img/C__.png"/>
+            <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/>
           </th>
         </tr>
         <tr>
@@ -213,7 +213,7 @@ hide:
             <font size=2>软件许可授权</font>
           </th>
           <th>
-            <img src="./img/C.png"/> <img src="./img/C__.png"/>
+            <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/>
           </th>
         </tr>
         <tr>
@@ -239,7 +239,7 @@ hide:
             <font size=2>内存池</font>
           </th>
           <th>
-            <img src="./img/C.png"/> <img src="./img/C__.png"/>
+            <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/>
           </th>
         </tr>
       </tbody>
