@@ -15,4 +15,4 @@ PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理�
 |外语缩写|PHP|
 
 ## 路线图:
-![](PHPRoadmap.jpg)
+![](../img/PHPRoadmap.jpg)
