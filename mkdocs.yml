@@ -35,6 +35,8 @@ theme:
     - header.autohide # 自动隐藏头部
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - javascript/extra.js
 
 plugins:
   - i18n:
@@ -110,12 +112,13 @@ nav:
     - technology/index.md
     - 编程语言:
       - C&C++:
-        - Cpp:
-          - technology/Cpp.md
-        - QtWidgets:
-          - technology/Cpp/QtWidgets.md
-        - QtQuick:
-          - technology/Cpp/QtQuick.md
+        - technology/C++.md
+        - UI:
+          - Qt:
+            - technology/Cpp/QtWidgets.md
+            - technology/Cpp/QtQuick.md
+          - wxWidgets:
+            - technology/Cpp/wxWidgets.md
         - 构建:
           - technology/Cpp/Building.md
         - 调试:
@@ -130,12 +133,18 @@ nav:
         - technology/Java.md
       - C#:
         - technology/C#.md
-      - JavaScript:
+      - JS:
         - technology/JavaScript.md
+      - PHP:
+        - technology/PHP.md
+      - VB:
+        - technology/VisualBasic.md
+      - Go:
+        - technology/Go.md
       - Rust:
         - technology/Rust.md
-      - Visual Basic:
-        - technology/VisualBasic.md
+      - Ruby:
+        - technology/Ruby.md
     - 音视频:
       - technology/AudioVideo.md
     - 操作系统:
