@@ -1,2 +1,5 @@
+---
+icon: material/server
+---
 
 # OperatingSystem

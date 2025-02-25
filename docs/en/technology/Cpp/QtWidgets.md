@@ -1,2 +1,5 @@
+---
+icon: simple/qt
+---
 
 # QtWidgets

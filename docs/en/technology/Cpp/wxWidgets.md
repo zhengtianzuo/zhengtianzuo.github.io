@@ -1,2 +1,5 @@
+---
+icon: material/widgets
+---
 
 # wxWidgets
