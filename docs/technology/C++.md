@@ -19,5 +19,8 @@ C++是一种面向对象的计算机程序设计语言，由美国AT&T贝尔实�
 |首次使用时间|1983年12月|
 |创始人|本贾尼·斯特劳斯特卢普|
 
+![](../img/Language_cInfo.jpg)
+![](../img/Language_cppInfo.jpg)
+
 ## 路线图:
 ![](../img/C++Roadmap.jpg)

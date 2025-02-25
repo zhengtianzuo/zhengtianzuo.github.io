@@ -17,5 +17,6 @@ C#是微软公司发布的一种面向对象的、运行于.NET Framework之上�
 |发布单位|微软公司|
 |开发者|安德斯·海尔斯伯格|
 
+![](../img/Language_csharpInfo.jpg)
 
 ## 路线图:

@@ -17,5 +17,7 @@ PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理�
 |维护|The PHP Group|
 |外语缩写|PHP|
 
+![](../img/Language_phpInfo.jpg)
+
 ## 路线图:
 ![](../img/PHPRoadmap.jpg)
