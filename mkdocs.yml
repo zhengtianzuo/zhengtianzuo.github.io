@@ -131,8 +131,8 @@ nav:
         - technology/Python.md
       - Java:
         - technology/Java.md
-      - C#:
-        - technology/C#.md
+      - CSharp:
+        - technology/CSharp.md
       - JS:
         - technology/JavaScript.md
       - PHP:
