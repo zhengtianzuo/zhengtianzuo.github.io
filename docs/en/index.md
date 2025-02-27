@@ -94,6 +94,32 @@ hide:
             <img src="../img/C.png" class="icon_img"/> <img src="../img/C__.png" class="icon_img"/> <img src="../img/tianzuo.Kongtong.png" class="icon_img"/> <img src="../img/tianzuo.Qiankun.png" class="icon_img"/> <img src="../img/tianzuo.Zhuiri.png" class="icon_img"/> <img src="../img/boost.png"/> <img src="../img/Qt.png"/>
           </th>
         </tr>
+        <tr>
+          <th>
+            <a href="https://github.com/zhengtianzuo/tianzuo.Fuxi" target="_blank">
+              <img src="../img/tianzuo.Fuxi.png" class="icon_img"/>
+            </a>
+          </th>
+          <th>
+            <font size=2>tianzuo.Fuxi</font>
+          </th>
+          <th>
+            <a href="https://github.com/zhengtianzuo/tianzuo.Fuxi" target="_blank">
+              <img src="../img/com_btnGitHub.svg">
+            </a>
+          </th>
+          <th>
+            <a href="https://gitee.com/zhengtianzuo/tianzuo.Fuxi" target="_blank">
+              <img src="../img/com_btnGitee.svg">
+            </a>
+          </th>
+          <th>
+            <font size=2>In development</font>
+          </th>
+          <th>
+            <img src="../img/C.png" class="icon_img"/> <img src="../img/C__.png" class="icon_img"/> <img src="../img/tianzuo.Kongtong.png" class="icon_img"/> <img src="../img/tianzuo.Qiankun.png" class="icon_img"/> <img src="../img/tianzuo.Zhuiri.png" class="icon_img"/>
+          </th>
+        </tr>
       </tbody>
     </table>
   </tr>
@@ -242,6 +268,84 @@ hide:
             <img src="../img/C.png" class="icon_img"/> <img src="../img/C__.png" class="icon_img"/>
           </th>
         </tr>
+        <tr>
+        <th>
+          <a href="https://github.com/zhengtianzuo/tianzuo.Shennong" target="_blank">
+            <img src="../img/tianzuo.Shennong.png" class="icon_img"/>
+          </a>
+        </th>
+        <th>
+          <font size=2>tianzuo.Shennong</font>
+        </th>
+        <th>
+          <a href="https://github.com/zhengtianzuo/tianzuo.Shennong" target="_blank">
+            <img src="../img/com_btnGitHub.svg">
+          </a>
+          </th>
+        <th>
+          <a href="https://gitee.com/zhengtianzuo/tianzuo.Shennong" target="_blank">
+            <img src="../img/com_btnGitee.svg">
+          </a>
+        </th>
+        <th>
+          <font size=2>In development</font>
+        </th>
+        <th>
+          <img src="../img/C.png" class="icon_img"/> <img src="../img/C__.png" class="icon_img"/> <img src="../img/ffmpeg.png" class="icon_img"/> <img src="../img/opencv.png" class="icon_img"/>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <a href="https://github.com/zhengtianzuo/tianzuo.Linglong" target="_blank">
+            <img src="../img/tianzuo.Linglong.png" class="icon_img"/>
+          </a>
+        </th>
+        <th>
+          <font size=2>tianzuo.Linglong</font>
+        </th>
+        <th>
+          <a href="https://github.com/zhengtianzuo/tianzuo.Linglong" target="_blank">
+            <img src="../img/com_btnGitHub.svg">
+          </a>
+          </th>
+        <th>
+          <a href="https://gitee.com/zhengtianzuo/tianzuo.Linglong" target="_blank">
+            <img src="../img/com_btnGitee.svg">
+          </a>
+        </th>
+        <th>
+          <font size=2>In development</font>
+        </th>
+        <th>
+          <img src="../img/C.png" class="icon_img"/> <img src="../img/C__.png" class="icon_img"/> <img src="../img/ffmpeg.png" class="icon_img"/> 
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <a href="https://github.com/zhengtianzuo/tianzuo.Fengtian" target="_blank">
+            <img src="../img/tianzuo.Fengtian.png" class="icon_img"/>
+          </a>
+        </th>
+        <th>
+          <font size=2>tianzuo.Fengtian</font>
+        </th>
+        <th>
+          <a href="https://github.com/zhengtianzuo/tianzuo.Fengtian" target="_blank">
+            <img src="../img/com_btnGitHub.svg">
+          </a>
+          </th>
+        <th>
+          <a href="https://gitee.com/zhengtianzuo/tianzuo.Fengtian" target="_blank">
+            <img src="../img/com_btnGitee.svg">
+          </a>
+        </th>
+        <th>
+          <font size=2>In development</font>
+        </th>
+        <th>
+          <img src="../img/C.png" class="icon_img"/> <img src="../img/C__.png" class="icon_img"/> <img src="../img/SDL.png" class="icon_img"/> 
+        </th>
+      </tr>
       </tbody>
     </table>
   </tr>
@@ -273,7 +377,7 @@ hide:
 |Author|zhengtianzuo||
 |QQ|278969898||
 |Email|zhengtianzuo06@163.com||
-|Homepage|[http://www.camelstudio.cn](http://www.camelstudio.cn)||
+|Homepage|[http://www.zhengtianzuo.com](http://www.zhengtianzuo.com)||
 |Blog|[http://blog.csdn.net/zhengtianzuo06](http://blog.csdn.net/zhengtianzuo06)||
 |github|[https://github.com/zhengtianzuo](https://github.com/zhengtianzuo)||
 |gitee|[https://gitee.com/zhengtianzuo](https://gitee.com/zhengtianzuo)||

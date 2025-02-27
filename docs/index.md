@@ -94,6 +94,32 @@ hide:
             <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/> <img src="./img/tianzuo.Kongtong.png" class="icon_img"/> <img src="./img/tianzuo.Qiankun.png" class="icon_img"/> <img src="./img/tianzuo.Zhuiri.png" class="icon_img"/> <img src="./img/boost.png"/> <img src="./img/Qt.png"/>
           </th>
         </tr>
+        <tr>
+          <th>
+            <a href="https://github.com/zhengtianzuo/tianzuo.Fuxi" target="_blank">
+              <img src="./img/tianzuo.Fuxi.png" class="icon_img"/>
+            </a>
+          </th>
+          <th>
+            <font size=2>天佐.伏羲琴</font>
+          </th>
+          <th>
+            <a href="https://github.com/zhengtianzuo/tianzuo.Fuxi" target="_blank">
+              <img src="./img/com_btnGitHub.svg">
+            </a>
+          </th>
+          <th>
+            <a href="https://gitee.com/zhengtianzuo/tianzuo.Fuxi" target="_blank">
+              <img src="./img/com_btnGitee.svg">
+            </a>
+          </th>
+          <th>
+            <font size=2>开发中</font>
+          </th>
+          <th>
+            <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/> <img src="./img/tianzuo.Kongtong.png" class="icon_img"/> <img src="./img/tianzuo.Qiankun.png" class="icon_img"/> <img src="./img/tianzuo.Zhuiri.png" class="icon_img"/>
+          </th>
+        </tr>
       </tbody>
     </table>
   </tr>
@@ -242,6 +268,84 @@ hide:
             <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/>
           </th>
         </tr>
+        <tr>
+          <th>
+            <a href="https://github.com/zhengtianzuo/tianzuo.Shennong" target="_blank">
+              <img src="./img/tianzuo.Shennong.png" class="icon_img"/>
+            </a>
+          </th>
+          <th>
+            <font size=2>天佐.神农鼎</font>
+          </th>
+          <th>
+            <a href="https://github.com/zhengtianzuo/tianzuo.Shennong" target="_blank">
+              <img src="./img/com_btnGitHub.svg">
+            </a>
+            </th>
+          <th>
+            <a href="https://gitee.com/zhengtianzuo/tianzuo.Shennong" target="_blank">
+              <img src="./img/com_btnGitee.svg">
+            </a>
+          </th>
+          <th>
+            <font size=2>开发中</font>
+          </th>
+          <th>
+            <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/> <img src="./img/ffmpeg.png" class="icon_img"/> <img src="./img/opencv.png" class="icon_img"/>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <a href="https://github.com/zhengtianzuo/tianzuo.Linglong" target="_blank">
+              <img src="./img/tianzuo.Linglong.png" class="icon_img"/>
+            </a>
+          </th>
+          <th>
+            <font size=2>天佐.玲珑塔</font>
+          </th>
+          <th>
+            <a href="https://github.com/zhengtianzuo/tianzuo.Linglong" target="_blank">
+              <img src="./img/com_btnGitHub.svg">
+            </a>
+            </th>
+          <th>
+            <a href="https://gitee.com/zhengtianzuo/tianzuo.Linglong" target="_blank">
+              <img src="./img/com_btnGitee.svg">
+            </a>
+          </th>
+          <th>
+            <font size=2>开发中</font>
+          </th>
+          <th>
+            <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/> <img src="./img/ffmpeg.png" class="icon_img"/> 
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <a href="https://github.com/zhengtianzuo/tianzuo.Fengtian" target="_blank">
+              <img src="./img/tianzuo.Fengtian.png" class="icon_img"/>
+            </a>
+          </th>
+          <th>
+            <font size=2>天佐.封天印</font>
+          </th>
+          <th>
+            <a href="https://github.com/zhengtianzuo/tianzuo.Fengtian" target="_blank">
+              <img src="./img/com_btnGitHub.svg">
+            </a>
+            </th>
+          <th>
+            <a href="https://gitee.com/zhengtianzuo/tianzuo.Fengtian" target="_blank">
+              <img src="./img/com_btnGitee.svg">
+            </a>
+          </th>
+          <th>
+            <font size=2>开发中</font>
+          </th>
+          <th>
+            <img src="./img/C.png" class="icon_img"/> <img src="./img/C__.png" class="icon_img"/> <img src="./img/SDL.png" class="icon_img"/> 
+          </th>
+        </tr>
       </tbody>
     </table>
   </tr>
@@ -273,7 +377,7 @@ hide:
 |作者|郑天佐||
 |QQ|278969898||
 |邮箱|zhengtianzuo06@163.com||
-|主页|[http://www.camelstudio.cn](http://www.camelstudio.cn)||
+|主页|[http://www.zhengtianzuo.com](http://www.zhengtianzuo.com)||
 |博客|[http://blog.csdn.net/zhengtianzuo06](http://blog.csdn.net/zhengtianzuo06)||
 |github|[https://github.com/zhengtianzuo](https://github.com/zhengtianzuo)||
 |gitee|[https://gitee.com/zhengtianzuo](https://gitee.com/zhengtianzuo)||
