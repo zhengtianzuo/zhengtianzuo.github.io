@@ -35,7 +35,19 @@
 
 **天佐.盘古斧demo:**
 
-![](../img/Pangu1.png)![](../img/Pangu2.png)![](../img/Pangu3.png)![](../img/Pangu4.png)![](../img/Pangu5.png)![](../img/Pangu6.png)![](../img/Pangu7.png)![](../img/Pangu8.png)![](../img/Pangu9.png)![](../img/Pangu10.png)![](../img/Pangu11.png)![](../img/Pangu12.png)![](../img/Pangu13.png)
+![](../img/Pangu1.png)
+![](../img/Pangu2.png)
+![](../img/Pangu3.png)
+![](../img/Pangu4.png)
+![](../img/Pangu5.png)
+![](../img/Pangu6.png)
+![](../img/Pangu7.png)
+![](../img/Pangu8.png)
+![](../img/Pangu9.png)
+![](../img/Pangu10.png)
+![](../img/Pangu11.png)
+![](../img/Pangu12.png)
+![](../img/Pangu13.png)
 
 
 # 下载

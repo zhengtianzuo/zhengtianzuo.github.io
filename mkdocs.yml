@@ -59,7 +59,7 @@ plugins:
             产品: product
             其他: other
             编程语言: Programming Languages
-            音视频: Audio&Video
+            网络开发: NetWork
             操作系统: Operating System
             开发工具: Development Tools
             远程桌面: remote desktop
@@ -109,7 +109,6 @@ extra:
 nav:
   - 主页: index.md
   - 技术分享:
-    - technology/index.md
     - 编程语言:
       - C&C++:
         - technology/C++.md
@@ -145,14 +144,13 @@ nav:
         - technology/Rust.md
       - Ruby:
         - technology/Ruby.md
-    - 音视频:
-      - technology/AudioVideo.md
+    - 网络开发:
+      - technology/NetWork.md
     - 操作系统:
       - technology/OperatingSystem.md
     - 开发工具:
       - technology/DevelopmentTools.md
   - 远程桌面:
-    - remotedesktop/index.md
     - 屏幕捕获:
       - remotedesktop/ScreenCaptures.md
     - 视频编解码:
