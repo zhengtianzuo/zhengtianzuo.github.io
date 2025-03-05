@@ -126,6 +126,8 @@ nav:
           - technology/Cpp/Performance.md
         - 味道:
           - technology/Cpp/CodeSmell.md
+        - 内存:
+          - technology/Cpp/001-BoostMessageQueue.md
       - Python:
         - technology/Python.md
       - Java:
