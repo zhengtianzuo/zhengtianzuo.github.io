@@ -308,3 +308,6 @@ RDMA加速（需InfiniBand支持）
 |70% CPU占用|45% CPU占用|资源效率提升|
 
 实际测试显示，综合运用上述技巧可使Boost消息队列达到 80%的硬件理论性能上限。建议根据具体业务场景选择3-5个重点优化方向实施。
+
+## 完整代码
+[Github](https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/001-BoostMessageQueue)
