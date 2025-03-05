@@ -349,27 +349,6 @@ hide:
       </tbody>
     </table>
   </tr>
-
-  <tr>
-    <table style="border: 0px;margin: 0 0;">
-      <th align="center">
-        <img src="./img/1-QQ.png"/><br>
-        加QQ好友
-      </th>
-      <th align="center">
-        <img src="./img/2-WeChat.png"/><br>
-        加微信好友
-      </th>
-      <th align="center">
-        <img src="./img/4-AliPay.png"/><br>
-        支付宝赞助
-      </th>
-      <th align="center">
-        <img src="./img/3-WeChatPay.png"/><br>
-        微信赞助
-      </th>
-    </table>
-  </tr>
 </table>
 
 ||||
@@ -382,3 +361,32 @@ hide:
 |github|[https://github.com/zhengtianzuo](https://github.com/zhengtianzuo)||
 |gitee|[https://gitee.com/zhengtianzuo](https://gitee.com/zhengtianzuo)||
 |QQ群|199672080||
+
+  <tr>
+    <table style="border: 0px;margin: 0 0;">
+      <th align="center" style="text-align: center;">
+        <br><br><br><br><br><br>
+        <img src="./img/1-QQ.png"/><br>
+        加QQ好友
+      </th>
+      <th align="center" style="text-align: center;">
+        <br><br><br><br><br><br>
+        <img src="./img/2-WeChat.png"/><br>
+        加微信好友
+      </th>
+      <th align="center" style="text-align: center;">
+        <img src="./img/5-WeChatMp.png"/><br>
+        关注微信公众号
+      </th>
+      <th align="center" style="text-align: center;">
+        <br><br><br><br><br><br>
+        <img src="./img/4-AliPay.png"/><br>
+        支付宝赞助
+      </th>
+      <th align="center" style="text-align: center;">
+        <br><br><br><br><br><br>
+        <img src="./img/3-WeChatPay.png"/><br>
+        微信赞助
+      </th>
+    </table>
+  </tr>
