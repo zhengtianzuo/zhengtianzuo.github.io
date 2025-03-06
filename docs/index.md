@@ -22,6 +22,18 @@ hide:
 <table style="border: 0px;margin: 0 0;">
   <tr>
     <img src="./img/logo.png"/>
+    <div align="left">
+    <br>
+    <a href="https://zhengtianzuo.com/" target="_blank"><img src="https://img.shields.io/badge/zhengtianzuo-主页-green" /></a>&emsp;
+    <a href="https://blog.csdn.net/zhengtianzuo06/" target="_blank"><img src="https://img.shields.io/badge/CSDN-博客-c32136" /></a>&emsp;
+    <a href="https://www.zhihu.com/people/camelstudio" target="_blank"><img src="https://img.shields.io/badge/Zhihu-知乎-blue" /></a>&emsp;
+    <a href="https://juejin.cn/user/4198362625883460" target="_blank"><img src="https://img.shields.io/badge/juejin-掘金-blue" /></a>&emsp;
+    <a href="https://my.oschina.net/zhengtianzuo05" target="_blank"><img src="https://img.shields.io/badge/oschina-开源中国-green" /></a>&emsp;
+    <a href="https://www.cnblogs.com/zhengtianzuo" target="_blank"><img src="https://img.shields.io/badge/cnblogs-博客园-blue" /></a>&emsp;
+    <a href="https://blog.51cto.com/zhengtianzuo" target="_blank"><img src="https://img.shields.io/badge/51cto-51cto-c32136" /></a>&emsp;
+    <a href="https://gitee.com/zhengtianzuo" target="_blank"><img src="https://img.shields.io/badge/gitee-gitee-red" /></a>&emsp;
+    <img src="https://img.shields.io/github/followers/zhengtianzuo.svg?style=social&label=followers&maxAge=2592000" />
+    </div>
     <br>
     <font size=4>我是郑天佐，目前专注于</font><font color="#f47523" size=4>远程桌面</font>的开发，主要使用<font color="#f47523" size=4>C++</font>，喜欢研究<font color="#f47523" size=4>高性能</font>与<font color="#f47523" size=4>代码架构</font>。
     <table>
@@ -351,42 +363,31 @@ hide:
   </tr>
 </table>
 
-||||
-|--|--|--|
-|作者|郑天佐||
-|QQ|278969898||
-|邮箱|zhengtianzuo06@163.com||
-|主页|[http://www.zhengtianzuo.com](http://www.zhengtianzuo.com)||
-|博客|[http://blog.csdn.net/zhengtianzuo06](http://blog.csdn.net/zhengtianzuo06)||
-|github|[https://github.com/zhengtianzuo](https://github.com/zhengtianzuo)||
-|gitee|[https://gitee.com/zhengtianzuo](https://gitee.com/zhengtianzuo)||
-|QQ群|199672080||
-
-  <tr>
-    <table style="border: 0px;margin: 0 0;">
-      <th align="center" style="text-align: center;">
-        <br><br><br><br><br><br>
-        <img src="./img/1-QQ.png"/><br>
-        加QQ好友
-      </th>
-      <th align="center" style="text-align: center;">
-        <br><br><br><br><br><br>
-        <img src="./img/2-WeChat.png"/><br>
-        加微信好友
-      </th>
-      <th align="center" style="text-align: center;">
-        <img src="./img/5-WeChatMp.png"/><br>
-        关注微信公众号
-      </th>
-      <th align="center" style="text-align: center;">
-        <br><br><br><br><br><br>
-        <img src="./img/4-AliPay.png"/><br>
-        支付宝赞助
-      </th>
-      <th align="center" style="text-align: center;">
-        <br><br><br><br><br><br>
-        <img src="./img/3-WeChatPay.png"/><br>
-        微信赞助
-      </th>
-    </table>
-  </tr>
+<tr>
+  <table style="border: 0px;margin: 0 0;">
+    <th align="center" style="text-align: center;">
+      <br><br><br><br><br><br>
+      <img src="./img/1-QQ.png"/><br>
+      加QQ好友
+    </th>
+    <th align="center" style="text-align: center;">
+      <br><br><br><br><br><br>
+      <img src="./img/2-WeChat.png"/><br>
+      加微信好友
+    </th>
+    <th align="center" style="text-align: center;">
+      <img src="./img/5-WeChatMp.png"/><br>
+      关注微信公众号
+    </th>
+    <th align="center" style="text-align: center;">
+      <br><br><br><br><br><br>
+      <img src="./img/4-AliPay.png"/><br>
+      支付宝赞助
+    </th>
+    <th align="center" style="text-align: center;">
+      <br><br><br><br><br><br>
+      <img src="./img/3-WeChatPay.png"/><br>
+      微信赞助
+    </th>
+  </table>
+</tr>
