@@ -360,6 +360,10 @@ hide:
         <img src="../img/2-WeChat.png"/><br>
         Add WeChat Friend
       </th>
+	  <th align="center" style="text-align: center;">
+		<img src="./img/5-WeChatMp.png"/><br>
+		WeChat Official Account
+	  </th>
       <th align="center">
         <img src="../img/4-AliPay.png"/><br>
         AliPay sponsor
