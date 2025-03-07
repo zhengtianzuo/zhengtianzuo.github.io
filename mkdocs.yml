@@ -79,6 +79,7 @@ plugins:
             调试: Debugging
             性能: Performance
             味道: CodeSmell
+            存储: Storage
   - search
 
 extra:
@@ -126,9 +127,10 @@ nav:
           - technology/Cpp/Performance.md
         - 味道:
           - technology/Cpp/CodeSmell.md
-        - 内存:
+        - 存储:
           - technology/Cpp/001-BoostMessageQueue.md
           - technology/Cpp/002-BoostSharedMemory.md
+          - technology/Cpp/003-BoostFileLock.md
       - Python:
         - technology/Python.md
       - Java:
