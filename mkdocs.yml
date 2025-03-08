@@ -80,6 +80,7 @@ plugins:
             性能: Performance
             味道: CodeSmell
             存储: Storage
+            计算: Calculation
   - search
 
 extra:
@@ -131,6 +132,8 @@ nav:
           - technology/Cpp/001-BoostMessageQueue.md
           - technology/Cpp/002-BoostSharedMemory.md
           - technology/Cpp/003-BoostFileLock.md
+        - 计算:
+          - technology/Cpp/004-Get_CPU_Useage.md
       - Python:
         - technology/Python.md
       - Java:
