@@ -134,6 +134,7 @@ nav:
           - technology/Cpp/003-BoostFileLock.md
         - 计算:
           - technology/Cpp/004-Get_CPU_Useage.md
+          - technology/Cpp/005-Get_Mem_Useage.md
       - Python:
         - technology/Python.md
       - Java:
