@@ -58,6 +58,7 @@ plugins:
             模块: component
             产品: product
             其他: other
+            全部文章列表: All Articles
             编程语言: Programming Languages
             网络开发: NetWork
             操作系统: Operating System
@@ -81,6 +82,7 @@ plugins:
             味道: CodeSmell
             存储: Storage
             计算: Calculation
+            技巧: Skill
   - search
 
 extra:
@@ -136,6 +138,8 @@ nav:
           - technology/Cpp/004-Get_CPU_Useage.md
           - technology/Cpp/005-Get_Mem_Useage.md
           - technology/Cpp/006-GetSerialNumber.md
+        - 技巧:
+          - technology/Cpp/007-PropertyInCpp.md
       - Python:
         - technology/Python.md
       - Java:
@@ -198,3 +202,5 @@ nav:
       - component/tianzuo.LianYao.md
   - 其他: 
     - other/index.md
+  - 全部文章列表:
+    - other/AllArticles.md
