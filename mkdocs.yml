@@ -135,6 +135,7 @@ nav:
         - 计算:
           - technology/Cpp/004-Get_CPU_Useage.md
           - technology/Cpp/005-Get_Mem_Useage.md
+          - technology/Cpp/006-GetSerialNumber.md
       - Python:
         - technology/Python.md
       - Java:
