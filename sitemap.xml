@@ -50,6 +50,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/other/"/>
     </url>
     <url>
+        <loc>https://zhengtianzuo.com/other/AllArticles/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/other/AllArticles/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/other/AllArticles/"/>
+    </url>
+    <url>
         <loc>https://zhengtianzuo.com/product/tianzuo.Fuxi/</loc>
         <lastmod>2025-03-09</lastmod>
         <changefreq>daily</changefreq>
@@ -288,6 +295,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/006-GetSerialNumber/"/>
     </url>
     <url>
+        <loc>https://zhengtianzuo.com/technology/Cpp/007-PropertyInCpp/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/technology/Cpp/007-PropertyInCpp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/007-PropertyInCpp/"/>
+    </url>
+    <url>
         <loc>https://zhengtianzuo.com/technology/Cpp/Building/</loc>
         <lastmod>2025-03-09</lastmod>
         <changefreq>daily</changefreq>
@@ -398,6 +412,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/other/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/other/"/>
+    </url>
+    <url>
+        <loc>https://zhengtianzuo.com/en/other/AllArticles/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/other/AllArticles/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/other/AllArticles/"/>
     </url>
     <url>
         <loc>https://zhengtianzuo.com/en/product/tianzuo.Fuxi/</loc>
@@ -699,5 +720,12 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/006-GetSerialNumber/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/technology/Cpp/006-GetSerialNumber/"/>
+    </url>
+    <url>
+        <loc>https://zhengtianzuo.com/en/technology/Cpp/007-PropertyInCpp/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/007-PropertyInCpp/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/technology/Cpp/007-PropertyInCpp/"/>
     </url>
 </urlset>
