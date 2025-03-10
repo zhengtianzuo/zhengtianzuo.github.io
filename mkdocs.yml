@@ -127,7 +127,7 @@ nav:
         - 调试:
           - technology/Cpp/Debugging.md
         - 性能:
-          - technology/Cpp/Performance.md
+          - technology/Cpp/009-HighResolutionClock.md
         - 味道:
           - technology/Cpp/CodeSmell.md
         - 存储:
