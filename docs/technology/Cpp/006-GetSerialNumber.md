@@ -1,5 +1,5 @@
 ---
-icon: octicons/number-24
+icon: material/format-list-numbered
 ---
 
 # 获取硬件序列号
