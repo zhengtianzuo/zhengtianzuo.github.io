@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[010-Catch2 2025/03/11](../technology/Cpp/010-Catch2.md)
+
 [009-高精度计时器 2025/03/10](../technology/Cpp/009-HighResolutionClock.md)
 
 [008-生成不重复9位随机数 2025/03/10](../technology/Cpp/008-GenerateUniqueNumbers.md)
