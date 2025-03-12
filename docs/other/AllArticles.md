@@ -4,6 +4,10 @@ icon: material/menu
 
 # 全部文章列表
 
+[012-Benchmark 2025/03/12](../technology/Cpp/012-Benchmark.md)
+
+[011-base64 2025/03/12](../technology/Cpp/011-base64.md)
+
 [010-Catch2 2025/03/11](../technology/Cpp/010-Catch2.md)
 
 [009-高精度计时器 2025/03/10](../technology/Cpp/009-HighResolutionClock.md)

@@ -128,6 +128,7 @@ nav:
           - technology/Cpp/Debugging.md
         - 测试:
           - technology/Cpp/010-Catch2.md
+          - technology/Cpp/012-Benchmark.md
         - 性能:
           - technology/Cpp/009-HighResolutionClock.md
         - 味道:
