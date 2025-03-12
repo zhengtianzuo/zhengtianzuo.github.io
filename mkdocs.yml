@@ -141,6 +141,7 @@ nav:
           - technology/Cpp/005-Get_Mem_Useage.md
           - technology/Cpp/006-GetSerialNumber.md
           - technology/Cpp/008-GenerateUniqueNumbers.md
+          - technology/Cpp/011-base64.md
         - 技巧:
           - technology/Cpp/007-PropertyInCpp.md
       - Python:
