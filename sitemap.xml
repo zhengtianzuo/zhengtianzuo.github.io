@@ -330,6 +330,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/011-base64/"/>
     </url>
     <url>
+        <loc>https://zhengtianzuo.com/technology/Cpp/012-Benchmark/</loc>
+        <lastmod>2025-03-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/technology/Cpp/012-Benchmark/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/012-Benchmark/"/>
+    </url>
+    <url>
         <loc>https://zhengtianzuo.com/technology/Cpp/Building/</loc>
         <lastmod>2025-03-12</lastmod>
         <changefreq>daily</changefreq>
@@ -775,5 +782,12 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/011-base64/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/technology/Cpp/011-base64/"/>
+    </url>
+    <url>
+        <loc>https://zhengtianzuo.com/en/technology/Cpp/012-Benchmark/</loc>
+        <lastmod>2025-03-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/012-Benchmark/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/technology/Cpp/012-Benchmark/"/>
     </url>
 </urlset>
