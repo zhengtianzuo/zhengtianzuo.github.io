@@ -344,6 +344,20 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/013-Detours/"/>
     </url>
     <url>
+        <loc>https://zhengtianzuo.com/technology/Cpp/014-log4cpp/</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/technology/Cpp/014-log4cpp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/014-log4cpp/"/>
+    </url>
+    <url>
+        <loc>https://zhengtianzuo.com/technology/Cpp/015-SingleApplication/</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/technology/Cpp/015-SingleApplication/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/015-SingleApplication/"/>
+    </url>
+    <url>
         <loc>https://zhengtianzuo.com/technology/Cpp/Building/</loc>
         <lastmod>2025-03-13</lastmod>
         <changefreq>daily</changefreq>
@@ -795,5 +809,19 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/013-Detours/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/technology/Cpp/013-Detours/"/>
+    </url>
+    <url>
+        <loc>https://zhengtianzuo.com/en/technology/Cpp/014-log4cpp/</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/014-log4cpp/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/technology/Cpp/014-log4cpp/"/>
+    </url>
+    <url>
+        <loc>https://zhengtianzuo.com/en/technology/Cpp/015-SingleApplication/</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zhengtianzuo.com/en/technology/Cpp/015-SingleApplication/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://zhengtianzuo.com/technology/Cpp/015-SingleApplication/"/>
     </url>
 </urlset>
