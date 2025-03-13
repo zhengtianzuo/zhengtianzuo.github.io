@@ -125,7 +125,7 @@ nav:
         - 构建:
           - technology/Cpp/Building.md
         - 调试:
-          - technology/Cpp/Debugging.md
+          - technology/Cpp/013-Detours.md
         - 测试:
           - technology/Cpp/010-Catch2.md
           - technology/Cpp/012-Benchmark.md

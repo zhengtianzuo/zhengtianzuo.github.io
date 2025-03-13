@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[013-Detours 2025/03/13](../technology/Cpp/013-Detours.md)
+
 [012-Benchmark 2025/03/12](../technology/Cpp/012-Benchmark.md)
 
 [011-base64 2025/03/12](../technology/Cpp/011-base64.md)
