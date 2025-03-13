@@ -126,6 +126,7 @@ nav:
           - technology/Cpp/Building.md
         - 调试:
           - technology/Cpp/013-Detours.md
+          - technology/Cpp/014-log4cpp.md
         - 测试:
           - technology/Cpp/010-Catch2.md
           - technology/Cpp/012-Benchmark.md
@@ -145,6 +146,7 @@ nav:
           - technology/Cpp/011-base64.md
         - 技巧:
           - technology/Cpp/007-PropertyInCpp.md
+          - technology/Cpp/015-SingleApplication.md
       - Python:
         - technology/Python.md
       - Java:
