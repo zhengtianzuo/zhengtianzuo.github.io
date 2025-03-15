@@ -4,7 +4,7 @@ icon: material/server
 
 # HttpServer
 
-![](img/cpprestsdk.png)
+![](../../img/cpprestsdk.png)
 
 以下为关于C++ REST SDK（cpprestsdk）的技术调研报告及完整实现方案，综合了架构原理、核心功能实现、性能优化策略及可视化说明：
 
