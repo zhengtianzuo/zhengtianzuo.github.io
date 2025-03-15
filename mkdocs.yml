@@ -83,8 +83,10 @@ plugins:
             存储: Storage
             计算: Calculation
             技巧: Skill
+            服务器: Server
   - search
-
+  - mermaid2
+  
 extra:
   alternate:
     - name: 简体中文
@@ -147,6 +149,9 @@ nav:
         - 技巧:
           - technology/Cpp/007-PropertyInCpp.md
           - technology/Cpp/015-SingleApplication.md
+          - technology/Cpp/016-condition_variable.md
+        - 服务器:
+          - technology/Cpp/017-HttpServer.md
       - Python:
         - technology/Python.md
       - Java:
