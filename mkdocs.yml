@@ -105,12 +105,21 @@ extra:
       link: mailto:<zhengtianzuo06@163.com>
     - icon: fontawesome/solid/c
       link: https://blog.csdn.net/zhengtianzuo06/
+    - icon: fontawesome/brands/zhihu
+      link: https://www.zhihu.com/people/camelstudio/
+    - icon: simple/juejin
+      link: https://juejin.cn/user/4198362625883460
+    - icon: material/web
+      link: https://my.oschina.net/zhengtianzuo05
+    - icon: material/web
+      link: https://www.cnblogs.com/zhengtianzuo
+    - icon: material/web
+      link: https://blog.51cto.com/zhengtianzuo
     - icon: fontawesome/brands/github
       link: https://github.com/zhengtianzuo/
     - icon: fontawesome/solid/g
       link: https://gitee.com/zhengtianzuo/
-    - icon: fontawesome/brands/zhihu
-      link: https://www.zhihu.com/people/camelstudio/
+
 
 nav:
   - 主页: index.md
@@ -152,6 +161,8 @@ nav:
           - technology/Cpp/016-condition_variable.md
         - 服务器:
           - technology/Cpp/017-HttpServer.md
+        - 网络:
+          - technology/Cpp/018-IOCP.md
       - Python:
         - technology/Python.md
       - Java:
@@ -170,8 +181,6 @@ nav:
         - technology/Rust.md
       - Ruby:
         - technology/Ruby.md
-    - 网络开发:
-      - technology/NetWork.md
     - 操作系统:
       - technology/OperatingSystem.md
     - 开发工具:
