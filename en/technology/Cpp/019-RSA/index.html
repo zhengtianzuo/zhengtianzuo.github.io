@@ -6,12 +6,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="zhengtianzuo" name="description"/>
-<link href="https://zhengtianzuo.com/en/technology/Cpp/017-HttpServer/" rel="canonical"/>
-<link href="../016-condition_variable/" rel="prev"/>
-<link href="../018-IOCP/" rel="next"/>
+<link href="https://zhengtianzuo.com/en/technology/Cpp/019-RSA/" rel="canonical"/>
+<link href="../011-base64/" rel="prev"/>
+<link href="../007-PropertyInCpp/" rel="next"/>
 <link href="../../../../img/me.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>HttpServer - tianzuo.home</title>
+<title>RSA - tianzuo.home</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#httpserver">
+<a class="md-skip" href="#rsa">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              HttpServer
+              RSA
             
           </span>
 </div>
@@ -74,7 +74,7 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="../../../../technology/Cpp/017-HttpServer/" hreflang="zh">
+<a class="md-select__link" href="../../../../technology/Cpp/019-RSA/" hreflang="zh">
               简体中文
             </a>
 </li>
@@ -561,8 +561,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_9" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_9" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_9" id="__nav_2_1_1_9_label" tabindex="0">
 <span class="md-ellipsis">
     Calculation
@@ -570,7 +570,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_9_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_9_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_9">
 <span class="md-nav__icon md-icon"></span>
             Calculation
@@ -621,14 +621,84 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../019-RSA/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.991 0a.883.883 0 0 0-.871.817v3.02a.883.883 0 0 0 .88.884.883.883 0 0 0 .88-.88V.816A.883.883 0 0 0 11.991 0m7.705 3.109a.88.88 0 0 0-.521.174L16.8 5.231a.88.88 0 0 0 .559 1.563.88.88 0 0 0 .56-.2l2.37-1.951a.88.88 0 0 0-.594-1.534M4.32 3.122a.883.883 0 0 0-.611 1.52l2.37 1.951a.88.88 0 0 0 .56.2v-.002a.88.88 0 0 0 .56-1.56L4.828 3.283a.9.9 0 0 0-.508-.16zm7.66 3.228a5.046 5.046 0 0 0-5.026 5.045v1.488H5.787a.967.967 0 0 0-.965.964v9.189a.967.967 0 0 0 .965.964h12.426a.967.967 0 0 0 .964-.964v-9.19a.967.967 0 0 0-.964-.963h-1.168v-1.488A5.046 5.046 0 0 0 11.98 6.35m.012 2.893a2.15 2.15 0 0 1 2.16 2.152v1.488H9.847v-1.488a2.15 2.15 0 0 1 2.145-2.152zm7.382.503a.883.883 0 1 0 .07 1.763h3.027a.883.883 0 0 0 0-1.76h-3.027zM1.529 9.75a.883.883 0 0 0 0 1.76h2.999a.883.883 0 0 0 0-1.76zm10.46 6.774a1.28 1.28 0 0 1 .64 2.393v1.245a.63.63 0 0 1-1.259 0v-1.245a1.28 1.28 0 0 1 .619-2.393"></path></svg>
+<span class="md-ellipsis">
+    RSA
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.991 0a.883.883 0 0 0-.871.817v3.02a.883.883 0 0 0 .88.884.883.883 0 0 0 .88-.88V.816A.883.883 0 0 0 11.991 0m7.705 3.109a.88.88 0 0 0-.521.174L16.8 5.231a.88.88 0 0 0 .559 1.563.88.88 0 0 0 .56-.2l2.37-1.951a.88.88 0 0 0-.594-1.534M4.32 3.122a.883.883 0 0 0-.611 1.52l2.37 1.951a.88.88 0 0 0 .56.2v-.002a.88.88 0 0 0 .56-1.56L4.828 3.283a.9.9 0 0 0-.508-.16zm7.66 3.228a5.046 5.046 0 0 0-5.026 5.045v1.488H5.787a.967.967 0 0 0-.965.964v9.189a.967.967 0 0 0 .965.964h12.426a.967.967 0 0 0 .964-.964v-9.19a.967.967 0 0 0-.964-.963h-1.168v-1.488A5.046 5.046 0 0 0 11.98 6.35m.012 2.893a2.15 2.15 0 0 1 2.16 2.152v1.488H9.847v-1.488a2.15 2.15 0 0 1 2.145-2.152zm7.382.503a.883.883 0 1 0 .07 1.763h3.027a.883.883 0 0 0 0-1.76h-3.027zM1.529 9.75a.883.883 0 0 0 0 1.76h2.999a.883.883 0 0 0 0-1.76zm10.46 6.774a1.28 1.28 0 0 1 .64 2.393v1.245a.63.63 0 0 1-1.259 0v-1.245a1.28 1.28 0 0 1 .619-2.393"></path></svg>
 <span class="md-ellipsis">
     RSA
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rsa_1">
+<span class="md-ellipsis">
+      一、RSA技术原理与流程（附流程图）
+    </span>
+</a>
+<nav aria-label="一、RSA技术原理与流程（附流程图）" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      密钥生成流程
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      加解密流程对比
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#copenssl">
+<span class="md-ellipsis">
+      二、C++完整代码实现（OpenSSL库）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      三、关键优化参数与技术
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      四、技术扩展建议
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      完整代码
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -678,8 +748,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_11" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_11" id="__nav_2_1_1_11_label" tabindex="0">
 <span class="md-ellipsis">
     Server
@@ -687,144 +757,20 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_11_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_11_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_11">
 <span class="md-nav__icon md-icon"></span>
             Server
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg>
-<span class="md-ellipsis">
-    HttpServer
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../017-HttpServer/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg>
 <span class="md-ellipsis">
     HttpServer
     
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#c-rest-sdk">
-<span class="md-ellipsis">
-      一、C++ REST SDK技术原理
-    </span>
-</a>
-<nav aria-label="一、C++ REST SDK技术原理" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      核心架构
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      实现原理
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      二、基础功能实现
-    </span>
-</a>
-<nav aria-label="二、基础功能实现" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      客户端实现
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      服务端实现（多路由处理）
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      三、性能优化策略
-    </span>
-</a>
-<nav aria-label="三、性能优化策略" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      核心参数配置
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      四、系统监控与调试
-    </span>
-</a>
-<nav aria-label="四、系统监控与调试" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      日志追踪配置
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-<span class="md-ellipsis">
-      性能分析指标
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-<span class="md-ellipsis">
-      五、部署建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-<span class="md-ellipsis">
-      完整代码
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1682,24 +1628,24 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#c-rest-sdk">
+<a class="md-nav__link" href="#rsa_1">
 <span class="md-ellipsis">
-      一、C++ REST SDK技术原理
+      一、RSA技术原理与流程（附流程图）
     </span>
 </a>
-<nav aria-label="一、C++ REST SDK技术原理" class="md-nav">
+<nav aria-label="一、RSA技术原理与流程（附流程图）" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      核心架构
+      密钥生成流程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      实现原理
+      加解密流程对比
     </span>
 </a>
 </li>
@@ -1707,82 +1653,28 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#copenssl">
 <span class="md-ellipsis">
-      二、基础功能实现
+      二、C++完整代码实现（OpenSSL库）
     </span>
 </a>
-<nav aria-label="二、基础功能实现" class="md-nav">
-<ul class="md-nav__list">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      三、关键优化参数与技术
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
-      客户端实现
+      四、技术扩展建议
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      服务端实现（多路由处理）
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      三、性能优化策略
-    </span>
-</a>
-<nav aria-label="三、性能优化策略" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      核心参数配置
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      四、系统监控与调试
-    </span>
-</a>
-<nav aria-label="四、系统监控与调试" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      日志追踪配置
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-<span class="md-ellipsis">
-      性能分析指标
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-<span class="md-ellipsis">
-      五、部署建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
 <span class="md-ellipsis">
       完整代码
     </span>
@@ -1795,223 +1687,182 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="httpserver">HttpServer</h1>
-<p><img alt="" src="../../../../img/cpprestsdk.png"/></p>
-<p>以下为关于C++ REST SDK（cpprestsdk）的技术调研报告及完整实现方案，综合了架构原理、核心功能实现、性能优化策略及可视化说明：</p>
-<h3 id="c-rest-sdk">一、C++ REST SDK技术原理</h3>
-<h4 id="_1">核心架构</h4>
-<p>cpprestsdk基于异步I/O模型构建，采用C++11特性与Boost.Asio库实现高性能网络通信。其核心模块包括：</p>
-<ul>
-<li>HTTP Client/Server：支持RESTful API请求/响应处理</li>
-<li>JSON序列化：基于web::json命名空间实现结构化数据处理</li>
-<li>URI解析：提供符合RFC 3986标准的URI构造与解析工具</li>
-<li>异步任务链：通过pplx::task实现非阻塞操作链式调用</li>
-</ul>
-<h4 id="_2">实现原理</h4>
-<p>遵循Roy Fielding提出的REST架构约束：</p>
-<ul>
-<li>无状态通信：每个请求包含完整上下文</li>
-<li>资源标识：通过URI定位资源（如/api/users/{id}）</li>
-<li>统一接口：使用HTTP方法（GET/POST/PUT/DELETE）操作资源</li>
-<li>超媒体驱动：响应中嵌入相关资源链接（HATEOAS）</li>
-</ul>
-<h3 id="_3">二、基础功能实现</h3>
-<h4 id="_4">客户端实现</h4>
-<pre><code class="language-cpp">#include &lt;cpprest/http_client.h&gt;
-#include &lt;cpprest/json.h&gt;
-
-using namespace web;
-using namespace web::http;
-using namespace web::http::client;
-
-class RestClient {
-public:
-    RestClient(const utility::string_t&amp; url) : client(url) {}
-
-    // GET请求（带查询参数）
-    pplx::task&lt;json::value&gt; GetUsers(int page = 1) {
-        uri_builder builder(U("/users"));
-        builder.append_query(U("page"),  page);
-        return client.request(methods::GET,  builder.to_string()) 
-            .then([](http_response response) {
-                return response.extract_json(); 
-            });
-    }
-
-    // POST创建资源 
-    pplx::task&lt;http_response&gt; CreateUser(const json::value&amp; user) {
-        return client.request(methods::POST,  U("/users"), user);
-    }
-
-    // PUT更新资源 
-    pplx::task&lt;http_response&gt; UpdateUser(int id, const json::value&amp; data) {
-        uri_builder builder(U("/users"));
-        builder.append_path(std::to_string(id)); 
-        return client.request(methods::PUT,  builder.to_string(),  data);
-    }
-
-    // DELETE删除资源 
-    pplx::task&lt;http_response&gt; DeleteUser(int id) {
-        uri_builder builder(U("/users"));
-        builder.append_path(std::to_string(id)); 
-        return client.request(methods::DEL,  builder.to_string()); 
-    }
-
-private:
-    http_client client;
-};
-</code></pre>
-<h4 id="_5">服务端实现（多路由处理）</h4>
-<pre><code class="language-cpp">#include &lt;cpprest/http_listener.h&gt;
-#include &lt;cpprest/json.h&gt;
-
-using namespace web;
-using namespace web::http;
-using namespace web::http::experimental::listener;
-
-class RestServer {
-public:
-    RestServer(const utility::string_t&amp; url) : listener(url) {
-        listener.support(methods::GET,  std::bind(&amp;RestServer::HandleGet, this, std::placeholders::_1));
-        listener.support(methods::POST,  std::bind(&amp;RestServer::HandlePost, this, std::placeholders::_1));
-    }
-
-    void Start() { listener.open().wait();  }
-    void Stop() { listener.close().wait();  }
-
-private:
-    void HandleGet(http_request req) {
-        auto path = uri::decode(req.relative_uri().path()); 
-
-        if (path == U("/users")) {
-            json::value users = GetUserList(); // 业务逻辑实现 
-            req.reply(status_codes::OK,  users);
-        } else {
-            req.reply(status_codes::NotFound); 
-        }
-    }
-
-    void HandlePost(http_request req) {
-        req.extract_json() 
-            .then([=](json::value body) {
-                // 数据验证与存储逻辑 
-                req.reply(status_codes::Created); 
-            });
-    }
-
-    http_listener listener;
-};
-</code></pre>
-<h3 id="_6">三、性能优化策略</h3>
-<h4 id="_7">核心参数配置</h4>
+<h1 id="rsa">RSA</h1>
+<p><img alt="" src="../../../../img/rsa.png"/></p>
+<h3 id="rsa_1">一、RSA技术原理与流程（附流程图）</h3>
+<h4 id="_1">密钥生成流程</h4>
+<div class="mermaid">graph TD
+    A[选择大质数p/q] --&gt; B[计算n=p*q]
+    B --&gt; C[计算 “φ（n）=p-1*q-1”]
+    C --&gt; D[选择e与φ（n）互质]
+    D --&gt; E[计算d满足ed≡1 mod φ（n）]
+    E --&gt; F[公钥=e/n, 私钥=d/n]
+</div>
+<h4 id="_2">加解密流程对比</h4>
 <table>
 <thead>
 <tr>
-<th>配置项</th>
-<th>作用域</th>
-<th>推荐值</th>
-<th>说明</th>
+<th>场景</th>
+<th>操作方向</th>
+<th>数据保护目标</th>
+<th>典型应用场景</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>http_client_config</td>
-<td>客户端</td>
-<td>timeout=10s</td>
-<td>请求超时时间</td>
+<td>公钥加密</td>
+<td>公钥→私钥</td>
+<td>防数据泄露</td>
+<td>敏感信息传输</td>
 </tr>
 <tr>
-<td>threadpool::initialize</td>
-<td>服务端</td>
-<td>threads=CPU*2</td>
-<td>I/O线程池大小</td>
-</tr>
-<tr>
-<td>http_listener::set_entity_size</td>
-<td>服务端</td>
-<td>10MB</td>
-<td>最大请求体限制</td>
-</tr>
-<tr>
-<td>compression::builtin</td>
-<td>双向</td>
-<td>gzip</td>
-<td>启用传输压缩</td>
+<td>私钥签名</td>
+<td>私钥→公钥</td>
+<td>防数据篡改</td>
+<td>身份认证/数字签名</td>
 </tr>
 </tbody>
 </table>
-<p>3.2 高级优化方案
-* 连接池管理：复用HTTP客户端实例减少TCP握手开销</p>
-<pre><code class="language-cpp">http_client_config config;
-config.set_connection_timeout(std::chrono::seconds(5)); 
-config.set_max_redirects(3);  // 自动重定向 
-http_client client(U("https://api.example.com"),  config);
+<h3 id="copenssl">二、C++完整代码实现（OpenSSL库）</h3>
+<ol>
+<li>环境配置</li>
+</ol>
+<pre><code class="language-bash"># Ubuntu安装OpenSSL开发库
+sudo apt-get install libssl-dev 
 </code></pre>
-<ul>
-<li>异步批处理：合并多个请求提升吞吐量</li>
-</ul>
-<pre><code class="language-cpp">std::vector&lt;pplx::task&lt;json::value&gt;&gt; tasks;
-for(auto&amp; id : ids) {
-    tasks.push_back(client.request(methods::GET,  GetUserUri(id))
-        .then([](http_response res){ return res.extract_json();  }));
-}
+<ol>
+<li>密钥对生成（2048位）</li>
+</ol>
+<pre><code class="language-cpp">#include &lt;openssl/rsa.h&gt;
+#include &lt;openssl/pem.h&gt;
 
-pplx::when_all(tasks.begin(),  tasks.end()) 
-    .then([](std::vector&lt;json::value&gt; results){
-        // 批量处理结果 
-    });
-</code></pre>
-<ul>
-<li>缓存策略：使用内存缓存高频数据</li>
-</ul>
-<pre><code class="language-cpp">#include &lt;cpprest/cache.h&gt;
-web::cache::memory_cache&lt;uint64_t, json::value&gt; user_cache;
-
-auto get_cached_user(int id) {
-    if(auto entry = user_cache.get(id))  return entry;
-    auto user = fetch_from_db(id);
-    user_cache.put(id,  user, std::chrono::minutes(5));
-    return user;
+RSA* generate_keypair() {
+    RSA *rsa = RSA_new();
+    BIGNUM *e = BN_new();
+    BN_set_word(e, 65537); // 常用公钥指数 
+    RSA_generate_key_ex(rsa, 2048, e, NULL);
+    BN_free(e);
+    return rsa;
 }
 </code></pre>
-<h3 id="_8">四、系统监控与调试</h3>
-<h4 id="_9">日志追踪配置</h4>
-<pre><code class="language-cpp">// 启用详细日志输出 
-web::http::diagnostics::trace_level level = 
-    web::http::diagnostics::trace_level::verbose;
-web::http::diagnostics::set_tracing_level(level);
-</code></pre>
-<h4 id="_10">性能分析指标</h4>
-<div class="mermaid">graph TD 
-    A[客户端请求] --&gt; B{服务端处理}
-    B --&gt;|成功| C[记录QPS]
-    B --&gt;|失败| D[记录错误类型]
-    C --&gt; E[生成监控报表]
-    D --&gt; E 
-</div>
-<h3 id="_11">五、部署建议</h3>
-<ul>
-<li>跨平台编译：使用CMake统一构建配置</li>
-</ul>
-<pre><code class="language-bash">cmake_minimum_required(VERSION 3.12)
-project(cpprest-demo)
+<ol>
+<li>公钥加密/私钥解密</li>
+</ol>
+<pre><code class="language-cpp">std::string rsa_encrypt(RSA* pub_key, const std::string&amp; plaintext) {
+    int rsa_len = RSA_size(pub_key);
+    std::vector&lt;unsigned char&gt; ciphertext(rsa_len);
 
-find_package(cpprestsdk REQUIRED)
-add_executable(server src/server.cpp) 
-target_link_libraries(server PRIVATE cpprestsdk::cpprest)
+    int ret = RSA_public_encrypt(
+        plaintext.size(),  
+        (const unsigned char*)plaintext.data(), 
+        ciphertext.data(), 
+        pub_key,
+        RSA_PKCS1_OAEP_PADDING // 更安全的填充方式 
+    );
+
+    return std::string(ciphertext.begin(),  ciphertext.end()); 
+}
+
+std::string rsa_decrypt(RSA* priv_key, const std::string&amp; ciphertext) {
+    int rsa_len = RSA_size(priv_key);
+    std::vector&lt;unsigned char&gt; plaintext(rsa_len);
+
+    int ret = RSA_private_decrypt(
+        ciphertext.size(), 
+        (const unsigned char*)ciphertext.data(), 
+        plaintext.data(), 
+        priv_key,
+        RSA_PKCS1_OAEP_PADDING 
+    );
+
+    return std::string(plaintext.begin(),  plaintext.end()); 
+}
 </code></pre>
+<ol>
+<li>私钥签名/公钥验签</li>
+</ol>
+<pre><code class="language-cpp">#include &lt;openssl/sha.h&gt;
+
+std::string rsa_sign(RSA* priv_key, const std::string&amp; data) {
+    unsigned char hash[SHA256_DIGEST_LENGTH];
+    SHA256((const unsigned char*)data.data(),  data.size(),  hash);
+
+    std::vector&lt;unsigned char&gt; sig(RSA_size(priv_key));
+    unsigned int sig_len;
+
+    RSA_sign(NID_sha256, hash, SHA256_DIGEST_LENGTH, 
+             sig.data(),  &amp;sig_len, priv_key);
+
+    return std::string(sig.begin(),  sig.begin()+sig_len); 
+}
+
+bool rsa_verify(RSA* pub_key, const std::string&amp; data, 
+               const std::string&amp; signature) {
+    unsigned char hash[SHA256_DIGEST_LENGTH];
+    SHA256((const unsigned char*)data.data(),  data.size(),  hash);
+
+    return RSA_verify(NID_sha256, hash, SHA256_DIGEST_LENGTH,
+                    (const unsigned char*)signature.data(), 
+                    signature.size(),  pub_key) == 1;
+}
+</code></pre>
+<h3 id="_3">三、关键优化参数与技术</h3>
+<ol>
+<li>性能优化项</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数类别</th>
+<th>可选值</th>
+<th>影响维度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>密钥长度</td>
+<td>1024/2048/4096 bits</td>
+<td>安全性与计算开销</td>
+</tr>
+<tr>
+<td>填充模式</td>
+<td>PKCS1_v1_5/OAEP</td>
+<td>抗攻击能力</td>
+</tr>
+<tr>
+<td>哈希算法</td>
+<td>SHA256/SHA3</td>
+<td>签名安全性</td>
+</tr>
+<tr>
+<td>大数运算加速</td>
+<td>蒙哥马利模乘/CRT优化</td>
+<td>解密速度提升40%</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>典型参数组合示例</li>
+</ol>
+<pre><code class="language-cpp">// 高性能场景配置 
+RSA* rsa = RSA_new();
+BN_set_word(e, 65537); 
+RSA_generate_key_ex(rsa, 2048, e, NULL); // 2048位密钥 
+RSA_blinding_on(rsa, NULL); // 启用盲化抵抗时序攻击 
+
+// 选择OAEP填充增强安全性 
+RSA_padding_add_PKCS1_OAEP(ciphertext, rsa_len, plaintext, plaintext_len, NULL, 0);
+</code></pre>
+<h3 id="_4">四、技术扩展建议</h3>
 <ul>
-<li>容器化部署：建议Docker镜像集成openssl和boost依赖
-FROM ubuntu:20.04 </li>
+<li>密钥存储方案：使用PKCS#8标准存储私钥（PEM格式加密）</li>
+<li>混合加密体系：RSA传输AES密钥（结合对称加密）</li>
+<li>抗量子计算：探索NTRU/Lattice-based后量子算法</li>
+<li>硬件加速：通过OpenSSL ENGINE接口调用HSM加速卡</li>
 </ul>
-<pre><code class="language-bash">RUN apt-get update &amp;&amp; apt-get install -y \
-    libcpprest-dev \
-    libssl-dev \
-    &amp;&amp; rm -rf /var/lib/apt/lists/*
-</code></pre>
-<p>完整示例代码及配置模板可通过引用中的实现进行扩展。建议结合具体业务场景调整线程池大小、超时阈值等参数，并通过性能测试工具（如Apache Bench）验证优化效果。</p>
-<h2 id="_12">完整代码</h2>
-<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/017-HttpServer">Github</a></p>
+<p>完整代码示例与性能测试数据可参考。如需更深入的数学证明或特定语言移植方案，可进一步提供需求细节。</p>
+<h2 id="_5">完整代码</h2>
+<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/019-RSA">Github</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
