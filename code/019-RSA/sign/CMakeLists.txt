@@ -1,0 +1,11 @@
+﻿
+cmake_minimum_required (VERSION 3.8)
+project ("test")
+include_directories("./include")
+link_directories("./lib")
+add_executable (${PROJECT_NAME} "test.cpp")
+if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+target_link_libraries(${PROJECT_NAME} crypto)
+elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+target_link_libraries(${PROJECT_NAME} crypto pthread dl)
+endif()
