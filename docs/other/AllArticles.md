@@ -4,7 +4,7 @@ icon: material/menu
 
 # 全部文章列表
 
-[020-环形队列 2025/03/20](../technology/Cpp/020-RingQueue)
+[020-环形队列 2025/03/20](../technology/Cpp/020-RingQueue.md)
 
 [019-RSA 2025/03/17](../technology/Cpp/019-RSA.md)
 
