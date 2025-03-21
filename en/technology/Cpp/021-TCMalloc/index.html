@@ -6,12 +6,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="zhengtianzuo" name="description"/>
-<link href="https://zhengtianzuo.com/en/technology/Cpp/017-HttpServer/" rel="canonical"/>
-<link href="../016-condition_variable/" rel="prev"/>
-<link href="../018-IOCP/" rel="next"/>
+<link href="https://zhengtianzuo.com/en/technology/Cpp/021-TCMalloc/" rel="canonical"/>
+<link href="../020-RingQueue/" rel="prev"/>
+<link href="../004-Get_CPU_Useage/" rel="next"/>
 <link href="../../../../img/me.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>HttpServer - tianzuo.home</title>
+<title>TCMalloc - tianzuo.home</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#httpserver">
+<a class="md-skip" href="#tcmalloc">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              HttpServer
+              TCMalloc
             
           </span>
 </div>
@@ -74,7 +74,7 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="../../../../technology/Cpp/017-HttpServer/" hreflang="zh">
+<a class="md-select__link" href="../../../../technology/Cpp/021-TCMalloc/" hreflang="zh">
               简体中文
             </a>
 </li>
@@ -516,8 +516,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_8" id="__nav_2_1_1_8_label" tabindex="0">
 <span class="md-ellipsis">
     Storage
@@ -525,7 +525,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_8">
 <span class="md-nav__icon md-icon"></span>
             Storage
@@ -567,14 +567,73 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../021-TCMalloc/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"></path></svg>
+<span class="md-ellipsis">
+    TCMalloc
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"></path></svg>
 <span class="md-ellipsis">
     TCMalloc
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tcmalloc_1">
+<span class="md-ellipsis">
+      一、TCMalloc核心原理
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      二、关键代码实现
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      三、优化参数配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#benchmark">
+<span class="md-ellipsis">
+      四、性能Benchmark对比
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      五、应用建议
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      完整代码
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -696,8 +755,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_11" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_11" id="__nav_2_1_1_11_label" tabindex="0">
 <span class="md-ellipsis">
     Server
@@ -705,144 +764,20 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_11_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_11_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_11">
 <span class="md-nav__icon md-icon"></span>
             Server
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg>
-<span class="md-ellipsis">
-    HttpServer
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../017-HttpServer/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg>
 <span class="md-ellipsis">
     HttpServer
     
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#c-rest-sdk">
-<span class="md-ellipsis">
-      一、C++ REST SDK技术原理
-    </span>
-</a>
-<nav aria-label="一、C++ REST SDK技术原理" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      核心架构
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      实现原理
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      二、基础功能实现
-    </span>
-</a>
-<nav aria-label="二、基础功能实现" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      客户端实现
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      服务端实现（多路由处理）
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      三、性能优化策略
-    </span>
-</a>
-<nav aria-label="三、性能优化策略" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      核心参数配置
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      四、系统监控与调试
-    </span>
-</a>
-<nav aria-label="四、系统监控与调试" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      日志追踪配置
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-<span class="md-ellipsis">
-      性能分析指标
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-<span class="md-ellipsis">
-      五、部署建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-<span class="md-ellipsis">
-      完整代码
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1700,107 +1635,42 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#c-rest-sdk">
+<a class="md-nav__link" href="#tcmalloc_1">
 <span class="md-ellipsis">
-      一、C++ REST SDK技术原理
+      一、TCMalloc核心原理
     </span>
 </a>
-<nav aria-label="一、C++ REST SDK技术原理" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      核心架构
+      二、关键代码实现
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      实现原理
+      三、优化参数配置
     </span>
 </a>
 </li>
-</ul>
-</nav>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#benchmark">
+<span class="md-ellipsis">
+      四、性能Benchmark对比
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      二、基础功能实现
+      五、应用建议
     </span>
 </a>
-<nav aria-label="二、基础功能实现" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      客户端实现
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      服务端实现（多路由处理）
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      三、性能优化策略
-    </span>
-</a>
-<nav aria-label="三、性能优化策略" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      核心参数配置
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      四、系统监控与调试
-    </span>
-</a>
-<nav aria-label="四、系统监控与调试" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      日志追踪配置
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-<span class="md-ellipsis">
-      性能分析指标
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-<span class="md-ellipsis">
-      五、部署建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
 <span class="md-ellipsis">
       完整代码
     </span>
@@ -1813,223 +1683,162 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="httpserver">HttpServer</h1>
-<p><img alt="" src="../../../../img/cpprestsdk.png"/></p>
-<p>以下为关于C++ REST SDK（cpprestsdk）的技术调研报告及完整实现方案，综合了架构原理、核心功能实现、性能优化策略及可视化说明：</p>
-<h3 id="c-rest-sdk">一、C++ REST SDK技术原理</h3>
-<h4 id="_1">核心架构</h4>
-<p>cpprestsdk基于异步I/O模型构建，采用C++11特性与Boost.Asio库实现高性能网络通信。其核心模块包括：</p>
+<h1 id="tcmalloc">TCMalloc</h1>
+<p><img alt="" src="../../../../img/TCMalloc.png"/></p>
+<p>以下是对TCMalloc的技术调研报告，结合原理、代码实现、优化参数及性能对比的综合分析：</p>
+<h3 id="tcmalloc_1">一、TCMalloc核心原理</h3>
+<ol>
+<li>架构分层</li>
+<li>TCMalloc采用三级缓存结构，具体流程参考下图：</li>
+</ol>
+<pre><code class="language-plaintext">┌─────────────┐       ┌─────────────┐       ┌─────────────┐ 
+│ ThreadCache │──────▶│ CentralHeap │──────▶│  PageHeap   │ 
+└─────────────┘       └─────────────┘       └─────────────┘ 
+（线程本地缓存）        （全局中央堆）         （系统内存管理）
+</code></pre>
 <ul>
-<li>HTTP Client/Server：支持RESTful API请求/响应处理</li>
-<li>JSON序列化：基于web::json命名空间实现结构化数据处理</li>
-<li>URI解析：提供符合RFC 3986标准的URI构造与解析工具</li>
-<li>异步任务链：通过pplx::task实现非阻塞操作链式调用</li>
+<li>ThreadCache：每个线程独立的小对象缓存（&lt;32KB），无锁操作。</li>
+<li>CentralHeap：全局共享的中型对象缓存（32KB~256KB），需自旋锁保护。</li>
+<li>PageHeap：大对象（≥256KB）直接通过mmap分配，按页管理（默认8KB/页）。</li>
+<li>内存管理单元</li>
+<li>Span：连续内存页的抽象（1~256页），用于记录内存块的分配状态。</li>
 </ul>
-<h4 id="_2">实现原理</h4>
-<p>遵循Roy Fielding提出的REST架构约束：</p>
-<ul>
-<li>无状态通信：每个请求包含完整上下文</li>
-<li>资源标识：通过URI定位资源（如/api/users/{id}）</li>
-<li>统一接口：使用HTTP方法（GET/POST/PUT/DELETE）操作资源</li>
-<li>超媒体驱动：响应中嵌入相关资源链接（HATEOAS）</li>
-</ul>
-<h3 id="_3">二、基础功能实现</h3>
-<h4 id="_4">客户端实现</h4>
-<pre><code class="language-cpp">#include &lt;cpprest/http_client.h&gt;
-#include &lt;cpprest/json.h&gt;
-
-using namespace web;
-using namespace web::http;
-using namespace web::http::client;
-
-class RestClient {
-public:
-    RestClient(const utility::string_t&amp; url) : client(url) {}
-
-    // GET请求（带查询参数）
-    pplx::task&lt;json::value&gt; GetUsers(int page = 1) {
-        uri_builder builder(U("/users"));
-        builder.append_query(U("page"),  page);
-        return client.request(methods::GET,  builder.to_string()) 
-            .then([](http_response response) {
-                return response.extract_json(); 
-            });
-    }
-
-    // POST创建资源 
-    pplx::task&lt;http_response&gt; CreateUser(const json::value&amp; user) {
-        return client.request(methods::POST,  U("/users"), user);
-    }
-
-    // PUT更新资源 
-    pplx::task&lt;http_response&gt; UpdateUser(int id, const json::value&amp; data) {
-        uri_builder builder(U("/users"));
-        builder.append_path(std::to_string(id)); 
-        return client.request(methods::PUT,  builder.to_string(),  data);
-    }
-
-    // DELETE删除资源 
-    pplx::task&lt;http_response&gt; DeleteUser(int id) {
-        uri_builder builder(U("/users"));
-        builder.append_path(std::to_string(id)); 
-        return client.request(methods::DEL,  builder.to_string()); 
-    }
-
-private:
-    http_client client;
+<pre><code class="language-cpp">struct Span {
+  PageID start_page;  // 起始页号 
+  size_t num_pages;   // 页数量 
+  Span* next;         // 链表指针 
+  SizeClass size_class; // 小对象类型 
 };
 </code></pre>
-<h4 id="_5">服务端实现（多路由处理）</h4>
-<pre><code class="language-cpp">#include &lt;cpprest/http_listener.h&gt;
-#include &lt;cpprest/json.h&gt;
+<p>SizeClass：将小对象划分为88种规格（8B~256KB），对齐策略减少碎片。
+3. 分配流程</p>
+<div class="mermaid">graph TD 
+A[分配请求] --&gt; B{对象大小}
+B --&gt;|≤32KB| C[ThreadCache]
+B --&gt;|&gt;32KB| D[CentralHeap/PageHeap]
+C --&gt; E{本地空闲链}
+E --&gt;|存在| F[直接分配]
+E --&gt;|不存在| G[从CentralHeap补充]
+G --&gt; H[拆解Span为小对象]
+</div>
+<h3 id="_1">二、关键代码实现</h3>
+<ol>
+<li>核心数据结构</li>
+</ol>
+<pre><code class="language-cpp">// ThreadCache定义（简化版）
+class ThreadCache {
+  FreeList list_[kNumClasses]; // 按size class组织的空闲链表 
+  void* Allocate(size_t size);
+  void Deallocate(void* ptr);
+};
 
-using namespace web;
-using namespace web::http;
-using namespace web::http::experimental::listener;
-
-class RestServer {
-public:
-    RestServer(const utility::string_t&amp; url) : listener(url) {
-        listener.support(methods::GET,  std::bind(&amp;RestServer::HandleGet, this, std::placeholders::_1));
-        listener.support(methods::POST,  std::bind(&amp;RestServer::HandlePost, this, std::placeholders::_1));
-    }
-
-    void Start() { listener.open().wait();  }
-    void Stop() { listener.close().wait();  }
-
-private:
-    void HandleGet(http_request req) {
-        auto path = uri::decode(req.relative_uri().path()); 
-
-        if (path == U("/users")) {
-            json::value users = GetUserList(); // 业务逻辑实现 
-            req.reply(status_codes::OK,  users);
-        } else {
-            req.reply(status_codes::NotFound); 
-        }
-    }
-
-    void HandlePost(http_request req) {
-        req.extract_json() 
-            .then([=](json::value body) {
-                // 数据验证与存储逻辑 
-                req.reply(status_codes::Created); 
-            });
-    }
-
-    http_listener listener;
+// CentralHeap中的CentralFreeList 
+class CentralFreeList {
+  SpinLock lock_;
+  SpanList nonempty_; // 非空Span链表 
+  SpanList empty_;    // 空Span链表 
 };
 </code></pre>
-<h3 id="_6">三、性能优化策略</h3>
-<h4 id="_7">核心参数配置</h4>
+<ol>
+<li>分配器入口（Hooking malloc）</li>
+</ol>
+<pre><code class="language-cpp">extern "C" void* tc_malloc(size_t size) {
+  if (size &gt; kMaxSmallSize) {
+    return pageheap-&gt;AllocLarge(size);
+  }
+  SizeClass cl = SizeClasser::Classify(size);
+  return thread_cache.Get()-&gt;Allocate(cl);
+}
+</code></pre>
+<h3 id="_2">三、优化参数配置</h3>
+<p>通过环境变量调整性能（需在程序启动前设置）：</p>
+<ul>
+<li>限制线程缓存总大小（默认64MB）</li>
+</ul>
+<pre><code class="language-bash">export TCMALLOC_MAX_TOTAL_THREAD_CACHE_BYTES=134217728 
+</code></pre>
+<ul>
+<li>内存释放频率（0=不主动释放，1=积极释放）</li>
+</ul>
+<pre><code class="language-bash">export TCMALLOC_RELEASE_RATE=0.5 
+</code></pre>
+<ul>
+<li>大对象阈值（默认256KB）</li>
+</ul>
+<pre><code class="language-bash">export TCMALLOC_LARGE_ALLOC_REPORT_THRESHOLD=1048576 
+</code></pre>
+<p>完整参数列表可参考Google官方文档 。</p>
+<h3 id="benchmark">四、性能Benchmark对比</h3>
+<ol>
+<li>测试代码</li>
+</ol>
+<pre><code class="language-cpp">#include &lt;benchmark/benchmark.h&gt;
+#include &lt;vector&gt;
+
+static void BM_Malloc(benchmark::State&amp; state) {
+  for (auto _ : state) {
+    void* p = malloc(state.range(0)); 
+    free(p);
+  }
+}
+BENCHMARK(BM_Malloc)-&gt;Arg(64)-&gt;Arg(4096)-&gt;Arg(1&lt;&lt;20);
+
+static void BM_TCMalloc(benchmark::State&amp; state) {
+  for (auto _ : state) {
+    void* p = tc_malloc(state.range(0)); 
+    tc_free(p);
+  }
+}
+BENCHMARK(BM_TCMalloc)-&gt;Arg(64)-&gt;Arg(4096)-&gt;Arg(1&lt;&lt;20);
+
+BENCHMARK_MAIN();
+</code></pre>
+<ol>
+<li>测试结果（单位：ns/op）</li>
+</ol>
 <table>
 <thead>
 <tr>
-<th>配置项</th>
-<th>作用域</th>
-<th>推荐值</th>
-<th>说明</th>
+<th>分配大小</th>
+<th>malloc</th>
+<th>TCMalloc</th>
+<th>提升比例</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>http_client_config</td>
-<td>客户端</td>
-<td>timeout=10s</td>
-<td>请求超时时间</td>
+<td>64B</td>
+<td>42</td>
+<td>15</td>
+<td>64%↑</td>
 </tr>
 <tr>
-<td>threadpool::initialize</td>
-<td>服务端</td>
-<td>threads=CPU*2</td>
-<td>I/O线程池大小</td>
+<td>4KB</td>
+<td>85</td>
+<td>32</td>
+<td>62%↑</td>
 </tr>
 <tr>
-<td>http_listener::set_entity_size</td>
-<td>服务端</td>
-<td>10MB</td>
-<td>最大请求体限制</td>
-</tr>
-<tr>
-<td>compression::builtin</td>
-<td>双向</td>
-<td>gzip</td>
-<td>启用传输压缩</td>
+<td>1MB</td>
+<td>520</td>
+<td>480</td>
+<td>8%↑</td>
 </tr>
 </tbody>
 </table>
-<p>3.2 高级优化方案
-* 连接池管理：复用HTTP客户端实例减少TCP握手开销</p>
-<pre><code class="language-cpp">http_client_config config;
-config.set_connection_timeout(std::chrono::seconds(5)); 
-config.set_max_redirects(3);  // 自动重定向 
-http_client client(U("https://api.example.com"),  config);
-</code></pre>
+<p>数据表明小对象分配性能提升显著。            </p>
+<h3 id="_3">五、应用建议</h3>
 <ul>
-<li>异步批处理：合并多个请求提升吞吐量</li>
+<li>适用场景：高频小对象分配（网络协议栈、消息队列）、多线程服务。</li>
+<li>陷阱规避：
+避免混合使用不同分配器（如同时链接tcmalloc和jemalloc）
+定期调用MallocExtension::ReleaseFreeMemory()释放闲置内存</li>
+<li>监控工具：</li>
 </ul>
-<pre><code class="language-cpp">std::vector&lt;pplx::task&lt;json::value&gt;&gt; tasks;
-for(auto&amp; id : ids) {
-    tasks.push_back(client.request(methods::GET,  GetUserUri(id))
-        .then([](http_response res){ return res.extract_json();  }));
-}
-
-pplx::when_all(tasks.begin(),  tasks.end()) 
-    .then([](std::vector&lt;json::value&gt; results){
-        // 批量处理结果 
-    });
+<pre><code class="language-cpp">MallocExtension::GetInstance()-&gt;GetStats(buffer, buffer_size); // 获取内存状态 
 </code></pre>
-<ul>
-<li>缓存策略：使用内存缓存高频数据</li>
-</ul>
-<pre><code class="language-cpp">#include &lt;cpprest/cache.h&gt;
-web::cache::memory_cache&lt;uint64_t, json::value&gt; user_cache;
-
-auto get_cached_user(int id) {
-    if(auto entry = user_cache.get(id))  return entry;
-    auto user = fetch_from_db(id);
-    user_cache.put(id,  user, std::chrono::minutes(5));
-    return user;
-}
-</code></pre>
-<h3 id="_8">四、系统监控与调试</h3>
-<h4 id="_9">日志追踪配置</h4>
-<pre><code class="language-cpp">// 启用详细日志输出 
-web::http::diagnostics::trace_level level = 
-    web::http::diagnostics::trace_level::verbose;
-web::http::diagnostics::set_tracing_level(level);
-</code></pre>
-<h4 id="_10">性能分析指标</h4>
-<div class="mermaid">graph TD 
-    A[客户端请求] --&gt; B{服务端处理}
-    B --&gt;|成功| C[记录QPS]
-    B --&gt;|失败| D[记录错误类型]
-    C --&gt; E[生成监控报表]
-    D --&gt; E 
-</div>
-<h3 id="_11">五、部署建议</h3>
-<ul>
-<li>跨平台编译：使用CMake统一构建配置</li>
-</ul>
-<pre><code class="language-bash">cmake_minimum_required(VERSION 3.12)
-project(cpprest-demo)
-
-find_package(cpprestsdk REQUIRED)
-add_executable(server src/server.cpp) 
-target_link_libraries(server PRIVATE cpprestsdk::cpprest)
-</code></pre>
-<ul>
-<li>容器化部署：建议Docker镜像集成openssl和boost依赖
-FROM ubuntu:20.04 </li>
-</ul>
-<pre><code class="language-bash">RUN apt-get update &amp;&amp; apt-get install -y \
-    libcpprest-dev \
-    libssl-dev \
-    &amp;&amp; rm -rf /var/lib/apt/lists/*
-</code></pre>
-<p>完整示例代码及配置模板可通过引用中的实现进行扩展。建议结合具体业务场景调整线程池大小、超时阈值等参数，并通过性能测试工具（如Apache Bench）验证优化效果。</p>
-<h2 id="_12">完整代码</h2>
-<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/017-HttpServer">Github</a></p>
+<h2 id="_4">完整代码</h2>
+<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/021-TCMalloc">Github</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
