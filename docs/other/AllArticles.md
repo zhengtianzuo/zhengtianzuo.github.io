@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[022-spdlog 2025/03/22](../technology/Cpp/022-spdlog.md)
+
 [021-TCMalloc 2025/03/21](../technology/Cpp/021-TCMalloc.md)
 
 [020-环形队列 2025/03/20](../technology/Cpp/020-RingQueue.md)

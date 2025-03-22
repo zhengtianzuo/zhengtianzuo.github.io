@@ -138,6 +138,7 @@ nav:
         - 调试:
           - technology/Cpp/013-Detours.md
           - technology/Cpp/014-log4cpp.md
+          - technology/Cpp/022-spdlog.md
         - 测试:
           - technology/Cpp/010-Catch2.md
           - technology/Cpp/012-Benchmark.md
