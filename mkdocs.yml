@@ -159,6 +159,7 @@ nav:
           - technology/Cpp/008-GenerateUniqueNumbers.md
           - technology/Cpp/011-base64.md
           - technology/Cpp/019-RSA.md
+          - technology/Cpp/023-sha256.md
         - 技巧:
           - technology/Cpp/007-PropertyInCpp.md
           - technology/Cpp/015-SingleApplication.md
