@@ -1,40 +1,40 @@
 
 <!DOCTYPE html>
 
-<html class="no-js" lang="en">
+<html class="no-js" lang="zh">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="zhengtianzuo" name="description"/>
-<link href="https://zhengtianzuo.com/en/technology/Cpp/021-TCMalloc/" rel="canonical"/>
-<link href="../020-RingQueue/" rel="prev"/>
-<link href="../004-Get_CPU_Useage/" rel="next"/>
-<link href="../../../../img/me.png" rel="icon"/>
+<link href="https://zhengtianzuo.com/technology/Cpp/024-epoll/" rel="canonical"/>
+<link href="../018-IOCP/" rel="prev"/>
+<link href="../../Python/" rel="next"/>
+<link href="../../../img/me.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>TCMalloc - tianzuo.home</title>
-<link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<title>epoll - 天佐.主页</title>
+<link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../../../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#tcmalloc">
-          Skip to content
+<a class="md-skip" href="#epoll">
+          跳转至
         </a>
 </div>
 <div data-md-component="announce">
 </div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="tianzuo.home" class="md-header__button md-logo" data-md-component="logo" href="../../../" title="tianzuo.home">
-<img alt="logo" src="../../../../img/me.png"/>
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="天佐.主页" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="天佐.主页">
+<img alt="logo" src="../../../img/me.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -43,13 +43,13 @@
 <div class="md-header__ellipsis">
 <div class="md-header__topic">
 <span class="md-ellipsis">
-            tianzuo.home
+            天佐.主页
           </span>
 </div>
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              TCMalloc
+              epoll
             
           </span>
 </div>
@@ -68,18 +68,18 @@
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <div class="md-header__option">
 <div class="md-select">
-<button aria-label="Select language" class="md-header__button md-icon">
+<button aria-label="选择当前语言" class="md-header__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
 </button>
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="../../../../technology/Cpp/021-TCMalloc/" hreflang="zh">
+<a class="md-select__link" href="./" hreflang="zh">
               简体中文
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="./" hreflang="en">
+<a class="md-select__link" href="../../../en/technology/Cpp/024-epoll/" hreflang="en">
               English
             </a>
 </li>
@@ -94,13 +94,13 @@
 <label class="md-search__overlay" for="__search"></label>
 <div class="md-search__inner" role="search">
 <form class="md-search__form" name="search">
-<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </label>
-<nav aria-label="Search" class="md-search__options">
-<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<nav aria-label="查找" class="md-search__options">
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
 </button>
 </nav>
@@ -110,7 +110,7 @@
 <div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
 <div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜索引擎
           </div>
 <ol class="md-search-result__list" role="presentation"></ol>
 </div>
@@ -119,7 +119,7 @@
 </div>
 </div>
 <div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/zhengtianzuo/" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/zhengtianzuo/" title="前往仓库">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
 </div>
@@ -129,16 +129,16 @@
 </a>
 </div>
 </nav>
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../">
+<a class="md-tabs__link" href="../../..">
         
   
     
   
-  home
+  主页
 
       </a>
 </li>
@@ -148,7 +148,7 @@
   
     
   
-  technology sharing
+  技术分享
 
         </a>
 </li>
@@ -158,7 +158,7 @@
   
     
   
-  remote desktop
+  远程桌面
 
         </a>
 </li>
@@ -168,7 +168,7 @@
   
     
   
-  personal work
+  个人作品
 
         </a>
 </li>
@@ -178,7 +178,7 @@
   
     
   
-  other
+  其他
 
         </a>
 </li>
@@ -188,7 +188,7 @@
   
     
   
-  All Articles
+  全部文章列表
 
         </a>
 </li>
@@ -202,15 +202,15 @@
 <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="tianzuo.home" class="md-nav__button md-logo" data-md-component="logo" href="../../../" title="tianzuo.home">
-<img alt="logo" src="../../../../img/me.png"/>
+<a aria-label="天佐.主页" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="天佐.主页">
+<img alt="logo" src="../../../img/me.png"/>
 </a>
-    tianzuo.home
+    天佐.主页
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/zhengtianzuo/" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/zhengtianzuo/" title="前往仓库">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
 </div>
@@ -221,9 +221,9 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../">
+<a class="md-nav__link" href="../../..">
 <span class="md-ellipsis">
-    home
+    主页
     
   </span>
 </a>
@@ -232,7 +232,7 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
 <span class="md-ellipsis">
-    technology sharing
+    技术分享
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -240,14 +240,14 @@
 <nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
-            technology sharing
+            技术分享
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
 <span class="md-ellipsis">
-    Programming Languages
+    编程语言
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -255,7 +255,7 @@
 <nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_1">
 <span class="md-nav__icon md-icon"></span>
-            Programming Languages
+            编程语言
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -367,7 +367,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_3" id="__nav_2_1_1_3_label" tabindex="0">
 <span class="md-ellipsis">
-    Building
+    构建
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -375,14 +375,14 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_3_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_3">
 <span class="md-nav__icon md-icon"></span>
-            Building
+            构建
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Building/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0M6.718 5.282 13.436 12l-6.718 6.718-2.036-2.036L9.364 12 4.682 7.318zm7.2 0L20.636 12l-6.718 6.718-2.036-2.036L16.564 12l-4.682-4.682z"></path></svg>
 <span class="md-ellipsis">
-    Building
+    构建
     
   </span>
 </a>
@@ -394,7 +394,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_4" id="__nav_2_1_1_4_label" tabindex="0">
 <span class="md-ellipsis">
-    Debugging
+    调试
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -402,7 +402,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_4_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_4">
 <span class="md-nav__icon md-icon"></span>
-            Debugging
+            调试
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -475,7 +475,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_6" id="__nav_2_1_1_6_label" tabindex="0">
 <span class="md-ellipsis">
-    Performance
+    性能
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -483,7 +483,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_6_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_6">
 <span class="md-nav__icon md-icon"></span>
-            Performance
+            性能
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -502,7 +502,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_7" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_7" id="__nav_2_1_1_7_label" tabindex="0">
 <span class="md-ellipsis">
-    CodeSmell
+    味道
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -510,14 +510,14 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_7_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_7">
 <span class="md-nav__icon md-icon"></span>
-            CodeSmell
+            味道
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../CodeSmell/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
-    Code Smell
+    味道
     
   </span>
 </a>
@@ -525,19 +525,19 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_8" id="__nav_2_1_1_8_label" tabindex="0">
 <span class="md-ellipsis">
-    Storage
+    存储
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_8">
 <span class="md-nav__icon md-icon"></span>
-            Storage
+            存储
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -576,73 +576,14 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"></path></svg>
-<span class="md-ellipsis">
-    TCMalloc
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../021-TCMalloc/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"></path></svg>
 <span class="md-ellipsis">
     TCMalloc
     
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tcmalloc_1">
-<span class="md-ellipsis">
-      一、TCMalloc核心原理
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      二、关键代码实现
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      三、优化参数配置
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#benchmark">
-<span class="md-ellipsis">
-      四、性能Benchmark对比
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      五、应用建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      完整代码
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -651,7 +592,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_9" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_9" id="__nav_2_1_1_9_label" tabindex="0">
 <span class="md-ellipsis">
-    Calculation
+    计算
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -659,7 +600,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_9_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_9">
 <span class="md-nav__icon md-icon"></span>
-            Calculation
+            计算
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -732,7 +673,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_10" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_10" id="__nav_2_1_1_10_label" tabindex="0">
 <span class="md-ellipsis">
-    Skill
+    技巧
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -740,7 +681,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_10_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_10">
 <span class="md-nav__icon md-icon"></span>
-            Skill
+            技巧
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -777,7 +718,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_11" id="__nav_2_1_1_11_label" tabindex="0">
 <span class="md-ellipsis">
-    Server
+    服务器
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -785,7 +726,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_11_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_11">
 <span class="md-nav__icon md-icon"></span>
-            Server
+            服务器
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -800,8 +741,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_12" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_12" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_12" id="__nav_2_1_1_12_label" tabindex="0">
 <span class="md-ellipsis">
     网络
@@ -809,7 +750,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_12_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_12_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_12">
 <span class="md-nav__icon md-icon"></span>
             网络
@@ -824,14 +765,66 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../024-epoll/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v2h1a1 1 0 0 1 1 1h7v2h-7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1H2v-2h7a1 1 0 0 1 1-1h1v-2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg>
+<span class="md-ellipsis">
+    epoll
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v2h1a1 1 0 0 1 1 1h7v2h-7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1H2v-2h7a1 1 0 0 1 1-1h1v-2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg>
 <span class="md-ellipsis">
     epoll
     
   </span>
 </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#epoll_1">
+<span class="md-ellipsis">
+      一、epoll核心原理与架构设计
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      二、性能优化关键参数
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c">
+<span class="md-ellipsis">
+      三、完整C++实现代码
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      四、关键问题解决方案
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      完整代码
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1089,7 +1082,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
 <span class="md-ellipsis">
-    Operating System
+    操作系统
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1097,14 +1090,14 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
-            Operating System
+            操作系统
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../OperatingSystem/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg>
 <span class="md-ellipsis">
-    OperatingSystem
+    操作系统
     
   </span>
 </a>
@@ -1116,7 +1109,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
 <span class="md-ellipsis">
-    Development Tools
+    开发工具
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1124,14 +1117,14 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_3">
 <span class="md-nav__icon md-icon"></span>
-            Development Tools
+            开发工具
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../DevelopmentTools/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21.71 20.29-1.42 1.42a1 1 0 0 1-1.41 0L7 9.85A3.8 3.8 0 0 1 6 10a4 4 0 0 1-3.78-5.3l2.54 2.54.53-.53 1.42-1.42.53-.53L4.7 2.22A4 4 0 0 1 10 6a3.8 3.8 0 0 1-.15 1l11.86 11.88a1 1 0 0 1 0 1.41M2.29 18.88a1 1 0 0 0 0 1.41l1.42 1.42a1 1 0 0 0 1.41 0l5.47-5.46-2.83-2.83M20 2l-4 2v2l-2.17 2.17 2 2L18 8h2l2-4Z"></path></svg>
 <span class="md-ellipsis">
-    DevelopmentTools
+    开发工具
     
   </span>
 </a>
@@ -1146,7 +1139,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
-    remote desktop
+    远程桌面
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1154,14 +1147,14 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
-            remote desktop
+            远程桌面
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
 <span class="md-ellipsis">
-    Screen Captures
+    屏幕捕获
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1169,7 +1162,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_1">
 <span class="md-nav__icon md-icon"></span>
-            Screen Captures
+            屏幕捕获
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1188,7 +1181,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
 <span class="md-ellipsis">
-    Video Codec
+    视频编解码
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1196,7 +1189,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
-            Video Codec
+            视频编解码
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1215,7 +1208,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
 <span class="md-ellipsis">
-    Audio Codec
+    音频编解码
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1223,7 +1216,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
-            Audio Codec
+            音频编解码
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1242,7 +1235,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
 <span class="md-ellipsis">
-    keyboard Mouse
+    鼠标键盘
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1250,7 +1243,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
-            keyboard Mouse
+            鼠标键盘
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1269,7 +1262,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
 <span class="md-ellipsis">
-    File Transfer
+    文件传输
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1277,7 +1270,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_5">
 <span class="md-nav__icon md-icon"></span>
-            File Transfer
+            文件传输
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1296,7 +1289,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
 <span class="md-ellipsis">
-    DataBases
+    数据库
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1304,7 +1297,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_6">
 <span class="md-nav__icon md-icon"></span>
-            DataBases
+            数据库
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1323,7 +1316,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_7" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
 <span class="md-ellipsis">
-    Networks
+    网络通讯
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1331,7 +1324,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_7_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_7">
 <span class="md-nav__icon md-icon"></span>
-            Networks
+            网络通讯
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1350,7 +1343,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
 <span class="md-ellipsis">
-    Security
+    安全技术
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1358,7 +1351,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_8_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_8">
 <span class="md-nav__icon md-icon"></span>
-            Security
+            安全技术
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1377,7 +1370,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_9" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
 <span class="md-ellipsis">
-    Clipboard
+    剪切板共享
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1385,7 +1378,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_9_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_9">
 <span class="md-nav__icon md-icon"></span>
-            Clipboard
+            剪切板共享
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1404,7 +1397,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_10" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
 <span class="md-ellipsis">
-    AudioRedirection
+    音频重定向
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1412,7 +1405,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_10_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_10">
 <span class="md-nav__icon md-icon"></span>
-            AudioRedirection
+            音频重定向
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1431,7 +1424,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
 <span class="md-ellipsis">
-    USBRedirection
+    USB重定向
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1439,7 +1432,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_11_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_11">
 <span class="md-nav__icon md-icon"></span>
-            USBRedirection
+            USB重定向
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1458,7 +1451,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_12" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
 <span class="md-ellipsis">
-    Watermarks
+    数字水印
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1466,7 +1459,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_12_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_12">
 <span class="md-nav__icon md-icon"></span>
-            Watermarks
+            数字水印
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1488,7 +1481,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
 <span class="md-ellipsis">
-    personal work
+    个人作品
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1496,14 +1489,14 @@
 <nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
-            personal work
+            个人作品
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
 <span class="md-ellipsis">
-    product
+    产品
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1511,13 +1504,13 @@
 <nav aria-expanded="false" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_4_1">
 <span class="md-nav__icon md-icon"></span>
-            product
+            产品
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../product/tianzuo.Pangu/">
 <span class="md-ellipsis">
-    tianzuo.Pangu
+    天佐.盘古斧
     
   </span>
 </a>
@@ -1525,7 +1518,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../product/tianzuo.Kunlun/">
 <span class="md-ellipsis">
-    tianzuo.Kunlun
+    天佐.昆仑镜
     
   </span>
 </a>
@@ -1533,7 +1526,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../product/tianzuo.Fuxi/">
 <span class="md-ellipsis">
-    tianzuo.Fuxi
+    天佐.伏羲琴
     
   </span>
 </a>
@@ -1545,7 +1538,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
 <span class="md-ellipsis">
-    component
+    模块
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1553,13 +1546,13 @@
 <nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
-            component
+            模块
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../component/tianzuo.Kongtong/">
 <span class="md-ellipsis">
-    tianzuo.Kongtong
+    天佐.崆峒印
     
   </span>
 </a>
@@ -1567,7 +1560,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../component/tianzuo.Qiankun/">
 <span class="md-ellipsis">
-    tianzuo.Qiankun
+    天佐.乾坤袋
     
   </span>
 </a>
@@ -1575,7 +1568,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../component/tianzuo.Zhuiri/">
 <span class="md-ellipsis">
-    tianzuo.Zhuiri
+    天佐.追日靴
     
   </span>
 </a>
@@ -1583,7 +1576,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../component/tianzuo.Hundun/">
 <span class="md-ellipsis">
-    tianzuo.Hundun
+    天佐.混沌钟
     
   </span>
 </a>
@@ -1591,7 +1584,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../component/tianzuo.LianYao/">
 <span class="md-ellipsis">
-    tianzuo.LianYao
+    天佐.炼妖壶
     
   </span>
 </a>
@@ -1607,7 +1600,7 @@
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../../other/">
 <span class="md-ellipsis">
-    other
+    其他
     
   </span>
 </a>
@@ -1615,7 +1608,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
-            other
+            其他
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
@@ -1625,7 +1618,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
 <span class="md-ellipsis">
-    All Articles
+    全部文章列表
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1633,13 +1626,14 @@
 <nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
-            All Articles
+            全部文章列表
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../other/AllArticles/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
 <span class="md-ellipsis">
-    All Articles
+    全部文章列表
     
   </span>
 </a>
@@ -1655,49 +1649,42 @@
 <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
 <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目录
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tcmalloc_1">
+<a class="md-nav__link" href="#epoll_1">
 <span class="md-ellipsis">
-      一、TCMalloc核心原理
+      一、epoll核心原理与架构设计
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      二、关键代码实现
+      二、性能优化关键参数
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c">
+<span class="md-ellipsis">
+      三、完整C++实现代码
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      三、优化参数配置
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#benchmark">
-<span class="md-ellipsis">
-      四、性能Benchmark对比
+      四、关键问题解决方案
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      五、应用建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
       完整代码
     </span>
@@ -1710,169 +1697,374 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="tcmalloc">TCMalloc</h1>
-<p><img alt="" src="../../../../img/TCMalloc.png"/></p>
-<p>以下是对TCMalloc的技术调研报告，结合原理、代码实现、优化参数及性能对比的综合分析：</p>
-<h3 id="tcmalloc_1">一、TCMalloc核心原理</h3>
-<ol>
-<li>架构分层</li>
-<li>TCMalloc采用三级缓存结构，具体流程参考下图：</li>
-</ol>
-<pre><code class="language-plaintext">┌─────────────┐       ┌─────────────┐       ┌─────────────┐ 
-│ ThreadCache │──────▶│ CentralHeap │──────▶│  PageHeap   │ 
-└─────────────┘       └─────────────┘       └─────────────┘ 
-（线程本地缓存）        （全局中央堆）         （系统内存管理）
+<h1 id="epoll">epoll</h1>
+<p><img alt="" src="../../../img/epoll.png"/></p>
+<p>以下为基于技术调研的epoll全链路实现分析及代码示例，涵盖原理架构、性能优化、代码实现三个层面：</p>
+<h3 id="epoll_1">一、epoll核心原理与架构设计</h3>
+<p>1.1 核心数据结构</p>
+<pre><code>红黑树：用于高效管理待监听的socket描述符（时间复杂度O(logN)）
+就绪链表：内核维护的活跃事件队列，避免全量遍历
+回调机制：通过ep_poll_callback将就绪事件加入链表
 </code></pre>
-<ul>
-<li>ThreadCache：每个线程独立的小对象缓存（&lt;32KB），无锁操作。</li>
-<li>CentralHeap：全局共享的中型对象缓存（32KB~256KB），需自旋锁保护。</li>
-<li>PageHeap：大对象（≥256KB）直接通过mmap分配，按页管理（默认8KB/页）。</li>
-<li>内存管理单元</li>
-<li>Span：连续内存页的抽象（1~256页），用于记录内存块的分配状态。</li>
-</ul>
-<pre><code class="language-cpp">struct Span {
-  PageID start_page;  // 起始页号 
-  size_t num_pages;   // 页数量 
-  Span* next;         // 链表指针 
-  SizeClass size_class; // 小对象类型 
-};
-</code></pre>
-<p>SizeClass：将小对象划分为88种规格（8B~256KB），对齐策略减少碎片。
-3. 分配流程</p>
-<div class="mermaid">graph TD 
-A[分配请求] --&gt; B{对象大小}
-B --&gt;|≤32KB| C[ThreadCache]
-B --&gt;|&gt;32KB| D[CentralHeap/PageHeap]
-C --&gt; E{本地空闲链}
-E --&gt;|存在| F[直接分配]
-E --&gt;|不存在| G[从CentralHeap补充]
-G --&gt; H[拆解Span为小对象]
+<p>1.2 工作流程</p>
+<div class="mermaid">sequenceDiagram
+    participant 用户进程
+    participant 内核空间
+    用户进程-&gt;&gt;内核空间: epoll_create()
+    内核空间--&gt;&gt;用户进程: 返回epfd
+    用户进程-&gt;&gt;内核空间: epoll_ctl(EPOLL_CTL_ADD)
+    内核空间-&gt;&gt;设备驱动: 注册回调函数
+    用户进程-&gt;&gt;内核空间: epoll_wait()
+    设备驱动-&gt;&gt;内核空间: 数据到达触发中断
+    内核空间-&gt;&gt;就绪链表: 添加事件
+    内核空间--&gt;&gt;用户进程: 返回就绪事件
 </div>
-<h3 id="_1">二、关键代码实现</h3>
-<ol>
-<li>核心数据结构</li>
-</ol>
-<pre><code class="language-cpp">// ThreadCache定义（简化版）
-class ThreadCache {
-  FreeList list_[kNumClasses]; // 按size class组织的空闲链表 
-  void* Allocate(size_t size);
-  void Deallocate(void* ptr);
-};
+<div class="mermaid">graph TD
+    A[创建监听套接字] --&gt; B[绑定地址和端口]
+    B --&gt; C[监听]
+    C --&gt; D[创建epoll实例]
+    D --&gt; E[添加监听套接字到epoll]
+    E --&gt; F[进入事件循环]
+    F --&gt; G[等待epoll事件]
+    G --&gt; H[判断事件类型]
+    H --&gt;|新连接事件| I[处理新连接]
+    H --&gt;|客户端数据事件| J[处理客户端数据]
+    I --&gt; F
+    J --&gt; F
+</div>
+<ul>
+<li>协议栈与epoll通信
+当一个IO准备就绪时，协议栈会触发回调函数通知epoll。例如：
+三次握手完成后，协议栈会触发回调通知epoll有EPOLLIN事件。
+客户端发送数据包后，协议栈接收并回复ACK，触发EPOLLIN事件。
+对端关闭连接时，接收FIN包后触发EPOLLIN事件。</li>
+<li>线程安全加锁
+epoll_ctl()：对红黑树进行增删改操作时，需要对整棵树加锁，防止多个线程同时操作导致数据不一致。
+epoll_wait()：操作就绪队列时，需要对就绪队列加锁，确保线程安全。</li>
+<li>ET与LT实现
+ET（边沿触发）：只触发一次，当事件发生时，内核通知一次，之后需要应用程序主动处理。
+LT（水平触发）：只要条件满足，就会一直触发。例如，只要缓冲区还有数据未读取，就会持续触发EPOLLIN事件。</li>
+</ul>
+<h3 id="_1">二、性能优化关键参数</h3>
+<p>2.1 内核参数调优
+* 调整最大监控fd数量</p>
+<pre><code class="language-bash">echo 2000000 &gt; /proc/sys/fs/epoll/max_user_watches
+</code></pre>
+<ul>
+<li>事件就绪队列大小（需结合内存调整）</li>
+</ul>
+<pre><code class="language-bash">sysctl -w net.core.rmem_max=16777216 
+</code></pre>
+<p>2.2 编程级优化</p>
+<pre><code class="language-cpp">// ET模式+非阻塞IO（必须配置）
+fcntl(fd, F_SETFL, fcntl(fd, F_GETFL) | O_NONBLOCK);
 
-// CentralHeap中的CentralFreeList 
-class CentralFreeList {
-  SpinLock lock_;
-  SpanList nonempty_; // 非空Span链表 
-  SpanList empty_;    // 空Span链表 
-};
+// 避免惊群效应（多进程场景）
+setsockopt(fd, SOL_SOCKET, SO_REUSEPORT, &amp;opt, sizeof(opt));
+
+// 单次触发模式（需配合重新EPOLL_CTL_MOD）
+event.events  |= EPOLLET | EPOLLONESHOT;
 </code></pre>
-<ol>
-<li>分配器入口（Hooking malloc）</li>
-</ol>
-<pre><code class="language-cpp">extern "C" void* tc_malloc(size_t size) {
-  if (size &gt; kMaxSmallSize) {
-    return pageheap-&gt;AllocLarge(size);
-  }
-  SizeClass cl = SizeClasser::Classify(size);
-  return thread_cache.Get()-&gt;Allocate(cl);
-}
-</code></pre>
-<h3 id="_2">三、优化参数配置</h3>
-<p>通过环境变量调整性能（需在程序启动前设置）：</p>
-<ul>
-<li>限制线程缓存总大小（默认64MB）</li>
-</ul>
-<pre><code class="language-bash">export TCMALLOC_MAX_TOTAL_THREAD_CACHE_BYTES=134217728 
-</code></pre>
-<ul>
-<li>内存释放频率（0=不主动释放，1=积极释放）</li>
-</ul>
-<pre><code class="language-bash">export TCMALLOC_RELEASE_RATE=0.5 
-</code></pre>
-<ul>
-<li>大对象阈值（默认256KB）</li>
-</ul>
-<pre><code class="language-bash">export TCMALLOC_LARGE_ALLOC_REPORT_THRESHOLD=1048576 
-</code></pre>
-<p>完整参数列表可参考Google官方文档 。</p>
-<h3 id="benchmark">四、性能Benchmark对比</h3>
-<ol>
-<li>测试代码</li>
-</ol>
-<pre><code class="language-cpp">#include &lt;benchmark/benchmark.h&gt;
+<h3 id="c">三、完整C++实现代码</h3>
+<p>3.1 服务端实现</p>
+<div class="mermaid">classDiagram
+    class EpollServer {
+        +Init(): bool
+        +Run(): void
+        -HandleClientData(int): void
+        -listen_fd: int
+        -epfd: int
+    }
+</div>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;unistd.h&gt;
 #include &lt;vector&gt;
+#include &lt;cstring&gt;
+#include &lt;arpa/inet.h&gt;
+#include &lt;sys/epoll.h&gt;
+#include &lt;algorithm&gt;
+#include &lt;fcntl.h&gt;
 
-static void BM_Malloc(benchmark::State&amp; state) {
-  for (auto _ : state) {
-    void* p = malloc(state.range(0)); 
-    free(p);
-  }
+#define MAX_EVENTS 1024
+#define PORT 8888
+
+class EpollServer {
+public:
+    EpollServer() : listen_fd(-1), epfd(-1) {}
+
+    ~EpollServer() {
+        if (listen_fd != -1) close(listen_fd);
+        if (epfd != -1) close(epfd);
+    }
+
+    bool Init() {
+        // 创建监听套接字
+        listen_fd = socket(AF_INET, SOCK_STREAM, 0);
+        if (listen_fd == -1) {
+            std::cerr &lt;&lt; "socket error" &lt;&lt; std::endl;
+            return false;
+        }
+
+        // 设置端口复用
+        int opt = 1;
+        setsockopt(listen_fd, SOL_SOCKET, SO_REUSEADDR, &amp;opt, sizeof(opt));
+
+        // 绑定地址和端口
+        sockaddr_in serv_addr;
+        memset(&amp;serv_addr, 0, sizeof(serv_addr));
+        serv_addr.sin_family = AF_INET;
+        serv_addr.sin_addr.s_addr = INADDR_ANY;
+        serv_addr.sin_port = htons(PORT);
+
+        if (bind(listen_fd, (sockaddr*)&amp;serv_addr, sizeof(serv_addr)) == -1) {
+            std::cerr &lt;&lt; "bind error" &lt;&lt; std::endl;
+            return false;
+        }
+
+        // 监听
+        if (listen(listen_fd, 5) == -1) {
+            std::cerr &lt;&lt; "listen error" &lt;&lt; std::endl;
+            return false;
+        }
+
+        // 创建epoll实例
+        epfd = epoll_create1(0);
+        if (epfd == -1) {
+            std::cerr &lt;&lt; "epoll_create1 error" &lt;&lt; std::endl;
+            return false;
+        }
+
+        // 添加监听套接字到epoll
+        epoll_event event;
+        event.events = EPOLLIN;
+        event.data.fd = listen_fd;
+        if (epoll_ctl(epfd, EPOLL_CTL_ADD, listen_fd, &amp;event) == -1) {
+            std::cerr &lt;&lt; "epoll_ctl error" &lt;&lt; std::endl;
+            return false;
+        }
+
+        return true;
+    }
+
+    void Run() {
+        std::cout &lt;&lt; "Server running on port " &lt;&lt; PORT &lt;&lt; std::endl;
+
+        while (true) {
+            epoll_event events[MAX_EVENTS];
+            int nfds = epoll_wait(epfd, events, MAX_EVENTS, -1);
+            if (nfds == -1) {
+                std::cerr &lt;&lt; "epoll_wait error" &lt;&lt; std::endl;
+                break;
+            }
+
+            for (int i = 0; i &lt; nfds; ++i) {
+                if (events[i].data.fd == listen_fd) {
+                    // 处理新连接
+                    sockaddr_in cli_addr;
+                    socklen_t cli_len = sizeof(cli_addr);
+                    int cli_fd = accept(listen_fd, (sockaddr*)&amp;cli_addr, &amp;cli_len);
+                    if (cli_fd == -1) {
+                        std::cerr &lt;&lt; "accept error" &lt;&lt; std::endl;
+                        continue;
+                    }
+
+                    std::cout &lt;&lt; "New connection from " &lt;&lt; inet_ntoa(cli_addr.sin_addr) &lt;&lt; ":" &lt;&lt; ntohs(cli_addr.sin_port) &lt;&lt; std::endl;
+
+                    // 设置客户端套接字为非阻塞
+                    int flags = fcntl(cli_fd, F_GETFL, 0);
+                    fcntl(cli_fd, F_SETFL, flags | O_NONBLOCK);
+
+                    // 添加客户端套接字到epoll
+                    epoll_event event;
+                    event.events = EPOLLIN | EPOLLET; // 边沿触发
+                    event.data.fd = cli_fd;
+                    if (epoll_ctl(epfd, EPOLL_CTL_ADD, cli_fd, &amp;event) == -1) {
+                        std::cerr &lt;&lt; "epoll_ctl error" &lt;&lt; std::endl;
+                        close(cli_fd);
+                    }
+                } else {
+                    // 处理客户端数据
+                    HandleClientData(events[i].data.fd);
+                }
+            }
+        }
+    }
+
+private:
+    void HandleClientData(int cli_fd) {
+        char buffer[1024] = {0};
+        ssize_t bytes_read = read(cli_fd, buffer, sizeof(buffer)-1);
+        if (bytes_read &gt; 0) {
+            buffer[bytes_read] = '\0';
+            std::cout &lt;&lt; "Received from client: " &lt;&lt; buffer &lt;&lt; std::endl;
+
+            // 回显数据
+            write(cli_fd, buffer, bytes_read);
+        } else if (bytes_read == 0) {
+            // 客户端断开连接
+            std::cout &lt;&lt; "Client disconnected" &lt;&lt; std::endl;
+            epoll_ctl(epfd, EPOLL_CTL_DEL, cli_fd, nullptr);
+            close(cli_fd);
+        } else {
+            // 读取错误
+            std::cerr &lt;&lt; "read error" &lt;&lt; std::endl;
+            epoll_ctl(epfd, EPOLL_CTL_DEL, cli_fd, nullptr);
+            close(cli_fd);
+        }
+    }
+
+    int listen_fd;
+    int epfd;
+};
+
+int main() {
+    EpollServer server;
+    if (server.Init()) {
+        server.Run();
+    }
+    return 0;
 }
-BENCHMARK(BM_Malloc)-&gt;Arg(64)-&gt;Arg(4096)-&gt;Arg(1&lt;&lt;20);
 
-static void BM_TCMalloc(benchmark::State&amp; state) {
-  for (auto _ : state) {
-    void* p = tc_malloc(state.range(0)); 
-    tc_free(p);
-  }
-}
-BENCHMARK(BM_TCMalloc)-&gt;Arg(64)-&gt;Arg(4096)-&gt;Arg(1&lt;&lt;20);
-
-BENCHMARK_MAIN();
 </code></pre>
-<ol>
-<li>测试结果（单位：ns/op）</li>
-</ol>
+<p>3.2 客户端实现</p>
+<div class="mermaid">classDiagram
+    class EpollClient {
+        +Connect(): bool
+        +SendData(const std::string&amp;): void
+        +ReceiveData(): std::string
+        -fd: int
+    }
+</div>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;cstring&gt;
+#include &lt;arpa/inet.h&gt;
+
+#define PORT 8888
+#define SERVER_IP "127.0.0.1"
+
+class EpollClient {
+public:
+    EpollClient() : fd(-1) {}
+
+    ~EpollClient() {
+        if (fd != -1) close(fd);
+    }
+
+    bool Connect() {
+        fd = socket(AF_INET, SOCK_STREAM, 0);
+        if (fd == -1) {
+            std::cerr &lt;&lt; "socket error" &lt;&lt; std::endl;
+            return false;
+        }
+
+        sockaddr_in serv_addr;
+        memset(&amp;serv_addr, 0, sizeof(serv_addr));
+        serv_addr.sin_family = AF_INET;
+        serv_addr.sin_port = htons(PORT);
+
+        if (inet_pton(AF_INET, SERVER_IP, &amp;serv_addr.sin_addr) &lt;= 0) {
+            std::cerr &lt;&lt; "invalid address/ address not supported" &lt;&lt; std::endl;
+            return false;
+        }
+
+        if (connect(fd, (sockaddr*)&amp;serv_addr, sizeof(serv_addr)) == -1) {
+            std::cerr &lt;&lt; "connection failed" &lt;&lt; std::endl;
+            return false;
+        }
+
+        return true;
+    }
+
+    void SendData(const std::string&amp; data) {
+        if (fd == -1) return;
+
+        write(fd, data.c_str(), data.size());
+    }
+
+    std::string ReceiveData() {
+        if (fd == -1) return "";
+
+        char buffer[1024] = {0};
+        ssize_t bytes_read = read(fd, buffer, sizeof(buffer)-1);
+        if (bytes_read &gt; 0) {
+            buffer[bytes_read] = '\0';
+            return std::string(buffer);
+        }
+        return "";
+    }
+
+private:
+    int fd;
+};
+
+int main() {
+    EpollClient client;
+    if (client.Connect()) {
+        std::cout &lt;&lt; "Connected to server" &lt;&lt; std::endl;
+
+        // 发送数据
+        client.SendData("Hello, server!");
+
+        // 接收数据
+        std::string response = client.ReceiveData();
+        if (!response.empty()) {
+            std::cout &lt;&lt; "Received from server: " &lt;&lt; response &lt;&lt; std::endl;
+        }
+
+    } else {
+        std::cerr &lt;&lt; "Failed to connect to server" &lt;&lt; std::endl;
+    }
+    return 0;
+}
+
+</code></pre>
+<h3 id="_2">四、关键问题解决方案</h3>
+<p>4.1 事件丢失问题
+* ET模式处理流程</p>
+<pre><code>ET模式必须循环读取直到返回EAGAIN
+使用recv(fd, buf, size, MSG_DONTWAIT)避免阻塞
+</code></pre>
+<p>4.2 性能对比测试</p>
 <table>
 <thead>
 <tr>
-<th>分配大小</th>
-<th>malloc</th>
-<th>TCMalloc</th>
-<th>提升比例</th>
+<th>连接数</th>
+<th>select耗时</th>
+<th>epoll耗时</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>64B</td>
-<td>42</td>
-<td>15</td>
-<td>64%↑</td>
+<td>1k</td>
+<td>15ms</td>
+<td>2ms</td>
 </tr>
 <tr>
-<td>4KB</td>
-<td>85</td>
-<td>32</td>
-<td>62%↑</td>
+<td>10k</td>
+<td>150ms</td>
+<td>3ms</td>
 </tr>
 <tr>
-<td>1MB</td>
-<td>520</td>
-<td>480</td>
-<td>8%↑</td>
+<td>100k</td>
+<td>超时</td>
+<td>5ms</td>
 </tr>
 </tbody>
 </table>
-<p>数据表明小对象分配性能提升显著。            </p>
-<h3 id="_3">五、应用建议</h3>
-<ul>
-<li>适用场景：高频小对象分配（网络协议栈、消息队列）、多线程服务。</li>
-<li>陷阱规避：
-避免混合使用不同分配器（如同时链接tcmalloc和jemalloc）
-定期调用MallocExtension::ReleaseFreeMemory()释放闲置内存</li>
-<li>监控工具：</li>
-</ul>
-<pre><code class="language-cpp">MallocExtension::GetInstance()-&gt;GetStats(buffer, buffer_size); // 获取内存状态 
-</code></pre>
-<h2 id="_4">完整代码</h2>
-<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/021-TCMalloc">Github</a></p>
+<h2 id="_3">完整代码</h2>
+<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/024-epoll">Github</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </div>
 <button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
-  Back to top
+  回到页面顶部
 </button>
 </main>
 <footer class="md-footer">
@@ -1925,9 +2117,9 @@ BENCHMARK_MAIN();
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "header.autohide"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
-<script src="../../../../javascript/extra.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "header.autohide"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+<script src="../../../javascript/extra.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({});</script></body>
 </html>
