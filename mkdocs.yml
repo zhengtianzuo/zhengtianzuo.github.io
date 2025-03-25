@@ -152,6 +152,7 @@ nav:
           - technology/Cpp/003-BoostFileLock.md
           - technology/Cpp/020-RingQueue.md
           - technology/Cpp/021-TCMalloc.md
+          - technology/Cpp/025-lz4.md
         - 计算:
           - technology/Cpp/004-Get_CPU_Useage.md
           - technology/Cpp/005-Get_Mem_Useage.md
