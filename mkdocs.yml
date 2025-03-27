@@ -134,7 +134,7 @@ nav:
           - wxWidgets:
             - technology/Cpp/wxWidgets.md
         - 构建:
-          - technology/Cpp/Building.md
+          - technology/Cpp/027-7zsfx.md
         - 调试:
           - technology/Cpp/013-Detours.md
           - technology/Cpp/014-log4cpp.md

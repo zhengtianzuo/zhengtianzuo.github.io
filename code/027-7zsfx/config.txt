@@ -1,0 +1,6 @@
+;!@Install@!UTF-8!
+Title="cmake-gui"
+BeginPrompt="Do you want to run cmake-gui?"
+Progress="yes"
+RunProgram="release/cmake-gui.exe"
+;!@InstallEnd@!
