@@ -166,6 +166,7 @@ nav:
           - technology/Cpp/007-PropertyInCpp.md
           - technology/Cpp/015-SingleApplication.md
           - technology/Cpp/016-condition_variable.md
+          - technology/Cpp/028-ImageCompress.md
         - 服务器:
           - technology/Cpp/017-HttpServer.md
         - 网络:

@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[028-ImageCompress 2025/03/28](../technology/Cpp/028-ImageCompress.md)
+
 [027-7zsfx 2025/03/27](../technology/Cpp/027-7zsfx.md)
 
 [026-zstd 2025/03/26](../technology/Cpp/026-zstd.md)
