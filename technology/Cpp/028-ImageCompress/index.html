@@ -6,12 +6,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="zhengtianzuo" name="description"/>
-<link href="https://zhengtianzuo.com/technology/Cpp/026-zstd/" rel="canonical"/>
-<link href="../025-lz4/" rel="prev"/>
-<link href="../004-Get_CPU_Useage/" rel="next"/>
+<link href="https://zhengtianzuo.com/technology/Cpp/028-ImageCompress/" rel="canonical"/>
+<link href="../016-condition_variable/" rel="prev"/>
+<link href="../017-HttpServer/" rel="next"/>
 <link href="../../../img/me.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>zstd - 天佐.主页</title>
+<title>ImageCompress - 天佐.主页</title>
 <link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#zstd">
+<a class="md-skip" href="#imagecompress">
           跳转至
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              zstd
+              ImageCompress
             
           </span>
 </div>
@@ -79,7 +79,7 @@
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="../../../en/technology/Cpp/026-zstd/" hreflang="en">
+<a class="md-select__link" href="../../../en/technology/Cpp/028-ImageCompress/" hreflang="en">
               English
             </a>
 </li>
@@ -525,8 +525,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_8" id="__nav_2_1_1_8_label" tabindex="0">
 <span class="md-ellipsis">
     存储
@@ -534,7 +534,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_8">
 <span class="md-nav__icon md-icon"></span>
             存储
@@ -594,66 +594,14 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2h-2.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146z"></path><path d="M11.5 15.75a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12.25 6a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M9.75 13.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 11.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 5.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 9 5.25M11 17h1a2 2 0 0 1 2 2v4.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V19a2 2 0 0 1 2-2m-.5 2v3.5h2V19a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"></path></svg>
-<span class="md-ellipsis">
-    zstd
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../026-zstd/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2h-2.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146z"></path><path d="M11.5 15.75a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12.25 6a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M9.75 13.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 11.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 5.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 9 5.25M11 17h1a2 2 0 0 1 2 2v4.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V19a2 2 0 0 1 2-2m-.5 2v3.5h2V19a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"></path></svg>
 <span class="md-ellipsis">
     zstd
     
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      一、核心原理与技术架构
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      二、参数优化策略
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      四、性能优化关键点
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      五、测试数据对比
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      完整代码
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -739,8 +687,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_10" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_10" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_10" id="__nav_2_1_1_10_label" tabindex="0">
 <span class="md-ellipsis">
     技巧
@@ -748,7 +696,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_10_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_10_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_10">
 <span class="md-nav__icon md-icon"></span>
             技巧
@@ -781,14 +729,66 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../028-ImageCompress/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2h-2.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146z"></path><path d="M11.5 15.75a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12.25 6a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M9.75 13.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 11.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 5.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 9 5.25M11 17h1a2 2 0 0 1 2 2v4.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V19a2 2 0 0 1 2-2m-.5 2v3.5h2V19a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"></path></svg>
+<span class="md-ellipsis">
+    ImageCompress
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2h-2.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146z"></path><path d="M11.5 15.75a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12.25 6a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M9.75 13.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 11.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 5.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 9 5.25M11 17h1a2 2 0 0 1 2 2v4.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V19a2 2 0 0 1 2-2m-.5 2v3.5h2V19a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"></path></svg>
 <span class="md-ellipsis">
     ImageCompress
     
   </span>
 </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      一、工具功能定位对比
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      二、原理与技术实现深度解析
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      三、参数优化策略对照表
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      四、技术选型建议
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      完整代码
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1685,28 +1685,28 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      一、核心原理与技术架构
+      一、工具功能定位对比
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      二、参数优化策略
+      二、原理与技术实现深度解析
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      四、性能优化关键点
+      三、参数优化策略对照表
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
-      五、测试数据对比
+      四、技术选型建议
     </span>
 </a>
 </li>
@@ -1724,154 +1724,214 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="zstd">zstd</h1>
-<p><img alt="" src="../../../img/zstd.png"/></p>
-<p>以下为Zstandard（zstd）压缩算法从原理到代码实现的技术调研报告，结合流程图、结构图及完整C++代码实现：</p>
-<h3 id="_1">一、核心原理与技术架构</h3>
-<p>1.1 算法原理
-Zstd基于LZ77衍生算法与熵编码（FSE/Huffman）的混合架构：</p>
-<div class="mermaid">graph TD 
-    A[输入数据] --&gt; B[预处理]
-    B --&gt; C[重复模式匹配-LZ77]
-    C --&gt; D[熵编码-FSE/Huffman]
-    D --&gt; E[压缩数据块]
-</div>
-<ul>
-<li>字典压缩：通过ZSTD_trainFromBuffer预生成高频数据字典，提升小文件压缩率（压缩率提升30%-50%）。</li>
-<li>多阶段编码：LZ77处理冗余数据 → FSE（有限状态熵）优化压缩比 → Huffman二次压缩高频符号。</li>
-</ul>
-<p>1.2 数据结构
-压缩后的二进制格式包含：</p>
-<pre><code class="language-cpp">struct ZSTD_Header {
-    uint32_t magic_number;  // 0xFD2FB528 
-    uint32_t window_size;   // 滑动窗口尺寸 
-    uint8_t dict_id[4]();     // 字典标识符（可选）
-    uint32_t content_size;  // 原始数据长度（可选）
-};
-</code></pre>
-<h3 id="_2">二、参数优化策略</h3>
-<p>2.1 基础参数配置</p>
-<pre><code class="language-cpp">// 压缩级别（1-22，默认3）
-ZSTD_CCtx_setParameter(cctx, ZSTD_c_compressionLevel, 5); 
-
-// 窗口尺寸（影响内存占用）
-ZSTD_CCtx_setParameter(cctx, ZSTD_c_windowLog, 22); // 4MB窗口 
-
-// 启用长距离匹配（适合大文件）
-ZSTD_CCtx_setParameter(cctx, ZSTD_c_enableLongDistanceMatching, 1);
-</code></pre>
-<p>2.2 高级优化参数</p>
-<pre><code class="language-cpp">// 多线程压缩（需编译时启用ZSTD_MULTITHREAD）
-ZSTD_CCtx_setParameter(cctx, ZSTD_c_nbWorkers, 4); 
-
-// 字典压缩模式 
-ZSTD_CCtx_refCDict(cctx, cdict); 
-
-// 实时模式（牺牲压缩率提升速度）
-ZSTD_CCtx_setParameter(cctx, ZSTD_c_strategy, ZSTD_fast); 
-</code></pre>
-<p>三、完整C++实现（单文件压缩/解压）</p>
-<pre><code class="language-cpp">#include &lt;zstd.h&gt;
-#include &lt;fstream&gt;
-#include &lt;vector&gt;
-
-// 压缩函数 
-bool zstd_compress(const char* input_path, const char* output_path, int level=3) {
-    std::ifstream fin(input_path, std::ios::binary);
-    std::vector&lt;char&gt; input((std::istreambuf_iterator&lt;char&gt;(fin)), 
-                           std::istreambuf_iterator&lt;char&gt;());
-
-    size_t bound = ZSTD_compressBound(input.size()); 
-    std::vector&lt;char&gt; output(bound);
-
-    ZSTD_CCtx* cctx = ZSTD_createCCtx();
-    size_t csize = ZSTD_compressCCtx(cctx, 
-        output.data(),  bound, 
-        input.data(),  input.size(),  
-        level);
-
-    if (ZSTD_isError(csize)) {
-        ZSTD_freeCCtx(cctx);
-        return false;
-    }
-
-    std::ofstream fout(output_path, std::ios::binary);
-    fout.write(output.data(),  csize);
-
-    ZSTD_freeCCtx(cctx);
-    return true;
-}
-
-// 解压函数 
-bool zstd_decompress(const char* input_path, const char* output_path) {
-    std::ifstream fin(input_path, std::ios::binary);
-    std::vector&lt;char&gt; input((std::istreambuf_iterator&lt;char&gt;(fin)), 
-                           std::istreambuf_iterator&lt;char&gt;());
-
-    unsigned long long rsize = ZSTD_getFrameContentSize(input.data(),  input.size()); 
-    std::vector&lt;char&gt; output(rsize);
-
-    ZSTD_DCtx* dctx = ZSTD_createDCtx();
-    size_t dsize = ZSTD_decompressDCtx(dctx, 
-        output.data(),  rsize, 
-        input.data(),  input.size()); 
-
-    if (ZSTD_isError(dsize)) {
-        ZSTD_freeDCtx(dctx);
-        return false;
-    }
-
-    std::ofstream fout(output_path, std::ios::binary);
-    fout.write(output.data(),  dsize);
-
-    ZSTD_freeDCtx(dctx);
-    return true;
-}
-</code></pre>
-<h3 id="_3">四、性能优化关键点</h3>
-<ul>
-<li>上下文复用：重复使用ZSTD_CCtx对象减少内存分配开销。</li>
-<li>流式处理：对大型文件分块处理，示例代码：</li>
-</ul>
-<pre><code class="language-cpp">ZSTD_inBuffer input = { src_buffer, src_size, 0 };
-ZSTD_outBuffer output = { dst_buffer, dst_size, 0 };
-while (input.pos  &lt; input.size)  {
-    ZSTD_compressStream2(cctx, &amp;output, &amp;input, ZSTD_e_continue);
-}
-</code></pre>
-<ul>
-<li>内存管理：通过ZSTD_c_ldmHashLog调整哈希表尺寸平衡速度与内存。</li>
-</ul>
-<h3 id="_4">五、测试数据对比</h3>
+<h1 id="imagecompress">ImageCompress</h1>
+<p><img alt="" src="../../../img/ImageCompress.png"/></p>
+<p>以下为针对 GIFsicle、Guetzli、LibimageQuant 的技术调研报告，包含原理分析、压缩率对比、代码实现及参数优化策略：</p>
+<h3 id="_1">一、工具功能定位对比</h3>
 <table>
 <thead>
 <tr>
-<th>文件类型</th>
-<th>原始大小</th>
-<th>Zstd压缩后</th>
-<th>压缩率</th>
-<th>耗时(ms)</th>
+<th>工具名称</th>
+<th>目标格式</th>
+<th>核心场景</th>
+<th>压缩特性</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>文本日志</td>
-<td>128MB</td>
-<td>32MB</td>
-<td>4:1</td>
-<td>210</td>
+<td>GIFsicle</td>
+<td>GIF</td>
+<td>动图优化/帧处理</td>
+<td>空间优化+调色板量化</td>
 </tr>
 <tr>
-<td>数据库备份</td>
-<td>1GB</td>
-<td>280MB</td>
-<td>3.57:1</td>
-<td>8900</td>
+<td>Guetzli</td>
+<td>JPEG</td>
+<td>高保真静态图压缩</td>
+<td>心理视觉模型+色彩空间转换</td>
+</tr>
+<tr>
+<td>LibimageQuant</td>
+<td>PNG</td>
+<td>真彩转索引色优化</td>
+<td>颜色聚类+抖动算法</td>
 </tr>
 </tbody>
 </table>
+<h3 id="_2">二、原理与技术实现深度解析</h3>
+<ol>
+<li>
+<p>GIFsicle
+核心原理：</p>
+</li>
+<li>
+<p>帧差分算法：通过检测连续帧之间的差异区域，仅保留变化像素（透明化重复部分），减少冗余数据</p>
+</li>
+<li>调色板优化：将每帧颜色映射到全局/局部调色板，通过减少颜色数降低存储成本（256色→64色可压缩50%）</li>
+<li>LZW编码优化：采用改进的LZW压缩算法，动态调整编码表提升压缩率
+代码实现示例：</li>
+</ol>
+<pre><code class="language-bash"># 优化级别与调色板控制 
+gifsicle -O3 --colors 128 input.gif  -o output.gif  
+# 帧差分阈值设置（仅处理差异&gt;5%的像素）
+gifsicle --delta-threshold 0.05 input.gif  -o optimized.gif  
+</code></pre>
+<p>压缩率实测：</p>
+<table>
+<thead>
+<tr>
+<th>原图尺寸</th>
+<th>参数设置</th>
+<th>输出尺寸</th>
+<th>压缩率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12.6MB</td>
+<td>-O3 --colors 256</td>
+<td></td>
+<td>6.2MB</td>
+</tr>
+<tr>
+<td>12.6MB</td>
+<td>-O3 --colors 128</td>
+<td></td>
+<td>3.4MB</td>
+</tr>
+<tr>
+<td>12.6MB</td>
+<td>--lossy=30</td>
+<td>1.8MB</td>
+<td>85.7%</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Guetzli
+核心原理：</p>
+</li>
+<li>
+<p>Butteraugli模型：模拟人眼感知特性，优先保留高频细节，对低频区域进行高压缩</p>
+</li>
+<li>色彩空间转换：将RGB转换为XYB色彩空间（Y表示亮度，X/B表示色度），分离可压缩维度</li>
+<li>量化表优化：动态生成JPEG量化表，针对图像内容优化DCT系数取舍</li>
+</ol>
+<p>处理流程：</p>
+<div class="mermaid">graph TD 
+    A[RGB输入] --&gt; B{色彩空间转换}
+    B --&gt; C[XYB空间分解]
+    C --&gt; D[Butteraugli模型分析]
+    D --&gt; E[动态量化表生成]
+    E --&gt; F[DCT系数压缩]
+    F --&gt; G[JPEG编码输出]
+</div>
+<p>压缩率实测：</p>
+<table>
+<thead>
+<tr>
+<th>测试集</th>
+<th>原图平均大小</th>
+<th>Guetzli输出</th>
+<th>压缩率</th>
+<th>耗时/张</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1292张测试图</td>
+<td>33KB</td>
+<td>23.4KB</td>
+<td>29%</td>
+<td>8秒</td>
+</tr>
+<tr>
+<td>3.76MB大图</td>
+<td>3.76MB</td>
+<td>2.55MB</td>
+<td>31.5%</td>
+<td>16分钟</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>LibimageQuant
+核心原理：</p>
+</li>
+<li>
+<p>中位切割算法：通过递归划分颜色空间，生成最优256色调色板</p>
+</li>
+<li>误差扩散抖动：使用Floyd-Steinberg算法模拟颜色过渡，减少色带效应</li>
+<li>α通道优化：单独处理透明通道，避免颜色混合失真</li>
+</ol>
+<p>代码集成示例：</p>
+<pre><code class="language-cpp">liq_image *img = liq_image_create_rgba(attr, pixels, width, height, 0);
+liq_set_quality(attr, 70, 90); // 设置质量范围 
+liq_result *res = liq_quantize_image(attr, img);
+liq_write_remapped_image(res, img, buffer, buffer_size);
+</code></pre>
+<p>压缩率实测：</p>
+<table>
+<thead>
+<tr>
+<th>输入类型</th>
+<th>原图大小</th>
+<th>输出大小</th>
+<th>压缩率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>24位PNG</td>
+<td>4.2MB</td>
+<td>820KB</td>
+<td>80.5%</td>
+</tr>
+<tr>
+<td>带α通道PNG</td>
+<td>3.7MB</td>
+<td>1.1MB</td>
+<td>70.3%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">三、参数优化策略对照表</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>关键参数</th>
+<th>优化建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GIFsicle</td>
+<td>--colors --lossy</td>
+<td>128色+lossy=20平衡质量与压缩率</td>
+</tr>
+<tr>
+<td>Guetzli</td>
+<td>--quality</td>
+<td>质量&gt;90时性价比低，建议85-90区间</td>
+</tr>
+<tr>
+<td>LibimageQuant</td>
+<td>liq_set_speed()</td>
+<td>speed=1（最高质量） vs speed=5（最快）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">四、技术选型建议</h3>
+<ul>
+<li>动态内容压缩：优先使用GIFsicle进行帧差分优化，lossy模式压缩率可达85%</li>
+<li>高保真JPEG压缩：Guetzli在质量&gt;90时优于mozjpeg，但需接受20倍耗时增长</li>
+<li>索引色转换场景：LibimageQuant在生成8位PNG时，比pngquant快3倍且质量更高</li>
+</ul>
 <h2 id="_5">完整代码</h2>
-<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/026-zstd">Github</a></p>
+<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/028-ImageCompress">Github</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
