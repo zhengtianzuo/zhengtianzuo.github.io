@@ -1,0 +1,10 @@
+﻿
+cmake_minimum_required (VERSION 3.8)
+project ("test")
+include_directories("./include")
+link_directories("./lib")
+add_executable (${PROJECT_NAME} "test.cpp")
+target_link_options(${PROJECT_NAME} PRIVATE -ltcmalloc_and_profiler)
+target_link_libraries(${PROJECT_NAME} profiler)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -g")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g")
