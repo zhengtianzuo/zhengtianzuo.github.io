@@ -145,6 +145,7 @@ nav:
         - 性能:
           - technology/Cpp/009-HighResolutionClock.md
           - technology/Cpp/029-gperftools.md
+          - technology/Cpp/030-gprof.md
         - 味道:
           - technology/Cpp/CodeSmell.md
         - 存储:
