@@ -6,12 +6,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="zhengtianzuo" name="description"/>
-<link href="https://zhengtianzuo.com/en/technology/Cpp/020-RingQueue/" rel="canonical"/>
-<link href="../003-BoostFileLock/" rel="prev"/>
-<link href="../021-TCMalloc/" rel="next"/>
+<link href="https://zhengtianzuo.com/en/technology/Cpp/030-gprof/" rel="canonical"/>
+<link href="../029-gperftools/" rel="prev"/>
+<link href="../CodeSmell/" rel="next"/>
 <link href="../../../../img/me.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>环形队列 - tianzuo.home</title>
+<title>gprof - tianzuo.home</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#gprof">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              环形队列
+              gprof
             
           </span>
 </div>
@@ -74,7 +74,7 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="../../../../technology/Cpp/020-RingQueue/" hreflang="zh">
+<a class="md-select__link" href="../../../../technology/Cpp/030-gprof/" hreflang="zh">
               简体中文
             </a>
 </li>
@@ -471,8 +471,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_6" id="__nav_2_1_1_6_label" tabindex="0">
 <span class="md-ellipsis">
     Performance
@@ -480,7 +480,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_6_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_6_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_6">
 <span class="md-nav__icon md-icon"></span>
             Performance
@@ -504,14 +504,73 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../030-gprof/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.741 8.755c.164-.425.352-.834.573-1.219-.213-.196-.745-.613-.712-.646 2.774-3.322 6.391-4.32 9.59-3.74.655.09 1.31.246 1.956.483 4.583 1.702 6.898 6.75 5.18 11.284a9.3 9.3 0 0 1-.614 1.285c.254.22.81.63.778.663-3.077 3.641-7.177 4.484-10.589 3.47a11 11 0 0 1-.982-.295c-4.574-1.702-6.898-6.751-5.18-11.285M19.371.982c-.581.556-1.277 1.227-1.62 1.53a12 12 0 0 0-1.727-.802C10.819-.221 5.337 1.964 2.317 6.03.738 8.364-.195 11.236.034 14.19c0 0 .009 5.556 5.14 8.83.417-.574.948-1.31 1.3-1.785a12.4 12.4 0 0 0 1.817.86c5.892 2.184 12.422-.606 14.557-6.228 0 0 1.563-3.428 1.048-7.176 0 0-.401-5.057-4.525-7.708z"></path></svg>
+<span class="md-ellipsis">
+    gprof
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.741 8.755c.164-.425.352-.834.573-1.219-.213-.196-.745-.613-.712-.646 2.774-3.322 6.391-4.32 9.59-3.74.655.09 1.31.246 1.956.483 4.583 1.702 6.898 6.75 5.18 11.284a9.3 9.3 0 0 1-.614 1.285c.254.22.81.63.778.663-3.077 3.641-7.177 4.484-10.589 3.47a11 11 0 0 1-.982-.295c-4.574-1.702-6.898-6.751-5.18-11.285M19.371.982c-.581.556-1.277 1.227-1.62 1.53a12 12 0 0 0-1.727-.802C10.819-.221 5.337 1.964 2.317 6.03.738 8.364-.195 11.236.034 14.19c0 0 .009 5.556 5.14 8.83.417-.574.948-1.31 1.3-1.785a12.4 12.4 0 0 0 1.817.86c5.892 2.184 12.422-.606 14.557-6.228 0 0 1.563-3.428 1.048-7.176 0 0-.401-5.057-4.525-7.708z"></path></svg>
 <span class="md-ellipsis">
     gprof
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gprof_1">
+<span class="md-ellipsis">
+      一、gprof核心原理与实现架构
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c">
+<span class="md-ellipsis">
+      二、完整C++示例代码
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      三、性能分析进阶配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      四、可视化分析流程
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      五、技术局限与优化建议
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      完整代码
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -543,8 +602,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_8" id="__nav_2_1_1_8_label" tabindex="0">
 <span class="md-ellipsis">
     Storage
@@ -552,7 +611,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_8">
 <span class="md-nav__icon md-icon"></span>
             Storage
@@ -585,66 +644,14 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2m7-2a2 2 0 1 0 2 2c0-1.11-.89-2-2-2m7-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2M3.5 11c-.83 0-1.5.67-1.5 1.5V17h1v5h4v-5h1v-4.5c0-.83-.67-1.5-1.5-1.5zm7-2C9.67 9 9 9.67 9 10.5V15h1v5h4v-5h1v-4.5c0-.83-.67-1.5-1.5-1.5zm7-2c-.83 0-1.5.67-1.5 1.5V13h1v5h4v-5h1V8.5c0-.83-.67-1.5-1.5-1.5z"></path></svg>
-<span class="md-ellipsis">
-    环形队列
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../020-RingQueue/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2m7-2a2 2 0 1 0 2 2c0-1.11-.89-2-2-2m7-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2M3.5 11c-.83 0-1.5.67-1.5 1.5V17h1v5h4v-5h1v-4.5c0-.83-.67-1.5-1.5-1.5zm7-2C9.67 9 9 9.67 9 10.5V15h1v5h4v-5h1v-4.5c0-.83-.67-1.5-1.5-1.5zm7-2c-.83 0-1.5.67-1.5 1.5V13h1v5h4v-5h1V8.5c0-.83-.67-1.5-1.5-1.5z"></path></svg>
 <span class="md-ellipsis">
     环形队列
     
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      一、设计原理与核心机制
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#c">
-<span class="md-ellipsis">
-      二、完整C++实现（带优化特性）
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      三、性能测试与分析
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      四、工程实践建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      完整代码
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../021-TCMalloc/">
@@ -1700,35 +1707,42 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#gprof_1">
 <span class="md-ellipsis">
-      一、设计原理与核心机制
+      一、gprof核心原理与实现架构
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#c">
 <span class="md-ellipsis">
-      二、完整C++实现（带优化特性）
+      二、完整C++示例代码
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      三、性能分析进阶配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      四、可视化分析流程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      三、性能测试与分析
+      五、技术局限与优化建议
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      四、工程实践建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
 <span class="md-ellipsis">
       完整代码
     </span>
@@ -1741,178 +1755,155 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1">环形队列</h1>
-<p><img alt="" src="../../../../img/RingQueue.png"/></p>
-<p>以下是从技术原理到代码实现的环形队列完整设计方案，包含数据结构设计、性能优化策略及测试分析。综合了多篇技术文献的核心要点，结合工业级实现的最佳实践：</p>
-<h3 id="_2">一、设计原理与核心机制</h3>
-<ol>
-<li>环形队列结构</li>
-</ol>
-<pre><code class="language-ascii">     ┌───┬───┬───┬───┬───┐ 
-     │ 0 │ 1 │ 2 │ 3 │ 4 │ ← 固定大小数组 
-     └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ 
-front →│ A │ B │ C │   │   ← rear 
-       └───┴───┴───┴───┴───
-</code></pre>
-<ul>
-<li>循环机制：通过模运算实现指针回绕（rear = (rear+1) % capacity）</li>
-<li>状态判断：
-空队列：front == rear
-满队列：(rear+1) % capacity == front（牺牲一个存储单元）</li>
-<li>性能优化维度</li>
-</ul>
+<h1 id="gprof">gprof</h1>
+<p><img alt="" src="../../../../img/gprof.png"/></p>
+<p>以下是从原理到实现、从全局到细节的gprof技术调研报告，包含核心代码实现和可视化分析方案：</p>
+<h3 id="gprof_1">一、gprof核心原理与实现架构</h3>
+<p>1.1 系统架构图</p>
 <div class="mermaid">graph TD 
-    A[环形队列优化] --&gt; B[内存布局]
-    A --&gt; C[并发控制]
-    A --&gt; D[批量操作]
-    B --&gt; B1[缓存行对齐]
-    B --&gt; B2[预分配连续内存]
-    C --&gt; C1[无锁设计]
-    C --&gt; C2[内存屏障]
-    D --&gt; D1[批量化入队]
-    D --&gt; D2[批量出队]
+    A[源代码] --&gt; B[带-pg编译]
+    B --&gt; C[插入mcount函数]
+    C --&gt; D[运行时数据采集]
+    D --&gt; E[生成gmon.out] 
+    E --&gt; F[gprof分析]
+    F --&gt; G[Flat Profile]
+    F --&gt; H[Call Graph]
 </div>
-<h3 id="c">二、完整C++实现（带优化特性）</h3>
-<ol>
-<li>基础版环形队列</li>
-</ol>
-<pre><code class="language-cpp">template&lt;typename T, size_t Capacity&gt;
-class RingQueue {
-private:
-    T buffer[Capacity + 1]; // 多分配一个单元处理满队列判断 
-    std::atomic&lt;size_t&gt; front{0};
-    std::atomic&lt;size_t&gt; rear{0};
-
-    // 内存屏障保证多核一致性 [13]()
-    static inline void memory_fence() { 
-        std::atomic_thread_fence(std::memory_order_seq_cst);
-    }
-
-public:
-    bool enqueue(const T&amp; item) {
-        size_t next_rear = (rear.load()  + 1) % (Capacity + 1);
-        if(next_rear == front.load())  return false; // 队列满
-
-        buffer[rear.load()] = item;
-        rear.store(next_rear); 
-        memory_fence();
-        return true;
-    }
-
-    bool dequeue(T&amp; item) {
-        if(front.load()  == rear.load())  return false; // 队列空
-
-        item = buffer[front.load()];
-        front.store((front.load()  + 1) % (Capacity + 1));
-        memory_fence();
-        return true;
-    }
-
-    size_t size() const {
-        return (rear.load()  - front.load()  + Capacity + 1) % (Capacity + 1);
-    }
-};
-</code></pre>
-<ol>
-<li>高级优化版（支持批量操作）</li>
-</ol>
-<pre><code class="language-cpp">template&lt;typename T, size_t Capacity&gt;
-class OptimizedRingQueue {
-    // 缓存行对齐（64字节）[5]()
-    alignas(64) std::atomic&lt;size_t&gt; front;
-    alignas(64) std::atomic&lt;size_t&gt; rear;
-    T buffer[Capacity + 1];
-
-public:
-    // 批量入队（返回成功插入数量）
-    size_t batch_enqueue(const T* items, size_t count) {
-        size_t current_rear = rear.load(std::memory_order_relaxed); 
-        size_t free_space = (front.load(std::memory_order_acquire)  - current_rear - 1 + Capacity + 1) % (Capacity + 1);
-        size_t actual_count = std::min(count, free_space);
-
-        for(size_t i=0; i&lt;actual_count; ++i) {
-            size_t pos = (current_rear + i) % (Capacity + 1);
-            buffer[pos] = items[i];
-        }
-        rear.store((current_rear  + actual_count) % (Capacity + 1), std::memory_order_release);
-        return actual_count;
-    }
-};
-</code></pre>
-<h3 id="_3">三、性能测试与分析</h3>
-<ol>
-<li>Benchmark设计</li>
-</ol>
-<pre><code class="language-cpp">// 测试单线程吞吐量
-void benchmark_single_thread(RingQueue&lt;int, 1024&gt;&amp; queue) {
-    auto start = std::chrono::high_resolution_clock::now();
-    for(int i=0; i&lt;1e6; ++i){
-        queue.enqueue(i); 
-        int val;
-        queue.dequeue(val); 
-    }
-    auto end = std::chrono::high_resolution_clock::now();
-    cout &lt;&lt; "Throughput: " &lt;&lt; 1e6/(end-start).count() &lt;&lt; " ops/ns";
-}
-
-// 多线程测试（生产者-消费者模型）
-void test_concurrent_access() {
-    // 创建4个生产者和4个消费者线程 [13]()
-    // 统计总操作次数和时延分布 
+<p>1.2 核心工作原理（参考）
+代码插桩：编译时通过-pg参数在函数入口插入mcount调用
+调用栈追踪：</p>
+<pre><code class="language-cpp">void __mcount (void *self_pc){
+    // 获取调用者地址（通过寄存器或栈指针）
+    void *from_pc = __builtin_return_address(0);
+    // 记录调用关系图
+    record_call_graph(from_pc, self_pc);
 }
 </code></pre>
-<ol>
-<li>典型测试结果</li>
-</ol>
+<p>数据采集：
+* 时间采样：每10ms中断记录当前PC值（参考）
+* 调用计数：维护哈希表记录函数调用次数
+* 动态内存分配结构：</p>
+<pre><code class="language-cpp">struct profile_data {
+    unsigned long calls;  // 调用次数 
+    double total_time;    // 总耗时 
+    struct child *children; // 子调用节点 
+};
+</code></pre>
+<h3 id="c">二、完整C++示例代码</h3>
+<p>2.1 测试程序（参考）</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+void func3(int depth) {
+    for(int i=0; i&lt;10000*(depth+1); i++); // 耗时操作 
+}
+
+void func2() {
+    for(int i=0; i&lt;50000; i++);
+    func3(1);
+}
+
+void func1() {
+    for(int i=0; i&lt;100000; i++);
+    func3(0);
+    func2();
+}
+
+int main() {
+    for(int i=0; i&lt;5; i++){
+        func1();
+        func2();
+    }
+    return 0;
+}
+</code></pre>
+<p>2.2 编译与运行</p>
+<pre><code class="language-bash">g++ -pg -O2 test_gprof.cpp  -o test_gprof  # 带优化编译[8]()
+./test_gprof  # 生成gmon.out  
+</code></pre>
+<h3 id="_1">三、性能分析进阶配置</h3>
+<p>3.1 关键优化参数（参考）</p>
 <table>
 <thead>
 <tr>
-<th>实现方案</th>
-<th>单线程吞吐量</th>
-<th>4线程吞吐量</th>
-<th>延迟(99%)</th>
+<th>参数组合</th>
+<th>作用</th>
+<th>注意事项</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>基础版（无锁）</td>
-<td>28M ops/s</td>
-<td>15M ops/s</td>
-<td>120ns</td>
+<td>-pg -O2</td>
+<td>基础性能分析</td>
+<td>避免-O3导致插桩失效</td>
 </tr>
 <tr>
-<td>优化版（批量）</td>
-<td>52M ops/s</td>
-<td>38M ops/s</td>
-<td>85ns</td>
+<td>-lc_p -pg</td>
+<td>分析C库函数</td>
+<td>需安装libc-profile</td>
 </tr>
 <tr>
-<td>传统加锁队列</td>
-<td>6M ops/s</td>
-<td>2M ops/s</td>
-<td>450ns</td>
+<td>-fno-inline</td>
+<td>禁用内联</td>
+<td>确保函数可见</td>
+</tr>
+<tr>
+<td>-static-libgcc</td>
+<td>静态链接</td>
+<td>避免动态库问题</td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li>
-<p>关键发现：</p>
-</li>
-<li>
-<p>批量操作提升吞吐量87%</p>
-</li>
-<li>缓存行对齐减少False Sharing现象</li>
-<li>内存屏障使用使多核扩展性提升3倍</li>
-</ul>
-<h3 id="_4">四、工程实践建议</h3>
-<ul>
-<li>容量选择：推荐2^n大小（位运算优化：rear &amp; (capacity-1)）</li>
-<li>异常处理：通过返回值替代异常（适合高性能场景）</li>
-<li>动态扩容：可设计双缓冲区方案（牺牲瞬时性能换取弹性）</li>
-<li>内存回收：使用epoch-based reclamation处理无锁队列的ABA问题</li>
-</ul>
-<h2 id="_5">完整代码</h2>
-<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/020-RingQueue">Github</a></p>
+<p>3.2 多线程支持方案</p>
+<pre><code class="language-bash">// 使用gprof-helper.c[1]()
+gcc -shared -fPIC gprof-helper.c -o gprof-helper.so  -lpthread -ldl
+export LD_PRELOAD=./gprof-helper.so  
+</code></pre>
+<h3 id="_2">四、可视化分析流程</h3>
+<p>4.1 Kcachegrind可视化（参考）</p>
+<div class="mermaid">sequenceDiagram 
+    程序运行-&gt;&gt;gmon.out:  生成原始数据 
+    gprof-&gt;&gt;callgrind.out:  转换格式: gprof -b ./test_gprof | gprof2dot | dot -Tcallgrind -o callgrind.out  
+    kcachegrind-&gt;&gt;可视化: 加载callgrind.out  
+</div>
+<p>4.2 关键分析视图
+调用关系火焰图：</p>
+<pre><code class="language-bash">gprof2dot -f pstats gmon.out  | dot -Tsvg -o flame.svg  
+</code></pre>
+<h3 id="_3">五、技术局限与优化建议</h3>
+<p>5.1 已知缺陷（参考）
+* 时间采样精度误差（±10%）
+* 无法分析内核态耗时（需结合perf工具）
+* 递归函数处理不完善（强连通分量压缩）
+5.2 替代方案对比</p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>优势</th>
+<th>局限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gprof</td>
+<td>无需重新编译内核</td>
+<td>多线程支持差</td>
+</tr>
+<tr>
+<td>perf</td>
+<td>支持硬件计数器</td>
+<td>学习曲线陡峭</td>
+</tr>
+<tr>
+<td>Valgrind</td>
+<td>内存+性能综合分析</td>
+<td>运行速度慢10倍以上</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">完整代码</h2>
+<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/030-gprof">Github</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
