@@ -139,6 +139,7 @@ nav:
           - technology/Cpp/013-Detours.md
           - technology/Cpp/014-log4cpp.md
           - technology/Cpp/022-spdlog.md
+          - technology/Cpp/031-valgrind.md
         - 测试:
           - technology/Cpp/010-Catch2.md
           - technology/Cpp/012-Benchmark.md

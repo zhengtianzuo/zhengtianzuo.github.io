@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[031-valgrind 2025/03/31](../technology/Cpp/031-valgrind.md)
+
 [030-gprof 2025/03/30](../technology/Cpp/030-gprof.md)
 
 [029-gperftools 2025/03/29](../technology/Cpp/029-gperftools.md)
