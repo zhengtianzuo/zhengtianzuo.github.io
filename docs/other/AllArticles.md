@@ -4,6 +4,10 @@ icon: material/menu
 
 # 全部文章列表
 
+[033-QtShadowDialog 2025/04/02](../technology/Cpp/033-QtShadowDialog.md)
+
+[032-overlayYUV.md 2025/04/01](../remotedesktop/032-overlayYUV.md)
+
 [031-valgrind 2025/03/31](../technology/Cpp/031-valgrind.md)
 
 [030-gprof 2025/03/30](../technology/Cpp/030-gprof.md)

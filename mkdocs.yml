@@ -129,7 +129,7 @@ nav:
         - technology/C++.md
         - UI:
           - Qt:
-            - technology/Cpp/QtWidgets.md
+            - technology/Cpp/033-QtShadowDialog.md
             - technology/Cpp/QtQuick.md
           - wxWidgets:
             - technology/Cpp/wxWidgets.md
@@ -202,6 +202,7 @@ nav:
       - remotedesktop/ScreenCaptures.md
     - 视频编解码:
       - remotedesktop/VideoCodec.md
+      - remotedesktop/032-overlayYUV.md
     - 音频编解码:
       - remotedesktop/AudioCodec.md
     - 鼠标键盘:
