@@ -6,12 +6,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="zhengtianzuo" name="description"/>
-<link href="https://zhengtianzuo.com/en/technology/Cpp/021-TCMalloc/" rel="canonical"/>
-<link href="../020-RingQueue/" rel="prev"/>
-<link href="../025-lz4/" rel="next"/>
+<link href="https://zhengtianzuo.com/en/technology/Cpp/033-QtShadowDialog/" rel="canonical"/>
+<link href="../../C%2B%2B/" rel="prev"/>
+<link href="../QtQuick/" rel="next"/>
 <link href="../../../../img/me.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>TCMalloc - tianzuo.home</title>
+<title>QtShadowDialog - tianzuo.home</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#tcmalloc">
+<a class="md-skip" href="#qtshadowdialog">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              TCMalloc
+              QtShadowDialog
             
           </span>
 </div>
@@ -74,7 +74,7 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="../../../../technology/Cpp/021-TCMalloc/" hreflang="zh">
+<a class="md-select__link" href="../../../../technology/Cpp/033-QtShadowDialog/" hreflang="zh">
               简体中文
             </a>
 </li>
@@ -282,8 +282,8 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_2" id="__nav_2_1_1_2_label" tabindex="0">
 <span class="md-ellipsis">
     UI
@@ -291,14 +291,14 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_2_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_2_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_2">
 <span class="md-nav__icon md-icon"></span>
             UI
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_2_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_2_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_2_1" id="__nav_2_1_1_2_1_label" tabindex="0">
 <span class="md-ellipsis">
     Qt
@@ -306,19 +306,98 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_2_1_label" class="md-nav" data-md-level="5">
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_2_1_label" class="md-nav" data-md-level="5">
 <label class="md-nav__title" for="__nav_2_1_1_2_1">
 <span class="md-nav__icon md-icon"></span>
             Qt
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../033-QtShadowDialog/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    QtShadowDialog
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     QtShadowDialog
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      一、实现原理
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      二、实现流程图
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#qpainter">
+<span class="md-ellipsis">
+      三、代码实现（方案二：QPainter绘制）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      四、优化参数配置表
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      五、技术调研对比
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      六、结构图说明
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      七、全屏与局部状态处理
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      八、注意事项
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
+      完整代码
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../QtQuick/">
@@ -551,8 +630,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_8" id="__nav_2_1_1_8_label" tabindex="0">
 <span class="md-ellipsis">
     Storage
@@ -560,7 +639,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_8">
 <span class="md-nav__icon md-icon"></span>
             Storage
@@ -602,73 +681,14 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"></path></svg>
-<span class="md-ellipsis">
-    TCMalloc
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../021-TCMalloc/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"></path></svg>
 <span class="md-ellipsis">
     TCMalloc
     
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tcmalloc_1">
-<span class="md-ellipsis">
-      一、TCMalloc核心原理
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      二、关键代码实现
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      三、优化参数配置
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#benchmark">
-<span class="md-ellipsis">
-      四、性能Benchmark对比
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      五、应用建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      完整代码
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../025-lz4/">
@@ -1724,42 +1744,63 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tcmalloc_1">
-<span class="md-ellipsis">
-      一、TCMalloc核心原理
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      二、关键代码实现
+      一、实现原理
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      三、优化参数配置
+      二、实现流程图
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#benchmark">
+<a class="md-nav__link" href="#qpainter">
 <span class="md-ellipsis">
-      四、性能Benchmark对比
+      三、代码实现（方案二：QPainter绘制）
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      五、应用建议
+      四、优化参数配置表
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      五、技术调研对比
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      六、结构图说明
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      七、全屏与局部状态处理
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      八、注意事项
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
 <span class="md-ellipsis">
       完整代码
     </span>
@@ -1772,162 +1813,215 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="tcmalloc">TCMalloc</h1>
-<p><img alt="" src="../../../../img/TCMalloc.png"/></p>
-<p>以下是对TCMalloc的技术调研报告，结合原理、代码实现、优化参数及性能对比的综合分析：</p>
-<h3 id="tcmalloc_1">一、TCMalloc核心原理</h3>
+<h1 id="qtshadowdialog">QtShadowDialog</h1>
+<p><img alt="" src="../../../../img/QtShadowDialog.png"/></p>
+<p>QWidget实现无边框带阴影窗体技术调研报告</p>
+<h3 id="_1">一、实现原理</h3>
 <ol>
-<li>架构分层</li>
-<li>TCMalloc采用三级缓存结构，具体流程参考下图：</li>
+<li>核心机制
+无边框实现：通过</li>
 </ol>
-<pre><code class="language-plaintext">┌─────────────┐       ┌─────────────┐       ┌─────────────┐ 
-│ ThreadCache │──────▶│ CentralHeap │──────▶│  PageHeap   │ 
-└─────────────┘       └─────────────┘       └─────────────┘ 
-（线程本地缓存）        （全局中央堆）         （系统内存管理）
+<pre><code class="language-cpp">Qt::FramelessWindowHint
 </code></pre>
+<p>标志去除系统默认边框。</p>
 <ul>
-<li>ThreadCache：每个线程独立的小对象缓存（&lt;32KB），无锁操作。</li>
-<li>CentralHeap：全局共享的中型对象缓存（32KB~256KB），需自旋锁保护。</li>
-<li>PageHeap：大对象（≥256KB）直接通过mmap分配，按页管理（默认8KB/页）。</li>
-<li>内存管理单元</li>
-<li>Span：连续内存页的抽象（1~256页），用于记录内存块的分配状态。</li>
+<li>阴影效果：</li>
 </ul>
-<pre><code class="language-cpp">struct Span {
-  PageID start_page;  // 起始页号 
-  size_t num_pages;   // 页数量 
-  Span* next;         // 链表指针 
-  SizeClass size_class; // 小对象类型 
-};
-</code></pre>
-<p>SizeClass：将小对象划分为88种规格（8B~256KB），对齐策略减少碎片。
-3. 分配流程</p>
+<p>方案一：使用
+QGraphicsDropShadowEffect
+类实现快速阴影。</p>
+<p>方案二：重写
+paintEvent
+使用
+QPainter
+绘制自定义阴影。</p>
+<ol>
+<li>窗口状态管理
+全屏/局部切换：通过
+showFullScreen()
+和
+showNormal()
+控制窗口状态，结合
+windowState()
+判断当前状态。
+透明背景：
+setAttribute(Qt::WA_TranslucentBackground)
+确保阴影可见。</li>
+</ol>
+<h3 id="_2">二、实现流程图</h3>
 <div class="mermaid">graph TD 
-A[分配请求] --&gt; B{对象大小}
-B --&gt;|≤32KB| C[ThreadCache]
-B --&gt;|&gt;32KB| D[CentralHeap/PageHeap]
-C --&gt; E{本地空闲链}
-E --&gt;|存在| F[直接分配]
-E --&gt;|不存在| G[从CentralHeap补充]
-G --&gt; H[拆解Span为小对象]
+    A[创建QWidget基类窗口] --&gt; B{设置无边框}
+    B --&gt;|Qt::FramelessWindowHint| C[启用透明背景]
+    C --&gt; D{选择阴影方案}
+    D --&gt;|方案一| E[应用QGraphicsDropShadowEffect]
+    D --&gt;|方案二| F[重写paintEvent绘制阴影]
+    E --&gt; G[处理窗口拖动事件]
+    F --&gt; G 
+    G --&gt; H[状态切换优化]
+    H --&gt; I[输出最终窗体]
 </div>
-<h3 id="_1">二、关键代码实现</h3>
-<ol>
-<li>核心数据结构</li>
-</ol>
-<pre><code class="language-cpp">// ThreadCache定义（简化版）
-class ThreadCache {
-  FreeList list_[kNumClasses]; // 按size class组织的空闲链表 
-  void* Allocate(size_t size);
-  void Deallocate(void* ptr);
+<h3 id="qpainter">三、代码实现（方案二：QPainter绘制）</h3>
+<pre><code class="language-cpp">#include &lt;QWidget&gt;
+#include &lt;QPainter&gt;
+#include &lt;QMouseEvent&gt;
+#include &lt;QPropertyAnimation&gt;
+
+class ShadowWindow : public QWidget {
+    Q_OBJECT 
+public:
+    ShadowWindow(QWidget *parent = nullptr) : QWidget(parent) {
+        // 无边框设置 
+        setWindowFlags(Qt::FramelessWindowHint);
+        setAttribute(Qt::WA_TranslucentBackground);
+
+        // 阴影参数 
+        m_radius = 10;          // 圆角半径
+        m_offset = QPoint(0, 0); // 阴影偏移
+        m_blurRadius = 20;      // 阴影模糊半径 
+        m_color = QColor(0, 0, 0, 100); // 阴影颜色 
+    }
+
+protected:
+    void paintEvent(QPaintEvent *event) override {
+        QPainter painter(this);
+        painter.setRenderHint(QPainter::Antialiasing); 
+
+        // 绘制阴影 
+        QLinearGradient gradient(rect().topLeft(), rect().bottomRight());
+        gradient.setColorAt(0,  m_color);
+        gradient.setColorAt(1,  Qt::transparent);
+        painter.setBrush(gradient); 
+        painter.setPen(Qt::NoPen); 
+        painter.drawRect(rect().adjusted(-m_blurRadius,  -m_blurRadius, m_blurRadius, m_blurRadius));
+
+        // 绘制圆角主体 
+        QPainterPath path;
+        path.addRoundedRect(rect().adjusted(m_blurRadius,  m_blurRadius, -m_blurRadius, -m_blurRadius), m_radius, m_radius);
+        painter.fillPath(path,  Qt::white);
+    }
+
+    void mousePressEvent(QMouseEvent *event) {
+        if (event-&gt;button() == Qt::LeftButton) {
+            m_dragPos = event-&gt;globalPos() - frameGeometry().topLeft();
+            event-&gt;accept();
+        }
+    }
+
+    void mouseMoveEvent(QMouseEvent *event) {
+        if (event-&gt;buttons() &amp; Qt::LeftButton) {
+            move(event-&gt;globalPos() - m_dragPos);
+            event-&gt;accept();
+        }
+    }
+
+private:
+    int m_radius;
+    QPoint m_offset;
+    int m_blurRadius;
+    QColor m_color;
+    QPoint m_dragPos;
 };
-
-// CentralHeap中的CentralFreeList 
-class CentralFreeList {
-  SpinLock lock_;
-  SpanList nonempty_; // 非空Span链表 
-  SpanList empty_;    // 空Span链表 
-};
 </code></pre>
-<ol>
-<li>分配器入口（Hooking malloc）</li>
-</ol>
-<pre><code class="language-cpp">extern "C" void* tc_malloc(size_t size) {
-  if (size &gt; kMaxSmallSize) {
-    return pageheap-&gt;AllocLarge(size);
-  }
-  SizeClass cl = SizeClasser::Classify(size);
-  return thread_cache.Get()-&gt;Allocate(cl);
-}
-</code></pre>
-<h3 id="_2">三、优化参数配置</h3>
-<p>通过环境变量调整性能（需在程序启动前设置）：</p>
-<ul>
-<li>限制线程缓存总大小（默认64MB）</li>
-</ul>
-<pre><code class="language-bash">export TCMALLOC_MAX_TOTAL_THREAD_CACHE_BYTES=134217728 
-</code></pre>
-<ul>
-<li>内存释放频率（0=不主动释放，1=积极释放）</li>
-</ul>
-<pre><code class="language-bash">export TCMALLOC_RELEASE_RATE=0.5 
-</code></pre>
-<ul>
-<li>大对象阈值（默认256KB）</li>
-</ul>
-<pre><code class="language-bash">export TCMALLOC_LARGE_ALLOC_REPORT_THRESHOLD=1048576 
-</code></pre>
-<p>完整参数列表可参考Google官方文档 。</p>
-<h3 id="benchmark">四、性能Benchmark对比</h3>
-<ol>
-<li>测试代码</li>
-</ol>
-<pre><code class="language-cpp">#include &lt;benchmark/benchmark.h&gt;
-#include &lt;vector&gt;
-
-static void BM_Malloc(benchmark::State&amp; state) {
-  for (auto _ : state) {
-    void* p = malloc(state.range(0)); 
-    free(p);
-  }
-}
-BENCHMARK(BM_Malloc)-&gt;Arg(64)-&gt;Arg(4096)-&gt;Arg(1&lt;&lt;20);
-
-static void BM_TCMalloc(benchmark::State&amp; state) {
-  for (auto _ : state) {
-    void* p = tc_malloc(state.range(0)); 
-    tc_free(p);
-  }
-}
-BENCHMARK(BM_TCMalloc)-&gt;Arg(64)-&gt;Arg(4096)-&gt;Arg(1&lt;&lt;20);
-
-BENCHMARK_MAIN();
-</code></pre>
-<ol>
-<li>测试结果（单位：ns/op）</li>
-</ol>
+<h3 id="_3">四、优化参数配置表</h3>
 <table>
 <thead>
 <tr>
-<th>分配大小</th>
-<th>malloc</th>
-<th>TCMalloc</th>
-<th>提升比例</th>
+<th>参数</th>
+<th>作用描述</th>
+<th>推荐取值范围</th>
+<th>示例代码片段</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>64B</td>
-<td>42</td>
-<td>15</td>
-<td>64%↑</td>
+<td><code>m_radius</code></td>
+<td>圆角半径</td>
+<td>5-20像素</td>
+<td><code>m_radius = 10;</code></td>
 </tr>
 <tr>
-<td>4KB</td>
-<td>85</td>
-<td>32</td>
-<td>62%↑</td>
+<td><code>m_blurRadius</code></td>
+<td>阴影模糊半径</td>
+<td>10-30像素</td>
+<td><code>m_blurRadius = 20;</code></td>
 </tr>
 <tr>
-<td>1MB</td>
-<td>520</td>
-<td>480</td>
-<td>8%↑</td>
+<td><code>m_color</code></td>
+<td>阴影颜色（带透明度）</td>
+<td><code>QColor(0,0,0,100)</code></td>
+<td><code>m_color = QColor(0,0,0,100);</code></td>
+</tr>
+<tr>
+<td><code>AA_EnableHighDpi</code></td>
+<td>高DPI缩放适配</td>
+<td><code>true/false</code></td>
+<td><code>QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);</code></td>
 </tr>
 </tbody>
 </table>
-<p>数据表明小对象分配性能提升显著。            </p>
-<h3 id="_3">五、应用建议</h3>
-<ul>
-<li>适用场景：高频小对象分配（网络协议栈、消息队列）、多线程服务。</li>
-<li>陷阱规避：
-避免混合使用不同分配器（如同时链接tcmalloc和jemalloc）
-定期调用MallocExtension::ReleaseFreeMemory()释放闲置内存</li>
-<li>监控工具：</li>
-</ul>
-<pre><code class="language-cpp">MallocExtension::GetInstance()-&gt;GetStats(buffer, buffer_size); // 获取内存状态 
+<h3 id="_4">五、技术调研对比</h3>
+<table>
+<thead>
+<tr>
+<th>方案</th>
+<th>优点</th>
+<th>缺点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QGraphicsDropShadow</td>
+<td>代码简洁，跨平台兼容性好</td>
+<td>高DPI下可能出现错位<a href="">1</a></td>
+<td>快速开发，简单阴影需求</td>
+</tr>
+<tr>
+<td>QPainter自定义绘制</td>
+<td>完全控制阴影形状和动画</td>
+<td>需要手动处理性能优化</td>
+<td>高级视觉效果，动画需求</td>
+</tr>
+<tr>
+<td>系统API调用</td>
+<td>原生系统阴影效果</td>
+<td>跨平台实现复杂<a href="">9</a></td>
+<td>对系统一致性要求高的场景</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="_5">六、结构图说明</h3>
+<div class="mermaid">classDiagram 
+    QWidget &lt;|-- ShadowWindow 
+    ShadowWindow --&gt; QGraphicsDropShadowEffect: 方案一 
+    ShadowWindow --&gt; QPainter: 方案二 
+    ShadowWindow --&gt; QMouseEvent: 拖动事件处理 
+    ShadowWindow --&gt; QPropertyAnimation: 动画效果 
+</div>
+<h3 id="_6">七、全屏与局部状态处理</h3>
+<pre><code class="language-cpp">void ShadowWindow::toggleWindowState() {
+    if (isFullScreen()) {
+        showNormal();
+        // 调整阴影参数 
+        m_blurRadius = 20;
+        update();
+    } else {
+        showFullScreen();
+        // 优化全屏阴影 
+        m_blurRadius = 10;
+        update();
+    }
+}
 </code></pre>
-<h2 id="_4">完整代码</h2>
-<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/021-TCMalloc">Github</a></p>
+<h3 id="_7">八、注意事项</h3>
+<ol>
+<li><strong>性能优化</strong>：复杂阴影建议使用<code>QPainter.setRenderHint(QPainter::HighQualityAntialiasing)</code>。</li>
+<li><strong>跨平台测试</strong>：Windows/Linux/Mac的阴影渲染可能存在差异，需单独测试。</li>
+<li><strong>动画兼容性</strong>：结合<code>QPropertyAnimation</code>时需注意阴影效果的平滑过渡。 </li>
+</ol>
+<h2 id="_8">完整代码</h2>
+<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/033-QtShadowDialog">Github</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
