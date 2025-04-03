@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[034-QSharedMemory 2025/04/03](../technology/Cpp/034-QSharedMemory.md)
+
 [033-QtShadowDialog 2025/04/02](../technology/Cpp/033-QtShadowDialog.md)
 
 [032-overlayYUV.md 2025/04/01](../remotedesktop/032-overlayYUV.md)

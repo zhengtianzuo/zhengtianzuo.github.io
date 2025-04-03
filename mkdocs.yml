@@ -130,7 +130,7 @@ nav:
         - UI:
           - Qt:
             - technology/Cpp/033-QtShadowDialog.md
-            - technology/Cpp/QtQuick.md
+            - technology/Cpp/034-QSharedMemory.md
           - wxWidgets:
             - technology/Cpp/wxWidgets.md
         - 构建:
