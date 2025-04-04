@@ -199,7 +199,7 @@ nav:
       - technology/DevelopmentTools.md
   - 远程桌面:
     - 屏幕捕获:
-      - remotedesktop/ScreenCaptures.md
+      - remotedesktop/035-GDIGrab.md
     - 视频编解码:
       - remotedesktop/VideoCodec.md
       - remotedesktop/032-overlayYUV.md

@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[035-Windows抓屏-GDI 2025/04/04](../remotedesktop/035-GDIGrab.md)
+
 [034-QSharedMemory 2025/04/03](../technology/Cpp/034-QSharedMemory.md)
 
 [033-QtShadowDialog 2025/04/02](../technology/Cpp/033-QtShadowDialog.md)
