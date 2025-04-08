@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[036-CodeSmellGodClass 2025/04/08](../technology/Cpp/036-CodeSmellGodClass.md)
+
 [035-Windows抓屏-GDI 2025/04/04](../remotedesktop/035-GDIGrab.md)
 
 [034-QSharedMemory 2025/04/03](../technology/Cpp/034-QSharedMemory.md)
