@@ -4,7 +4,9 @@ icon: material/menu
 
 # 全部文章列表
 
-[036-CodeSmellGodClass 2025/04/08](../technology/Cpp/036-CodeSmellGodClass.md)
+[037-代码味道-过度耦合的消息链 2025/04/10](../technology/Cpp/037-CodeSmellMessageChains.md)
+
+[036-代码味道-上帝类 2025/04/08](../technology/Cpp/036-CodeSmellGodClass.md)
 
 [035-Windows抓屏-GDI 2025/04/04](../remotedesktop/035-GDIGrab.md)
 

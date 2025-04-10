@@ -149,6 +149,7 @@ nav:
           - technology/Cpp/030-gprof.md
         - 味道:
           - technology/Cpp/036-CodeSmellGodClass.md
+          - technology/Cpp/037-CodeSmellMessageChains.md
         - 存储:
           - technology/Cpp/001-BoostMessageQueue.md
           - technology/Cpp/002-BoostSharedMemory.md

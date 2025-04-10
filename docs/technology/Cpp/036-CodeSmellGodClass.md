@@ -2,7 +2,7 @@
 icon: simple/sellfy
 ---
 
-# CodeSmellGodClass
+# 代码味道-上帝类
 
 ![](../../img/CodeSmellGodClass.png)
 
