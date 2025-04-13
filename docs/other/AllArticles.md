@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[038-flatbuffers 2025/04/13](../technology/Cpp/038-flatbuffers.md)
+
 [037-代码味道-过度耦合的消息链 2025/04/10](../technology/Cpp/037-CodeSmellMessageChains.md)
 
 [036-代码味道-上帝类 2025/04/08](../technology/Cpp/036-CodeSmellGodClass.md)
