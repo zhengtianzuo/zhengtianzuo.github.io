@@ -1,0 +1,7 @@
+// person.fbs 
+table Person {
+  name: string;
+  age: int;
+  friends: [Person];
+}
+root_type Person;
