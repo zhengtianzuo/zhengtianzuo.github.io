@@ -6,12 +6,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="zhengtianzuo" name="description"/>
-<link href="https://zhengtianzuo.com/technology/Cpp/026-zstd/" rel="canonical"/>
-<link href="../025-lz4/" rel="prev"/>
-<link href="../038-flatbuffers/" rel="next"/>
+<link href="https://zhengtianzuo.com/technology/Cpp/039-CodeSmellFeatureEnvy/" rel="canonical"/>
+<link href="../037-CodeSmellMessageChains/" rel="prev"/>
+<link href="../001-BoostMessageQueue/" rel="next"/>
 <link href="../../../img/me.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>zstd - 天佐.主页</title>
+<title>代码味道-依恋情结 - 天佐.主页</title>
 <link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#zstd">
+<a class="md-skip" href="#-">
           跳转至
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              zstd
+              代码味道-依恋情结
             
           </span>
 </div>
@@ -79,7 +79,7 @@
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="../../../en/technology/Cpp/026-zstd/" hreflang="en">
+<a class="md-select__link" href="../../../en/technology/Cpp/039-CodeSmellFeatureEnvy/" hreflang="en">
               English
             </a>
 </li>
@@ -525,8 +525,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_7" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_7" id="__nav_2_1_1_7_label" tabindex="0">
 <span class="md-ellipsis">
     味道
@@ -534,7 +534,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_7_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_7_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_7">
 <span class="md-nav__icon md-icon"></span>
             味道
@@ -558,20 +558,86 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../039-CodeSmellFeatureEnvy/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
+<span class="md-ellipsis">
+    代码味道-依恋情结
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-依恋情结
     
   </span>
 </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      一、定义与核心特征
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c">
+<span class="md-ellipsis">
+      二、C++典型案例分析
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      三、重构过程详解
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      四、质量提升指标
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      五、特殊场景处理
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      六、最佳实践建议
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      完整代码
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_8" id="__nav_2_1_1_8_label" tabindex="0">
 <span class="md-ellipsis">
     存储
@@ -579,7 +645,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_8">
 <span class="md-nav__icon md-icon"></span>
             存储
@@ -639,66 +705,14 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2h-2.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146z"></path><path d="M11.5 15.75a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12.25 6a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M9.75 13.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 11.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 5.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 9 5.25M11 17h1a2 2 0 0 1 2 2v4.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V19a2 2 0 0 1 2-2m-.5 2v3.5h2V19a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"></path></svg>
-<span class="md-ellipsis">
-    zstd
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../026-zstd/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2h-2.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146z"></path><path d="M11.5 15.75a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12.25 6a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M9.75 13.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 11.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 5.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 9 5.25M11 17h1a2 2 0 0 1 2 2v4.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V19a2 2 0 0 1 2-2m-.5 2v3.5h2V19a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"></path></svg>
 <span class="md-ellipsis">
     zstd
     
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      一、核心原理与技术架构
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      二、参数优化策略
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      四、性能优化关键点
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      五、测试数据对比
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      完整代码
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../038-flatbuffers/">
@@ -1748,33 +1762,47 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      一、核心原理与技术架构
+      一、定义与核心特征
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c">
+<span class="md-ellipsis">
+      二、C++典型案例分析
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      二、参数优化策略
+      三、重构过程详解
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      四、性能优化关键点
+      四、质量提升指标
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
-      五、测试数据对比
+      五、特殊场景处理
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      六、最佳实践建议
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
 <span class="md-ellipsis">
       完整代码
     </span>
@@ -1787,154 +1815,149 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="zstd">zstd</h1>
-<p><img alt="" src="../../../img/zstd.png"/></p>
-<p>以下为Zstandard（zstd）压缩算法从原理到代码实现的技术调研报告，结合流程图、结构图及完整C++代码实现：</p>
-<h3 id="_1">一、核心原理与技术架构</h3>
-<p>1.1 算法原理
-Zstd基于LZ77衍生算法与熵编码（FSE/Huffman）的混合架构：</p>
-<div class="mermaid">graph TD 
-    A[输入数据] --&gt; B[预处理]
-    B --&gt; C[重复模式匹配-LZ77]
-    C --&gt; D[熵编码-FSE/Huffman]
-    D --&gt; E[压缩数据块]
-</div>
+<h1 id="-">代码味道-依恋情结</h1>
+<p><img alt="" src="../../../img/CodeSmellFeatureEnvy.png"/></p>
+<p>代码味道-Feature Envy：从定义到重构的完整指南</p>
+<h3 id="_1">一、定义与核心特征</h3>
+<p>1.1 基本定义
+Feature Envy（依恋情结） 是一种经典的代码坏味道，表现为某个函数/方法对另一个类的数据或方法的关注度远高于其所属的宿主类。这种现象违背了面向对象设计中的"数据与行为绑定"原则，导致代码耦合度增高、可维护性下降。</p>
+<p>1.2 识别特征</p>
 <ul>
-<li>字典压缩：通过ZSTD_trainFromBuffer预生成高频数据字典，提升小文件压缩率（压缩率提升30%-50%）。</li>
-<li>多阶段编码：LZ77处理冗余数据 → FSE（有限状态熵）优化压缩比 → Huffman二次压缩高频符号。</li>
+<li>高频跨类调用：方法中超过30%的代码涉及其他类的属性或方法调用（特别是getter方法）</li>
+<li>数据流异常：方法处理参数对象的数据量 &gt; 处理宿主类属性的数据量</li>
+<li>逻辑碎片化：相同业务逻辑分散在多个类中，形成隐式耦合</li>
+<li>流程图：Feature Envy检测流程</li>
 </ul>
-<p>1.2 数据结构
-压缩后的二进制格式包含：</p>
-<pre><code class="language-cpp">struct ZSTD_Header {
-    uint32_t magic_number;  // 0xFD2FB528 
-    uint32_t window_size;   // 滑动窗口尺寸 
-    uint8_t dict_id[4]();     // 字典标识符（可选）
-    uint32_t content_size;  // 原始数据长度（可选）
+<div class="mermaid">graph TD
+    A[解析AST语法树] --&gt; B[提取方法调用关系]
+    B --&gt; C{判断调用目标分布}
+    C --&gt;|80%调用外部类| D[标记为Feature Envy]
+    C --&gt;|主要调用宿主类| E[正常方法]
+</div>
+<h3 id="c">二、C++典型案例分析</h3>
+<p>2.1 问题代码示例</p>
+<pre><code class="language-cpp">// 订单处理类
+class OrderProcessor {
+public:
+    double calculateDiscount(Customer&amp; customer, Product&amp; product) {
+        if (customer.getMembershipLevel()  == GOLD) {
+            return product.getBasePrice()  * 0.3;  // 30%折扣
+        } else if (customer.getPurchaseHistory().totalSpent  &gt; 5000) {
+            return product.getBasePrice()  * 0.2;  // 20%折扣
+        }
+        return 0;
+    }
+};
+
+// 客户数据类
+class Customer {
+private:
+    MembershipLevel level;
+    PurchaseHistory history;
+public:
+    MembershipLevel getMembershipLevel() const { return level; }
+    PurchaseHistory getPurchaseHistory() const { return history; }
 };
 </code></pre>
-<h3 id="_2">二、参数优化策略</h3>
-<p>2.1 基础参数配置</p>
-<pre><code class="language-cpp">// 压缩级别（1-22，默认3）
-ZSTD_CCtx_setParameter(cctx, ZSTD_c_compressionLevel, 5); 
-
-// 窗口尺寸（影响内存占用）
-ZSTD_CCtx_setParameter(cctx, ZSTD_c_windowLog, 22); // 4MB窗口 
-
-// 启用长距离匹配（适合大文件）
-ZSTD_CCtx_setParameter(cctx, ZSTD_c_enableLongDistanceMatching, 1);
-</code></pre>
-<p>2.2 高级优化参数</p>
-<pre><code class="language-cpp">// 多线程压缩（需编译时启用ZSTD_MULTITHREAD）
-ZSTD_CCtx_setParameter(cctx, ZSTD_c_nbWorkers, 4); 
-
-// 字典压缩模式 
-ZSTD_CCtx_refCDict(cctx, cdict); 
-
-// 实时模式（牺牲压缩率提升速度）
-ZSTD_CCtx_setParameter(cctx, ZSTD_c_strategy, ZSTD_fast); 
-</code></pre>
-<p>三、完整C++实现（单文件压缩/解压）</p>
-<pre><code class="language-cpp">#include &lt;zstd.h&gt;
-#include &lt;fstream&gt;
-#include &lt;vector&gt;
-
-// 压缩函数 
-bool zstd_compress(const char* input_path, const char* output_path, int level=3) {
-    std::ifstream fin(input_path, std::ios::binary);
-    std::vector&lt;char&gt; input((std::istreambuf_iterator&lt;char&gt;(fin)), 
-                           std::istreambuf_iterator&lt;char&gt;());
-
-    size_t bound = ZSTD_compressBound(input.size()); 
-    std::vector&lt;char&gt; output(bound);
-
-    ZSTD_CCtx* cctx = ZSTD_createCCtx();
-    size_t csize = ZSTD_compressCCtx(cctx, 
-        output.data(),  bound, 
-        input.data(),  input.size(),  
-        level);
-
-    if (ZSTD_isError(csize)) {
-        ZSTD_freeCCtx(cctx);
-        return false;
+<p>2.2 重构解决方案</p>
+<pre><code class="language-cpp">// 客户数据类增强
+class Customer {
+private:
+    MembershipLevel level;
+    PurchaseHistory history;
+public:
+    // 将折扣计算逻辑迁移至此
+    double calculateDiscount(Product&amp; product) const {
+        if (level == GOLD) {
+            return product.getBasePrice()  * 0.3;
+        } else if (history.totalSpent  &gt; 5000) {
+            return product.getBasePrice()  * 0.2;
+        }
+        return 0;
     }
+};
 
-    std::ofstream fout(output_path, std::ios::binary);
-    fout.write(output.data(),  csize);
-
-    ZSTD_freeCCtx(cctx);
-    return true;
-}
-
-// 解压函数 
-bool zstd_decompress(const char* input_path, const char* output_path) {
-    std::ifstream fin(input_path, std::ios::binary);
-    std::vector&lt;char&gt; input((std::istreambuf_iterator&lt;char&gt;(fin)), 
-                           std::istreambuf_iterator&lt;char&gt;());
-
-    unsigned long long rsize = ZSTD_getFrameContentSize(input.data(),  input.size()); 
-    std::vector&lt;char&gt; output(rsize);
-
-    ZSTD_DCtx* dctx = ZSTD_createDCtx();
-    size_t dsize = ZSTD_decompressDCtx(dctx, 
-        output.data(),  rsize, 
-        input.data(),  input.size()); 
-
-    if (ZSTD_isError(dsize)) {
-        ZSTD_freeDCtx(dctx);
-        return false;
+// 订单处理类简化
+class OrderProcessor {
+public:
+    double processOrder(Customer&amp; customer, Product&amp; product) {
+        return customer.calculateDiscount(product); 
     }
-
-    std::ofstream fout(output_path, std::ios::binary);
-    fout.write(output.data(),  dsize);
-
-    ZSTD_freeDCtx(dctx);
-    return true;
-}
+};
 </code></pre>
-<h3 id="_3">四、性能优化关键点</h3>
+<h3 id="_2">三、重构过程详解</h3>
+<p>3.1 重构步骤</p>
 <ul>
-<li>上下文复用：重复使用ZSTD_CCtx对象减少内存分配开销。</li>
-<li>流式处理：对大型文件分块处理，示例代码：</li>
+<li>识别数据归属（通过依赖分析工具）</li>
+<li>创建目标方法（在数据拥有类中建立新方法）</li>
+<li>逐步迁移逻辑（使用测试驱动保障）</li>
+<li>更新调用链路（保持接口兼容性）</li>
+<li>结构变化示意图：</li>
 </ul>
-<pre><code class="language-cpp">ZSTD_inBuffer input = { src_buffer, src_size, 0 };
-ZSTD_outBuffer output = { dst_buffer, dst_size, 0 };
-while (input.pos  &lt; input.size)  {
-    ZSTD_compressStream2(cctx, &amp;output, &amp;input, ZSTD_e_continue);
-}
-</code></pre>
+<div class="mermaid">graph LR
+    Before[OrderProcessor::calculateDiscount] --&gt;|访问| CustomerData
+    After[Customer::calculateDiscount] --&gt;|操作| CustomerData
+</div>
+<p>3.2 关键技术</p>
 <ul>
-<li>内存管理：通过ZSTD_c_ldmHashLog调整哈希表尺寸平衡速度与内存。</li>
+<li>搬移方法(Move Method)：直接将方法迁移到数据类</li>
+<li>提炼方法(Extract Method)：当只有部分代码存在依恋时</li>
+<li>策略模式：适用于需要动态更换计算规则的复杂场景</li>
 </ul>
-<h3 id="_4">五、测试数据对比</h3>
+<h3 id="_3">四、质量提升指标</h3>
+<p>通过重构可获得以下改进：</p>
 <table>
 <thead>
 <tr>
-<th>文件类型</th>
-<th>原始大小</th>
-<th>Zstd压缩后</th>
-<th>压缩率</th>
-<th>耗时(ms)</th>
+<th>指标</th>
+<th>重构前</th>
+<th>重构后</th>
+<th>提升率</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>文本日志</td>
-<td>128MB</td>
-<td>32MB</td>
-<td>4:1</td>
-<td>210</td>
+<td>类间耦合度</td>
+<td>0.78</td>
+<td>0.32</td>
+<td>59%</td>
 </tr>
 <tr>
-<td>数据库备份</td>
-<td>1GB</td>
-<td>280MB</td>
-<td>3.57:1</td>
-<td>8900</td>
+<td>方法内聚性</td>
+<td>0.41</td>
+<td>0.86</td>
+<td>110%v</td>
+</tr>
+<tr>
+<td>单元测试维护成本</td>
+<td>高</td>
+<td>低</td>
+<td>-65%</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_5">完整代码</h2>
-<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/026-zstd">Github</a></p>
+<h3 id="_4">五、特殊场景处理</h3>
+<p>当遇到以下情况时，需采用高级重构策略：</p>
+<p>多数据源依赖：引入参数对象</p>
+<pre><code class="language-cpp">struct DiscountContext {
+    Customer&amp; customer;
+    Product&amp; product;
+    DateTime orderTime;
+};
+</code></pre>
+<ul>
+<li>历史遗留系统：使用适配器模式渐进式改造</li>
+<li>性能敏感场景：通过缓存机制平衡设计</li>
+</ul>
+<h3 id="_5">六、最佳实践建议</h3>
+<ul>
+<li>持续检测：集成Lint工具实现自动化扫描</li>
+<li>团队规范：在CR环节设置Feature Envy检查项</li>
+<li>架构设计：采用DDD（领域驱动设计）划分边界</li>
+</ul>
+<p>通过系统性地识别和处理Feature Envy，可以使代码库保持高内聚、低耦合的健康状态，显著提升长期维护效率。建议结合具体业务场景，灵活运用本文所述的重构策略。</p>
+<h2 id="_6">完整代码</h2>
+<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/039-CodeSmellFeatureEnvy">Github</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
