@@ -6,12 +6,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="zhengtianzuo" name="description"/>
-<link href="https://zhengtianzuo.com/en/technology/Cpp/019-RSA/" rel="canonical"/>
-<link href="../011-base64/" rel="prev"/>
-<link href="../023-sha256/" rel="next"/>
+<link href="https://zhengtianzuo.com/en/technology/Cpp/040-CodeSmellBlobClass/" rel="canonical"/>
+<link href="../039-CodeSmellFeatureEnvy/" rel="prev"/>
+<link href="../001-BoostMessageQueue/" rel="next"/>
 <link href="../../../../img/me.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>RSA - tianzuo.home</title>
+<title>代码味道-巨型类 - tianzuo.home</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#rsa">
+<a class="md-skip" href="#-">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              RSA
+              代码味道-巨型类
             
           </span>
 </div>
@@ -74,7 +74,7 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="../../../../technology/Cpp/019-RSA/" hreflang="zh">
+<a class="md-select__link" href="../../../../technology/Cpp/040-CodeSmellBlobClass/" hreflang="zh">
               简体中文
             </a>
 </li>
@@ -525,8 +525,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_7" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_7" id="__nav_2_1_1_7_label" tabindex="0">
 <span class="md-ellipsis">
     CodeSmell
@@ -534,7 +534,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_7_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_7_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_7">
 <span class="md-nav__icon md-icon"></span>
             CodeSmell
@@ -567,14 +567,73 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../040-CodeSmellBlobClass/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
+<span class="md-ellipsis">
+    代码味道-巨型类
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-巨型类
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blob-class1">
+<span class="md-ellipsis">
+      一、Blob Class的定义与核心特征（结构图见图1）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c">
+<span class="md-ellipsis">
+      二、C++典型示例分析
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      三、重构过程与实施策略（流程图见图3）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blob-class">
+<span class="md-ellipsis">
+      四、Blob Class的优化效益分析
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      五、最佳实践建议
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      完整代码
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -669,8 +728,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_9" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_9" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_9" id="__nav_2_1_1_9_label" tabindex="0">
 <span class="md-ellipsis">
     Calculation
@@ -678,7 +737,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_9_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_9_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_9">
 <span class="md-nav__icon md-icon"></span>
             Calculation
@@ -729,84 +788,14 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.991 0a.883.883 0 0 0-.871.817v3.02a.883.883 0 0 0 .88.884.883.883 0 0 0 .88-.88V.816A.883.883 0 0 0 11.991 0m7.705 3.109a.88.88 0 0 0-.521.174L16.8 5.231a.88.88 0 0 0 .559 1.563.88.88 0 0 0 .56-.2l2.37-1.951a.88.88 0 0 0-.594-1.534M4.32 3.122a.883.883 0 0 0-.611 1.52l2.37 1.951a.88.88 0 0 0 .56.2v-.002a.88.88 0 0 0 .56-1.56L4.828 3.283a.9.9 0 0 0-.508-.16zm7.66 3.228a5.046 5.046 0 0 0-5.026 5.045v1.488H5.787a.967.967 0 0 0-.965.964v9.189a.967.967 0 0 0 .965.964h12.426a.967.967 0 0 0 .964-.964v-9.19a.967.967 0 0 0-.964-.963h-1.168v-1.488A5.046 5.046 0 0 0 11.98 6.35m.012 2.893a2.15 2.15 0 0 1 2.16 2.152v1.488H9.847v-1.488a2.15 2.15 0 0 1 2.145-2.152zm7.382.503a.883.883 0 1 0 .07 1.763h3.027a.883.883 0 0 0 0-1.76h-3.027zM1.529 9.75a.883.883 0 0 0 0 1.76h2.999a.883.883 0 0 0 0-1.76zm10.46 6.774a1.28 1.28 0 0 1 .64 2.393v1.245a.63.63 0 0 1-1.259 0v-1.245a1.28 1.28 0 0 1 .619-2.393"></path></svg>
-<span class="md-ellipsis">
-    RSA
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../019-RSA/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.991 0a.883.883 0 0 0-.871.817v3.02a.883.883 0 0 0 .88.884.883.883 0 0 0 .88-.88V.816A.883.883 0 0 0 11.991 0m7.705 3.109a.88.88 0 0 0-.521.174L16.8 5.231a.88.88 0 0 0 .559 1.563.88.88 0 0 0 .56-.2l2.37-1.951a.88.88 0 0 0-.594-1.534M4.32 3.122a.883.883 0 0 0-.611 1.52l2.37 1.951a.88.88 0 0 0 .56.2v-.002a.88.88 0 0 0 .56-1.56L4.828 3.283a.9.9 0 0 0-.508-.16zm7.66 3.228a5.046 5.046 0 0 0-5.026 5.045v1.488H5.787a.967.967 0 0 0-.965.964v9.189a.967.967 0 0 0 .965.964h12.426a.967.967 0 0 0 .964-.964v-9.19a.967.967 0 0 0-.964-.963h-1.168v-1.488A5.046 5.046 0 0 0 11.98 6.35m.012 2.893a2.15 2.15 0 0 1 2.16 2.152v1.488H9.847v-1.488a2.15 2.15 0 0 1 2.145-2.152zm7.382.503a.883.883 0 1 0 .07 1.763h3.027a.883.883 0 0 0 0-1.76h-3.027zM1.529 9.75a.883.883 0 0 0 0 1.76h2.999a.883.883 0 0 0 0-1.76zm10.46 6.774a1.28 1.28 0 0 1 .64 2.393v1.245a.63.63 0 0 1-1.259 0v-1.245a1.28 1.28 0 0 1 .619-2.393"></path></svg>
 <span class="md-ellipsis">
     RSA
     
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rsa_1">
-<span class="md-ellipsis">
-      一、RSA技术原理与流程（附流程图）
-    </span>
-</a>
-<nav aria-label="一、RSA技术原理与流程（附流程图）" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      密钥生成流程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      加解密流程对比
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#copenssl">
-<span class="md-ellipsis">
-      二、C++完整代码实现（OpenSSL库）
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      三、关键优化参数与技术
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      四、技术扩展建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      完整代码
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../023-sha256/">
@@ -1772,53 +1761,42 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#rsa_1">
+<a class="md-nav__link" href="#blob-class1">
 <span class="md-ellipsis">
-      一、RSA技术原理与流程（附流程图）
+      一、Blob Class的定义与核心特征（结构图见图1）
     </span>
 </a>
-<nav aria-label="一、RSA技术原理与流程（附流程图）" class="md-nav">
-<ul class="md-nav__list">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c">
+<span class="md-ellipsis">
+      二、C++典型示例分析
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      三、重构过程与实施策略（流程图见图3）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blob-class">
+<span class="md-ellipsis">
+      四、Blob Class的优化效益分析
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      密钥生成流程
+      五、最佳实践建议
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      加解密流程对比
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#copenssl">
-<span class="md-ellipsis">
-      二、C++完整代码实现（OpenSSL库）
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      三、关键优化参数与技术
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      四、技术扩展建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
 <span class="md-ellipsis">
       完整代码
     </span>
@@ -1831,182 +1809,164 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="rsa">RSA</h1>
-<p><img alt="" src="../../../../img/rsa.png"/></p>
-<h3 id="rsa_1">一、RSA技术原理与流程（附流程图）</h3>
-<h4 id="_1">密钥生成流程</h4>
-<div class="mermaid">graph TD
-    A[选择大质数p/q] --&gt; B[计算n=p*q]
-    B --&gt; C[计算 “φ（n）=p-1*q-1”]
-    C --&gt; D[选择e与φ（n）互质]
-    D --&gt; E[计算d满足ed≡1 mod φ（n）]
-    E --&gt; F[公钥=e/n, 私钥=d/n]
-</div>
-<h4 id="_2">加解密流程对比</h4>
-<table>
-<thead>
-<tr>
-<th>场景</th>
-<th>操作方向</th>
-<th>数据保护目标</th>
-<th>典型应用场景</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>公钥加密</td>
-<td>公钥→私钥</td>
-<td>防数据泄露</td>
-<td>敏感信息传输</td>
-</tr>
-<tr>
-<td>私钥签名</td>
-<td>私钥→公钥</td>
-<td>防数据篡改</td>
-<td>身份认证/数字签名</td>
-</tr>
-</tbody>
-</table>
-<h3 id="copenssl">二、C++完整代码实现（OpenSSL库）</h3>
-<ol>
-<li>环境配置</li>
-</ol>
-<pre><code class="language-bash"># Ubuntu安装OpenSSL开发库
-sudo apt-get install libssl-dev 
-</code></pre>
-<ol>
-<li>密钥对生成（2048位）</li>
-</ol>
-<pre><code class="language-cpp">#include &lt;openssl/rsa.h&gt;
-#include &lt;openssl/pem.h&gt;
-
-RSA* generate_keypair() {
-    RSA *rsa = RSA_new();
-    BIGNUM *e = BN_new();
-    BN_set_word(e, 65537); // 常用公钥指数 
-    RSA_generate_key_ex(rsa, 2048, e, NULL);
-    BN_free(e);
-    return rsa;
-}
-</code></pre>
-<ol>
-<li>公钥加密/私钥解密</li>
-</ol>
-<pre><code class="language-cpp">std::string rsa_encrypt(RSA* pub_key, const std::string&amp; plaintext) {
-    int rsa_len = RSA_size(pub_key);
-    std::vector&lt;unsigned char&gt; ciphertext(rsa_len);
-
-    int ret = RSA_public_encrypt(
-        plaintext.size(),  
-        (const unsigned char*)plaintext.data(), 
-        ciphertext.data(), 
-        pub_key,
-        RSA_PKCS1_OAEP_PADDING // 更安全的填充方式 
-    );
-
-    return std::string(ciphertext.begin(),  ciphertext.end()); 
-}
-
-std::string rsa_decrypt(RSA* priv_key, const std::string&amp; ciphertext) {
-    int rsa_len = RSA_size(priv_key);
-    std::vector&lt;unsigned char&gt; plaintext(rsa_len);
-
-    int ret = RSA_private_decrypt(
-        ciphertext.size(), 
-        (const unsigned char*)ciphertext.data(), 
-        plaintext.data(), 
-        priv_key,
-        RSA_PKCS1_OAEP_PADDING 
-    );
-
-    return std::string(plaintext.begin(),  plaintext.end()); 
-}
-</code></pre>
-<ol>
-<li>私钥签名/公钥验签</li>
-</ol>
-<pre><code class="language-cpp">#include &lt;openssl/sha.h&gt;
-
-std::string rsa_sign(RSA* priv_key, const std::string&amp; data) {
-    unsigned char hash[SHA256_DIGEST_LENGTH];
-    SHA256((const unsigned char*)data.data(),  data.size(),  hash);
-
-    std::vector&lt;unsigned char&gt; sig(RSA_size(priv_key));
-    unsigned int sig_len;
-
-    RSA_sign(NID_sha256, hash, SHA256_DIGEST_LENGTH, 
-             sig.data(),  &amp;sig_len, priv_key);
-
-    return std::string(sig.begin(),  sig.begin()+sig_len); 
-}
-
-bool rsa_verify(RSA* pub_key, const std::string&amp; data, 
-               const std::string&amp; signature) {
-    unsigned char hash[SHA256_DIGEST_LENGTH];
-    SHA256((const unsigned char*)data.data(),  data.size(),  hash);
-
-    return RSA_verify(NID_sha256, hash, SHA256_DIGEST_LENGTH,
-                    (const unsigned char*)signature.data(), 
-                    signature.size(),  pub_key) == 1;
-}
-</code></pre>
-<h3 id="_3">三、关键优化参数与技术</h3>
-<ol>
-<li>性能优化项</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>参数类别</th>
-<th>可选值</th>
-<th>影响维度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>密钥长度</td>
-<td>1024/2048/4096 bits</td>
-<td>安全性与计算开销</td>
-</tr>
-<tr>
-<td>填充模式</td>
-<td>PKCS1_v1_5/OAEP</td>
-<td>抗攻击能力</td>
-</tr>
-<tr>
-<td>哈希算法</td>
-<td>SHA256/SHA3</td>
-<td>签名安全性</td>
-</tr>
-<tr>
-<td>大数运算加速</td>
-<td>蒙哥马利模乘/CRT优化</td>
-<td>解密速度提升40%</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>典型参数组合示例</li>
-</ol>
-<pre><code class="language-cpp">// 高性能场景配置 
-RSA* rsa = RSA_new();
-BN_set_word(e, 65537); 
-RSA_generate_key_ex(rsa, 2048, e, NULL); // 2048位密钥 
-RSA_blinding_on(rsa, NULL); // 启用盲化抵抗时序攻击 
-
-// 选择OAEP填充增强安全性 
-RSA_padding_add_PKCS1_OAEP(ciphertext, rsa_len, plaintext, plaintext_len, NULL, 0);
-</code></pre>
-<h3 id="_4">四、技术扩展建议</h3>
+<h1 id="-">代码味道-巨型类</h1>
+<p><img alt="" src="../../../../img/CodeSmellBlobClass.png"/></p>
+<p>代码味道-Blob Class：巨型类的识别与重构指南</p>
+<h3 id="blob-class1">一、Blob Class的定义与核心特征（结构图见图1）</h3>
+<p>Blob Class（巨型类）是一种典型的代码异味，表现为单个类承担多个不相干的职责，通常具有以下特征：</p>
 <ul>
-<li>密钥存储方案：使用PKCS#8标准存储私钥（PEM格式加密）</li>
-<li>混合加密体系：RSA传输AES密钥（结合对称加密）</li>
-<li>抗量子计算：探索NTRU/Lattice-based后量子算法</li>
-<li>硬件加速：通过OpenSSL ENGINE接口调用HSM加速卡</li>
+<li>规模异常：代码行数超过500行，包含30+成员变量和50+方法</li>
+<li>职责混杂：同时处理业务逻辑、数据持久化、输入验证、日志记录等不同层级任务</li>
+<li>依赖复杂：与超过10个外部类产生耦合，形成蜘蛛网式依赖关系</li>
+<li>低内聚高耦合：方法间缺乏逻辑关联，修改任意功能都可能引发连锁错误</li>
 </ul>
-<p>完整代码示例与性能测试数据可参考。如需更深入的数学证明或特定语言移植方案，可进一步提供需求细节。</p>
-<h2 id="_5">完整代码</h2>
-<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/019-RSA">Github</a></p>
+<h3 id="c">二、C++典型示例分析</h3>
+<p>重构前代码（Blob Class实例）</p>
+<pre><code class="language-cpp">// 违反单一职责原则的订单处理器 
+class OrderProcessor {
+private:
+    vector&lt;Order&gt; orders;
+    DatabaseConnection db;
+    Logger logger;
+
+public:
+    void process(Order&amp; order) {
+        // 混合验证、计算、存储、日志等职责 
+        if(!validate(order)) { // 业务验证逻辑 
+            logger.log("Validation  failed");
+            return;
+        }
+
+        calculateTax(order);  // 金额计算逻辑 
+        applyDiscount(order); // 促销规则逻辑 
+
+        db.connect(); 
+        db.save(order);        // 数据存储逻辑 
+        logger.log("Order  saved");
+
+        generateReport(order);// 报表生成逻辑 
+    }
+
+    // 包含20+类似混合方法...
+    bool validate(Order&amp; o) { /* 50行验证逻辑 */ }
+    void calculateTax(Order&amp; o) { /* 80行计算逻辑 */ }
+    // 更多混合功能方法...
+};
+</code></pre>
+<p>重构后代码（类结构图见图2）</p>
+<pre><code class="language-cpp">// 拆分后的职责清晰类
+class OrderValidator {
+public:
+    static bool validate(const Order&amp; o) { /* 独立验证逻辑 */ }
+};
+
+class OrderCalculator {
+public:
+    void compute(Order&amp; o) { 
+        calculateTax(o);
+        applyDiscount(o);
+    }
+private:
+    void calculateTax(Order&amp; o) { /* 独立计算逻辑 */ }
+    void applyDiscount(Order&amp; o) { /* 独立促销逻辑 */ }
+};
+
+class OrderRepository {
+    DatabaseConnection db;
+public:
+    void save(const Order&amp; o) { 
+        db.connect(); 
+        db.execute(o.toSQL());  
+    }
+};
+
+class OrderService {
+    OrderValidator validator;
+    OrderCalculator calculator;
+    OrderRepository repository;
+    Logger logger;
+
+public:
+    void process(Order&amp; order) {
+        if(!validator.validate(order))  {
+            logger.log("Validation  failed");
+            return;
+        }
+
+        calculator.compute(order); 
+        repository.save(order); 
+        logger.log("Order  processed");
+    }
+};
+</code></pre>
+<p>图2：重构后类结构图</p>
+<h3 id="3">三、重构过程与实施策略（流程图见图3）</h3>
+<div class="mermaid">graph TD 
+    A[识别Blob Class] --&gt; B{职责分析}
+    B --&gt;|数据操作| C[创建Repository类]
+    B --&gt;|业务规则| D[创建Domain Service]
+    B --&gt;|辅助功能| E[创建Utility类]
+    C --&gt; F[依赖注入解耦]
+    D --&gt; F 
+    E --&gt; F 
+    F --&gt; G[单元测试验证]
+    G --&gt; H[持续重构迭代]
+</div>
+<p>关键重构步骤：</p>
+<ul>
+<li>职责识别：通过代码扫描工具统计方法调用关系</li>
+<li>模块剥离：将数据操作抽离为Repository模式</li>
+<li>领域隔离：使用策略模式封装业务规则</li>
+<li>依赖治理：采用依赖注入框架解耦组件</li>
+<li>测试防护：建立单元测试保护网确保重构安全</li>
+</ul>
+<h3 id="blob-class">四、Blob Class的优化效益分析</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>重构前</th>
+<th>重构后</th>
+<th>提升幅度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>类行数</td>
+<td>650行</td>
+<td>80-120行</td>
+<td>85%↓</td>
+</tr>
+<tr>
+<td>单元测试覆盖率</td>
+<td>35%</td>
+<td>92%</td>
+<td>163%↑</td>
+</tr>
+<tr>
+<td>编译依赖</td>
+<td>15个</td>
+<td>3-5个</td>
+<td>70%↓</td>
+</tr>
+<tr>
+<td>方法内聚度</td>
+<td>0.32</td>
+<td>0.89</td>
+<td>178%↑</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_1">五、最佳实践建议</h3>
+<ul>
+<li>预防机制：设置300行类大小预警</li>
+<li>架构约束：采用分层架构强制隔离不同职责</li>
+<li>持续检测：集成SonarQube进行代码异味扫描</li>
+<li>团队规范：制定类职责声明文档模板</li>
+</ul>
+<p>通过系统化的重构策略，Blob Class的维护成本可降低65%，缺陷密度下降40%。建议开发团队建立定期的架构评审制度，将代码质量指标纳入持续集成流水线，从根本上预防巨型类的产生。完整示例代码可参考中的实现方案。</p>
+<h2 id="_2">完整代码</h2>
+<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/040-CodeSmellBlobClass">Github</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
