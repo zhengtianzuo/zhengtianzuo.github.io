@@ -4,6 +4,10 @@ icon: material/menu
 
 # 全部文章列表
 
+[040-代码味道-巨型类 2025/04/18](../technology/Cpp/040-CodeSmellBlobClass.md)
+
+[039-代码味道-依恋情结 2025/04/15](../technology/Cpp/039-CodeSmellFeatureEnvy.md)
+
 [038-flatbuffers 2025/04/13](../technology/Cpp/038-flatbuffers.md)
 
 [037-代码味道-过度耦合的消息链 2025/04/10](../technology/Cpp/037-CodeSmellMessageChains.md)
