@@ -4,6 +4,10 @@ icon: material/menu
 
 # 全部文章列表
 
+[042-Windows抓屏-DXGI 2025/04/24](../remotedesktop/042-DXGI.md)
+
+[041-代码味道-大泥团模块 2025/04/21](../technology/Cpp/041-CodeSmellBlobModule.md)
+
 [040-代码味道-巨型类 2025/04/18](../technology/Cpp/040-CodeSmellBlobClass.md)
 
 [039-代码味道-依恋情结 2025/04/15](../technology/Cpp/039-CodeSmellFeatureEnvy.md)
