@@ -1,24 +1,24 @@
 
 <!DOCTYPE html>
 
-<html class="no-js" lang="zh">
+<html class="no-js" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="zhengtianzuo" name="description"/>
-<link href="https://zhengtianzuo.com/technology/Cpp/036-CodeSmellGodClass/" rel="canonical"/>
-<link href="../030-gprof/" rel="prev"/>
-<link href="../037-CodeSmellMessageChains/" rel="next"/>
-<link href="../../../img/me.png" rel="icon"/>
+<link href="https://zhengtianzuo.com/en/technology/Cpp/044-CodeSmellDataClass/" rel="canonical"/>
+<link href="../043-CodeSmellCyclicDependencies/" rel="prev"/>
+<link href="../001-BoostMessageQueue/" rel="next"/>
+<link href="../../../../img/me.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>代码味道-上帝类 - 天佐.主页</title>
-<link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<title>代码味道-数据类 - tianzuo.home</title>
+<link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -26,15 +26,15 @@
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
 <a class="md-skip" href="#-">
-          跳转至
+          Skip to content
         </a>
 </div>
 <div data-md-component="announce">
 </div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-<nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="天佐.主页" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="天佐.主页">
-<img alt="logo" src="../../../img/me.png"/>
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="tianzuo.home" class="md-header__button md-logo" data-md-component="logo" href="../../../" title="tianzuo.home">
+<img alt="logo" src="../../../../img/me.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -43,13 +43,13 @@
 <div class="md-header__ellipsis">
 <div class="md-header__topic">
 <span class="md-ellipsis">
-            天佐.主页
+            tianzuo.home
           </span>
 </div>
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              代码味道-上帝类
+              代码味道-数据类
             
           </span>
 </div>
@@ -68,18 +68,18 @@
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <div class="md-header__option">
 <div class="md-select">
-<button aria-label="选择当前语言" class="md-header__button md-icon">
+<button aria-label="Select language" class="md-header__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
 </button>
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="./" hreflang="zh">
+<a class="md-select__link" href="../../../../technology/Cpp/044-CodeSmellDataClass/" hreflang="zh">
               简体中文
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="../../../en/technology/Cpp/036-CodeSmellGodClass/" hreflang="en">
+<a class="md-select__link" href="./" hreflang="en">
               English
             </a>
 </li>
@@ -94,13 +94,13 @@
 <label class="md-search__overlay" for="__search"></label>
 <div class="md-search__inner" role="search">
 <form class="md-search__form" name="search">
-<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </label>
-<nav aria-label="查找" class="md-search__options">
-<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
 </button>
 </nav>
@@ -110,7 +110,7 @@
 <div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
 <div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
 <ol class="md-search-result__list" role="presentation"></ol>
 </div>
@@ -119,7 +119,7 @@
 </div>
 </div>
 <div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/zhengtianzuo/" title="前往仓库">
+<a class="md-source" data-md-component="source" href="https://github.com/zhengtianzuo/" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
 </div>
@@ -129,16 +129,16 @@
 </a>
 </div>
 </nav>
-<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../../../">
         
   
     
   
-  主页
+  home
 
       </a>
 </li>
@@ -148,7 +148,7 @@
   
     
   
-  技术分享
+  technology sharing
 
         </a>
 </li>
@@ -158,7 +158,7 @@
   
     
   
-  远程桌面
+  remote desktop
 
         </a>
 </li>
@@ -168,7 +168,7 @@
   
     
   
-  个人作品
+  personal work
 
         </a>
 </li>
@@ -178,7 +178,7 @@
   
     
   
-  其他
+  other
 
         </a>
 </li>
@@ -188,7 +188,7 @@
   
     
   
-  全部文章列表
+  All Articles
 
         </a>
 </li>
@@ -202,15 +202,15 @@
 <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
-<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="天佐.主页" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="天佐.主页">
-<img alt="logo" src="../../../img/me.png"/>
+<a aria-label="tianzuo.home" class="md-nav__button md-logo" data-md-component="logo" href="../../../" title="tianzuo.home">
+<img alt="logo" src="../../../../img/me.png"/>
 </a>
-    天佐.主页
+    tianzuo.home
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/zhengtianzuo/" title="前往仓库">
+<a class="md-source" data-md-component="source" href="https://github.com/zhengtianzuo/" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
 </div>
@@ -221,9 +221,9 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../../../">
 <span class="md-ellipsis">
-    主页
+    home
     
   </span>
 </a>
@@ -232,7 +232,7 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
 <span class="md-ellipsis">
-    技术分享
+    technology sharing
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -240,14 +240,14 @@
 <nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
-            技术分享
+            technology sharing
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
 <span class="md-ellipsis">
-    编程语言
+    Programming Languages
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -255,7 +255,7 @@
 <nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_1">
 <span class="md-nav__icon md-icon"></span>
-            编程语言
+            Programming Languages
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -367,7 +367,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_3" id="__nav_2_1_1_3_label" tabindex="0">
 <span class="md-ellipsis">
-    构建
+    Building
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -375,7 +375,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_3_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_3">
 <span class="md-nav__icon md-icon"></span>
-            构建
+            Building
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -394,7 +394,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_4" id="__nav_2_1_1_4_label" tabindex="0">
 <span class="md-ellipsis">
-    调试
+    Debugging
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -402,7 +402,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_4_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_4">
 <span class="md-nav__icon md-icon"></span>
-            调试
+            Debugging
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -484,7 +484,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_6" id="__nav_2_1_1_6_label" tabindex="0">
 <span class="md-ellipsis">
-    性能
+    Performance
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -492,7 +492,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_6_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_6">
 <span class="md-nav__icon md-icon"></span>
-            性能
+            Performance
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -529,7 +529,7 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_7" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_7" id="__nav_2_1_1_7_label" tabindex="0">
 <span class="md-ellipsis">
-    味道
+    CodeSmell
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -537,69 +537,17 @@
 <nav aria-expanded="true" aria-labelledby="__nav_2_1_1_7_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_7">
 <span class="md-nav__icon md-icon"></span>
-            味道
+            CodeSmell
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
-<span class="md-ellipsis">
-    代码味道-上帝类
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../036-CodeSmellGodClass/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-上帝类
     
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      一、定义与特征
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#c">
-<span class="md-ellipsis">
-      二、C++示例代码对比
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      三、重构过程与技术方案
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      四、重构效果分析
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      五、最佳实践建议
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../037-CodeSmellMessageChains/">
@@ -646,14 +594,80 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../044-CodeSmellDataClass/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
+<span class="md-ellipsis">
+    代码味道-数据类
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-数据类
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-class">
+<span class="md-ellipsis">
+      一、Data Class 的定义与特征
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c-data-class">
+<span class="md-ellipsis">
+      二、C++ 中的 Data Class 实例演示
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      三、重构解决方案与过程
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      四、关键重构步骤解析
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      五、重构效果对比
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      六、设计模式应用建议
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      七、最佳实践原则
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -662,7 +676,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_8" id="__nav_2_1_1_8_label" tabindex="0">
 <span class="md-ellipsis">
-    存储
+    Storage
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -670,7 +684,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_8_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_8">
 <span class="md-nav__icon md-icon"></span>
-            存储
+            Storage
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -752,7 +766,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_9" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_9" id="__nav_2_1_1_9_label" tabindex="0">
 <span class="md-ellipsis">
-    计算
+    Calculation
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -760,7 +774,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_9_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_9">
 <span class="md-nav__icon md-icon"></span>
-            计算
+            Calculation
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -833,7 +847,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_10" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_10" id="__nav_2_1_1_10_label" tabindex="0">
 <span class="md-ellipsis">
-    技巧
+    Skill
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -841,7 +855,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_10_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_10">
 <span class="md-nav__icon md-icon"></span>
-            技巧
+            Skill
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -887,7 +901,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_1_1_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_11" id="__nav_2_1_1_11_label" tabindex="0">
 <span class="md-ellipsis">
-    服务器
+    Server
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -895,7 +909,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_11_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_11">
 <span class="md-nav__icon md-icon"></span>
-            服务器
+            Server
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1199,7 +1213,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
 <span class="md-ellipsis">
-    操作系统
+    Operating System
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1207,14 +1221,14 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
-            操作系统
+            Operating System
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../OperatingSystem/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg>
 <span class="md-ellipsis">
-    操作系统
+    OperatingSystem
     
   </span>
 </a>
@@ -1226,7 +1240,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
 <span class="md-ellipsis">
-    开发工具
+    Development Tools
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1234,14 +1248,14 @@
 <nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_3">
 <span class="md-nav__icon md-icon"></span>
-            开发工具
+            Development Tools
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../DevelopmentTools/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21.71 20.29-1.42 1.42a1 1 0 0 1-1.41 0L7 9.85A3.8 3.8 0 0 1 6 10a4 4 0 0 1-3.78-5.3l2.54 2.54.53-.53 1.42-1.42.53-.53L4.7 2.22A4 4 0 0 1 10 6a3.8 3.8 0 0 1-.15 1l11.86 11.88a1 1 0 0 1 0 1.41M2.29 18.88a1 1 0 0 0 0 1.41l1.42 1.42a1 1 0 0 0 1.41 0l5.47-5.46-2.83-2.83M20 2l-4 2v2l-2.17 2.17 2 2L18 8h2l2-4Z"></path></svg>
 <span class="md-ellipsis">
-    开发工具
+    DevelopmentTools
     
   </span>
 </a>
@@ -1256,7 +1270,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
-    远程桌面
+    remote desktop
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1264,14 +1278,14 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
-            远程桌面
+            remote desktop
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
 <span class="md-ellipsis">
-    屏幕捕获
+    Screen Captures
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1279,7 +1293,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_1">
 <span class="md-nav__icon md-icon"></span>
-            屏幕捕获
+            Screen Captures
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1307,7 +1321,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
 <span class="md-ellipsis">
-    视频编解码
+    Video Codec
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1315,7 +1329,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
-            视频编解码
+            Video Codec
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1343,7 +1357,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
 <span class="md-ellipsis">
-    音频编解码
+    Audio Codec
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1351,7 +1365,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
-            音频编解码
+            Audio Codec
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1370,7 +1384,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
 <span class="md-ellipsis">
-    鼠标键盘
+    keyboard Mouse
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1378,7 +1392,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
-            鼠标键盘
+            keyboard Mouse
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1397,7 +1411,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
 <span class="md-ellipsis">
-    文件传输
+    File Transfer
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1405,7 +1419,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_5">
 <span class="md-nav__icon md-icon"></span>
-            文件传输
+            File Transfer
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1424,7 +1438,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
 <span class="md-ellipsis">
-    数据库
+    DataBases
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1432,7 +1446,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_6">
 <span class="md-nav__icon md-icon"></span>
-            数据库
+            DataBases
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1451,7 +1465,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_7" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
 <span class="md-ellipsis">
-    网络通讯
+    Networks
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1459,7 +1473,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_7_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_7">
 <span class="md-nav__icon md-icon"></span>
-            网络通讯
+            Networks
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1478,7 +1492,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
 <span class="md-ellipsis">
-    安全技术
+    Security
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1486,7 +1500,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_8_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_8">
 <span class="md-nav__icon md-icon"></span>
-            安全技术
+            Security
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1505,7 +1519,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_9" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
 <span class="md-ellipsis">
-    剪切板共享
+    Clipboard
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1513,7 +1527,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_9_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_9">
 <span class="md-nav__icon md-icon"></span>
-            剪切板共享
+            Clipboard
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1532,7 +1546,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_10" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
 <span class="md-ellipsis">
-    音频重定向
+    AudioRedirection
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1540,7 +1554,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_10_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_10">
 <span class="md-nav__icon md-icon"></span>
-            音频重定向
+            AudioRedirection
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1559,7 +1573,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
 <span class="md-ellipsis">
-    USB重定向
+    USBRedirection
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1567,7 +1581,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_11_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_11">
 <span class="md-nav__icon md-icon"></span>
-            USB重定向
+            USBRedirection
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1586,7 +1600,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_3_12" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
 <span class="md-ellipsis">
-    数字水印
+    Watermarks
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1594,7 +1608,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_3_12_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_12">
 <span class="md-nav__icon md-icon"></span>
-            数字水印
+            Watermarks
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -1616,7 +1630,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
 <span class="md-ellipsis">
-    个人作品
+    personal work
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1624,14 +1638,14 @@
 <nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
-            个人作品
+            personal work
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
 <span class="md-ellipsis">
-    产品
+    product
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1639,13 +1653,13 @@
 <nav aria-expanded="false" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_4_1">
 <span class="md-nav__icon md-icon"></span>
-            产品
+            product
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../product/tianzuo.Pangu/">
 <span class="md-ellipsis">
-    天佐.盘古斧
+    tianzuo.Pangu
     
   </span>
 </a>
@@ -1653,7 +1667,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../product/tianzuo.Kunlun/">
 <span class="md-ellipsis">
-    天佐.昆仑镜
+    tianzuo.Kunlun
     
   </span>
 </a>
@@ -1661,7 +1675,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../product/tianzuo.Fuxi/">
 <span class="md-ellipsis">
-    天佐.伏羲琴
+    tianzuo.Fuxi
     
   </span>
 </a>
@@ -1673,7 +1687,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
 <span class="md-ellipsis">
-    模块
+    component
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1681,13 +1695,13 @@
 <nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
-            模块
+            component
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../component/tianzuo.Kongtong/">
 <span class="md-ellipsis">
-    天佐.崆峒印
+    tianzuo.Kongtong
     
   </span>
 </a>
@@ -1695,7 +1709,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../component/tianzuo.Qiankun/">
 <span class="md-ellipsis">
-    天佐.乾坤袋
+    tianzuo.Qiankun
     
   </span>
 </a>
@@ -1703,7 +1717,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../component/tianzuo.Zhuiri/">
 <span class="md-ellipsis">
-    天佐.追日靴
+    tianzuo.Zhuiri
     
   </span>
 </a>
@@ -1711,7 +1725,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../component/tianzuo.Hundun/">
 <span class="md-ellipsis">
-    天佐.混沌钟
+    tianzuo.Hundun
     
   </span>
 </a>
@@ -1719,7 +1733,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../component/tianzuo.LianYao/">
 <span class="md-ellipsis">
-    天佐.炼妖壶
+    tianzuo.LianYao
     
   </span>
 </a>
@@ -1735,7 +1749,7 @@
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../../other/">
 <span class="md-ellipsis">
-    其他
+    other
     
   </span>
 </a>
@@ -1743,7 +1757,7 @@
 <nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
-            其他
+            other
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
@@ -1753,7 +1767,7 @@
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
 <span class="md-ellipsis">
-    全部文章列表
+    All Articles
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -1761,14 +1775,13 @@
 <nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
-            全部文章列表
+            All Articles
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../other/AllArticles/">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
 <span class="md-ellipsis">
-    全部文章列表
+    All Articles
     
   </span>
 </a>
@@ -1784,44 +1797,58 @@
 <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
-<nav aria-label="目录" class="md-nav md-nav--secondary">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
 <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#data-class">
 <span class="md-ellipsis">
-      一、定义与特征
+      一、Data Class 的定义与特征
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#c">
+<a class="md-nav__link" href="#c-data-class">
 <span class="md-ellipsis">
-      二、C++示例代码对比
+      二、C++ 中的 Data Class 实例演示
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      三、重构解决方案与过程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      三、重构过程与技术方案
+      四、关键重构步骤解析
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      四、重构效果分析
+      五、重构效果对比
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
-      五、最佳实践建议
+      六、设计模式应用建议
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      七、最佳实践原则
     </span>
 </a>
 </li>
@@ -1832,181 +1859,177 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="-">代码味道-上帝类</h1>
-<p><img alt="" src="../../../img/CodeSmellGodClass.png"/></p>
-<p>代码味道-上帝类技术解析与重构实践</p>
-<h3 id="_1">一、定义与特征</h3>
-<p>上帝类(God Class)是面向对象编程中典型的代码坏味道，指单个类承担了过多不相关的职责，表现为：</p>
+<h1 id="-">代码味道-数据类</h1>
+<p><img alt="" src="../../../../img/CodeSmellDataClass.png"/></p>
+<p>代码坏味道：Data Class 的深度解析与重构实践</p>
+<h3 id="data-class">一、Data Class 的定义与特征</h3>
+<p>Data Class（数据类）是指仅包含数据字段和简单访问方法（如getter/setter），缺乏业务逻辑和职责的类。它本质上是"哑数据容器"，常见于面向对象编程中，表现为以下特征：</p>
 <ul>
-<li>规模庞大：代码行数超过1000行</li>
-<li>功能混杂：同时处理数据存储、业务逻辑、界面交互等</li>
-<li>依赖复杂：被数十个其他类直接依赖</li>
-<li>低内聚高耦合：成员变量被多个无关方法共享使用</li>
+<li>仅有数据存储：仅包含字段定义和基础读写方法</li>
+<li>无行为逻辑：不包含数据验证、计算等业务方法</li>
+<li>低内聚高耦合：其他类需直接操作其内部数据</li>
+<li>集合管理缺陷：若包含容器类字段（如列表/字典），常缺乏封装</li>
 </ul>
-<div class="mermaid">graph TD
-    A[God Class] --&gt; B[数据持久化]
-    A --&gt; C[业务计算]
-    A --&gt; D[界面渲染]
-    A --&gt; E[日志记录]
+<h3 id="c-data-class">二、C++ 中的 Data Class 实例演示</h3>
+<p>重构前的问题代码</p>
+<pre><code class="language-cpp">// 纯数据类示例 
+class StudentRecord {
+public:
+    std::string name;
+    std::vector&lt;int&gt; scores;
+
+    StudentRecord(std::string n, std::vector&lt;int&gt; s) 
+        : name(n), scores(s) {}
+};
+
+// 外部业务逻辑 
+class GradeCalculator {
+public:
+    float calculateAverage(const StudentRecord&amp; record) {
+        if(record.scores.empty())  return 0.0f;
+        int sum = 0;
+        for(int score : record.scores)  {
+            sum += score;
+        }
+        return static_cast&lt;float&gt;(sum) / record.scores.size(); 
+    }
+};
+</code></pre>
+<p>主要问题分析
+StudentRecord
+仅作为数据容器存在
+核心业务逻辑（平均分计算）外置于其他类
+scores字段直接暴露，违反封装原则</p>
+<h3 id="_1">三、重构解决方案与过程</h3>
+<p>重构流程图</p>
+<div class="mermaid">graph TD 
+    A[识别Data Class] --&gt; B[分析数据操作点]
+    B --&gt; C{操作类型}
+    C --&gt;|计算逻辑| D[Move Method到数据类]
+    C --&gt;|集合操作| E[Encapsulate Collection]
+    C --&gt;|字段访问| F[Hide Field]
+    D --&gt; G[验证内聚性提升]
 </div>
-<h3 id="c">二、C++示例代码对比</h3>
-<p>重构前（上帝类）</p>
-<pre><code class="language-cpp">// OrderProcessor.h（1123行）
-class OrderProcessor {
-public:
-    // 订单管理
-    void createOrder(ItemList items);
-    void cancelOrder(int orderId);
-
-    // 数据库操作
-    void connectDatabase(string config);
-    void saveToDB(Order order);
-
-    // 日志记录
-    void writeLog(string message);
-    void rotateLogFiles();
-
-    // 报表生成
-    string generatePDFReport();
-    string generateExcelReport();
-
+<p>重构后优化代码</p>
+<pre><code class="language-cpp">class Student {
 private:
-    vector&lt;Order&gt; orders;
-    DatabaseConnection db;
-    Logger logger;
+    std::string name;
+    std::vector&lt;int&gt; scores;
+
+public:
+    Student(std::string n, std::vector&lt;int&gt; s) 
+        : name(std::move(n)), scores(std::move(s)) {}
+
+    // 封装集合操作 
+    void addScore(int score) {
+        scores.push_back(score); 
+    }
+
+    // 内聚业务逻辑 
+    float calculateAverage() const {
+        if(scores.empty())  return 0.0f;
+        return std::accumulate(scores.begin(),  scores.end(),  0.0f) / scores.size(); 
+    }
+
+    // 受控访问方法 
+    const std::string&amp; getName() const { return name; }
 };
 </code></pre>
-<p>重构后（职责分离）</p>
-<pre><code class="language-cpp">// Order.h（核心领域对象）
-class Order {
-public:
-    void addItem(Item item);
-    void calculateTotal();
-private:
-    vector&lt;Item&gt; items;
-    double total;
-};
-
-// DatabaseManager.h（数据持久化）
-class DatabaseManager {
-public:
-    void saveOrder(const Order&amp; order);
-    // 其他数据库操作方法...
-};
-
-// ReportGenerator.h（报表生成）
-class ReportGenerator {
-public:
-    static string generatePDF(const Order&amp; order);
-    static string generateExcel(const Order&amp; order);
-};
-
-// Logger.h（日志组件）
-class Logger {
-public:
-    static void write(string message);
-    static void rotateFiles();
-};
-</code></pre>
-<h3 id="_2">三、重构过程与技术方案</h3>
+<h3 id="_2">四、关键重构步骤解析</h3>
 <ol>
-<li>重构流程图</li>
+<li>封装集合字段</li>
 </ol>
-<div class="mermaid">graph LR
-    A[识别上帝类] --&gt; B[分析职责边界]
-    B --&gt; C{是否核心业务?}
-    C --&gt;|是| D[保留为领域对象]
-    C --&gt;|否| E[提取为工具类]
-    D --&gt; F[拆分子模块]
-    E --&gt; G[建立依赖关系]
-</div>
+<pre><code class="language-diff">+ void addScore(int score) {
++     scores.push_back(score); 
++ }
+</code></pre>
+<p>解决思路：通过方法控制集合修改，避免直接操作容器</p>
 <ol>
-<li>关键重构步骤</li>
-<li>职责分析：使用</li>
+<li>搬移业务逻辑</li>
 </ol>
-<pre><code class="language-bash">git blame
+<pre><code class="language-cpp">float calculateAverage() const {
+    // 计算逻辑内聚到数据类
+}
 </code></pre>
-<p>统计代码修改频率，识别高频修改区域</p>
-<ul>
-<li>提取工具类：将数据库操作移至DatabaseManager，日志功能独立为Logger</li>
-<li>领域模型重建：通过</li>
-</ul>
-<pre><code class="language-plaintext">Order
+<p>重构技术：应用Move Method模式</p>
+<ol>
+<li>访问控制优化</li>
+</ol>
+<pre><code class="language-cpp">- std::string name;
++ private:
++    std::string name;
 </code></pre>
-<p>类封装核心业务逻辑
-* 依赖倒置：采用接口隔离原则定义</p>
-<pre><code class="language-plaintext">IReportGenerator
-</code></pre>
-<pre><code class="language-cpp">// 接口隔离示例
-class IReportGenerator {
-public:
-    virtual string generate(const Order&amp; order) = 0;
-    virtual ~IReportGenerator() = default;
-};
-
-class PDFReport : public IReportGenerator {
-    string generate(const Order&amp; order) override { /* PDF生成逻辑 */ }
-};
-</code></pre>
-<h3 id="_3">四、重构效果分析</h3>
+<p>设计原则：遵循最小公开原则</p>
+<h3 id="_3">五、重构效果对比</h3>
 <table>
 <thead>
 <tr>
 <th>指标</th>
 <th>重构前</th>
 <th>重构后</th>
-<th>提升幅度</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>单元测试覆盖率</td>
-<td>18%</td>
-<td>89%</td>
-<td>394%</td>
+<td>类职责</td>
+<td>单纯数据存储</td>
+<td>数据+业务聚合</td>
 </tr>
 <tr>
-<td>代码重复率</td>
-<td>43%</td>
-<td>5%</td>
-<td>88%</td>
+<td>方法调用次数</td>
+<td>外部类多次调用</td>
+<td>单点调用</td>
 </tr>
 <tr>
-<td>平均维护时间</td>
-<td>3.2小时/需求</td>
-<td>0.7小时/需求</td>
-<td>78%</td>
+<td>修改影响范围</td>
+<td>需修改多处调用点</td>
+<td>仅修改类内部实现</td>
+</tr>
+<tr>
+<td>单元测试难度</td>
+<td>需mock外部依赖</td>
+<td>自包含可测试</td>
 </tr>
 </tbody>
 </table>
-<p>重构带来三大核心改进：</p>
-<ul>
-<li>可扩展性：新增报表格式只需实现IReportGenerator接口</li>
-<li>可测试性：数据库操作可替换为Mock对象进行单元测试</li>
-<li>可维护性：修改日志策略不会影响订单处理逻辑</li>
-</ul>
-<h3 id="_4">五、最佳实践建议</h3>
-<p>预防策略：</p>
-<p>设置类行数预警（建议≤300行）
-定期执行静态代码分析（推荐使用SonarQube）
-重构工具：</p>
-<pre><code class="language-bash"># CLion重构命令示例
-Refactor → Extract Class...
-Refactor → Move Method...
+<h3 id="_4">六、设计模式应用建议</h3>
+<ol>
+<li>策略模式（计算策略）</li>
+</ol>
+<pre><code class="language-cpp">class ScoreStrategy {
+public:
+    virtual float calculate(const std::vector&lt;int&gt;&amp;) = 0;
+};
+
+class Student {
+    // 注入不同的计算策略...
+};
 </code></pre>
-<p>设计原则检查表：</p>
-<p>✅ 单一职责原则</p>
-<p>✅ 接口隔离原则</p>
-<p>✅ 依赖倒置原则</p>
-<p>❌ 是否存在超过3个public方法组
-通过系统化的重构策略，开发者可将上帝类改造成符合SOLID原则的模块化设计，使代码库具备更好的演进能力。实际案例显示，合理的架构拆分可降低40%以上的缺陷密度。</p>
+<ol>
+<li>工厂模式（对象构建）</li>
+</ol>
+<pre><code class="language-cpp">class StudentFactory {
+public:
+    static Student createFromDB(int id) {
+        // 数据库查询逻辑...
+    }
+};
+</code></pre>
+<h3 id="_5">七、最佳实践原则</h3>
+<ul>
+<li>单一职责原则：每个类应专注于单一功能域</li>
+<li>迪米特法则：对象应最小化对其他对象的了解</li>
+<li>开闭原则：通过扩展而非修改实现功能变更</li>
+<li>组合优于继承：使用组合封装数据行为</li>
+</ul>
+<p>通过系统化的重构过程，Data Class可转变为具备业务能力的成熟对象。建议在代码审查阶段使用SonarQube等静态分析工具检测此类坏味道，结合持续重构保持代码健康度。</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </div>
 <button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
-  回到页面顶部
+  Back to top
 </button>
 </main>
 <footer class="md-footer">
@@ -2059,9 +2082,9 @@ Refactor → Move Method...
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "header.autohide"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
-<script src="../../../javascript/extra.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "header.autohide"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+<script src="../../../../javascript/extra.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({});</script></body>
 </html>
