@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[044-代码味道-数据类 2025/05/15](../technology/Cpp/044-CodeSmellDataClass.md)
+
 [043-代码味道-循环依赖 2025/04/29](../technology/Cpp/043-CodeSmellCyclicDependencies.md)
 
 [042-Windows抓屏-DXGI 2025/04/24](../remotedesktop/042-DXGI.md)
