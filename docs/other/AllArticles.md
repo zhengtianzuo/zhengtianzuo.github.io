@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[045-代码味道-数据泥团 2025/06/05](../technology/Cpp/045-CodeSmellDataClumps.md)
+
 [044-代码味道-数据类 2025/05/15](../technology/Cpp/044-CodeSmellDataClass.md)
 
 [043-代码味道-循环依赖 2025/04/29](../technology/Cpp/043-CodeSmellCyclicDependencies.md)

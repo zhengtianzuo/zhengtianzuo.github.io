@@ -155,6 +155,7 @@ nav:
           - technology/Cpp/041-CodeSmellBlobModule.md
           - technology/Cpp/043-CodeSmellCyclicDependencies.md
           - technology/Cpp/044-CodeSmellDataClass.md
+          - technology/Cpp/045-CodeSmellDataClumps.md
         - 存储:
           - technology/Cpp/001-BoostMessageQueue.md
           - technology/Cpp/002-BoostSharedMemory.md
@@ -209,7 +210,6 @@ nav:
       - remotedesktop/035-GDIGrab.md
       - remotedesktop/042-DXGI.md
     - 视频编解码:
-      - remotedesktop/VideoCodec.md
       - remotedesktop/032-overlayYUV.md
     - 音频编解码:
       - remotedesktop/AudioCodec.md
