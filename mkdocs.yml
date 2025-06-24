@@ -209,6 +209,7 @@ nav:
     - 01屏幕捕获:
       - remotedesktop/035-GDIGrab.md
       - remotedesktop/042-DXGI.md
+      - remotedesktop/046-WGC.md
     - 02视频编解码:
       - remotedesktop/032-overlayYUV.md
     - 03音频编解码:
