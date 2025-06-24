@@ -6,26 +6,26 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="zhengtianzuo" name="description"/>
-<link href="https://zhengtianzuo.com/technology/Cpp/039-CodeSmellFeatureEnvy/" rel="canonical"/>
-<link href="../037-CodeSmellMessageChains/" rel="prev"/>
-<link href="../040-CodeSmellBlobClass/" rel="next"/>
-<link href="../../../img/me.png" rel="icon"/>
+<link href="https://zhengtianzuo.com/remotedesktop/046-WGC/" rel="canonical"/>
+<link href="../042-DXGI/" rel="prev"/>
+<link href="../032-overlayYUV/" rel="next"/>
+<link href="../../img/me.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>代码味道-依恋情结 - 天佐.主页</title>
-<link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<title>Windows抓屏-WGC - 天佐.主页</title>
+<link href="../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#-">
+<a class="md-skip" href="#windows-wgc">
           跳转至
         </a>
 </div>
@@ -33,8 +33,8 @@
 </div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="天佐.主页" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="天佐.主页">
-<img alt="logo" src="../../../img/me.png"/>
+<a aria-label="天佐.主页" class="md-header__button md-logo" data-md-component="logo" href="../.." title="天佐.主页">
+<img alt="logo" src="../../img/me.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              代码味道-依恋情结
+              Windows抓屏-WGC
             
           </span>
 </div>
@@ -79,7 +79,7 @@
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="../../../en/technology/Cpp/039-CodeSmellFeatureEnvy/" hreflang="en">
+<a class="md-select__link" href="../../en/remotedesktop/046-WGC/" hreflang="en">
               English
             </a>
 </li>
@@ -133,7 +133,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
         
   
     
@@ -142,8 +142,8 @@
 
       </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../C%2B%2B/">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../technology/C%2B%2B/">
           
   
     
@@ -152,8 +152,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../remotedesktop/035-GDIGrab/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../035-GDIGrab/">
           
   
     
@@ -163,7 +163,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../product/tianzuo.Pangu/">
+<a class="md-tabs__link" href="../../product/tianzuo.Pangu/">
           
   
     
@@ -173,7 +173,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../other/">
+<a class="md-tabs__link" href="../../other/">
           
   
     
@@ -183,7 +183,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../other/AllArticles/">
+<a class="md-tabs__link" href="../../other/AllArticles/">
           
   
     
@@ -204,8 +204,8 @@
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="天佐.主页" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="天佐.主页">
-<img alt="logo" src="../../../img/me.png"/>
+<a aria-label="天佐.主页" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="天佐.主页">
+<img alt="logo" src="../../img/me.png"/>
 </a>
     天佐.主页
   </label>
@@ -221,45 +221,45 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
 <span class="md-ellipsis">
     主页
     
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
 <span class="md-ellipsis">
     技术分享
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             技术分享
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
 <span class="md-ellipsis">
     编程语言
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_1">
 <span class="md-nav__icon md-icon"></span>
             编程语言
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
 <span class="md-ellipsis">
     C&amp;C++
@@ -267,14 +267,14 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_label" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_1_1">
 <span class="md-nav__icon md-icon"></span>
             C&amp;C++
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../C%2B%2B/">
+<a class="md-nav__link" href="../../technology/C%2B%2B/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m10.5 15.97.41 2.44c-.26.14-.68.27-1.24.39-.57.13-1.24.2-2.01.2-2.21-.04-3.87-.7-4.98-1.96Q1 15.135 1 12.21c.05-2.31.72-4.08 2-5.32C4.32 5.64 5.96 5 7.94 5c.75 0 1.4.07 1.94.19s.94.25 1.2.4l-.58 2.49-1.06-.34c-.4-.1-.86-.15-1.39-.15-1.16-.01-2.12.36-2.87 1.1-.76.73-1.15 1.85-1.18 3.34 0 1.36.37 2.42 1.08 3.2.71.77 1.71 1.17 2.99 1.18l1.33-.12c.43-.08.79-.19 1.1-.32M11 11h2V9h2v2h2v2h-2v2h-2v-2h-2zm7 0h2V9h2v2h2v2h-2v2h-2v-2h-2z"></path></svg>
 <span class="md-ellipsis">
     C++
@@ -313,7 +313,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../033-QtShadowDialog/">
+<a class="md-nav__link" href="../../technology/Cpp/033-QtShadowDialog/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h15v15H3zm16 16h2v2h-2zm0-3h2v2h-2zm0-3h2v2h-2zm0-3h2v2h-2zm0-3h2v2h-2zm-3 12h2v2h-2zm-3 0h2v2h-2zm-3 0h2v2h-2zm-3 0h2v2H7z"></path></svg>
 <span class="md-ellipsis">
     QtShadowDialog
@@ -322,7 +322,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../034-QSharedMemory/">
+<a class="md-nav__link" href="../../technology/Cpp/034-QSharedMemory/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"></path></svg>
 <span class="md-ellipsis">
     QSharedMemory
@@ -349,7 +349,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../wxWidgets/">
+<a class="md-nav__link" href="../../technology/Cpp/wxWidgets/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h8v4.34l5.66-5.65 5.65 5.65L16.66 13H21v8h-8v-8h3.66L11 7.34V11H3zm0 10h8v8H3z"></path></svg>
 <span class="md-ellipsis">
     wxWidgets
@@ -379,7 +379,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../027-7zsfx/">
+<a class="md-nav__link" href="../../technology/Cpp/027-7zsfx/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2h-2.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146z"></path><path d="M11.5 15.75a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12.25 6a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M9.75 13.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 11.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 5.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 9 5.25M11 17h1a2 2 0 0 1 2 2v4.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V19a2 2 0 0 1 2-2m-.5 2v3.5h2V19a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"></path></svg>
 <span class="md-ellipsis">
     7zsfx
@@ -406,7 +406,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../013-Detours/">
+<a class="md-nav__link" href="../../technology/Cpp/013-Detours/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m11.46-5.14-1.59 6.89L15 14.16l3.8-2.38A7.97 7.97 0 0 0 12 8c-3.95 0-7.23 2.86-7.88 6.63l-1.97-.35C2.96 9.58 7.06 6 12 6c3.58 0 6.73 1.89 8.5 4.72z"></path></svg>
 <span class="md-ellipsis">
     Detours
@@ -415,7 +415,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../014-log4cpp/">
+<a class="md-nav__link" href="../../technology/Cpp/014-log4cpp/">
 <svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 8.25a.75.75 0 0 1 .75-.75h4a.75.75 0 0 1 0 1.5h-4A.75.75 0 0 1 5 8.25M4 10.5A.75.75 0 0 0 4 12h4a.75.75 0 0 0 0-1.5z"></path><path d="M13-.005c1.654 0 3 1.328 3 3 0 .982-.338 1.933-.783 2.818-.443.879-1.028 1.758-1.582 2.588l-.011.017c-.568.853-1.104 1.659-1.501 2.446-.398.789-.623 1.494-.623 2.136a1.5 1.5 0 1 0 2.333-1.248.75.75 0 0 1 .834-1.246A3 3 0 0 1 13 16H3a3 3 0 0 1-3-3c0-1.582.891-3.135 1.777-4.506q.315-.483.623-.946c.473-.709.923-1.386 1.287-2.048H2.51c-.576 0-1.381-.133-1.907-.783A2.68 2.68 0 0 1 0 2.995a3 3 0 0 1 3-3Zm0 1.5a1.5 1.5 0 0 0-1.5 1.5c0 .476.223.834.667 1.132A.75.75 0 0 1 11.75 5.5H5.368c-.467 1.003-1.141 2.015-1.773 2.963-.192.289-.381.571-.558.845C2.13 10.711 1.5 11.916 1.5 13A1.5 1.5 0 0 0 3 14.5h7.401A3 3 0 0 1 10 13c0-.979.338-1.928.784-2.812.441-.874 1.023-1.748 1.575-2.576l.017-.026c.568-.853 1.103-1.658 1.501-2.448s.623-1.497.623-2.143c0-.838-.669-1.5-1.5-1.5m-10 0a1.5 1.5 0 0 0-1.5 1.5c0 .321.1.569.27.778.097.12.325.227.74.227h7.674A2.7 2.7 0 0 1 10 2.995c0-.546.146-1.059.401-1.5Z"></path></svg>
 <span class="md-ellipsis">
     log4cpp
@@ -424,7 +424,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../022-spdlog/">
+<a class="md-nav__link" href="../../technology/Cpp/022-spdlog/">
 <svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 8.25a.75.75 0 0 1 .75-.75h4a.75.75 0 0 1 0 1.5h-4A.75.75 0 0 1 5 8.25M4 10.5A.75.75 0 0 0 4 12h4a.75.75 0 0 0 0-1.5z"></path><path d="M13-.005c1.654 0 3 1.328 3 3 0 .982-.338 1.933-.783 2.818-.443.879-1.028 1.758-1.582 2.588l-.011.017c-.568.853-1.104 1.659-1.501 2.446-.398.789-.623 1.494-.623 2.136a1.5 1.5 0 1 0 2.333-1.248.75.75 0 0 1 .834-1.246A3 3 0 0 1 13 16H3a3 3 0 0 1-3-3c0-1.582.891-3.135 1.777-4.506q.315-.483.623-.946c.473-.709.923-1.386 1.287-2.048H2.51c-.576 0-1.381-.133-1.907-.783A2.68 2.68 0 0 1 0 2.995a3 3 0 0 1 3-3Zm0 1.5a1.5 1.5 0 0 0-1.5 1.5c0 .476.223.834.667 1.132A.75.75 0 0 1 11.75 5.5H5.368c-.467 1.003-1.141 2.015-1.773 2.963-.192.289-.381.571-.558.845C2.13 10.711 1.5 11.916 1.5 13A1.5 1.5 0 0 0 3 14.5h7.401A3 3 0 0 1 10 13c0-.979.338-1.928.784-2.812.441-.874 1.023-1.748 1.575-2.576l.017-.026c.568-.853 1.103-1.658 1.501-2.448s.623-1.497.623-2.143c0-.838-.669-1.5-1.5-1.5m-10 0a1.5 1.5 0 0 0-1.5 1.5c0 .321.1.569.27.778.097.12.325.227.74.227h7.674A2.7 2.7 0 0 1 10 2.995c0-.546.146-1.059.401-1.5Z"></path></svg>
 <span class="md-ellipsis">
     spdlog
@@ -433,7 +433,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../031-valgrind/">
+<a class="md-nav__link" href="../../technology/Cpp/031-valgrind/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m11.46-5.14-1.59 6.89L15 14.16l3.8-2.38A7.97 7.97 0 0 0 12 8c-3.95 0-7.23 2.86-7.88 6.63l-1.97-.35C2.96 9.58 7.06 6 12 6c3.58 0 6.73 1.89 8.5 4.72z"></path></svg>
 <span class="md-ellipsis">
     valgrind
@@ -460,7 +460,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../010-Catch2/">
+<a class="md-nav__link" href="../../technology/Cpp/010-Catch2/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.615 0v.887h3.84V0zm5.022 0v.887h3.842V0zm4.957 0v.887h3.841V0zm4.935 0v.887h3.842V0zM2.447 1.895a.935.935 0 0 0-.935.935c0 .517.418.938.935.938h19.106c.517 0 .935-.42.935-.938a.935.935 0 0 0-.935-.936zm.168 2.847V24h3.84V4.742zm5.022 0v15.801h3.842v-15.8zm4.957 0v10.549h3.85V4.742zm4.935 0v6.494h3.842V4.742z"></path></svg>
 <span class="md-ellipsis">
     Catch2
@@ -469,7 +469,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../012-Benchmark/">
+<a class="md-nav__link" href="../../technology/Cpp/012-Benchmark/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.615 0v.887h3.84V0zm5.022 0v.887h3.842V0zm4.957 0v.887h3.841V0zm4.935 0v.887h3.842V0zM2.447 1.895a.935.935 0 0 0-.935.935c0 .517.418.938.935.938h19.106c.517 0 .935-.42.935-.938a.935.935 0 0 0-.935-.936zm.168 2.847V24h3.84V4.742zm5.022 0v15.801h3.842v-15.8zm4.957 0v10.549h3.85V4.742zm4.935 0v6.494h3.842V4.742z"></path></svg>
 <span class="md-ellipsis">
     Benchmark
@@ -496,7 +496,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../009-HighResolutionClock/">
+<a class="md-nav__link" href="../../technology/Cpp/009-HighResolutionClock/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m4.2 14.2L11 13V7h1.5v5.2l4.5 2.7z"></path></svg>
 <span class="md-ellipsis">
     高精度计时器
@@ -505,7 +505,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../029-gperftools/">
+<a class="md-nav__link" href="../../technology/Cpp/029-gperftools/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.741 8.755c.164-.425.352-.834.573-1.219-.213-.196-.745-.613-.712-.646 2.774-3.322 6.391-4.32 9.59-3.74.655.09 1.31.246 1.956.483 4.583 1.702 6.898 6.75 5.18 11.284a9.3 9.3 0 0 1-.614 1.285c.254.22.81.63.778.663-3.077 3.641-7.177 4.484-10.589 3.47a11 11 0 0 1-.982-.295c-4.574-1.702-6.898-6.751-5.18-11.285M19.371.982c-.581.556-1.277 1.227-1.62 1.53a12 12 0 0 0-1.727-.802C10.819-.221 5.337 1.964 2.317 6.03.738 8.364-.195 11.236.034 14.19c0 0 .009 5.556 5.14 8.83.417-.574.948-1.31 1.3-1.785a12.4 12.4 0 0 0 1.817.86c5.892 2.184 12.422-.606 14.557-6.228 0 0 1.563-3.428 1.048-7.176 0 0-.401-5.057-4.525-7.708z"></path></svg>
 <span class="md-ellipsis">
     gperftools
@@ -514,7 +514,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../030-gprof/">
+<a class="md-nav__link" href="../../technology/Cpp/030-gprof/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.741 8.755c.164-.425.352-.834.573-1.219-.213-.196-.745-.613-.712-.646 2.774-3.322 6.391-4.32 9.59-3.74.655.09 1.31.246 1.956.483 4.583 1.702 6.898 6.75 5.18 11.284a9.3 9.3 0 0 1-.614 1.285c.254.22.81.63.778.663-3.077 3.641-7.177 4.484-10.589 3.47a11 11 0 0 1-.982-.295c-4.574-1.702-6.898-6.751-5.18-11.285M19.371.982c-.581.556-1.277 1.227-1.62 1.53a12 12 0 0 0-1.727-.802C10.819-.221 5.337 1.964 2.317 6.03.738 8.364-.195 11.236.034 14.19c0 0 .009 5.556 5.14 8.83.417-.574.948-1.31 1.3-1.785a12.4 12.4 0 0 0 1.817.86c5.892 2.184 12.422-.606 14.557-6.228 0 0 1.563-3.428 1.048-7.176 0 0-.401-5.057-4.525-7.708z"></path></svg>
 <span class="md-ellipsis">
     gprof
@@ -525,8 +525,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_7" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_7" id="__nav_2_1_1_7_label" tabindex="0">
 <span class="md-ellipsis">
     味道
@@ -534,14 +534,14 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_7_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_7_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_7">
 <span class="md-nav__icon md-icon"></span>
             味道
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../036-CodeSmellGodClass/">
+<a class="md-nav__link" href="../../technology/Cpp/036-CodeSmellGodClass/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-上帝类
@@ -550,7 +550,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../037-CodeSmellMessageChains/">
+<a class="md-nav__link" href="../../technology/Cpp/037-CodeSmellMessageChains/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-过度耦合的消息链
@@ -558,83 +558,17 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
-<span class="md-ellipsis">
-    代码味道-依恋情结
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technology/Cpp/039-CodeSmellFeatureEnvy/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-依恋情结
     
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      一、定义与核心特征
-    </span>
-</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#c">
-<span class="md-ellipsis">
-      二、C++典型案例分析
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      三、重构过程详解
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      四、质量提升指标
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      五、特殊场景处理
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      六、最佳实践建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      完整代码
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../040-CodeSmellBlobClass/">
+<a class="md-nav__link" href="../../technology/Cpp/040-CodeSmellBlobClass/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-巨型类
@@ -643,7 +577,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../041-CodeSmellBlobModule/">
+<a class="md-nav__link" href="../../technology/Cpp/041-CodeSmellBlobModule/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-大泥团模块
@@ -652,7 +586,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../043-CodeSmellCyclicDependencies/">
+<a class="md-nav__link" href="../../technology/Cpp/043-CodeSmellCyclicDependencies/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-循环依赖
@@ -661,7 +595,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../044-CodeSmellDataClass/">
+<a class="md-nav__link" href="../../technology/Cpp/044-CodeSmellDataClass/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-数据类
@@ -670,7 +604,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../045-CodeSmellDataClumps/">
+<a class="md-nav__link" href="../../technology/Cpp/045-CodeSmellDataClumps/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-数据泥团
@@ -697,7 +631,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../001-BoostMessageQueue/">
+<a class="md-nav__link" href="../../technology/Cpp/001-BoostMessageQueue/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.79 11.5H9.72V8.19h2.47c1.26 0 1.96.56 1.96 1.59 0 1.12-.83 1.72-2.36 1.72m.37 1.13H9.72v3.64h2.56c1.56 0 2.38-.63 2.38-1.83s-.85-1.81-2.5-1.81M22 5.31v13.38C22 20.5 20.5 22 18.69 22H5.31C3.5 22 2 20.5 2 18.69V5.31C2 3.5 3.5 2 5.31 2h13.38C20.5 2 22 3.5 22 5.31m-6 9.19c0-1.38-.92-2.37-2.33-2.55v-.06c1-.18 1.79-1.18 1.79-2.26 0-1.55-1.2-2.58-2.96-2.58H8.43v10.36h4.04c2.21 0 3.53-1.09 3.53-2.91"></path></svg>
 <span class="md-ellipsis">
     Boost消息队列
@@ -706,7 +640,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../002-BoostSharedMemory/">
+<a class="md-nav__link" href="../../technology/Cpp/002-BoostSharedMemory/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.79 11.5H9.72V8.19h2.47c1.26 0 1.96.56 1.96 1.59 0 1.12-.83 1.72-2.36 1.72m.37 1.13H9.72v3.64h2.56c1.56 0 2.38-.63 2.38-1.83s-.85-1.81-2.5-1.81M22 5.31v13.38C22 20.5 20.5 22 18.69 22H5.31C3.5 22 2 20.5 2 18.69V5.31C2 3.5 3.5 2 5.31 2h13.38C20.5 2 22 3.5 22 5.31m-6 9.19c0-1.38-.92-2.37-2.33-2.55v-.06c1-.18 1.79-1.18 1.79-2.26 0-1.55-1.2-2.58-2.96-2.58H8.43v10.36h4.04c2.21 0 3.53-1.09 3.53-2.91"></path></svg>
 <span class="md-ellipsis">
     Boost共享内存
@@ -715,7 +649,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../003-BoostFileLock/">
+<a class="md-nav__link" href="../../technology/Cpp/003-BoostFileLock/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.79 11.5H9.72V8.19h2.47c1.26 0 1.96.56 1.96 1.59 0 1.12-.83 1.72-2.36 1.72m.37 1.13H9.72v3.64h2.56c1.56 0 2.38-.63 2.38-1.83s-.85-1.81-2.5-1.81M22 5.31v13.38C22 20.5 20.5 22 18.69 22H5.31C3.5 22 2 20.5 2 18.69V5.31C2 3.5 3.5 2 5.31 2h13.38C20.5 2 22 3.5 22 5.31m-6 9.19c0-1.38-.92-2.37-2.33-2.55v-.06c1-.18 1.79-1.18 1.79-2.26 0-1.55-1.2-2.58-2.96-2.58H8.43v10.36h4.04c2.21 0 3.53-1.09 3.53-2.91"></path></svg>
 <span class="md-ellipsis">
     Boost文件锁
@@ -724,7 +658,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../020-RingQueue/">
+<a class="md-nav__link" href="../../technology/Cpp/020-RingQueue/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2m7-2a2 2 0 1 0 2 2c0-1.11-.89-2-2-2m7-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2M3.5 11c-.83 0-1.5.67-1.5 1.5V17h1v5h4v-5h1v-4.5c0-.83-.67-1.5-1.5-1.5zm7-2C9.67 9 9 9.67 9 10.5V15h1v5h4v-5h1v-4.5c0-.83-.67-1.5-1.5-1.5zm7-2c-.83 0-1.5.67-1.5 1.5V13h1v5h4v-5h1V8.5c0-.83-.67-1.5-1.5-1.5z"></path></svg>
 <span class="md-ellipsis">
     环形队列
@@ -733,7 +667,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../021-TCMalloc/">
+<a class="md-nav__link" href="../../technology/Cpp/021-TCMalloc/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"></path></svg>
 <span class="md-ellipsis">
     TCMalloc
@@ -742,7 +676,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../025-lz4/">
+<a class="md-nav__link" href="../../technology/Cpp/025-lz4/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2h-2.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146z"></path><path d="M11.5 15.75a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12.25 6a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M9.75 13.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 11.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 5.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 9 5.25M11 17h1a2 2 0 0 1 2 2v4.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V19a2 2 0 0 1 2-2m-.5 2v3.5h2V19a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"></path></svg>
 <span class="md-ellipsis">
     lz4
@@ -751,7 +685,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../026-zstd/">
+<a class="md-nav__link" href="../../technology/Cpp/026-zstd/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2h-2.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146z"></path><path d="M11.5 15.75a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12.25 6a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M9.75 13.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 11.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 5.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 9 5.25M11 17h1a2 2 0 0 1 2 2v4.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V19a2 2 0 0 1 2-2m-.5 2v3.5h2V19a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"></path></svg>
 <span class="md-ellipsis">
     zstd
@@ -760,7 +694,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../038-flatbuffers/">
+<a class="md-nav__link" href="../../technology/Cpp/038-flatbuffers/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.371 5.476 11.943 0l10.686 5.476-10.686 5.495zm3.36 4.81 7.212 3.547 7.288-3.547 3.398 1.655-10.686 5.202L1.371 11.94zm0 6.171 7.212 3.911 7.288-3.91 3.398 1.815L11.943 24 1.371 18.273z"></path></svg>
 <span class="md-ellipsis">
     flatbuffers
@@ -787,7 +721,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../004-Get_CPU_Useage/">
+<a class="md-nav__link" href="../../technology/Cpp/004-Get_CPU_Useage/">
 <svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M6.5.75V2h3V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75V5h1.25a.75.75 0 0 1 0 1.5H14v3h1.25a.75.75 0 0 1 0 1.5H14v1.25A1.75 1.75 0 0 1 12.25 14H11v1.25a.75.75 0 0 1-1.5 0V14h-3v1.25a.75.75 0 0 1-1.5 0V14H3.75A1.75 1.75 0 0 1 2 12.25V11H.75a.75.75 0 0 1 0-1.5H2v-3H.75a.75.75 0 0 1 0-1.5H2V3.75C2 2.784 2.784 2 3.75 2H5V.75a.75.75 0 0 1 1.5 0m5.75 11.75a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25ZM5.75 5h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5A.75.75 0 0 1 5.75 5m.75 4.5h3v-3h-3Z"></path></svg>
 <span class="md-ellipsis">
     获取CPU占用率
@@ -796,7 +730,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../005-Get_Mem_Useage/">
+<a class="md-nav__link" href="../../technology/Cpp/005-Get_Mem_Useage/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"></path></svg>
 <span class="md-ellipsis">
     获取内存占用率
@@ -805,7 +739,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../006-GetSerialNumber/">
+<a class="md-nav__link" href="../../technology/Cpp/006-GetSerialNumber/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"></path></svg>
 <span class="md-ellipsis">
     获取硬件序列号
@@ -814,7 +748,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../008-GenerateUniqueNumbers/">
+<a class="md-nav__link" href="../../technology/Cpp/008-GenerateUniqueNumbers/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.003 7.754a.75.75 0 0 1 .75-.75h5.232a.75.75 0 0 1 .53 1.28l-2.776 2.777c.55.097 1.057.253 1.492.483.905.477 1.504 1.284 1.504 2.418 0 .966-.471 1.75-1.172 2.27-.687.511-1.587.77-2.521.77-1.367 0-2.274-.528-2.667-.756a.75.75 0 0 1 .755-1.297c.331.193.953.553 1.912.553.673 0 1.243-.188 1.627-.473.37-.275.566-.635.566-1.067 0-.5-.219-.836-.703-1.091-.538-.284-1.375-.443-2.471-.443a.75.75 0 0 1-.53-1.28l2.643-2.644h-3.421a.75.75 0 0 1-.75-.75M7.88 15.215a1.4 1.4 0 0 0-1.446.83.75.75 0 0 1-1.37-.61 2.9 2.9 0 0 1 2.986-1.71c.589.06 1.139.323 1.557.743.434.446.685 1.058.685 1.778 0 1.641-1.254 2.437-2.12 2.986-.538.341-1.18.694-1.495 1.273H9.75a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75c0-1.799 1.337-2.63 2.243-3.21 1.032-.659 1.55-1.031 1.55-1.8 0-.355-.116-.584-.26-.732a1.07 1.07 0 0 0-.652-.298Zm.234-13.121a.75.75 0 0 1 .386.656V9h1.252a.75.75 0 0 1 0 1.5H5.75a.75.75 0 0 1 0-1.5H7V4.103l-.853.533a.749.749 0 1 1-.795-1.272l2-1.25a.75.75 0 0 1 .762-.02"></path></svg>
 <span class="md-ellipsis">
     生成不重复9位随机数
@@ -823,7 +757,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../011-base64/">
+<a class="md-nav__link" href="../../technology/Cpp/011-base64/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 3v2H7a2 2 0 0 0-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2h2V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3M8 9h3.5v1.5h-3v.75h2a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m4.5 0H14v2h1.5V9H17v6h-1.5v-2.5h-3m-4 .25v.75H10v-.75"></path></svg>
 <span class="md-ellipsis">
     base64
@@ -832,7 +766,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../019-RSA/">
+<a class="md-nav__link" href="../../technology/Cpp/019-RSA/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.991 0a.883.883 0 0 0-.871.817v3.02a.883.883 0 0 0 .88.884.883.883 0 0 0 .88-.88V.816A.883.883 0 0 0 11.991 0m7.705 3.109a.88.88 0 0 0-.521.174L16.8 5.231a.88.88 0 0 0 .559 1.563.88.88 0 0 0 .56-.2l2.37-1.951a.88.88 0 0 0-.594-1.534M4.32 3.122a.883.883 0 0 0-.611 1.52l2.37 1.951a.88.88 0 0 0 .56.2v-.002a.88.88 0 0 0 .56-1.56L4.828 3.283a.9.9 0 0 0-.508-.16zm7.66 3.228a5.046 5.046 0 0 0-5.026 5.045v1.488H5.787a.967.967 0 0 0-.965.964v9.189a.967.967 0 0 0 .965.964h12.426a.967.967 0 0 0 .964-.964v-9.19a.967.967 0 0 0-.964-.963h-1.168v-1.488A5.046 5.046 0 0 0 11.98 6.35m.012 2.893a2.15 2.15 0 0 1 2.16 2.152v1.488H9.847v-1.488a2.15 2.15 0 0 1 2.145-2.152zm7.382.503a.883.883 0 1 0 .07 1.763h3.027a.883.883 0 0 0 0-1.76h-3.027zM1.529 9.75a.883.883 0 0 0 0 1.76h2.999a.883.883 0 0 0 0-1.76zm10.46 6.774a1.28 1.28 0 0 1 .64 2.393v1.245a.63.63 0 0 1-1.259 0v-1.245a1.28 1.28 0 0 1 .619-2.393"></path></svg>
 <span class="md-ellipsis">
     RSA
@@ -841,7 +775,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../023-sha256/">
+<a class="md-nav__link" href="../../technology/Cpp/023-sha256/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.991 0a.883.883 0 0 0-.871.817v3.02a.883.883 0 0 0 .88.884.883.883 0 0 0 .88-.88V.816A.883.883 0 0 0 11.991 0m7.705 3.109a.88.88 0 0 0-.521.174L16.8 5.231a.88.88 0 0 0 .559 1.563.88.88 0 0 0 .56-.2l2.37-1.951a.88.88 0 0 0-.594-1.534M4.32 3.122a.883.883 0 0 0-.611 1.52l2.37 1.951a.88.88 0 0 0 .56.2v-.002a.88.88 0 0 0 .56-1.56L4.828 3.283a.9.9 0 0 0-.508-.16zm7.66 3.228a5.046 5.046 0 0 0-5.026 5.045v1.488H5.787a.967.967 0 0 0-.965.964v9.189a.967.967 0 0 0 .965.964h12.426a.967.967 0 0 0 .964-.964v-9.19a.967.967 0 0 0-.964-.963h-1.168v-1.488A5.046 5.046 0 0 0 11.98 6.35m.012 2.893a2.15 2.15 0 0 1 2.16 2.152v1.488H9.847v-1.488a2.15 2.15 0 0 1 2.145-2.152zm7.382.503a.883.883 0 1 0 .07 1.763h3.027a.883.883 0 0 0 0-1.76h-3.027zM1.529 9.75a.883.883 0 0 0 0 1.76h2.999a.883.883 0 0 0 0-1.76zm10.46 6.774a1.28 1.28 0 0 1 .64 2.393v1.245a.63.63 0 0 1-1.259 0v-1.245a1.28 1.28 0 0 1 .619-2.393"></path></svg>
 <span class="md-ellipsis">
     sha256
@@ -868,7 +802,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../007-PropertyInCpp/">
+<a class="md-nav__link" href="../../technology/Cpp/007-PropertyInCpp/">
 <svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M4.75 7a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5zM5 4.75A.75.75 0 0 1 5.75 4h5.5a.75.75 0 0 1 0 1.5h-5.5A.75.75 0 0 1 5 4.75M6.75 10a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5z"></path><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25Z"></path></svg>
 <span class="md-ellipsis">
     Property在C++中的实现与应用
@@ -877,7 +811,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../015-SingleApplication/">
+<a class="md-nav__link" href="../../technology/Cpp/015-SingleApplication/">
 <svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m5.06 7.356 2.795 2.833c.08.081.21.081.29 0l2.794-2.833c.13-.131.038-.356-.145-.356H5.206c-.183 0-.275.225-.145.356Z"></path><path d="M1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 13.25 15H2.75A1.75 1.75 0 0 1 1 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25Z"></path></svg>
 <span class="md-ellipsis">
     进程单例
@@ -886,7 +820,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../016-condition_variable/">
+<a class="md-nav__link" href="../../technology/Cpp/016-condition_variable/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.41 3c1.39 2.71 1.94 5.84 1.59 9-.2 3.16-1.3 6.29-3.17 9l-1.53-1c1.61-2.43 2.55-5.2 2.7-8 .34-2.8-.11-5.57-1.3-8zM5.17 3 6.7 4C5.09 6.43 4.15 9.2 4 12c-.34 2.8.12 5.57 1.3 8l-1.69 1c-1.4-2.71-1.96-5.83-1.61-9 .2-3.16 1.3-6.29 3.17-9m6.91 7.68 2.32-3.23h2.53l-3.78 5 2.2 4.92h-2.26L11.71 14l-2.43 3.33H6.76l3.9-5.12-2.13-4.76h2.27z"></path></svg>
 <span class="md-ellipsis">
     condition_variable
@@ -895,7 +829,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../028-ImageCompress/">
+<a class="md-nav__link" href="../../technology/Cpp/028-ImageCompress/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2h-2.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146z"></path><path d="M11.5 15.75a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12.25 6a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M9.75 13.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 11.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 5.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 9 5.25M11 17h1a2 2 0 0 1 2 2v4.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V19a2 2 0 0 1 2-2m-.5 2v3.5h2V19a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"></path></svg>
 <span class="md-ellipsis">
     ImageCompress
@@ -922,7 +856,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../017-HttpServer/">
+<a class="md-nav__link" href="../../technology/Cpp/017-HttpServer/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg>
 <span class="md-ellipsis">
     HttpServer
@@ -949,7 +883,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../018-IOCP/">
+<a class="md-nav__link" href="../../technology/Cpp/018-IOCP/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v2h1a1 1 0 0 1 1 1h7v2h-7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1H2v-2h7a1 1 0 0 1 1-1h1v-2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg>
 <span class="md-ellipsis">
     iocp
@@ -958,7 +892,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../024-epoll/">
+<a class="md-nav__link" href="../../technology/Cpp/024-epoll/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v2h1a1 1 0 0 1 1 1h7v2h-7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1H2v-2h7a1 1 0 0 1 1-1h1v-2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg>
 <span class="md-ellipsis">
     epoll
@@ -988,7 +922,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Python/">
+<a class="md-nav__link" href="../../technology/Python/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"></path></svg>
 <span class="md-ellipsis">
     Python
@@ -1015,7 +949,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Java/">
+<a class="md-nav__link" href="../../technology/Java/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 6.08s-6.84 1.71-3.56 5.48c.97 1.11-.25 2.11-.25 2.11s2.45-1.25 1.31-2.85c-1.06-1.47-1.86-2.2 2.5-4.74m-4.47 1.2C16.08 4.08 14 2 14 2c.84 3.3-2.96 4.3-4.33 6.36-.94 1.4.46 2.91 2.33 4.64-.71-1.7-3.22-3.16.03-5.72M9.37 17.47c-3.08.86 1.88 2.63 5.79.96-.38-.15-.75-.33-1.1-.54-1.36.31-2.76.37-4.14.18-1.31-.16-.55-.6-.55-.6m5.32-1.68c-1.75.38-3.56.47-5.34.26-1.31-.13-.45-.77-.45-.77-3.4 1.13 1.88 2.4 6.6 1.02-.29-.11-.57-.3-.81-.51m3.42 3.3s.57.47-.61.83c-2.28.68-9.43.89-11.41.03-.71-.31.63-.74 1.05-.83.23-.06.46-.08.69-.08-.79-.54-5.13 1.1-2.19 1.56 7.97 1.3 14.54-.6 12.47-1.51m-2.74-4.86c.29-.19.6-.35.92-.49 0 0-1.51.26-3.02.4-1.6.16-3.21.18-4.81.06-2.35-.31 1.29-1.2 1.29-1.2-1.1 0-2.18.26-3.16.75-2.05 1 5.1 1.45 8.78.48m.9 2.42c-.02.04-.04.07-.08.1 5.01-1.31 3.17-4.64.77-3.81-.13.06-.24.14-.31.25.14-.05.28-.09.43-.12 1.2-.24 2.92 1.63-.81 3.58m.13 4.61c-3.01.52-6.09.56-9.12.14 0 0 .46.38 2.81.53 3.6.23 9.13-.13 9.26-1.83.03.01-.23.65-2.95 1.16"></path></svg>
 <span class="md-ellipsis">
     Java
@@ -1042,7 +976,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CSharp/">
+<a class="md-nav__link" href="../../technology/CSharp/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.5 15.97.41 2.44c-.26.14-.68.27-1.24.39-.57.13-1.24.2-2.01.2-2.21-.04-3.87-.7-4.98-1.96Q2 15.135 2 12.21c.05-2.31.72-4.08 2-5.32C5.32 5.64 6.96 5 8.94 5c.75 0 1.4.07 1.94.19s.94.25 1.2.4l-.58 2.49-1.06-.34c-.4-.1-.86-.15-1.39-.15-1.16-.01-2.12.36-2.87 1.1-.76.73-1.15 1.85-1.18 3.34 0 1.36.37 2.42 1.08 3.2.71.77 1.71 1.17 2.99 1.18l1.33-.12c.43-.08.79-.19 1.1-.32M13.89 19l.61-4H13l.34-2h1.5l.32-2h-1.5L14 9h1.5l.61-4h2l-.61 4h1l.61-4h2l-.61 4H22l-.34 2h-1.5l-.32 2h1.5L21 15h-1.5l-.61 4h-2l.61-4h-1l-.61 4zm2.95-6h1l.32-2h-1z"></path></svg>
 <span class="md-ellipsis">
     CSHARP
@@ -1069,7 +1003,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../JavaScript/">
+<a class="md-nav__link" href="../../technology/JavaScript/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h18v18H3zm4.73 15.04c.4.85 1.19 1.55 2.54 1.55 1.5 0 2.53-.8 2.53-2.55v-5.78h-1.7V17c0 .86-.35 1.08-.9 1.08-.58 0-.82-.4-1.09-.87zm5.98-.18c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03z"></path></svg>
 <span class="md-ellipsis">
     JavaScript
@@ -1096,7 +1030,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../PHP/">
+<a class="md-nav__link" href="../../technology/PHP/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18.08c-6.63 0-12-2.72-12-6.08s5.37-6.08 12-6.08S24 8.64 24 12s-5.37 6.08-12 6.08m-5.19-7.95c.54 0 .91.1 1.09.31.18.2.22.56.13 1.03-.1.53-.29.87-.58 1.09q-.42.33-1.29.33h-.87l.53-2.76zm-3.5 5.55h1.44l.34-1.75h1.23c.54 0 .98-.06 1.33-.17.35-.12.67-.31.96-.58.24-.22.43-.46.58-.73.15-.26.26-.56.31-.88.16-.78.05-1.39-.33-1.82-.39-.44-.99-.65-1.82-.65H4.59zm7.25-8.33-1.28 6.58h1.42l.74-3.77h1.14c.36 0 .6.06.71.18s.13.34.07.66l-.57 2.93h1.45l.59-3.07c.13-.62.03-1.07-.27-1.36-.3-.27-.85-.4-1.65-.4h-1.27L12 7.35zM18 10.13c.55 0 .91.1 1.09.31.18.2.22.56.13 1.03-.1.53-.29.87-.57 1.09-.29.22-.72.33-1.3.33h-.85l.5-2.76zm-3.5 5.55h1.44l.34-1.75h1.22c.55 0 1-.06 1.35-.17.35-.12.65-.31.95-.58.24-.22.44-.46.58-.73.15-.26.26-.56.32-.88.15-.78.04-1.39-.34-1.82-.36-.44-.99-.65-1.82-.65h-2.75z"></path></svg>
 <span class="md-ellipsis">
     PHP
@@ -1123,7 +1057,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../VisualBasic/">
+<a class="md-nav__link" href="../../technology/VisualBasic/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.583 23.497c.067.192-.043.348-.247.348H9.074c-.408 0-.85-.311-.988-.695L.043.784C-.105.393.149.115.528.16L6.92.776c.405.039.844.383.978.767zM23.473.16l-6.392.616c-.406.039-.844.383-.978.768l-3.827 10.99 3.678 10.509L23.959.783c.137-.383-.08-.662-.485-.623"></path></svg>
 <span class="md-ellipsis">
     VisualBasic
@@ -1150,7 +1084,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Go/">
+<a class="md-nav__link" href="../../technology/Go/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2.64 10.33-.02-.06.22-.27.12-.08H6.8l.03.08-.18.26-.11.06zm-1.61.98L1 11.26l.22-.29.12-.06h4.9l.05.09-.08.24-.1.07zm2.6.99-.04-.06.16-.28.1-.06H6l.07.07-.02.25-.08.08zm11.15-2.16-1.78.47c-.19.04-.2.05-.34-.11-.16-.18-.27-.29-.5-.4-.66-.34-1.33-.24-1.94.15-.72.48-1.11 1.17-1.1 2.05.01.86.6 1.57 1.45 1.7.73.09 1.34-.17 1.83-.72l.29-.39h-2.07c-.22 0-.27-.14-.2-.32l.55-1.18c.03-.06.11-.17.27-.17h3.44c.15-.5.41-.96.75-1.41.78-1.03 1.73-1.57 3-1.81 1.07-.18 2.13-.07 3.07.57.84.58 1.37 1.36 1.5 2.39.19 1.45-.24 2.63-1.24 3.65-.71.72-1.58 1.17-2.57 1.39l-.86.08c-.98-.02-1.87-.3-2.62-.95-.52-.45-.88-.99-1.06-1.63-.15.24-.27.47-.44.7-.77 1.02-1.78 1.65-3.06 1.8-1.05.16-2.03-.05-2.89-.69-.79-.6-1.26-1.4-1.36-2.39-.14-1.17.2-2.22.91-3.14.76-1 1.77-1.63 3.01-1.86 1-.18 1.97-.06 2.84.52.57.38.97.9 1.24 1.52q.06.135-.12.18m6.11 1.6-.03-.36c-.19-1.06-1.17-1.66-2.19-1.43-1.01.22-1.67.85-1.88 1.86-.19.84.21 1.69.98 2.03.59.26 1.19.22 1.76-.06.84-.43 1.31-1.12 1.36-2.04"></path></svg>
 <span class="md-ellipsis">
     Go
@@ -1177,7 +1111,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Rust/">
+<a class="md-nav__link" href="../../technology/Rust/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21.9 11.7-.9-.5V11l.7-.7c.1-.1.1-.3 0-.4l-.1-.1-.9-.3c0-.1 0-.2-.1-.2l.6-.8c.1-.1.1-.3-.1-.4 0 0-.1 0-.1-.1l-1-.2c0-.1-.1-.1-.1-.2l.4-.9v-.3c-.1-.1-.2-.1-.3-.1h-1s0-.1-.1-.1l.2-1c0-.2-.1-.3-.2-.3h-.1l-1 .2c0-.1-.1-.1-.2-.2v-1q0-.3-.3-.3h-.1l-.9.4h-.1L16 3c0-.2-.2-.3-.3-.2h-.1l-.8.6c-.1 0-.2 0-.2-.1l-.3-.9c-.1-.1-.2-.2-.4-.2 0 0-.1 0-.1.1L13 3h-.2l-.5-.8c-.1-.2-.3-.2-.5-.2l-.1.1-.5.9H11l-.7-.7c-.1-.1-.3-.1-.4 0l-.1.1-.3.9c-.1 0-.2 0-.2.1l-.8-.6c-.2-.1-.4-.1-.5.1V3l-.2 1s-.1 0-.2.1l-.9-.4c-.1-.1-.3 0-.4.1v1.1c0 .1-.1.1-.1.2l-1-.2c-.2-.1-.3 0-.3.2v.1l.2 1c-.1 0-.1.1-.2.1h-1q-.3 0-.3.3v.1l.4.9v.2L3 8c-.2 0-.3.2-.3.3v.1l.6.8c0 .1 0 .2-.1.2l-.8.4c-.1.1-.2.2-.2.4 0 0 0 .1.1.1l.7.7v.2l-.8.5c-.2.1-.2.3-.2.4l.1.1.9.6v.2l-.7.7c-.1.1-.1.3 0 .4l.1.1.9.3c0 .1 0 .2.1.2l-.6.8c-.1.1-.1.3.1.4 0 0 .1 0 .1.1l1 .2c0 .1.1.1.1.2l-.4.9c-.1.1 0 .3.1.4h1.1c.1 0 .1.1.2.1l-.2 1c0 .2.1.3.2.3h.1l1-.2c0 .1.1.1.2.2v1q0 .3.3.3h.1l.9-.4h.1l.2 1c0 .2.2.3.3.2h.1l.8-.6c.1 0 .2 0 .2.1l.3.9c.1.1.2.2.4.2 0 0 .1 0 .1-.1l.8-.7h.2l.5.8c.1.1.3.2.4.1l.1-.1.5-.8h.2l.7.7c.1.1.3.1.4 0l.1-.1.3-.9c.1 0 .2 0 .2-.1l.8.6c.1.1.3.1.4-.1 0 0 0-.1.1-.1l.2-1c.1 0 .1-.1.2-.1l.9.4c.1.1.3 0 .4-.1v-1.1l.2-.2 1 .2c.2 0 .3-.1.3-.2v-.1l-.2-1 .2-.2h1q.3 0 .3-.3v-.1l-.4-.9c0-.1.1-.1.1-.2l1-.2c.2 0 .3-.2.2-.3v-.1l-.6-.8.1-.2.9-.3c.1-.1.2-.2.2-.4 0 0 0-.1-.1-.1L21 13v-.2l.8-.5c.2-.1.2-.3.1-.6q0 .15 0 0m-5.7 7c-.3-.1-.5-.4-.5-.7.1-.3.4-.5.7-.5.3.1.5.4.5.7 0 .4-.3.6-.7.5m-.2-1.9c-.3-.1-.6.1-.6.4l-.4 1.4q-1.35.6-3 .6c-1.1 0-2.1-.2-3.1-.7l-.3-1.4c-.1-.3-.3-.5-.6-.4l-1.2.3c-.2-.2-.4-.5-.6-.7h6c.1 0 .1 0 .1-.1v-2.1c0-.1 0-.1-.1-.1h-1.7v-1.3h1.9c.2 0 .9 0 1.2 1 .1.3.2 1.3.4 1.6.1.3.6 1 1.1 1h3.1c-.2.3-.4.5-.7.8zm-8.3 1.9c-.3.1-.6-.1-.7-.5-.1-.3.1-.6.5-.7s.6.1.7.5c0 .3-.2.6-.5.7M5.4 9.5c.1.3 0 .7-.3.8s-.7 0-.8-.3 0-.7.3-.8c.4-.1.7 0 .8.3m-.7 1.6 1.3-.5c.3-.1.4-.4.3-.7L6 9.3h1V14H5c-.3-1-.4-1.9-.3-2.9m5.6-.4V9.3h2.5c.1 0 .9.1.9.7 0 .5-.6.7-1.1.7zm9 1.2v.5h-.8c-.1 0-.1 0-.1.1v.3c0 .8-.5 1-.9 1s-.8-.2-.9-.4c-.2-1.3-.6-1.5-1.2-2 .7-.5 1.5-1.2 1.5-2.1 0-1-.7-1.6-1.1-1.9-.7-.4-1.4-.5-1.6-.5H6.6c1.1-1.2 2.5-2 4.1-2.3l.9 1c.2.2.5.2.8 0l1-1c2.1.4 3.9 1.7 5 3.6l-.7 1.6c-.1.3 0 .6.3.7l1.3.6zm-7.7-8c.2-.2.6-.2.8 0s.2.6 0 .8q-.45.45-.9 0c-.2-.2-.1-.5.1-.8m6.9 5.6c.1-.3.5-.4.8-.3s.4.5.3.8-.5.4-.8.3-.4-.5-.3-.8"></path></svg>
 <span class="md-ellipsis">
     Rust
@@ -1204,7 +1138,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ruby/">
+<a class="md-nav__link" href="../../technology/Ruby/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.8 2.07c2.52.43 3.24 2.16 3.2 3.97V6l-1.14 14.93-14.78 1.01h.01c-1.23-.05-3.96-.17-4.09-3.99l1.37-2.5 2.77 6.46 2.36-7.62-.05.01.02-.02 7.71 2.46-1.99-7.78 7.35-.46-5.79-4.74 3.05-1.7zM2 17.91v.02zM6.28 6.23c2.96-2.95 6.79-4.69 8.26-3.2 1.46 1.47-.08 5.09-3.04 8.03-3 2.94-6.77 4.78-8.24 3.3-1.47-1.49.04-5.19 3.01-8.13z"></path></svg>
 <span class="md-ellipsis">
     Ruby
@@ -1218,9 +1152,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
 <span class="md-ellipsis">
     操作系统
     
@@ -1234,7 +1168,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../OperatingSystem/">
+<a class="md-nav__link" href="../../technology/OperatingSystem/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg>
 <span class="md-ellipsis">
     操作系统
@@ -1245,9 +1179,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
 <span class="md-ellipsis">
     开发工具
     
@@ -1261,7 +1195,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../DevelopmentTools/">
+<a class="md-nav__link" href="../../technology/DevelopmentTools/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21.71 20.29-1.42 1.42a1 1 0 0 1-1.41 0L7 9.85A3.8 3.8 0 0 1 6 10a4 4 0 0 1-3.78-5.3l2.54 2.54.53-.53 1.42-1.42.53-.53L4.7 2.22A4 4 0 0 1 10 6a3.8 3.8 0 0 1-.15 1l11.86 11.88a1 1 0 0 1 0 1.41M2.29 18.88a1 1 0 0 0 0 1.41l1.42 1.42a1 1 0 0 0 1.41 0l5.47-5.46-2.83-2.83M20 2l-4 2v2l-2.17 2.17 2 2L18 8h2l2-4Z"></path></svg>
 <span class="md-ellipsis">
     开发工具
@@ -1275,38 +1209,38 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 <span class="md-ellipsis">
     远程桌面
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             远程桌面
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
 <span class="md-ellipsis">
     01屏幕捕获
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_1">
 <span class="md-nav__icon md-icon"></span>
             01屏幕捕获
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/035-GDIGrab/">
+<a class="md-nav__link" href="../035-GDIGrab/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4h3c1.1 0 2 .9 2 2v2h-2V6h-3zM4 8V6h3V4H4c-1.1 0-2 .9-2 2v2zm16 8v2h-3v2h3c1.1 0 2-.9 2-2v-2zM7 18H4v-2H2v2c0 1.1.9 2 2 2h3zM18 8H6v8h12z"></path></svg>
 <span class="md-ellipsis">
     Windows抓屏-GDI
@@ -1315,7 +1249,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/042-DXGI/">
+<a class="md-nav__link" href="../042-DXGI/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4h3c1.1 0 2 .9 2 2v2h-2V6h-3zM4 8V6h3V4H4c-1.1 0-2 .9-2 2v2zm16 8v2h-3v2h3c1.1 0 2-.9 2-2v-2zM7 18H4v-2H2v2c0 1.1.9 2 2 2h3zM18 8H6v8h12z"></path></svg>
 <span class="md-ellipsis">
     Windows抓屏-DXGI
@@ -1323,21 +1257,73 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/046-WGC/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4h3c1.1 0 2 .9 2 2v2h-2V6h-3zM4 8V6h3V4H4c-1.1 0-2 .9-2 2v2zm16 8v2h-3v2h3c1.1 0 2-.9 2-2v-2zM7 18H4v-2H2v2c0 1.1.9 2 2 2h3zM18 8H6v8h12z"></path></svg>
+<span class="md-ellipsis">
+    Windows抓屏-WGC
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4h3c1.1 0 2 .9 2 2v2h-2V6h-3zM4 8V6h3V4H4c-1.1 0-2 .9-2 2v2zm16 8v2h-3v2h3c1.1 0 2-.9 2-2v-2zM7 18H4v-2H2v2c0 1.1.9 2 2 2h3zM18 8H6v8h12z"></path></svg>
 <span class="md-ellipsis">
     Windows抓屏-WGC
     
   </span>
 </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      1. 原理概述
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      2. 代码实现
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      3. 全屏到局部捕获
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      4. 设置各种优化参数
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      5. 流程图和结构图
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
 <span class="md-ellipsis">
     02视频编解码
     
@@ -1351,7 +1337,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/032-overlayYUV/">
+<a class="md-nav__link" href="../032-overlayYUV/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-11-4 2.03 2.71L16 11l4 5H8M2 6v14a2 2 0 0 0 2 2h14v-2H4V6"></path></svg>
 <span class="md-ellipsis">
     overlayYUV
@@ -1362,9 +1348,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
 <span class="md-ellipsis">
     03音频编解码
     
@@ -1378,7 +1364,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/AudioCodec/">
+<a class="md-nav__link" href="../AudioCodec/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 12a2.5 2.5 0 0 0-5 0c0 1 .59 1.84 1.43 2.25l-1.11 1.1A3.999 3.999 0 0 1 12 8a3.999 3.999 0 0 1 2.18 7.35l-1.1-1.1c.84-.41 1.42-1.25 1.42-2.25M12 2C6.5 2 2 6.5 2 12c0 3.06 1.38 5.8 3.54 7.63l1.07-1.06C4.71 17 3.5 14.64 3.5 12c0-4.69 3.81-8.5 8.5-8.5s8.5 3.81 8.5 8.5c0 2.64-1.21 5-3.11 6.57l1.07 1.06C20.62 17.79 22 15.06 22 12c0-5.5-4.5-10-10-10m7 10c0-3.87-3.13-7-7-7a6.995 6.995 0 0 0-4.32 12.5l1.07-1.07C7.39 15.42 6.5 13.82 6.5 12c0-3.03 2.47-5.5 5.5-5.5s5.5 2.47 5.5 5.5c0 1.82-.89 3.42-2.25 4.43l1.08 1.07A7 7 0 0 0 19 12M6 22h12l-6-6z"></path></svg>
 <span class="md-ellipsis">
     AudioCodec
@@ -1389,9 +1375,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
 <span class="md-ellipsis">
     04鼠标键盘
     
@@ -1405,7 +1391,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/keyboardMouse/">
+<a class="md-nav__link" href="../keyboardMouse/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 10h-2V8h2m0 5h-2v-2h2m-3-1h-2V8h2m0 5h-2v-2h2m0 6H8v-2h8m-9-5H5V8h2m0 5H5v-2h2m1 0h2v2H8m0-5h2v2H8m3 1h2v2h-2m0-5h2v2h-2m9-5H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2"></path></svg>
 <span class="md-ellipsis">
     keyboardMouse
@@ -1416,9 +1402,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
 <span class="md-ellipsis">
     05文件传输
     
@@ -1432,7 +1418,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/FileTransfer/">
+<a class="md-nav__link" href="../FileTransfer/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"></path></svg>
 <span class="md-ellipsis">
     FileTransfer
@@ -1443,9 +1429,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
 <span class="md-ellipsis">
     06数据库
     
@@ -1459,7 +1445,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/DataBases/">
+<a class="md-nav__link" href="../DataBases/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
 <span class="md-ellipsis">
     DataBases
@@ -1470,9 +1456,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
 <span class="md-ellipsis">
     07网络通讯
     
@@ -1486,7 +1472,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/Networks/">
+<a class="md-nav__link" href="../Networks/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v2h1a1 1 0 0 1 1 1h7v2h-7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1H2v-2h7a1 1 0 0 1 1-1h1v-2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg>
 <span class="md-ellipsis">
     Networks
@@ -1497,9 +1483,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="">
 <span class="md-ellipsis">
     08安全技术
     
@@ -1513,7 +1499,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/Security/">
+<a class="md-nav__link" href="../Security/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12h7c-.53 4.11-3.28 7.78-7 8.92zH5V6.3l7-3.11M12 1 3 5v6c0 5.55 3.84 10.73 9 12 5.16-1.27 9-6.45 9-12V5z"></path></svg>
 <span class="md-ellipsis">
     Security
@@ -1524,9 +1510,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="">
 <span class="md-ellipsis">
     09共享剪切板
     
@@ -1540,7 +1526,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/Clipboard/">
+<a class="md-nav__link" href="../Clipboard/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-7 0a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1"></path></svg>
 <span class="md-ellipsis">
     Clipboard
@@ -1551,9 +1537,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="">
 <span class="md-ellipsis">
     10音频重定向
     
@@ -1567,7 +1553,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/AudioRedirection/">
+<a class="md-nav__link" href="../AudioRedirection/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 11v2c5 0 9 4 9 9h2c0-6.1-4.9-11-11-11m18-9H10c-1.1 0-2 .9-2 2v6.5c1 .5 1.9 1.2 2.7 1.9.9-1.4 2.5-2.4 4.3-2.4 2.8 0 5 2.2 5 5s-2.2 5-5 5h-.2c.1.7.2 1.3.2 2h5c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-5 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2m0 10c-.2 0-.5 0-.7-.1-.5-1.5-1.2-2.8-2.1-4 .4-1.1 1.5-2 2.8-2 1.7 0 3 1.3 3 3S16.7 18 15 18M2 15v2c2.8 0 5 2.2 5 5h2c0-3.9-3.1-7-7-7m0 4v3h3c0-1.7-1.3-3-3-3"></path></svg>
 <span class="md-ellipsis">
     AudioRedirection
@@ -1578,9 +1564,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="">
 <span class="md-ellipsis">
     11USB重定向
     
@@ -1594,7 +1580,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/USBRedirection/">
+<a class="md-nav__link" href="../USBRedirection/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 2c-1.1 0-2 .9-2 2v8H5v4l4 4v2h6v-2l4-4v-4h-1V4a2 2 0 0 0-2-2M8 4h8v8H8m1-5v2h2V7m2 0v2h2V7Z"></path></svg>
 <span class="md-ellipsis">
     USBRedirection
@@ -1605,9 +1591,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="">
 <span class="md-ellipsis">
     12数字水印
     
@@ -1621,7 +1607,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../remotedesktop/Watermarks/">
+<a class="md-nav__link" href="../Watermarks/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 3H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 16h-9v-6h9z"></path></svg>
 <span class="md-ellipsis">
     Watermarks
@@ -1666,7 +1652,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../product/tianzuo.Pangu/">
+<a class="md-nav__link" href="../../product/tianzuo.Pangu/">
 <span class="md-ellipsis">
     天佐.盘古斧
     
@@ -1674,7 +1660,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../product/tianzuo.Kunlun/">
+<a class="md-nav__link" href="../../product/tianzuo.Kunlun/">
 <span class="md-ellipsis">
     天佐.昆仑镜
     
@@ -1682,7 +1668,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../product/tianzuo.Fuxi/">
+<a class="md-nav__link" href="../../product/tianzuo.Fuxi/">
 <span class="md-ellipsis">
     天佐.伏羲琴
     
@@ -1708,7 +1694,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../component/tianzuo.Kongtong/">
+<a class="md-nav__link" href="../../component/tianzuo.Kongtong/">
 <span class="md-ellipsis">
     天佐.崆峒印
     
@@ -1716,7 +1702,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../component/tianzuo.Qiankun/">
+<a class="md-nav__link" href="../../component/tianzuo.Qiankun/">
 <span class="md-ellipsis">
     天佐.乾坤袋
     
@@ -1724,7 +1710,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../component/tianzuo.Zhuiri/">
+<a class="md-nav__link" href="../../component/tianzuo.Zhuiri/">
 <span class="md-ellipsis">
     天佐.追日靴
     
@@ -1732,7 +1718,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../component/tianzuo.Hundun/">
+<a class="md-nav__link" href="../../component/tianzuo.Hundun/">
 <span class="md-ellipsis">
     天佐.混沌钟
     
@@ -1740,7 +1726,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../component/tianzuo.LianYao/">
+<a class="md-nav__link" href="../../component/tianzuo.LianYao/">
 <span class="md-ellipsis">
     天佐.炼妖壶
     
@@ -1756,7 +1742,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../other/">
+<a class="md-nav__link" href="../../other/">
 <span class="md-ellipsis">
     其他
     
@@ -1788,7 +1774,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../other/AllArticles/">
+<a class="md-nav__link" href="../../other/AllArticles/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
 <span class="md-ellipsis">
     全部文章列表
@@ -1814,51 +1800,37 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#1">
 <span class="md-ellipsis">
-      一、定义与核心特征
+      1. 原理概述
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#c">
+<a class="md-nav__link" href="#2">
 <span class="md-ellipsis">
-      二、C++典型案例分析
+      2. 代码实现
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#3">
 <span class="md-ellipsis">
-      三、重构过程详解
+      3. 全屏到局部捕获
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#4">
 <span class="md-ellipsis">
-      四、质量提升指标
+      4. 设置各种优化参数
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#5">
 <span class="md-ellipsis">
-      五、特殊场景处理
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      六、最佳实践建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      完整代码
+      5. 流程图和结构图
     </span>
 </a>
 </li>
@@ -1869,149 +1841,222 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="-">代码味道-依恋情结</h1>
-<p><img alt="" src="../../../img/CodeSmellFeatureEnvy.png"/></p>
-<p>代码味道-Feature Envy：从定义到重构的完整指南</p>
-<h3 id="_1">一、定义与核心特征</h3>
-<p>1.1 基本定义
-Feature Envy（依恋情结） 是一种经典的代码坏味道，表现为某个函数/方法对另一个类的数据或方法的关注度远高于其所属的宿主类。这种现象违背了面向对象设计中的"数据与行为绑定"原则，导致代码耦合度增高、可维护性下降。</p>
-<p>1.2 识别特征</p>
-<ul>
-<li>高频跨类调用：方法中超过30%的代码涉及其他类的属性或方法调用（特别是getter方法）</li>
-<li>数据流异常：方法处理参数对象的数据量 &gt; 处理宿主类属性的数据量</li>
-<li>逻辑碎片化：相同业务逻辑分散在多个类中，形成隐式耦合</li>
-<li>流程图：Feature Envy检测流程</li>
-</ul>
-<div class="mermaid">graph TD
-    A[解析AST语法树] --&gt; B[提取方法调用关系]
-    B --&gt; C{判断调用目标分布}
-    C --&gt;|80%调用外部类| D[标记为Feature Envy]
-    C --&gt;|主要调用宿主类| E[正常方法]
-</div>
-<h3 id="c">二、C++典型案例分析</h3>
-<p>2.1 问题代码示例</p>
-<pre><code class="language-cpp">// 订单处理类
-class OrderProcessor {
-public:
-    double calculateDiscount(Customer&amp; customer, Product&amp; product) {
-        if (customer.getMembershipLevel()  == GOLD) {
-            return product.getBasePrice()  * 0.3;  // 30%折扣
-        } else if (customer.getPurchaseHistory().totalSpent  &gt; 5000) {
-            return product.getBasePrice()  * 0.2;  // 20%折扣
-        }
-        return 0;
-    }
-};
+<h1 id="windows-wgc">Windows抓屏-WGC</h1>
+<p><img alt="" src="../../img/WGC.png"/></p>
+<p>Windows.Graphics.Capture抓屏技术调研</p>
+<h3 id="1">1. 原理概述</h3>
+<p>Windows.Graphics.Capture（WGC）是微软主推的一种桌面/窗口采集技术，从Windows 10版本1803开始提供用于从屏幕或应用程序窗口获取帧的API。它主要利用DirectX11的特性来实现，通过系统选取器UI让用户选择要捕获的屏幕或应用程序窗口，然后将捕获的内容以帧的形式提供给应用程序1368。</p>
+<p>原理步骤：
+* 权限声明：在应用程序清单中声明图形捕获功能，以获得使用屏幕捕获API的权限。
+* 用户选择：调用系统选取器UI，让用户选择要捕获的屏幕或应用程序窗口，返回GraphicsCaptureItem对象。
+* 创建帧池和会话：使用GraphicsCaptureItem、D3D设备、像素格式、帧数量和帧大小创建Direct3D11CaptureFramePool，并通过该帧池创建GraphicsCaptureSession。
+* 开始捕获：调用GraphicsCaptureSession的StartCapture方法，通知系统开始向应用发送捕获帧。
+* 获取帧数据：可以通过监听FrameArrived事件或手动调用Direct3D11CaptureFramePool.TryGetNextFrame方法获取捕获的帧数据8。</p>
+<h3 id="2">2. 代码实现</h3>
+<p>2.1 环境准备
+开发环境：Visual Studio 2017及以上版本，支持C++17。
+依赖库：Windows SDK，包含C++/WinRT库。
+2.2 完整C++代码示例</p>
+<pre><code class="language-cpp">#include &lt;windows.graphics.capture.h&gt;  
+#include &lt;d3d11.h&gt; 
+#include &lt;dxgi1_2.h&gt; 
+#include &lt;winrt/Windows.Foundation.h&gt; 
+#include &lt;winrt/Windows.Graphics.Capture.h&gt; 
+#include &lt;winrt/Windows.UI.Composition.h&gt; 
+#include &lt;iostream&gt; 
 
-// 客户数据类
-class Customer {
-private:
-    MembershipLevel level;
-    PurchaseHistory history;
-public:
-    MembershipLevel getMembershipLevel() const { return level; }
-    PurchaseHistory getPurchaseHistory() const { return history; }
-};
-</code></pre>
-<p>2.2 重构解决方案</p>
-<pre><code class="language-cpp">// 客户数据类增强
-class Customer {
-private:
-    MembershipLevel level;
-    PurchaseHistory history;
-public:
-    // 将折扣计算逻辑迁移至此
-    double calculateDiscount(Product&amp; product) const {
-        if (level == GOLD) {
-            return product.getBasePrice()  * 0.3;
-        } else if (history.totalSpent  &gt; 5000) {
-            return product.getBasePrice()  * 0.2;
-        }
-        return 0;
-    }
-};
+#pragma comment(lib, "d3d11.lib")  
+#pragma comment(lib, "dxgi.lib")  
 
-// 订单处理类简化
-class OrderProcessor {
-public:
-    double processOrder(Customer&amp; customer, Product&amp; product) {
-        return customer.calculateDiscount(product); 
-    }
-};
+// 创建D3D设备 
+winrt::com_ptr&lt;ID3D11Device&gt; CreateD3DDevice() { 
+    winrt::com_ptr&lt;ID3D11Device&gt; device; 
+    winrt::com_ptr&lt;ID3D11DeviceContext&gt; context; 
+    D3D_DRIVER_TYPE driverTypes[] = { 
+        D3D_DRIVER_TYPE_HARDWARE, 
+        D3D_DRIVER_TYPE_WARP, 
+        D3D_DRIVER_TYPE_REFERENCE 
+    }; 
+    UINT numDriverTypes = ARRAYSIZE(driverTypes); 
+    D3D_FEATURE_LEVEL featureLevels[] = { 
+        D3D_FEATURE_LEVEL_11_0, 
+        D3D_FEATURE_LEVEL_10_1, 
+        D3D_FEATURE_LEVEL_10_0, 
+        D3D_FEATURE_LEVEL_9_3 
+    }; 
+    UINT numFeatureLevels = ARRAYSIZE(featureLevels); 
+    UINT createDeviceFlags = 0; 
+#if defined(_DEBUG) 
+    createDeviceFlags |= D3D11_CREATE_DEVICE_DEBUG; 
+#endif 
+    for (UINT driverTypeIndex = 0; driverTypeIndex &lt; numDriverTypes; driverTypeIndex++) { 
+        HRESULT hr = D3D11CreateDevice( 
+            nullptr, 
+            driverTypes[driverTypeIndex], 
+            nullptr, 
+            createDeviceFlags, 
+            featureLevels, 
+            numFeatureLevels, 
+            D3D11_SDK_VERSION, 
+            device.put(),  
+            nullptr, 
+            context.put()  
+        ); 
+        if (SUCCEEDED(hr)) { 
+            break; 
+        } 
+    } 
+    return device; 
+} 
+
+// 开始屏幕捕获 
+void StartCapture() { 
+    if (!winrt::Windows::Graphics::Capture::GraphicsCaptureSession::IsSupported()) { 
+        std::cout &lt;&lt; "Screen capture is not supported on this device." &lt;&lt; std::endl; 
+        return; 
+    } 
+
+    auto device = CreateD3DDevice(); 
+
+    winrt::Windows::Graphics::Capture::GraphicsCapturePicker picker; 
+    auto item = picker.PickSingleItemAsync().get(); 
+    if (!item) { 
+        std::cout &lt;&lt; "No item selected." &lt;&lt; std::endl; 
+        return; 
+    } 
+
+    winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice d3dDevice = 
+        winrt::Windows::Graphics::DirectX::Direct3D11::CreateDirect3DDeviceFromDXGIDevice(device.as&lt;IDXGIDevice&gt;().get());  
+
+    winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool framePool = 
+        winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool::Create( 
+            d3dDevice, 
+            winrt::Windows::Graphics::DirectX::DirectXPixelFormat::B8G8R8A8UIntNormalized, 
+            2, 
+            item.Size() 
+        ); 
+
+    winrt::Windows::Graphics::Capture::GraphicsCaptureSession session = framePool.CreateCaptureSession(item); 
+
+    session.StartCapture(); 
+
+    // 处理捕获的帧 
+    framePool.FrameArrived([&amp;](auto sender, auto args) { 
+        auto frame = sender.TryGetNextFrame(); 
+        if (frame) { 
+            // 处理帧数据，例如保存或显示 
+            std::cout &lt;&lt; "Frame captured." &lt;&lt; std::endl; 
+        } 
+    }); 
+
+    // 保持程序运行 
+    std::cin.get();  
+} 
+
+int main() { 
+    winrt::init_apartment(); 
+    StartCapture(); 
+    return 0; 
+} 
 </code></pre>
-<h3 id="_2">三、重构过程详解</h3>
-<p>3.1 重构步骤</p>
+<p>2.3 代码解释
+* CreateD3DDevice函数：创建D3D11设备，用于后续的图形处理。
+* StartCapture函数：
+检查设备是否支持屏幕捕获。
+创建GraphicsCapturePicker并让用户选择要捕获的项目。
+创建Direct3D11CaptureFramePool和GraphicsCaptureSession。
+开始捕获并处理捕获的帧。
+* main函数：初始化WinRT并调用StartCapture函数。</p>
+<h3 id="3">3. 全屏到局部捕获</h3>
+<p>3.1 全屏捕获
+上述代码示例中的捕获方式可以实现全屏捕获，只需用户在系统选取器UI中选择整个屏幕即可。</p>
+<p>3.2 局部捕获
+要实现局部捕获，可以在创建Direct3D11CaptureFramePool时指定较小的帧大小，或者在获取帧数据后对其进行裁剪。以下是一个简单的裁剪示例：</p>
+<pre><code class="language-cpp">// 在FrameArrived事件处理函数中添加裁剪逻辑 
+framePool.FrameArrived([&amp;](auto sender, auto args) { 
+    auto frame = sender.TryGetNextFrame(); 
+    if (frame) { 
+        // 假设要裁剪的区域为左上角(100, 100)，宽高为200x200 
+        int x = 100; 
+        int y = 100; 
+        int width = 200; 
+        int height = 200; 
+
+        // 处理帧数据，例如裁剪 
+        // 这里需要根据具体的D3D11纹理处理方法进行裁剪 
+        std::cout &lt;&lt; "Frame captured and cropped." &lt;&lt; std::endl; 
+    } 
+}); 
+</code></pre>
+<h3 id="4">4. 设置各种优化参数</h3>
+<p>4.1 帧池参数</p>
 <ul>
-<li>识别数据归属（通过依赖分析工具）</li>
-<li>创建目标方法（在数据拥有类中建立新方法）</li>
-<li>逐步迁移逻辑（使用测试驱动保障）</li>
-<li>更新调用链路（保持接口兼容性）</li>
-<li>结构变化示意图：</li>
+<li>
+<p>像素格式：可以选择不同的像素格式，如DXGI_FORMAT_B8G8R8A8_UNORM或DXGI_FORMAT_R16G16B16A16_FLOAT，根据实际需求进行选择。</p>
+</li>
+<li>
+<p>帧数量：在创建Direct3D11CaptureFramePool时指定帧数量，适当增加帧数量可以提高捕获的流畅度，但会占用更多的内存。
+4.2 性能优化</p>
+</li>
+<li>
+<p>多线程处理：可以使用多线程来处理捕获的帧数据，避免在UI线程上进行耗时操作。</p>
+</li>
+<li>硬件加速：确保使用支持硬件加速的D3D设备，以提高捕获和处理的性能。</li>
 </ul>
-<div class="mermaid">graph LR
-    Before[OrderProcessor::calculateDiscount] --&gt;|访问| CustomerData
-    After[Customer::calculateDiscount] --&gt;|操作| CustomerData
+<h3 id="5">5. 流程图和结构图</h3>
+<p>5.1 流程图</p>
+<div class="mermaid">graph TD; 
+    A[开始] --&gt; B[检查设备是否支持捕获]; 
+    B -- 支持 --&gt; C[创建D3D设备]; 
+    B -- 不支持 --&gt; D[结束]; 
+    C --&gt; E[创建GraphicsCapturePicker]; 
+    E --&gt; F[用户选择捕获项目]; 
+    F -- 选择项目 --&gt; G[创建Direct3D11CaptureFramePool]; 
+    F -- 未选择项目 --&gt; D; 
+    G --&gt; H[创建GraphicsCaptureSession]; 
+    H --&gt; I[开始捕获]; 
+    I --&gt; J[监听FrameArrived事件]; 
+    J -- 有新帧 --&gt; K[处理帧数据]; 
+    K --&gt; J; 
+    J -- 无新帧 --&gt; J; 
 </div>
-<p>3.2 关键技术</p>
-<ul>
-<li>搬移方法(Move Method)：直接将方法迁移到数据类</li>
-<li>提炼方法(Extract Method)：当只有部分代码存在依恋时</li>
-<li>策略模式：适用于需要动态更换计算规则的复杂场景</li>
-</ul>
-<h3 id="_3">四、质量提升指标</h3>
-<p>通过重构可获得以下改进：</p>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>重构前</th>
-<th>重构后</th>
-<th>提升率</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>类间耦合度</td>
-<td>0.78</td>
-<td>0.32</td>
-<td>59%</td>
-</tr>
-<tr>
-<td>方法内聚性</td>
-<td>0.41</td>
-<td>0.86</td>
-<td>110%v</td>
-</tr>
-<tr>
-<td>单元测试维护成本</td>
-<td>高</td>
-<td>低</td>
-<td>-65%</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_4">五、特殊场景处理</h3>
-<p>当遇到以下情况时，需采用高级重构策略：</p>
-<p>多数据源依赖：引入参数对象</p>
-<pre><code class="language-cpp">struct DiscountContext {
-    Customer&amp; customer;
-    Product&amp; product;
-    DateTime orderTime;
-};
+<p>5.2 结构图</p>
+<pre><code class="language-plaintext">+-------------------+     +---------------------+     +-------------------+
+| GraphicsCaptureItem| → | Direct3D11CaptureFramePool | → | CaptureSession     |
++-------------------+     +---------------------+     +-------------------+
+                                ↓                               ↓ 
++-------------------+     +---------------------+     +-------------------+
+| D3D11Texture2D    | ← | Frame Processing     | ← | Dirty Rects Detection|
++-------------------+     +---------------------+     +-------------------+
 </code></pre>
-<ul>
-<li>历史遗留系统：使用适配器模式渐进式改造</li>
-<li>性能敏感场景：通过缓存机制平衡设计</li>
-</ul>
-<h3 id="_5">六、最佳实践建议</h3>
-<ul>
-<li>持续检测：集成Lint工具实现自动化扫描</li>
-<li>团队规范：在CR环节设置Feature Envy检查项</li>
-<li>架构设计：采用DDD（领域驱动设计）划分边界</li>
-</ul>
-<p>通过系统性地识别和处理Feature Envy，可以使代码库保持高内聚、低耦合的健康状态，显著提升长期维护效率。建议结合具体业务场景，灵活运用本文所述的重构策略。</p>
-<h2 id="_6">完整代码</h2>
-<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/039-CodeSmellFeatureEnvy">Github</a></p>
+<pre><code class="language-plaintext">[创建捕获会话] → [初始化D3D设备] → [选择捕获目标（窗口/屏幕）]  
+      ↓                                ↓  
+[获取帧数据（Direct3D纹理）] → [处理数据（复制到CPU/GPU）]  
+      ↓  
+[释放资源] → [循环捕获或结束]
+</code></pre>
+<pre><code class="language-plaintext">+---------------------+ 
+|   应用程序           | 
++---------------------+ 
+|  - 权限声明          | 
+|  - 用户选择逻辑      | 
+|  - 帧池和会话管理    | 
+|  - 帧数据处理逻辑    | 
++---------------------+ 
+|   Windows.Graphics.Capture API  | 
++---------------------+ 
+|  - GraphicsCapturePicker        | 
+|  - GraphicsCaptureItem          | 
+|  - Direct3D11CaptureFramePool   | 
+|  - GraphicsCaptureSession       | 
++---------------------+ 
+|   DirectX11              | 
++---------------------+ 
+|  - D3D11设备            | 
+|  - 纹理处理             | 
++---------------------+ 
+</code></pre>
+<p>以上就是关于Windows.Graphics.Capture抓屏的技术调研结果，包括原理、代码实现、全屏到局部捕获、优化参数设置以及流程图和结构图。</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -2071,9 +2116,9 @@ public:
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "header.autohide"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
-<script src="../../../javascript/extra.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "header.autohide"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+<script src="../../javascript/extra.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({});</script></body>
 </html>
