@@ -6,12 +6,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="zhengtianzuo" name="description"/>
-<link href="https://zhengtianzuo.com/en/technology/Cpp/028-ImageCompress/" rel="canonical"/>
-<link href="../016-condition_variable/" rel="prev"/>
-<link href="../017-HttpServer/" rel="next"/>
+<link href="https://zhengtianzuo.com/en/technology/Cpp/047-CodeSmellDataModule/" rel="canonical"/>
+<link href="../045-CodeSmellDataClumps/" rel="prev"/>
+<link href="../001-BoostMessageQueue/" rel="next"/>
 <link href="../../../../img/me.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>ImageCompress - tianzuo.home</title>
+<title>代码味道-数据模块 - tianzuo.home</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#imagecompress">
+<a class="md-skip" href="#-">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              ImageCompress
+              代码味道-数据模块
             
           </span>
 </div>
@@ -74,7 +74,7 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="../../../../technology/Cpp/028-ImageCompress/" hreflang="zh">
+<a class="md-select__link" href="../../../../technology/Cpp/047-CodeSmellDataModule/" hreflang="zh">
               简体中文
             </a>
 </li>
@@ -525,8 +525,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_7" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_7" id="__nav_2_1_1_7_label" tabindex="0">
 <span class="md-ellipsis">
     CodeSmell
@@ -534,7 +534,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_7_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_7_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_7">
 <span class="md-nav__icon md-icon"></span>
             CodeSmell
@@ -612,8 +612,9 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../047-CodeSmellDataModule/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.179.818C15.533-.273 8.406-.273.8.818-.266 8.377-.266 15.424.8 22.946 4.511 23.491 8.22 24 12.005 24c3.748 0 7.459-.51 11.17-1.017 1.1-7.56 1.1-14.607 0-22.165zm-11.54 18.314c-2.055 0-4.226-.689-5.179-1.199l.807-3.126c1.064.705 2.682 1.395 4.446 1.395 1.395 0 2.24-.436 2.24-1.305 0-.615-.435-.975-1.575-1.26l-2.279-.631c-2.416-.66-3.557-1.891-3.557-3.855 0-2.365 1.83-4.256 5.619-4.256 1.99 0 3.973.545 5.07 1.092l-.951 2.976c-1.104-.615-2.79-1.125-4.226-1.125-1.365 0-1.95.436-1.95 1.092 0 .619.404.87 1.291 1.092l2.488.734c2.566.736 3.707 1.966 3.707 3.885-.076 2.701-2.461 4.517-5.957 4.517z"></path></svg>
 <span class="md-ellipsis">
     代码味道-数据模块
@@ -795,8 +796,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_10" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_10" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1_1_10" id="__nav_2_1_1_10_label" tabindex="0">
 <span class="md-ellipsis">
     Skill
@@ -804,7 +805,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_10_label" class="md-nav" data-md-level="4">
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_10_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_2_1_1_10">
 <span class="md-nav__icon md-icon"></span>
             Skill
@@ -837,66 +838,14 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2h-2.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146z"></path><path d="M11.5 15.75a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12.25 6a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M9.75 13.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 11.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 5.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 9 5.25M11 17h1a2 2 0 0 1 2 2v4.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V19a2 2 0 0 1 2-2m-.5 2v3.5h2V19a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"></path></svg>
-<span class="md-ellipsis">
-    ImageCompress
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../028-ImageCompress/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H5a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2h-2.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146z"></path><path d="M11.5 15.75a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12.25 6a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zm-.75-2.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M9.75 13.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 11.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5zM9 5.25a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 9 5.25M11 17h1a2 2 0 0 1 2 2v4.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V19a2 2 0 0 1 2-2m-.5 2v3.5h2V19a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"></path></svg>
 <span class="md-ellipsis">
     ImageCompress
     
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      一、工具功能定位对比
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      二、原理与技术实现深度解析
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      三、参数优化策略对照表
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      四、技术选型建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      完整代码
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1802,261 +1751,155 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      一、工具功能定位对比
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      二、原理与技术实现深度解析
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      三、参数优化策略对照表
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      四、技术选型建议
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      完整代码
-    </span>
-</a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="imagecompress">ImageCompress</h1>
-<p><img alt="" src="../../../../img/ImageCompress.png"/></p>
-<p>以下为针对 GIFsicle、Guetzli、LibimageQuant 的技术调研报告，包含原理分析、压缩率对比、代码实现及参数优化策略：</p>
-<h3 id="_1">一、工具功能定位对比</h3>
+<h1 id="-">代码味道-数据模块</h1>
+<p><img alt="" src="img/CodeSmellDataModule.png"/></p>
+<p>以下是关于<strong>代码坏味道-Data Module（数据模块）</strong>的技术解析与实践指南，包含定义、特征分析、重构方案及完整的C++代码示例：</p>
+<p>一、Data Module 的定义与核心特征
+1. 定义
+Data Module（又称数据模块）是一种典型的代码坏味道，表现为仅包含数据字段和简单访问方法（如 getter/setter），却缺乏业务逻辑和职责的类。它本质上是“哑数据容器”，违背了面向对象设计中“数据与行为绑定”的原则。</p>
+<ol>
+<li>特征与问题</li>
+</ol>
 <table>
 <thead>
 <tr>
-<th>工具名称</th>
-<th>目标格式</th>
-<th>核心场景</th>
-<th>压缩特性</th>
+<th>特征</th>
+<th>问题分析</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>GIFsicle</td>
-<td>GIF</td>
-<td>动图优化/帧处理</td>
-<td>空间优化+调色板量化</td>
+<td>数据暴露</td>
+<td>字段公开或仅通过 getter/setter 暴露，破坏封装性。</td>
 </tr>
 <tr>
-<td>Guetzli</td>
-<td>JPEG</td>
-<td>高保真静态图压缩</td>
-<td>心理视觉模型+色彩空间转换</td>
+<td>行为缺失</td>
+<td>无业务逻辑方法，操作数据的逻辑散落在其他类中（依恋情结）。</td>
 </tr>
 <tr>
-<td>LibimageQuant</td>
-<td>PNG</td>
-<td>真彩转索引色优化</td>
-<td>颜色聚类+抖动算法</td>
+<td>高耦合性</td>
+<td>外部类频繁访问其字段，修改数据结构需同步修改多处。</td>
+</tr>
+<tr>
+<td>贫血模型</td>
+<td>导致系统设计为“贫血域模型”，数据与行为分离。</td>
 </tr>
 </tbody>
 </table>
-<h3 id="_2">二、原理与技术实现深度解析</h3>
-<ol>
-<li>
-<p>GIFsicle
-核心原理：</p>
-</li>
-<li>
-<p>帧差分算法：通过检测连续帧之间的差异区域，仅保留变化像素（透明化重复部分），减少冗余数据</p>
-</li>
-<li>调色板优化：将每帧颜色映射到全局/局部调色板，通过减少颜色数降低存储成本（256色→64色可压缩50%）</li>
-<li>LZW编码优化：采用改进的LZW压缩算法，动态调整编码表提升压缩率
-代码实现示例：</li>
-</ol>
-<pre><code class="language-bash"># 优化级别与调色板控制 
-gifsicle -O3 --colors 128 input.gif  -o output.gif  
-# 帧差分阈值设置（仅处理差异&gt;5%的像素）
-gifsicle --delta-threshold 0.05 input.gif  -o optimized.gif  
+<p>二、重构解决方案
+重构原则：封装数据 + 搬移行为
+1. 封装字段（Encapsulate Field）
+将字段设为私有，通过方法控制访问。
+2. 搬移函数（Move Method）
+将与数据紧密相关的逻辑移入数据模块中。
+3. 移除设值函数（Remove Setting Method）
+对不应外部修改的字段移除 setter。</p>
+<p>三、C++ 示例：重构前后对比
+重构前：典型的 Data Module</p>
+<pre><code class="language-cpp">// EmployeeData.h（数据模块）
+class EmployeeData {
+public:
+    std::string name;
+    int age;
+    double salary;
+};
+
+// 业务逻辑散落在外部类
+class ReportGenerator {
+public:
+    void generateReport(const EmployeeData&amp; emp) {
+        std::cout &lt;&lt; "Name: " &lt;&lt; emp.name  
+                  &lt;&lt; ", Age: " &lt;&lt; emp.age  
+                  &lt;&lt; ", Salary: $" &lt;&lt; emp.salary; 
+    }
+};
 </code></pre>
-<p>压缩率实测：</p>
-<table>
-<thead>
-<tr>
-<th>原图尺寸</th>
-<th>参数设置</th>
-<th>输出尺寸</th>
-<th>压缩率</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>12.6MB</td>
-<td>-O3 --colors 256</td>
-<td></td>
-<td>6.2MB</td>
-</tr>
-<tr>
-<td>12.6MB</td>
-<td>-O3 --colors 128</td>
-<td></td>
-<td>3.4MB</td>
-</tr>
-<tr>
-<td>12.6MB</td>
-<td>--lossy=30</td>
-<td>1.8MB</td>
-<td>85.7%</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>
-<p>Guetzli
-核心原理：</p>
-</li>
-<li>
-<p>Butteraugli模型：模拟人眼感知特性，优先保留高频细节，对低频区域进行高压缩</p>
-</li>
-<li>色彩空间转换：将RGB转换为XYB色彩空间（Y表示亮度，X/B表示色度），分离可压缩维度</li>
-<li>量化表优化：动态生成JPEG量化表，针对图像内容优化DCT系数取舍</li>
-</ol>
-<p>处理流程：</p>
-<div class="mermaid">graph TD 
-    A[RGB输入] --&gt; B{色彩空间转换}
-    B --&gt; C[XYB空间分解]
-    C --&gt; D[Butteraugli模型分析]
-    D --&gt; E[动态量化表生成]
-    E --&gt; F[DCT系数压缩]
-    F --&gt; G[JPEG编码输出]
+<p>问题分析：</p>
+<p>EmployeeData 仅有数据字段，无行为逻辑。
+generateReport 方法在外部类中，直接访问 EmployeeData 的内部字段（依恋情结）。
+重构后：内聚行为的数据模块</p>
+<pre><code class="language-cpp">// Employee.h（封装数据与行为）
+class Employee {
+private:  // 封装字段
+    std::string name;
+    int age;
+    double salary;
+
+public:
+    Employee(std::string name, int age, double salary) 
+        : name(std::move(name)), age(age), salary(salary) {}
+
+    // 搬移行为到数据模块
+    void generateReport() const {
+        std::cout &lt;&lt; "Name: " &lt;&lt; name 
+                  &lt;&lt; ", Age: " &lt;&lt; age 
+                  &lt;&lt; ", Salary: $" &lt;&lt; salary;
+    }
+
+    // 只读访问（移除不必要的setter）
+    std::string getName() const { return name; }
+    double getSalary() const { return salary; }
+};
+</code></pre>
+<p>优化点：</p>
+<p>字段私有化，通过构造函数初始化7；
+业务逻辑 generateReport 内聚到类中；
+移除 age 的 setter，避免随意修改。</p>
+<p>四、重构过程流程图</p>
+<div class="mermaid">graph TD
+    A[识别Data Module] --&gt; B{检查字段暴露}
+    B --&gt;|字段公开| C[封装字段为私有]
+    B --&gt;|依赖外部逻辑| D[查找依恋情结方法]
+    D --&gt; E[搬移方法到数据模块]
+    C --&gt; F[移除不必要setter]
+    E --&gt; G[验证行为内聚性]
+    G --&gt; H[重构完成]
 </div>
-<p>压缩率实测：</p>
-<table>
-<thead>
-<tr>
-<th>测试集</th>
-<th>原图平均大小</th>
-<th>Guetzli输出</th>
-<th>压缩率</th>
-<th>耗时/张</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1292张测试图</td>
-<td>33KB</td>
-<td>23.4KB</td>
-<td>29%</td>
-<td>8秒</td>
-</tr>
-<tr>
-<td>3.76MB大图</td>
-<td>3.76MB</td>
-<td>2.55MB</td>
-<td>31.5%</td>
-<td>16分钟</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>
-<p>LibimageQuant
-核心原理：</p>
-</li>
-<li>
-<p>中位切割算法：通过递归划分颜色空间，生成最优256色调色板</p>
-</li>
-<li>误差扩散抖动：使用Floyd-Steinberg算法模拟颜色过渡，减少色带效应</li>
-<li>α通道优化：单独处理透明通道，避免颜色混合失真</li>
-</ol>
-<p>代码集成示例：</p>
-<pre><code class="language-cpp">liq_image *img = liq_image_create_rgba(attr, pixels, width, height, 0);
-liq_set_quality(attr, 70, 90); // 设置质量范围 
-liq_result *res = liq_quantize_image(attr, img);
-liq_write_remapped_image(res, img, buffer, buffer_size);
-</code></pre>
-<p>压缩率实测：</p>
-<table>
-<thead>
-<tr>
-<th>输入类型</th>
-<th>原图大小</th>
-<th>输出大小</th>
-<th>压缩率</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>24位PNG</td>
-<td>4.2MB</td>
-<td>820KB</td>
-<td>80.5%</td>
-</tr>
-<tr>
-<td>带α通道PNG</td>
-<td>3.7MB</td>
-<td>1.1MB</td>
-<td>70.3%</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_3">三、参数优化策略对照表</h3>
-<table>
-<thead>
-<tr>
-<th>工具</th>
-<th>关键参数</th>
-<th>优化建议</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GIFsicle</td>
-<td>--colors --lossy</td>
-<td>128色+lossy=20平衡质量与压缩率</td>
-</tr>
-<tr>
-<td>Guetzli</td>
-<td>--quality</td>
-<td>质量&gt;90时性价比低，建议85-90区间</td>
-</tr>
-<tr>
-<td>LibimageQuant</td>
-<td>liq_set_speed()</td>
-<td>speed=1（最高质量） vs speed=5（最快）</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_4">四、技术选型建议</h3>
-<ul>
-<li>动态内容压缩：优先使用GIFsicle进行帧差分优化，lossy模式压缩率可达85%</li>
-<li>高保真JPEG压缩：Guetzli在质量&gt;90时优于mozjpeg，但需接受20倍耗时增长</li>
-<li>索引色转换场景：LibimageQuant在生成8位PNG时，比pngquant快3倍且质量更高</li>
-</ul>
-<h2 id="_5">完整代码</h2>
-<p><a href="https://github.com/zhengtianzuo/zhengtianzuo.github.io/tree/master/code/028-ImageCompress">Github</a></p>
+<p>五、类结构变化图
+重构前结构</p>
+<div class="mermaid">classDiagram 
+    class EmployeeData {
+        +string name 
+        +int age
+        +double salary 
+    }
+    class ReportGenerator {
+        +generateReport(EmployeeData)
+    }
+    EmployeeData &lt;.. ReportGenerator : 依赖 
+</div>
+<p>重构后结构</p>
+<div class="mermaid">classDiagram
+    class Employee {
+        -string name 
+        -int age
+        -double salary 
+        +generateReport()
+        +getName()
+        +getSalary()
+    }
+``` }
+</div>
+<p>关键改进：</p>
+<p>数据与行为绑定，消除跨类依赖；
+类职责单一化，符合高内聚原则。</p>
+<p>六、分析与总结
+为什么重构有效？
+1. 降低耦合：外部类无需感知数据细节；
+2. 提高内聚：数据操作逻辑集中在同一类中；
+3. 增强可维护性：修改数据格式只需调整一个类。</p>
+<p>何时使用 Data Module？
+仅当类需作为纯数据传输对象（DTO） 时（如 API 接口传参），可保留简单结构。其他场景应避免6。</p>
+<p>核心准则：面向对象设计中，数据与操作数据的行为应共存于同一抽象层次。</p>
+<p>如需完整代码或扩展案例，可参考：</p>
+<p>重构实践：Data Class 的深度解析
+重构手法：搬移函数与封装字段</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
