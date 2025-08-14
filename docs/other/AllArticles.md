@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[047-代码味道-数据模块 2025/08/14](../technology/Cpp/047-CodeSmellDataModule.md)
+
 [046-Windows抓屏-WGC 2025/06/24](../remotedesktop/046-WGC.md)
 
 [045-代码味道-数据泥团 2025/06/05](../technology/Cpp/045-CodeSmellDataClumps.md)

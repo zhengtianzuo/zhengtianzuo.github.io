@@ -156,6 +156,7 @@ nav:
           - technology/Cpp/043-CodeSmellCyclicDependencies.md
           - technology/Cpp/044-CodeSmellDataClass.md
           - technology/Cpp/045-CodeSmellDataClumps.md
+          - technology/Cpp/047-CodeSmellDataModule.md
         - 存储:
           - technology/Cpp/001-BoostMessageQueue.md
           - technology/Cpp/002-BoostSharedMemory.md
