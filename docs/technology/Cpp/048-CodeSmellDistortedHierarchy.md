@@ -1,3 +1,6 @@
+---
+icon: simple/sellfy
+---
 
 # 代码味道-扭曲的层次
 

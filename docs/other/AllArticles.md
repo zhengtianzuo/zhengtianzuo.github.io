@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[048-代码味道-扭曲的层次 2025/09/18](../technology/Cpp/048-CodeSmellDistortedHierarchy.md)
+
 [047-代码味道-数据模块 2025/08/14](../technology/Cpp/047-CodeSmellDataModule.md)
 
 [046-Windows抓屏-WGC 2025/06/24](../remotedesktop/046-WGC.md)
