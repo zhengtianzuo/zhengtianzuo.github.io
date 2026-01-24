@@ -4,6 +4,8 @@ icon: material/menu
 
 # 全部文章列表
 
+[049-Linux抓屏-xcb 2026/01/24](../remotedesktop/049-xcb.md)
+
 [048-代码味道-扭曲的层次 2025/09/18](../technology/Cpp/048-CodeSmellDistortedHierarchy.md)
 
 [047-代码味道-数据模块 2025/08/14](../technology/Cpp/047-CodeSmellDataModule.md)
